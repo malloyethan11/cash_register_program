@@ -46,3 +46,6 @@ D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.vb
 D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.exe
 D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.xml
 D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources

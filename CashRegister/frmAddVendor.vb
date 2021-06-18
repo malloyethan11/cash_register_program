@@ -1,8 +1,5 @@
-﻿' v0.0.1
-
-Public Class frmMain
-
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class frmAddVendor
+    Private Sub frmAddVendor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
 
@@ -18,20 +15,9 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Close()
-    End Sub
-
-    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-
-        OpenFormKillParent(Me, frmTransactions)
-
-    End Sub
-
-    Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         OpenFormKillParent(Me, frmInventory)
 
     End Sub
-
 End Class

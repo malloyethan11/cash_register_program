@@ -42,4 +42,15 @@
 
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnVendorLookup.Click
+
+        OpenFormKillParent(Me, frmVendorLookup)
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAddVendor.Click
+
+        OpenFormKillParent(Me, frmAddVendor)
+
+    End Sub
 End Class

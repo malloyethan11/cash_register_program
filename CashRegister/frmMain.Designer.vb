@@ -22,13 +22,11 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnCheckout = New System.Windows.Forms.Button()
         Me.btnInventory = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,10 +81,6 @@ Partial Class frmMain
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -109,5 +103,4 @@ Partial Class frmMain
     Friend WithEvents btnInventory As Button
     Friend WithEvents btnCheckout As Button
     Friend WithEvents picLogo As PictureBox
-    Friend WithEvents Timer1 As Timer
 End Class

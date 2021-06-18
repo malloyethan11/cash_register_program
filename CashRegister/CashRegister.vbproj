@@ -91,6 +91,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddVendor.Designer.vb">
+      <DependentUpon>frmAddVendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddVendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAddItem.Designer.vb">
       <DependentUpon>frmAddItem.vb</DependentUpon>
     </Compile>
@@ -158,6 +164,18 @@
     <Compile Include="frmTransactions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmVendorEditor.Designer.vb">
+      <DependentUpon>frmVendorEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendorEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendorLookup.Designer.vb">
+      <DependentUpon>frmVendorLookup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendorLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmViewTransactions.Designer.vb">
       <DependentUpon>frmViewTransactions.vb</DependentUpon>
     </Compile>
@@ -186,6 +204,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAddItem.resx">
       <DependentUpon>frmAddItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddVendor.resx">
+      <DependentUpon>frmAddVendor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckout.resx">
       <DependentUpon>frmCheckout.vb</DependentUpon>
@@ -216,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransactions.resx">
       <DependentUpon>frmTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendorEditor.resx">
+      <DependentUpon>frmVendorEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendorLookup.resx">
+      <DependentUpon>frmVendorLookup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewTransactions.resx">
       <DependentUpon>frmViewTransactions.vb</DependentUpon>

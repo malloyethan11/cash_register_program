@@ -52,11 +52,11 @@ Partial Class frmAddItem
         Me.txtSafetytock.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtSafetytock.BackColor = System.Drawing.Color.White
         Me.txtSafetytock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSafetytock.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSafetytock.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtSafetytock.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSafetytock.ForeColor = System.Drawing.Color.Black
         Me.txtSafetytock.Location = New System.Drawing.Point(507, 99)
         Me.txtSafetytock.Name = "txtSafetytock"
-        Me.txtSafetytock.Size = New System.Drawing.Size(227, 21)
+        Me.txtSafetytock.Size = New System.Drawing.Size(227, 20)
         Me.txtSafetytock.TabIndex = 100
         '
         'txtUPC
@@ -64,11 +64,11 @@ Partial Class frmAddItem
         Me.txtUPC.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtUPC.BackColor = System.Drawing.Color.White
         Me.txtUPC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtUPC.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUPC.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtUPC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUPC.ForeColor = System.Drawing.Color.Black
         Me.txtUPC.Location = New System.Drawing.Point(241, 126)
         Me.txtUPC.Name = "txtUPC"
-        Me.txtUPC.Size = New System.Drawing.Size(144, 21)
+        Me.txtUPC.Size = New System.Drawing.Size(144, 20)
         Me.txtUPC.TabIndex = 98
         '
         'lblUPC
@@ -87,11 +87,11 @@ Partial Class frmAddItem
         Me.txtInventory.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtInventory.BackColor = System.Drawing.Color.White
         Me.txtInventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtInventory.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInventory.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtInventory.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInventory.ForeColor = System.Drawing.Color.Black
         Me.txtInventory.Location = New System.Drawing.Point(241, 99)
         Me.txtInventory.Name = "txtInventory"
-        Me.txtInventory.Size = New System.Drawing.Size(144, 21)
+        Me.txtInventory.Size = New System.Drawing.Size(144, 20)
         Me.txtInventory.TabIndex = 96
         '
         'lblInventory
@@ -110,11 +110,11 @@ Partial Class frmAddItem
         Me.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtPrice.BackColor = System.Drawing.Color.White
         Me.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPrice.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrice.ForeColor = System.Drawing.Color.Black
         Me.txtPrice.Location = New System.Drawing.Point(241, 72)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(144, 21)
+        Me.txtPrice.Size = New System.Drawing.Size(144, 20)
         Me.txtPrice.TabIndex = 94
         '
         'lblPrice
@@ -133,11 +133,11 @@ Partial Class frmAddItem
         Me.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtDescription.BackColor = System.Drawing.Color.White
         Me.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescription.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescription.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescription.ForeColor = System.Drawing.Color.Black
         Me.txtDescription.Location = New System.Drawing.Point(241, 45)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(492, 21)
+        Me.txtDescription.Size = New System.Drawing.Size(492, 20)
         Me.txtDescription.TabIndex = 92
         '
         'lblDescription
@@ -167,11 +167,11 @@ Partial Class frmAddItem
         Me.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtName.BackColor = System.Drawing.Color.White
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.ForeColor = System.Drawing.Color.Black
         Me.txtName.Location = New System.Drawing.Point(485, 18)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(248, 21)
+        Me.txtName.Size = New System.Drawing.Size(248, 20)
         Me.txtName.TabIndex = 89
         '
         'lblSKU
@@ -190,11 +190,11 @@ Partial Class frmAddItem
         Me.txtSKU.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtSKU.BackColor = System.Drawing.Color.White
         Me.txtSKU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSKU.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSKU.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtSKU.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSKU.ForeColor = System.Drawing.Color.Black
         Me.txtSKU.Location = New System.Drawing.Point(241, 18)
         Me.txtSKU.Name = "txtSKU"
-        Me.txtSKU.Size = New System.Drawing.Size(182, 21)
+        Me.txtSKU.Size = New System.Drawing.Size(182, 20)
         Me.txtSKU.TabIndex = 87
         '
         'itmPictureFrame

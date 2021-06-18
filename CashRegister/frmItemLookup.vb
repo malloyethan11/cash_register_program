@@ -1,7 +1,11 @@
 ﻿
 Public Class frmItemLookup
 
+    Public Type As String = "Dialog"
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.CenterToScreen()
 
         txtSearch.ForeColor = Color.DarkGray
 
@@ -23,5 +27,13 @@ Public Class frmItemLookup
 
     Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles txtSearch.Leave
         txtSearch.ForeColor = Color.DarkGray
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        If (Type = "Dialog") Then
+            Me.Close()
+        Else
+            OpenFormKillParent(Me, frmInventory)
+        End If
     End Sub
 End Class

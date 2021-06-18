@@ -1,0 +1,4 @@
+﻿Module ModuleGlobalConstantsAndVariables
+
+
+End Module

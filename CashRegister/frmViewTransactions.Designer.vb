@@ -31,7 +31,7 @@ Partial Class frmViewTransactions
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.grpTransaction1 = New System.Windows.Forms.GroupBox()
-        Me.lblTransactionID1 = New System.Windows.Forms.Label()
+        Me.lstItems1 = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -49,10 +49,12 @@ Partial Class frmViewTransactions
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.lblPaymentType = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lblTransactionID1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lstItems2 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -75,6 +77,7 @@ Partial Class frmViewTransactions
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lstItems3 = New System.Windows.Forms.ListBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
@@ -97,6 +100,7 @@ Partial Class frmViewTransactions
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.lstItems4 = New System.Windows.Forms.ListBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox26 = New System.Windows.Forms.TextBox()
         Me.TextBox27 = New System.Windows.Forms.TextBox()
@@ -119,6 +123,7 @@ Partial Class frmViewTransactions
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lstItems5 = New System.Windows.Forms.ListBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.TextBox36 = New System.Windows.Forms.TextBox()
@@ -140,11 +145,6 @@ Partial Class frmViewTransactions
         Me.TextBox43 = New System.Windows.Forms.TextBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
-        Me.lstItems1 = New System.Windows.Forms.ListBox()
-        Me.lstItems2 = New System.Windows.Forms.ListBox()
-        Me.lstItems3 = New System.Windows.Forms.ListBox()
-        Me.lstItems4 = New System.Windows.Forms.ListBox()
-        Me.lstItems5 = New System.Windows.Forms.ListBox()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTransaction1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -270,15 +270,14 @@ Partial Class frmViewTransactions
         Me.grpTransaction1.TabIndex = 52
         Me.grpTransaction1.TabStop = False
         '
-        'lblTransactionID1
+        'lstItems1
         '
-        Me.lblTransactionID1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblTransactionID1.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblTransactionID1.Location = New System.Drawing.Point(739, 90)
-        Me.lblTransactionID1.Name = "lblTransactionID1"
-        Me.lblTransactionID1.Size = New System.Drawing.Size(31, 18)
-        Me.lblTransactionID1.TabIndex = 0
-        Me.lblTransactionID1.Text = "0000"
+        Me.lstItems1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lstItems1.FormattingEnabled = True
+        Me.lstItems1.Location = New System.Drawing.Point(777, 13)
+        Me.lstItems1.Name = "lstItems1"
+        Me.lstItems1.Size = New System.Drawing.Size(236, 82)
+        Me.lstItems1.TabIndex = 94
         '
         'Label4
         '
@@ -454,6 +453,15 @@ Partial Class frmViewTransactions
         Me.lblFirstName.Text = "First Name:"
         Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox1.Location = New System.Drawing.Point(90, 13)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(270, 20)
+        Me.TextBox1.TabIndex = 75
+        '
         'TextBox3
         '
         Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -474,14 +482,15 @@ Partial Class frmViewTransactions
         Me.lblPaymentType.Text = "Payment Type:"
         Me.lblPaymentType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'lblTransactionID1
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(90, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(270, 20)
-        Me.TextBox1.TabIndex = 75
+        Me.lblTransactionID1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTransactionID1.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTransactionID1.Location = New System.Drawing.Point(739, 90)
+        Me.lblTransactionID1.Name = "lblTransactionID1"
+        Me.lblTransactionID1.Size = New System.Drawing.Size(31, 18)
+        Me.lblTransactionID1.TabIndex = 0
+        Me.lblTransactionID1.Text = "0000"
         '
         'GroupBox1
         '
@@ -513,6 +522,15 @@ Partial Class frmViewTransactions
         Me.GroupBox1.Size = New System.Drawing.Size(1019, 111)
         Me.GroupBox1.TabIndex = 94
         Me.GroupBox1.TabStop = False
+        '
+        'lstItems2
+        '
+        Me.lstItems2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lstItems2.FormattingEnabled = True
+        Me.lstItems2.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems2.Name = "lstItems2"
+        Me.lstItems2.Size = New System.Drawing.Size(236, 82)
+        Me.lstItems2.TabIndex = 94
         '
         'Label1
         '
@@ -757,6 +775,15 @@ Partial Class frmViewTransactions
         Me.GroupBox2.TabIndex = 95
         Me.GroupBox2.TabStop = False
         '
+        'lstItems3
+        '
+        Me.lstItems3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lstItems3.FormattingEnabled = True
+        Me.lstItems3.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems3.Name = "lstItems3"
+        Me.lstItems3.Size = New System.Drawing.Size(236, 82)
+        Me.lstItems3.TabIndex = 94
+        '
         'Label15
         '
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -999,6 +1026,15 @@ Partial Class frmViewTransactions
         Me.GroupBox3.Size = New System.Drawing.Size(1019, 111)
         Me.GroupBox3.TabIndex = 96
         Me.GroupBox3.TabStop = False
+        '
+        'lstItems4
+        '
+        Me.lstItems4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lstItems4.FormattingEnabled = True
+        Me.lstItems4.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems4.Name = "lstItems4"
+        Me.lstItems4.Size = New System.Drawing.Size(236, 82)
+        Me.lstItems4.TabIndex = 94
         '
         'Label26
         '
@@ -1243,6 +1279,15 @@ Partial Class frmViewTransactions
         Me.GroupBox4.TabIndex = 97
         Me.GroupBox4.TabStop = False
         '
+        'lstItems5
+        '
+        Me.lstItems5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lstItems5.FormattingEnabled = True
+        Me.lstItems5.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems5.Name = "lstItems5"
+        Me.lstItems5.Size = New System.Drawing.Size(236, 82)
+        Me.lstItems5.TabIndex = 94
+        '
         'Label37
         '
         Me.Label37.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -1454,51 +1499,6 @@ Partial Class frmViewTransactions
         Me.Label47.Size = New System.Drawing.Size(31, 18)
         Me.Label47.TabIndex = 0
         Me.Label47.Text = "0004"
-        '
-        'lstItems1
-        '
-        Me.lstItems1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lstItems1.FormattingEnabled = True
-        Me.lstItems1.Location = New System.Drawing.Point(777, 13)
-        Me.lstItems1.Name = "lstItems1"
-        Me.lstItems1.Size = New System.Drawing.Size(236, 82)
-        Me.lstItems1.TabIndex = 94
-        '
-        'lstItems2
-        '
-        Me.lstItems2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lstItems2.FormattingEnabled = True
-        Me.lstItems2.Location = New System.Drawing.Point(776, 13)
-        Me.lstItems2.Name = "lstItems2"
-        Me.lstItems2.Size = New System.Drawing.Size(236, 82)
-        Me.lstItems2.TabIndex = 94
-        '
-        'lstItems3
-        '
-        Me.lstItems3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lstItems3.FormattingEnabled = True
-        Me.lstItems3.Location = New System.Drawing.Point(776, 13)
-        Me.lstItems3.Name = "lstItems3"
-        Me.lstItems3.Size = New System.Drawing.Size(236, 82)
-        Me.lstItems3.TabIndex = 94
-        '
-        'lstItems4
-        '
-        Me.lstItems4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lstItems4.FormattingEnabled = True
-        Me.lstItems4.Location = New System.Drawing.Point(776, 13)
-        Me.lstItems4.Name = "lstItems4"
-        Me.lstItems4.Size = New System.Drawing.Size(236, 82)
-        Me.lstItems4.TabIndex = 94
-        '
-        'lstItems5
-        '
-        Me.lstItems5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lstItems5.FormattingEnabled = True
-        Me.lstItems5.Location = New System.Drawing.Point(776, 13)
-        Me.lstItems5.Name = "lstItems5"
-        Me.lstItems5.Size = New System.Drawing.Size(236, 82)
-        Me.lstItems5.TabIndex = 94
         '
         'frmViewTransactions
         '

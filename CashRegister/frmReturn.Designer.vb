@@ -28,12 +28,6 @@ Partial Class frmReturn
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblPaymentDetails = New System.Windows.Forms.GroupBox()
-        Me.lblSalesTax = New System.Windows.Forms.Label()
-        Me.txtSalesTax = New System.Windows.Forms.TextBox()
-        Me.lblReturn = New System.Windows.Forms.Label()
-        Me.txtReturn = New System.Windows.Forms.TextBox()
-        Me.lblList = New System.Windows.Forms.Label()
-        Me.lstItems = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -58,6 +52,12 @@ Partial Class frmReturn
         Me.lblPaymentType = New System.Windows.Forms.Label()
         Me.cboState = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblSalesTax = New System.Windows.Forms.Label()
+        Me.txtSalesTax = New System.Windows.Forms.TextBox()
+        Me.lblReturn = New System.Windows.Forms.Label()
+        Me.txtReturn = New System.Windows.Forms.TextBox()
+        Me.lblList = New System.Windows.Forms.Label()
+        Me.lstItems = New System.Windows.Forms.ListBox()
         Me.lblPaymentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -147,69 +147,6 @@ Partial Class frmReturn
         Me.lblPaymentDetails.TabIndex = 66
         Me.lblPaymentDetails.TabStop = False
         Me.lblPaymentDetails.Text = "Payment Details"
-        '
-        'lblSalesTax
-        '
-        Me.lblSalesTax.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblSalesTax.Location = New System.Drawing.Point(504, 249)
-        Me.lblSalesTax.Name = "lblSalesTax"
-        Me.lblSalesTax.Size = New System.Drawing.Size(105, 23)
-        Me.lblSalesTax.TabIndex = 65
-        Me.lblSalesTax.Text = "Sales Tax Returned:"
-        Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtSalesTax
-        '
-        Me.txtSalesTax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSalesTax.Location = New System.Drawing.Point(615, 251)
-        Me.txtSalesTax.Name = "txtSalesTax"
-        Me.txtSalesTax.ReadOnly = True
-        Me.txtSalesTax.Size = New System.Drawing.Size(159, 20)
-        Me.txtSalesTax.TabIndex = 64
-        Me.txtSalesTax.TabStop = False
-        '
-        'lblReturn
-        '
-        Me.lblReturn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblReturn.Location = New System.Drawing.Point(504, 223)
-        Me.lblReturn.Name = "lblReturn"
-        Me.lblReturn.Size = New System.Drawing.Size(75, 23)
-        Me.lblReturn.TabIndex = 63
-        Me.lblReturn.Text = "Total Return:"
-        Me.lblReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtReturn
-        '
-        Me.txtReturn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtReturn.Location = New System.Drawing.Point(615, 225)
-        Me.txtReturn.Name = "txtReturn"
-        Me.txtReturn.Size = New System.Drawing.Size(159, 20)
-        Me.txtReturn.TabIndex = 58
-        '
-        'lblList
-        '
-        Me.lblList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblList.Location = New System.Drawing.Point(504, 61)
-        Me.lblList.Name = "lblList"
-        Me.lblList.Size = New System.Drawing.Size(279, 23)
-        Me.lblList.TabIndex = 62
-        Me.lblList.Text = "Purchase List:"
-        Me.lblList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lstItems
-        '
-        Me.lstItems.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstItems.FormattingEnabled = True
-        Me.lstItems.Location = New System.Drawing.Point(504, 87)
-        Me.lstItems.Name = "lstItems"
-        Me.lstItems.Size = New System.Drawing.Size(270, 69)
-        Me.lstItems.TabIndex = 61
-        Me.lstItems.TabStop = False
         '
         'Label4
         '
@@ -437,6 +374,69 @@ Partial Class frmReturn
         Me.ComboBox1.Size = New System.Drawing.Size(389, 21)
         Me.ComboBox1.TabIndex = 74
         '
+        'lblSalesTax
+        '
+        Me.lblSalesTax.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblSalesTax.Location = New System.Drawing.Point(504, 249)
+        Me.lblSalesTax.Name = "lblSalesTax"
+        Me.lblSalesTax.Size = New System.Drawing.Size(105, 23)
+        Me.lblSalesTax.TabIndex = 65
+        Me.lblSalesTax.Text = "Sales Tax Returned:"
+        Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax
+        '
+        Me.txtSalesTax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax.Location = New System.Drawing.Point(615, 251)
+        Me.txtSalesTax.Name = "txtSalesTax"
+        Me.txtSalesTax.ReadOnly = True
+        Me.txtSalesTax.Size = New System.Drawing.Size(159, 20)
+        Me.txtSalesTax.TabIndex = 64
+        Me.txtSalesTax.TabStop = False
+        '
+        'lblReturn
+        '
+        Me.lblReturn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblReturn.Location = New System.Drawing.Point(504, 223)
+        Me.lblReturn.Name = "lblReturn"
+        Me.lblReturn.Size = New System.Drawing.Size(75, 23)
+        Me.lblReturn.TabIndex = 63
+        Me.lblReturn.Text = "Total Return:"
+        Me.lblReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtReturn
+        '
+        Me.txtReturn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtReturn.Location = New System.Drawing.Point(615, 225)
+        Me.txtReturn.Name = "txtReturn"
+        Me.txtReturn.Size = New System.Drawing.Size(159, 20)
+        Me.txtReturn.TabIndex = 58
+        '
+        'lblList
+        '
+        Me.lblList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblList.Location = New System.Drawing.Point(504, 61)
+        Me.lblList.Name = "lblList"
+        Me.lblList.Size = New System.Drawing.Size(279, 23)
+        Me.lblList.TabIndex = 62
+        Me.lblList.Text = "Purchase List:"
+        Me.lblList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lstItems
+        '
+        Me.lstItems.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstItems.FormattingEnabled = True
+        Me.lstItems.Location = New System.Drawing.Point(504, 87)
+        Me.lstItems.Name = "lstItems"
+        Me.lstItems.Size = New System.Drawing.Size(270, 69)
+        Me.lstItems.TabIndex = 61
+        Me.lstItems.TabStop = False
+        '
         'frmReturn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -456,7 +456,7 @@ Partial Class frmReturn
         Me.Controls.Add(Me.lstItems)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmReturn"
-        Me.Text = "Return"
+        Me.Text = "Returns"
         Me.lblPaymentDetails.ResumeLayout(False)
         Me.lblPaymentDetails.PerformLayout()
         Me.ResumeLayout(False)

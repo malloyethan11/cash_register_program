@@ -1,4 +1,5 @@
 ﻿' Test push to master
+' Test push to master after rule is added
 
 Public Class frmMain
 

@@ -122,4 +122,53 @@ Module ModuleCommonUtilities
 
     End Sub
 
+    ' Open a form and hide the current form
+    Public Function OpenFormMaintainParent(ByRef frmSelf As Form, ByVal frmToOpen As Form) As DialogResult
+
+        ' Init variables
+        Dim dlgResult As DialogResult
+
+        ' Make self invisible
+        frmSelf.Visible = False
+
+        ' Make new form
+        dlgResult = frmToOpen.ShowDialog()
+
+        ' Make self visible
+        If (frmSelf.IsDisposed = False) Then
+            frmSelf.Visible = True
+        End If
+
+        ' Return result
+        Return dlgResult
+
+    End Function
+
+    ' Open a form and close the current form
+    Public Function OpenFormKillParent(ByRef frmSelf As Form, ByVal frmToOpen As Form) As DialogResult
+
+        ' Init variables
+        Dim dlgResult As DialogResult
+
+        ' Make new form
+        frmToOpen.Show()
+
+        ' Kill self
+        frmSelf.Close()
+
+        ' Return result
+        Return dlgResult
+
+    End Function
+
+    Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control)
+
+        If (MousePosition.X > ctlControl.Location.X And MousePosition.Y > ctlControl.Location.Y And MousePosition.X < ctlControl.Location.X + ctlControl.Width And MousePosition.X < ctlControl.Location.Y + ctlControl.Height) Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
 End Module

@@ -24,8 +24,8 @@ Partial Class frmInventory
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventory))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnCheckout = New System.Windows.Forms.Button()
-        Me.btnManageItems = New System.Windows.Forms.Button()
+        Me.btnAddItem = New System.Windows.Forms.Button()
+        Me.btnPriceItems = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnItemLookup = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,31 +43,31 @@ Partial Class frmInventory
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'btnCheckout
+        'btnAddItem
         '
-        Me.btnCheckout.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCheckout.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckout.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnCheckout.Location = New System.Drawing.Point(266, 280)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(284, 42)
-        Me.btnCheckout.TabIndex = 7
-        Me.btnCheckout.Text = "Add Item"
-        Me.btnCheckout.UseVisualStyleBackColor = True
+        Me.btnAddItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddItem.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddItem.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnAddItem.Location = New System.Drawing.Point(266, 280)
+        Me.btnAddItem.Name = "btnAddItem"
+        Me.btnAddItem.Size = New System.Drawing.Size(284, 42)
+        Me.btnAddItem.TabIndex = 7
+        Me.btnAddItem.Text = "Add Item"
+        Me.btnAddItem.UseVisualStyleBackColor = True
         '
-        'btnManageItems
+        'btnPriceItems
         '
-        Me.btnManageItems.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnManageItems.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnManageItems.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnManageItems.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnManageItems.Location = New System.Drawing.Point(266, 328)
-        Me.btnManageItems.Name = "btnManageItems"
-        Me.btnManageItems.Size = New System.Drawing.Size(284, 42)
-        Me.btnManageItems.TabIndex = 6
-        Me.btnManageItems.Text = "Mass Pricing Form"
-        Me.btnManageItems.UseVisualStyleBackColor = True
+        Me.btnPriceItems.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnPriceItems.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPriceItems.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPriceItems.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnPriceItems.Location = New System.Drawing.Point(266, 328)
+        Me.btnPriceItems.Name = "btnPriceItems"
+        Me.btnPriceItems.Size = New System.Drawing.Size(284, 42)
+        Me.btnPriceItems.TabIndex = 6
+        Me.btnPriceItems.Text = "Mass Pricing Form"
+        Me.btnPriceItems.UseVisualStyleBackColor = True
         '
         'btnExit
         '
@@ -103,8 +103,8 @@ Partial Class frmInventory
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnItemLookup)
-        Me.Controls.Add(Me.btnCheckout)
-        Me.Controls.Add(Me.btnManageItems)
+        Me.Controls.Add(Me.btnAddItem)
+        Me.Controls.Add(Me.btnPriceItems)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmInventory"
@@ -115,8 +115,8 @@ Partial Class frmInventory
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnCheckout As Button
-    Friend WithEvents btnManageItems As Button
+    Friend WithEvents btnAddItem As Button
+    Friend WithEvents btnPriceItems As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents btnItemLookup As Button
 End Class

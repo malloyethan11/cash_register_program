@@ -32,10 +32,15 @@ Partial Class frmCheckout
         Me.lblPaymentDetails = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.lblState = New System.Windows.Forms.Label()
+        Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblZip = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.lblCity = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.lblSecurityCode = New System.Windows.Forms.Label()
         Me.dtpExpirationDate = New System.Windows.Forms.DateTimePicker()
@@ -47,17 +52,12 @@ Partial Class frmCheckout
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.lblPaymentType = New System.Windows.Forms.Label()
+        Me.cboState = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnRemoveSelectedItem = New System.Windows.Forms.Button()
         Me.btnItemLookup = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnSubmit = New System.Windows.Forms.Button()
-        Me.lblCity = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.lblAddress = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.cboState = New System.Windows.Forms.ComboBox()
-        Me.lblState = New System.Windows.Forms.Label()
         Me.lblPaymentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -176,6 +176,36 @@ Partial Class frmCheckout
         Me.txtPhoneNumber.Size = New System.Drawing.Size(389, 20)
         Me.txtPhoneNumber.TabIndex = 9
         '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(90, 124)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(389, 20)
+        Me.TextBox9.TabIndex = 8
+        '
+        'lblState
+        '
+        Me.lblState.AutoSize = True
+        Me.lblState.Enabled = False
+        Me.lblState.Location = New System.Drawing.Point(280, 153)
+        Me.lblState.Name = "lblState"
+        Me.lblState.Size = New System.Drawing.Size(35, 13)
+        Me.lblState.TabIndex = 70
+        Me.lblState.Text = "State:"
+        Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblAddress
+        '
+        Me.lblAddress.AutoSize = True
+        Me.lblAddress.Enabled = False
+        Me.lblAddress.Location = New System.Drawing.Point(5, 127)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(79, 13)
+        Me.lblAddress.TabIndex = 70
+        Me.lblAddress.Text = "Street Address:"
+        Me.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(90, 200)
@@ -211,6 +241,25 @@ Partial Class frmCheckout
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(390, 20)
         Me.TextBox8.TabIndex = 7
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(90, 150)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(158, 20)
+        Me.TextBox7.TabIndex = 6
+        '
+        'lblCity
+        '
+        Me.lblCity.AutoSize = True
+        Me.lblCity.Enabled = False
+        Me.lblCity.Location = New System.Drawing.Point(57, 153)
+        Me.lblCity.Name = "lblCity"
+        Me.lblCity.Size = New System.Drawing.Size(27, 13)
+        Me.lblCity.TabIndex = 66
+        Me.lblCity.Text = "City:"
+        Me.lblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBox6
         '
@@ -315,6 +364,17 @@ Partial Class frmCheckout
         Me.lblPaymentType.Text = "Payment Type:"
         Me.lblPaymentType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'cboState
+        '
+        Me.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboState.Enabled = False
+        Me.cboState.FormattingEnabled = True
+        Me.cboState.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
+        Me.cboState.Location = New System.Drawing.Point(320, 149)
+        Me.cboState.Name = "cboState"
+        Me.cboState.Size = New System.Drawing.Size(159, 21)
+        Me.cboState.TabIndex = 0
+        '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -376,66 +436,6 @@ Partial Class frmCheckout
         Me.btnSubmit.TabIndex = 13
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
-        '
-        'lblCity
-        '
-        Me.lblCity.AutoSize = True
-        Me.lblCity.Enabled = False
-        Me.lblCity.Location = New System.Drawing.Point(57, 153)
-        Me.lblCity.Name = "lblCity"
-        Me.lblCity.Size = New System.Drawing.Size(27, 13)
-        Me.lblCity.TabIndex = 66
-        Me.lblCity.Text = "City:"
-        Me.lblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(90, 150)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox7.TabIndex = 6
-        '
-        'lblAddress
-        '
-        Me.lblAddress.AutoSize = True
-        Me.lblAddress.Enabled = False
-        Me.lblAddress.Location = New System.Drawing.Point(5, 127)
-        Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(79, 13)
-        Me.lblAddress.TabIndex = 70
-        Me.lblAddress.Text = "Street Address:"
-        Me.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(90, 124)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(389, 20)
-        Me.TextBox9.TabIndex = 8
-        '
-        'cboState
-        '
-        Me.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboState.Enabled = False
-        Me.cboState.FormattingEnabled = True
-        Me.cboState.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.cboState.Location = New System.Drawing.Point(320, 149)
-        Me.cboState.Name = "cboState"
-        Me.cboState.Size = New System.Drawing.Size(159, 21)
-        Me.cboState.TabIndex = 0
-        '
-        'lblState
-        '
-        Me.lblState.AutoSize = True
-        Me.lblState.Enabled = False
-        Me.lblState.Location = New System.Drawing.Point(280, 153)
-        Me.lblState.Name = "lblState"
-        Me.lblState.Size = New System.Drawing.Size(35, 13)
-        Me.lblState.TabIndex = 70
-        Me.lblState.Text = "State:"
-        Me.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmCheckout
         '

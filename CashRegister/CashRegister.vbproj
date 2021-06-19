@@ -91,6 +91,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsUser.vb" />
     <Compile Include="frmAddVendor.Designer.vb">
       <DependentUpon>frmAddVendor.vb</DependentUpon>
     </Compile>
@@ -182,6 +183,7 @@
     <Compile Include="frmViewTransactions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modDatabaseUtilities.vb" />
     <Compile Include="ModuleCommonUtilities.vb" />
     <Compile Include="ModuleGlobalConstantsAndVariables.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

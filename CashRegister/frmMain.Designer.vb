@@ -51,7 +51,7 @@ Partial Class frmMain
         Me.btnCheckout.Location = New System.Drawing.Point(266, 280)
         Me.btnCheckout.Name = "btnCheckout"
         Me.btnCheckout.Size = New System.Drawing.Size(284, 42)
-        Me.btnCheckout.TabIndex = 3
+        Me.btnCheckout.TabIndex = 0
         Me.btnCheckout.Text = "Cashier"
         Me.btnCheckout.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class frmMain
         Me.btnExit.Location = New System.Drawing.Point(266, 376)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 0
+        Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '

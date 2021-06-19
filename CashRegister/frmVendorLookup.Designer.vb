@@ -26,7 +26,7 @@ Partial Class frmVendorLookup
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblVendorName = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboVendors = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnOpen
@@ -65,14 +65,14 @@ Partial Class frmVendorLookup
         Me.lblVendorName.Text = "Vendor Name:"
         Me.lblVendorName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'ComboBox1
+        'cboVendors
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(105, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(169, 21)
-        Me.ComboBox1.TabIndex = 99
+        Me.cboVendors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVendors.FormattingEnabled = True
+        Me.cboVendors.Location = New System.Drawing.Point(105, 13)
+        Me.cboVendors.Name = "cboVendors"
+        Me.cboVendors.Size = New System.Drawing.Size(169, 21)
+        Me.cboVendors.TabIndex = 99
         '
         'frmVendorLookup
         '
@@ -80,7 +80,7 @@ Partial Class frmVendorLookup
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(286, 94)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboVendors)
         Me.Controls.Add(Me.lblVendorName)
         Me.Controls.Add(Me.btnOpen)
         Me.Controls.Add(Me.btnExit)
@@ -94,5 +94,5 @@ Partial Class frmVendorLookup
     Friend WithEvents btnOpen As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents lblVendorName As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboVendors As ComboBox
 End Class

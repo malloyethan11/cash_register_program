@@ -25,10 +25,10 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblWelcome = New System.Windows.Forms.Label()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,12 +58,12 @@ Partial Class frmLogin
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(336, 301)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtPassword.Location = New System.Drawing.Point(336, 301)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(200, 20)
+        Me.txtPassword.TabIndex = 1
         '
         'lblPassword
         '
@@ -83,12 +83,12 @@ Partial Class frmLogin
         Me.lblUsername.TabIndex = 12
         Me.lblUsername.Text = "Username:"
         '
-        'TextBox2
+        'txtUsername
         '
-        Me.TextBox2.Location = New System.Drawing.Point(336, 265)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox2.TabIndex = 0
+        Me.txtUsername.Location = New System.Drawing.Point(336, 265)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(200, 20)
+        Me.txtUsername.TabIndex = 0
         '
         'lblWelcome
         '
@@ -102,15 +102,16 @@ Partial Class frmLogin
         '
         'frmLogin
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.lblUsername)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lblPassword)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.picLogo)
         Me.Controls.Add(Me.btnLogin)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -124,9 +125,9 @@ Partial Class frmLogin
 
     Friend WithEvents picLogo As PictureBox
     Friend WithEvents btnLogin As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents lblWelcome As Label
 End Class

@@ -76,3 +76,30 @@ D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRe
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.exe.config
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.exe
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.pdb
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.xml
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbprojAssemblyReference.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmCheckout.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInventory.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInvoice.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemEditor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmLogin.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmMain.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemLookup.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPriceAdjust.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmReturn.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmTransactions.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmViewTransactions.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.Resources.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb

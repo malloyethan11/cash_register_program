@@ -89,7 +89,7 @@
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
 
         Dim frmNewVendorEdit As New frmVendorEditor
-        frmNewVendorEdit.intCurrentlyEditingVendorPrimaryKey = cboVendors.SelectedIndex
+        frmNewVendorEdit.intCurrentlyEditingVendorPrimaryKey = cboVendors.SelectedValue
 
         OpenFormKillParent(Me, frmNewVendorEdit)
 

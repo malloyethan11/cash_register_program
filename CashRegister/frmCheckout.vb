@@ -27,9 +27,14 @@
 
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
-        Dim diaItem As DialogResult
+        Dim intItem As Integer
 
-        diaItem = OpenFormMaintainParent(Me, frmItemLookup)
+        Dim frmLookup As New frmItemLookup
+
+        OpenFormMaintainParent(Me, frmLookup)
+
+        ' Get the selected item
+        intItem = frmLookup.intPrimaryKeyReturnValue
 
     End Sub
 End Class

@@ -24,15 +24,25 @@ Partial Class frmItemLookup
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemLookup))
         Me.itmPictureFrame1 = New System.Windows.Forms.GroupBox()
+        Me.picImage1 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame2 = New System.Windows.Forms.GroupBox()
+        Me.picImage2 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame4 = New System.Windows.Forms.GroupBox()
+        Me.picImage4 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame5 = New System.Windows.Forms.GroupBox()
+        Me.picImage5 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame3 = New System.Windows.Forms.GroupBox()
+        Me.picImage3 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame8 = New System.Windows.Forms.GroupBox()
+        Me.picImage8 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame10 = New System.Windows.Forms.GroupBox()
+        Me.picImage10 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame9 = New System.Windows.Forms.GroupBox()
+        Me.picImage9 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame7 = New System.Windows.Forms.GroupBox()
+        Me.picImage7 = New System.Windows.Forms.PictureBox()
         Me.itmPictureFrame6 = New System.Windows.Forms.GroupBox()
+        Me.picImage6 = New System.Windows.Forms.PictureBox()
         Me.lblItem6 = New System.Windows.Forms.Label()
         Me.lblItem7 = New System.Windows.Forms.Label()
         Me.lblItem8 = New System.Windows.Forms.Label()
@@ -50,98 +60,218 @@ Partial Class frmItemLookup
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.itmPictureFrame1.SuspendLayout()
+        CType(Me.picImage1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame2.SuspendLayout()
+        CType(Me.picImage2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame4.SuspendLayout()
+        CType(Me.picImage4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame5.SuspendLayout()
+        CType(Me.picImage5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame3.SuspendLayout()
+        CType(Me.picImage3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame8.SuspendLayout()
+        CType(Me.picImage8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame10.SuspendLayout()
+        CType(Me.picImage10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame9.SuspendLayout()
+        CType(Me.picImage9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame7.SuspendLayout()
+        CType(Me.picImage7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.itmPictureFrame6.SuspendLayout()
+        CType(Me.picImage6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'itmPictureFrame1
         '
         Me.itmPictureFrame1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame1.Controls.Add(Me.picImage1)
         Me.itmPictureFrame1.Location = New System.Drawing.Point(12, 45)
         Me.itmPictureFrame1.Name = "itmPictureFrame1"
         Me.itmPictureFrame1.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame1.TabIndex = 22
         Me.itmPictureFrame1.TabStop = False
         '
+        'picImage1
+        '
+        Me.picImage1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage1.Location = New System.Drawing.Point(4, 10)
+        Me.picImage1.Name = "picImage1"
+        Me.picImage1.Size = New System.Drawing.Size(136, 113)
+        Me.picImage1.TabIndex = 0
+        Me.picImage1.TabStop = False
+        '
         'itmPictureFrame2
         '
         Me.itmPictureFrame2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame2.Controls.Add(Me.picImage2)
         Me.itmPictureFrame2.Location = New System.Drawing.Point(170, 45)
         Me.itmPictureFrame2.Name = "itmPictureFrame2"
         Me.itmPictureFrame2.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame2.TabIndex = 23
         Me.itmPictureFrame2.TabStop = False
         '
+        'picImage2
+        '
+        Me.picImage2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage2.Location = New System.Drawing.Point(4, 10)
+        Me.picImage2.Name = "picImage2"
+        Me.picImage2.Size = New System.Drawing.Size(136, 113)
+        Me.picImage2.TabIndex = 0
+        Me.picImage2.TabStop = False
+        '
         'itmPictureFrame4
         '
         Me.itmPictureFrame4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame4.Controls.Add(Me.picImage4)
         Me.itmPictureFrame4.Location = New System.Drawing.Point(486, 45)
         Me.itmPictureFrame4.Name = "itmPictureFrame4"
         Me.itmPictureFrame4.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame4.TabIndex = 24
         Me.itmPictureFrame4.TabStop = False
         '
+        'picImage4
+        '
+        Me.picImage4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage4.Location = New System.Drawing.Point(4, 10)
+        Me.picImage4.Name = "picImage4"
+        Me.picImage4.Size = New System.Drawing.Size(136, 113)
+        Me.picImage4.TabIndex = 0
+        Me.picImage4.TabStop = False
+        '
         'itmPictureFrame5
         '
         Me.itmPictureFrame5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame5.Controls.Add(Me.picImage5)
         Me.itmPictureFrame5.Location = New System.Drawing.Point(644, 45)
         Me.itmPictureFrame5.Name = "itmPictureFrame5"
         Me.itmPictureFrame5.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame5.TabIndex = 25
         Me.itmPictureFrame5.TabStop = False
         '
+        'picImage5
+        '
+        Me.picImage5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage5.Location = New System.Drawing.Point(4, 10)
+        Me.picImage5.Name = "picImage5"
+        Me.picImage5.Size = New System.Drawing.Size(136, 113)
+        Me.picImage5.TabIndex = 0
+        Me.picImage5.TabStop = False
+        '
         'itmPictureFrame3
         '
         Me.itmPictureFrame3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame3.Controls.Add(Me.picImage3)
         Me.itmPictureFrame3.Location = New System.Drawing.Point(328, 45)
         Me.itmPictureFrame3.Name = "itmPictureFrame3"
         Me.itmPictureFrame3.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame3.TabIndex = 24
         Me.itmPictureFrame3.TabStop = False
         '
+        'picImage3
+        '
+        Me.picImage3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage3.Location = New System.Drawing.Point(4, 10)
+        Me.picImage3.Name = "picImage3"
+        Me.picImage3.Size = New System.Drawing.Size(136, 113)
+        Me.picImage3.TabIndex = 0
+        Me.picImage3.TabStop = False
+        '
         'itmPictureFrame8
         '
         Me.itmPictureFrame8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame8.Controls.Add(Me.picImage8)
         Me.itmPictureFrame8.Location = New System.Drawing.Point(328, 207)
         Me.itmPictureFrame8.Name = "itmPictureFrame8"
         Me.itmPictureFrame8.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame8.TabIndex = 28
         Me.itmPictureFrame8.TabStop = False
         '
+        'picImage8
+        '
+        Me.picImage8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage8.Location = New System.Drawing.Point(4, 10)
+        Me.picImage8.Name = "picImage8"
+        Me.picImage8.Size = New System.Drawing.Size(136, 113)
+        Me.picImage8.TabIndex = 0
+        Me.picImage8.TabStop = False
+        '
         'itmPictureFrame10
         '
         Me.itmPictureFrame10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame10.Controls.Add(Me.picImage10)
         Me.itmPictureFrame10.Location = New System.Drawing.Point(644, 207)
         Me.itmPictureFrame10.Name = "itmPictureFrame10"
         Me.itmPictureFrame10.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame10.TabIndex = 30
         Me.itmPictureFrame10.TabStop = False
         '
+        'picImage10
+        '
+        Me.picImage10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage10.Location = New System.Drawing.Point(4, 10)
+        Me.picImage10.Name = "picImage10"
+        Me.picImage10.Size = New System.Drawing.Size(136, 113)
+        Me.picImage10.TabIndex = 0
+        Me.picImage10.TabStop = False
+        '
         'itmPictureFrame9
         '
         Me.itmPictureFrame9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame9.Controls.Add(Me.picImage9)
         Me.itmPictureFrame9.Location = New System.Drawing.Point(486, 207)
         Me.itmPictureFrame9.Name = "itmPictureFrame9"
         Me.itmPictureFrame9.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame9.TabIndex = 29
         Me.itmPictureFrame9.TabStop = False
         '
+        'picImage9
+        '
+        Me.picImage9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage9.Location = New System.Drawing.Point(4, 10)
+        Me.picImage9.Name = "picImage9"
+        Me.picImage9.Size = New System.Drawing.Size(136, 113)
+        Me.picImage9.TabIndex = 0
+        Me.picImage9.TabStop = False
+        '
         'itmPictureFrame7
         '
         Me.itmPictureFrame7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame7.Controls.Add(Me.picImage7)
         Me.itmPictureFrame7.Location = New System.Drawing.Point(170, 207)
         Me.itmPictureFrame7.Name = "itmPictureFrame7"
         Me.itmPictureFrame7.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame7.TabIndex = 27
         Me.itmPictureFrame7.TabStop = False
         '
+        'picImage7
+        '
+        Me.picImage7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage7.Location = New System.Drawing.Point(4, 10)
+        Me.picImage7.Name = "picImage7"
+        Me.picImage7.Size = New System.Drawing.Size(136, 113)
+        Me.picImage7.TabIndex = 0
+        Me.picImage7.TabStop = False
+        '
         'itmPictureFrame6
         '
         Me.itmPictureFrame6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.itmPictureFrame6.Controls.Add(Me.picImage6)
         Me.itmPictureFrame6.Location = New System.Drawing.Point(12, 207)
         Me.itmPictureFrame6.Name = "itmPictureFrame6"
         Me.itmPictureFrame6.Size = New System.Drawing.Size(144, 128)
         Me.itmPictureFrame6.TabIndex = 26
         Me.itmPictureFrame6.TabStop = False
+        '
+        'picImage6
+        '
+        Me.picImage6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picImage6.Location = New System.Drawing.Point(4, 10)
+        Me.picImage6.Name = "picImage6"
+        Me.picImage6.Size = New System.Drawing.Size(136, 113)
+        Me.picImage6.TabIndex = 0
+        Me.picImage6.TabStop = False
         '
         'lblItem6
         '
@@ -280,7 +410,9 @@ Partial Class frmItemLookup
         'cboFilter
         '
         Me.cboFilter.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.cboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboFilter.FormattingEnabled = True
+        Me.cboFilter.Items.AddRange(New Object() {"SKU", "Name", "Description", "Category", "Vendor", "UPC"})
         Me.cboFilter.Location = New System.Drawing.Point(636, 12)
         Me.cboFilter.Name = "cboFilter"
         Me.cboFilter.Size = New System.Drawing.Size(125, 21)
@@ -375,6 +507,26 @@ Partial Class frmItemLookup
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmItemLookup"
         Me.Text = "Item Lookup"
+        Me.itmPictureFrame1.ResumeLayout(False)
+        CType(Me.picImage1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame2.ResumeLayout(False)
+        CType(Me.picImage2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame4.ResumeLayout(False)
+        CType(Me.picImage4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame5.ResumeLayout(False)
+        CType(Me.picImage5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame3.ResumeLayout(False)
+        CType(Me.picImage3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame8.ResumeLayout(False)
+        CType(Me.picImage8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame10.ResumeLayout(False)
+        CType(Me.picImage10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame9.ResumeLayout(False)
+        CType(Me.picImage9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame7.ResumeLayout(False)
+        CType(Me.picImage7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.itmPictureFrame6.ResumeLayout(False)
+        CType(Me.picImage6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -407,4 +559,14 @@ Partial Class frmItemLookup
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnSearch As PictureBox
     Friend WithEvents cboFilter As ComboBox
+    Friend WithEvents picImage1 As PictureBox
+    Friend WithEvents picImage2 As PictureBox
+    Friend WithEvents picImage4 As PictureBox
+    Friend WithEvents picImage5 As PictureBox
+    Friend WithEvents picImage3 As PictureBox
+    Friend WithEvents picImage8 As PictureBox
+    Friend WithEvents picImage10 As PictureBox
+    Friend WithEvents picImage9 As PictureBox
+    Friend WithEvents picImage7 As PictureBox
+    Friend WithEvents picImage6 As PictureBox
 End Class

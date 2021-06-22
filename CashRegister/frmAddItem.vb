@@ -243,14 +243,14 @@ Public Class frmAddItem
     Private Sub btnAddImage_Click(sender As Object, e As EventArgs) Handles btnAddImage.Click
 
         ' Declare a new variable to open a file
-        Dim opf As New OpenFileDialog
+        Dim ofd As New OpenFileDialog
 
         ' Selectable image types
-        opf.Filter = "Choose Image(*.jpg;*png;*gif)|*.jpg;*.png;*.gif"
+        ofd.Filter = "Choose Image(*.jpg;*png;*gif)|*.jpg;*.png;*.gif"
 
         ' If true set the image as the user's image and fill in the picture box
-        If opf.ShowDialog = DialogResult.OK Then
-            picItemImage.Image = Image.FromFile(opf.FileName)
+        If ofd.ShowDialog = DialogResult.OK Then
+            picItemImage.Image = Image.FromFile(ofd.FileName)
             picItemImage.SizeMode = PictureBoxSizeMode.Zoom
         End If
 
@@ -299,7 +299,7 @@ Public Class frmAddItem
 
         If (intNumChars = 12) Then
             If IsNumeric(txtUPC.Text) Then
-                UPC = txtUPC.Text 'convert it to a decimal and set price
+                UPC = txtUPC.Text 'set the UPC
             Else
                 MessageBox.Show("Please enter numbers only for the UPC.") 'pop a message box if an error
                 Return False
@@ -319,14 +319,9 @@ Public Class frmAddItem
         intNumChars = txtSKU.Text.Length
 
         If (8 <= intNumChars <= 12) Then
-            If IsNumeric(txtSKU.Text) Then
-                SKU = txtSKU.Text 'convert it to a decimal and set price
-            Else
-                MessageBox.Show("Please enter numbers only for the SKU.") 'pop a message box if an error
-                Return False
-            End If
+            SKU = txtSKU.Text 'set the SKU
         Else
-            MessageBox.Show("Please enter a number between 8 and 12 characters for the SKU.") 'pop a message box if an error
+            MessageBox.Show("Please enter an 8 to 12 character string for the SKU.") 'pop a message box if an error
             Return False
         End If
         Return True
@@ -335,8 +330,8 @@ Public Class frmAddItem
 
     Private Function VerifyInventory(ByRef InventoryAmt As Integer) As Boolean
         If IsNumeric(txtInventory.Text) Then
-            If CInt(txtInventory.Text) > 0 Then 'convert to decimal and check for the range
-                InventoryAmt = CInt(txtInventory.Text) 'convert it to a decimal and set price
+            If CInt(txtInventory.Text) > 0 Then 'check the range
+                InventoryAmt = CInt(txtInventory.Text) 'convert it to an int and set the inventory
             Else
                 MessageBox.Show("Please enter a number greater than 0 for the inventory.") 'pop a message box if an error
                 Return False
@@ -351,7 +346,7 @@ Public Class frmAddItem
 
     Private Function VerifySafetyStock(ByRef SafetyStock As Integer) As Boolean
         If IsNumeric(txtSafetytock.Text) Then
-            If CInt(txtSafetytock.Text) > 0 Then 'convert to int and check for the range
+            If CInt(txtSafetytock.Text) > 0 Then 'check the range
                 SafetyStock = CInt(txtSafetytock.Text) 'convert it to an int and set safety stock
             Else
                 MessageBox.Show("Please enter a number greater than 0 for the safety stock.") 'pop a message box if an error

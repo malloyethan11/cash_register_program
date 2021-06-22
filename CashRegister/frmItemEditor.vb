@@ -23,7 +23,76 @@ Public Class frmItemEditor
         ' Load the Vendor and Category comboboxes
         LoadVendors()
         LoadCategories()
+        LoadItems()
 
+    End Sub
+
+
+    Private Sub LoadItems()
+        Dim strSelect As String = ""
+        Dim strName As String = ""
+        Dim cmdSelect As OleDb.OleDbCommand ' this will be used for our Select statement
+        Dim drSourceTable As OleDb.OleDbDataReader ' this will be where our data is retrieved to
+        Dim dt As DataTable = New DataTable ' this is the table we will load from our reader
+        Dim intVendor As Integer
+        Dim intCategory As Integer
+        Dim imgItemImage As Byte()
+
+        Try
+
+
+
+            ' open the database
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' No, warn the user ...
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                    "The application will now close.",
+                                    Me.Text + " Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' and close the form/application
+                Me.Close()
+
+            End If
+
+            ' Build the select statement using PK from name selected
+            strSelect = "SELECT strSKU, strItemName, strItemDesc, intCategoryID, intVendorID, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC, imgItemImage FROM TItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+
+            ' Retrieve all the records 
+            cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+            drSourceTable = cmdSelect.ExecuteReader
+
+            ' load the data table from the reader
+            dt.Load(drSourceTable)
+
+
+            ' populate the text boxes with the data
+            txtSKU.Text = dt.Rows(0).Item(0).ToString
+            txtName.Text = dt.Rows(0).Item(1).ToString
+            txtDescription.Text = dt.Rows(0).Item(2).ToString
+            intCategory = CInt(dt.Rows(0).Item(3))
+            cboCategory.SelectedValue = intCategory
+            intVendor = CInt(dt.Rows(0).Item(4))
+            cboVendor.SelectedValue = intVendor
+            txtPrice.Text = dt.Rows(0).Item(5).ToString
+            txtInventory.Text = dt.Rows(0).Item(6).ToString
+            txtSafetytock.Text = dt.Rows(0).Item(7).ToString
+            txtUPC.Text = dt.Rows(0).Item(8).ToString
+            imgItemImage = dt.Rows(0).Item(9)
+
+            ' Retrieve the image from the database and convert it to the proper format to display in the picturebox
+            Dim ms As New MemoryStream(imgItemImage)
+            picItemImage.Image = Image.FromStream(ms)
+            picItemImage.SizeMode = PictureBoxSizeMode.Zoom
+
+            ' close the database connection
+            CloseDatabaseConnection()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 
@@ -223,27 +292,24 @@ Public Class frmItemEditor
                                                       "Database=CPDM-GroupB;" &
                                                       "User ID=" & strConnectionUsername & ";" &
                                                       "Password=" & strConnectionPassword & ";")
+        Dim strSelect As String = "Update TItems Set strSKU = '" & SKU & "', " & "strItemName = '" & ItemName &
+                    "', " & "strItemDesc = '" & ItemDesc & "', " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
+                     "decItemPrice = '" & ItemPrice & "', " & "intInventoryAmt = '" & InventoryAmt & "', " & "intSafetyStockAmt = '" & SafetyStockAmt & "', 
+                    " & "strUPC = '" & UPC & "', " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
 
-        Dim cmdUpdateItem As New SqlCommand("UPDATE TItems SET strSKU = @strSKU, strItemName = @strItemName, strItemDesc = @strItemDesc, intCategoryID = @intCategoryID, intVendorID = @intVendorID,
-                                            decItemPrice = @decItemPrice, intInventoryAmt = @intInventoryAmt, intSafetyStockAmt = @intSafetyStockAmt, strUPC = @strUPC, imgItemImage = @imgItemImage
-                                            WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey)
+        Dim cmdUpdateItem As New SqlCommand(strSelect, Connection)
         Dim ms As MemoryStream = New MemoryStream()
 
+        ' Save the image to a byte array
         picItemImage.Image.Save(ms, picItemImage.Image.RawFormat)
 
         cmdUpdateItem.Connection = Connection
 
+        ' Testing purposes to make sure the command is correct
+        'MessageBox.Show(strSelect)
+
 
         Try
-            cmdUpdateItem.Parameters.AddWithValue("@strSKU", SKU)
-            cmdUpdateItem.Parameters.AddWithValue("@strItemName", ItemName)
-            cmdUpdateItem.Parameters.AddWithValue("@strItemDesc", ItemDesc)
-            cmdUpdateItem.Parameters.AddWithValue("@intCategoryID", cboCategory.SelectedValue.ToString)
-            cmdUpdateItem.Parameters.AddWithValue("@intVendorID", cboVendor.SelectedValue.ToString)
-            cmdUpdateItem.Parameters.AddWithValue("@decItemPrice", ItemPrice)
-            cmdUpdateItem.Parameters.AddWithValue("@intInventoryAmt", InventoryAmt)
-            cmdUpdateItem.Parameters.AddWithValue("@intSafetyStockAmt", SafetyStockAmt)
-            cmdUpdateItem.Parameters.AddWithValue("@strUPC", UPC)
             cmdUpdateItem.Parameters.AddWithValue("@imgItemImage", ms.ToArray())
 
             Connection.Open()
@@ -263,70 +329,6 @@ Public Class frmItemEditor
         End Try
 
 
-    End Sub
-
-
-    Private Sub txtSKU_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtSKU.TextChanged
-
-        'Dim strSelect As String = ""
-        'Dim strName As String = ""
-        'Dim cmdSelect As OleDb.OleDbCommand ' this will be used for our Select statement
-        'Dim drSourceTable As OleDb.OleDbDataReader ' this will be where our data is retrieved to
-        'Dim dt As DataTable = New DataTable ' this is the table we will load from our reader
-        'Dim intShirtSize As Integer
-        'Dim intGender As Integer
-
-        'Try
-
-
-
-        '    ' open the database
-        '    If OpenDatabaseConnectionSQLServer() = False Then
-
-        '        ' No, warn the user ...
-        '        MessageBox.Show(Me, "Database connection error." & vbNewLine &
-        '                            "The application will now close.",
-        '                            Me.Text + " Error",
-        '                            MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-        '        ' and close the form/application
-        '        Me.Close()
-
-        '    End If
-
-        '    ' Build the select statement using PK from name selected
-        '    strSelect = "SELECT strFirstName, strLastName, strStreetAddress, strCity, strState, strZip, strPhoneNumber, strEmail, intShirtSizeID, intGenderID FROM TGolfers Where intGolferID = " & cboNames.SelectedValue.ToString
-
-        '    ' Retrieve all the records 
-        '    cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
-        '    drSourceTable = cmdSelect.ExecuteReader
-
-        '    ' load the data table from the reader
-        '    dt.Load(drSourceTable)
-
-        '    ' populate the text boxes with the data
-        '    txtFirstName.Text = dt.Rows(0).Item(0).ToString
-        '    txtLastName.Text = dt.Rows(0).Item(1).ToString
-        '    txtAddress.Text = dt.Rows(0).Item(2).ToString
-        '    txtCity.Text = dt.Rows(0).Item(3).ToString
-        '    txtState.Text = dt.Rows(0).Item(4).ToString
-        '    txtZip.Text = dt.Rows(0).Item(5).ToString
-        '    txtPhoneNumber.Text = dt.Rows(0).Item(6).ToString
-        '    txtEmail.Text = dt.Rows(0).Item(7).ToString
-
-        '    intShirtSize = CInt(dt.Rows(0).Item(8)) 'put shirt size ID into variable
-        '    cboShirtSize.SelectedValue = intShirtSize 'set selected value of shirt size combo box to correct size
-
-        '    intGender = CInt(dt.Rows(0).Item(9)) 'put gender ID into variable
-        '    cboGender.SelectedValue = intGender 'set selected value of gender combo box to correct gender
-
-        '    ' close the database connection
-        '    CloseDatabaseConnection()
-
-
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message)
-        'End Try
     End Sub
 
 
@@ -373,7 +375,7 @@ Public Class frmItemEditor
 
         If (intNumChars = 12) Then
             If IsNumeric(txtUPC.Text) Then
-                UPC = txtUPC.Text 'convert it to a decimal and set price
+                UPC = txtUPC.Text 'set the UPC
             Else
                 MessageBox.Show("Please enter numbers only for the UPC.") 'pop a message box if an error
                 Return False
@@ -393,14 +395,9 @@ Public Class frmItemEditor
         intNumChars = txtSKU.Text.Length
 
         If (8 <= intNumChars <= 12) Then
-            If IsNumeric(txtSKU.Text) Then
-                SKU = txtSKU.Text 'convert it to a decimal and set price
-            Else
-                MessageBox.Show("Please enter numbers only for the SKU.") 'pop a message box if an error
-                Return False
-            End If
+            SKU = txtSKU.Text 'set the SKU
         Else
-            MessageBox.Show("Please enter a number between 8 and 12 characters for the SKU.") 'pop a message box if an error
+            MessageBox.Show("Please enter an 8 to 12 character string for the SKU.") 'pop a message box if an error
             Return False
         End If
         Return True
@@ -409,8 +406,8 @@ Public Class frmItemEditor
 
     Private Function VerifyInventory(ByRef InventoryAmt As Integer) As Boolean
         If IsNumeric(txtInventory.Text) Then
-            If CInt(txtInventory.Text) > 0 Then 'convert to decimal and check for the range
-                InventoryAmt = CInt(txtInventory.Text) 'convert it to a decimal and set price
+            If CInt(txtInventory.Text) > 0 Then 'convert to int and check for the range
+                InventoryAmt = CInt(txtInventory.Text) 'convert it to an int and set the inventory amount
             Else
                 MessageBox.Show("Please enter a number greater than 0 for the inventory.") 'pop a message box if an error
                 Return False
@@ -441,6 +438,7 @@ Public Class frmItemEditor
 
     Private Function VerifyImage() As Boolean
 
+        ' Check if the image box is empty
         If Not picItemImage.Image Is Nothing Then
             Return True
         Else
@@ -451,4 +449,80 @@ Public Class frmItemEditor
 
     End Function
 
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+
+        Dim strDelete As String = ""
+        Dim strSelect As String = String.Empty
+        Dim strName As String = ""
+        Dim intRowsAffected As Integer
+        Dim cmdDelete As OleDb.OleDbCommand ' this will be used for our Delete statement
+        Dim dt As DataTable = New DataTable ' this is the table we will load from our reader
+        Dim result As DialogResult  ' this is the result of which button the user selects
+
+        Try
+            ' open the database this is in module
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' No, warn the user ...
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                    "The application will now close.",
+                                    Me.Text + " Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' and close the form/application
+                Me.Close()
+
+            End If
+
+            ' always ask before deleting!!!!
+            result = MessageBox.Show("Are you sure you want to Delete Item: Item Name-" & txtName.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+
+            ' this will figure out which button was selected. Cancel and No does nothing, Yes will allow deletion
+            Select Case result
+                Case DialogResult.Cancel
+                    MessageBox.Show("Action Canceled")
+                Case DialogResult.No
+                    MessageBox.Show("Action Canceled")
+                Case DialogResult.Yes
+
+
+                    ' Build the delete statement using PK from name selected
+                    ' must delete any child records first
+                    strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+
+                    ' Delete the record(s) 
+                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                    intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                    ' now we can delete the parent record
+                    strDelete = "Delete FROM TItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+
+                    ' Delete the record(s) 
+                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                    intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                    ' Did it work?
+                    If intRowsAffected > 0 Then
+
+                        ' Yes, success
+                        MessageBox.Show("Delete successful")
+
+                    End If
+
+            End Select
+
+
+            ' close the database connection
+            CloseDatabaseConnection()
+
+            Dim frmNewItemLookup As New frmItemLookup
+
+            OpenFormKillParent(Me, frmNewItemLookup)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
 End Class

@@ -18,6 +18,11 @@
             End If
         Next
 
+        LoadVendor()
+
+    End Sub
+
+    Private Sub LoadVendor()
         Try
 
             Dim strSelect As String = ""
@@ -56,9 +61,6 @@
             ' load table from data reader
             dt.Load(drSourceTable)
 
-            ' Add the item to the combo box. We need the event ID associated with the year so 
-            ' when we click on the year we can then use the ID to pull the rest of the event data.
-            ' We are binding the column year to the combo box display and value members. 
             txtVendor.Text = dt.Rows(0).Item(1).ToString
 
             ' Clean up
@@ -73,7 +75,6 @@
             MessageBox.Show(ex.Message)
 
         End Try
-
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -170,5 +171,85 @@
         Dim frmNewVendorLookup As New frmVendorLookup
 
         OpenFormKillParent(Me, frmNewVendorLookup)
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+
+        Dim strDelete As String = ""
+        Dim strSelect As String = String.Empty
+        Dim strName As String = ""
+        Dim intRowsAffected As Integer
+        Dim cmdDelete As OleDb.OleDbCommand ' this will be used for our Delete statement
+        Dim dt As DataTable = New DataTable ' this is the table we will load from our reader
+        Dim result As DialogResult  ' this is the result of which button the user selects
+
+        Try
+            ' open the database this is in module
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' No, warn the user ...
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                    "The application will now close.",
+                                    Me.Text + " Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' and close the form/application
+                Me.Close()
+
+            End If
+
+            ' always ask before deleting!!!!
+            result = MessageBox.Show("Are you sure you want to Delete Vendor: " & txtVendor.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+
+            ' this will figure out which button was selected. Cancel and No does nothing, Yes will allow deletion
+            Select Case result
+                Case DialogResult.Cancel
+                    MessageBox.Show("Action Canceled")
+                Case DialogResult.No
+                    MessageBox.Show("Action Canceled")
+                Case DialogResult.Yes
+
+
+                    ' Build the delete statement using PK from name selected
+                    ' must delete any child records first
+                    strDelete = "Delete FROM TItems Where intVendorID = " & intCurrentlyEditingVendorPrimaryKey
+
+                    ' Delete the record(s) 
+                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                    intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                    ' delete the other child record
+
+                    ' now we can delete the parent record
+                    strDelete = "Delete FROM TVendors Where intVendorID = " & intCurrentlyEditingVendorPrimaryKey
+
+                    ' Delete the record(s) 
+                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                    intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                    ' Did it work?
+                    If intRowsAffected > 0 Then
+
+                        ' Yes, success
+                        MessageBox.Show("Delete successful")
+
+                    End If
+
+            End Select
+
+
+            ' close the database connection
+            CloseDatabaseConnection()
+
+            ' call the go back to the vendor lookup after a delete
+            Dim frmNewVendorLookup As New frmVendorLookup
+
+            OpenFormKillParent(Me, frmNewVendorLookup)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class

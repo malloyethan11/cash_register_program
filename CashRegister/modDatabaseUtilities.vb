@@ -36,11 +36,11 @@ Public Module modDatabaseUtilities
                                                       "Password=;"
 
     ' SQL Express Connection string                             
-    Private m_strDatabaseConnectionStringPassword As String = "Provider=SQLOLEDB;" &
+    Public m_strDatabaseConnectionStringPassword As String = "Provider=SQLOLEDB;" &
                                                       "Server=itd2.cincinnatistate.edu;" &
                                                       "Database=CPDM-GroupB;" &
-                                                      "User ID=" & strConnectionUsername & ";" &
-                                                      "Password=" & strConnectionPassword & ";"
+                                                      "User ID=cpdm_nhaussler;" &
+                                                      "Password=0683419;"
 
 
 

@@ -75,7 +75,7 @@ Partial Class frmAddVendor
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
         Me.btnExit.TabIndex = 89
-        Me.btnExit.Text = "Cancel"
+        Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'frmAddVendor

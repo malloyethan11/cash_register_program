@@ -60,6 +60,8 @@ Partial Class frmItemLookup
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.lblQTY = New System.Windows.Forms.Label()
+        Me.txtQTY = New System.Windows.Forms.TextBox()
         Me.itmPictureFrame1.SuspendLayout()
         CType(Me.picImage1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.itmPictureFrame2.SuspendLayout()
@@ -471,12 +473,33 @@ Partial Class frmItemLookup
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'lblQTY
+        '
+        Me.lblQTY.AutoSize = True
+        Me.lblQTY.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQTY.Location = New System.Drawing.Point(324, 392)
+        Me.lblQTY.Name = "lblQTY"
+        Me.lblQTY.Size = New System.Drawing.Size(59, 13)
+        Me.lblQTY.TabIndex = 45
+        Me.lblQTY.Text = "Quantity:"
+        Me.lblQTY.Visible = False
+        '
+        'txtQTY
+        '
+        Me.txtQTY.Location = New System.Drawing.Point(389, 389)
+        Me.txtQTY.Name = "txtQTY"
+        Me.txtQTY.Size = New System.Drawing.Size(47, 20)
+        Me.txtQTY.TabIndex = 46
+        Me.txtQTY.Visible = False
+        '
         'frmItemLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 438)
+        Me.Controls.Add(Me.txtQTY)
+        Me.Controls.Add(Me.lblQTY)
         Me.Controls.Add(Me.cboFilter)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.lblPageNumber)
@@ -569,4 +592,6 @@ Partial Class frmItemLookup
     Friend WithEvents picImage9 As PictureBox
     Friend WithEvents picImage7 As PictureBox
     Friend WithEvents picImage6 As PictureBox
+    Friend WithEvents lblQTY As Label
+    Friend WithEvents txtQTY As TextBox
 End Class

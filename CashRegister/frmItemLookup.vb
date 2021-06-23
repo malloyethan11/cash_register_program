@@ -4,6 +4,7 @@ Imports System.IO
 Public Class frmItemLookup
 
     Public intPrimaryKeyReturnValue As Integer
+    Public intQuantityToPurchase As Integer
     Public Type As String = "Dialog"
     Dim intStartIndex As Integer = 0
     Dim drSet As System.Data.DataRowCollection
@@ -38,6 +39,12 @@ Public Class frmItemLookup
         lblItem8.Text = ""
         lblItem9.Text = ""
         lblItem10.Text = ""
+
+        ' Make qty visible if dialog
+        If (Type = "Dialog") Then
+            lblQTY.Visible = True
+            txtQTY.Visible = True
+        End If
 
     End Sub
 
@@ -450,6 +457,7 @@ Public Class frmItemLookup
                 If (Type = "Dialog") Then
                     ' Close the form and return the primary key
                     intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                    intQuantityToPurchase = txtQTY.Text
                     Me.Close()
                 Else
                     ' Open the editor form and pass on the primary key
@@ -523,6 +531,17 @@ Public Class frmItemLookup
     Private Sub picImage10_Click(sender As Object, e As EventArgs) Handles picImage10.Click
 
         OpenItem(intStartIndex + 9)
+
+    End Sub
+
+    Private Sub txtQTY_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtQTY.KeyPress
+
+        If (IsNumeric(e.KeyChar.ToString) = False And Asc(e.KeyChar) <> 8) Then
+
+            e.Handled = True
+            CType(sender, TextBox).Clear()
+
+        End If
 
     End Sub
 End Class

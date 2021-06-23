@@ -1,0 +1,132 @@
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.vbprojAssemblyReference.cache
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmAddItem.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmCheckout.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmInventory.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmInvoice.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmItemEditor.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmLogin.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmMain.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmItemLookup.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmPriceAdjust.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmReturn.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmTransactions.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.frmViewTransactions.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.Resources.resources
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\bin\Debug\CashRegister.exe.config
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\bin\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\bin\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\bin\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\CashRegister\FormsDesign\obj\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\bin\Debug\CashRegister.exe.config
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\bin\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\bin\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\bin\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.vbprojAssemblyReference.cache
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmCheckout.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmInventory.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmInvoice.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmItemEditor.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmLogin.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmMain.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmItemLookup.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmPriceAdjust.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmReturn.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmTransactions.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmViewTransactions.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.Resources.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+D:\College Homework\CAPSTONE\CashRegister\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.exe.config
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.pdb
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbprojAssemblyReference.cache
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmCheckout.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInventory.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInvoice.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemEditor.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmLogin.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmMain.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemLookup.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPriceAdjust.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmReturn.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmTransactions.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmViewTransactions.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.Resources.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.exe.config
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.exe
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.pdb
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\bin\Debug\CashRegister.xml
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbprojAssemblyReference.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmCheckout.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInventory.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInvoice.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemEditor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmLogin.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmMain.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemLookup.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPriceAdjust.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmReturn.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmTransactions.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmViewTransactions.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.Resources.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\bin\Debug\CashRegister.exe.config
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\bin\Debug\CashRegister.exe
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\bin\Debug\CashRegister.pdb
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\bin\Debug\CashRegister.xml
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.AssemblyReference.cache
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmCheckout.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInventory.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmInvoice.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemEditor.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmLogin.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmMain.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmItemLookup.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPriceAdjust.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmReturn.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmTransactions.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorEditor.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmVendorLookup.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmViewTransactions.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.Resources.resources
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.GenerateResource.cache
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.CoreCompileInputs.cache
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb

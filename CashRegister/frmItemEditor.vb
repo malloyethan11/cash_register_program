@@ -5,6 +5,7 @@ Public Class frmItemEditor
 
     ' This public variable is set by the vendor lookup form when it opens this form
     Public intCurrentlyEditingVendorPrimaryKey As Integer
+    Public blnChangedData As Boolean = False
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -238,7 +239,7 @@ Public Class frmItemEditor
 
         Dim frmNewLookup As New frmItemLookup
         frmNewLookup.Type = "Standalone"
-        OpenFormKillParent(Me, frmNewLookup)
+        Me.Close()
 
     End Sub
 
@@ -317,6 +318,9 @@ Public Class frmItemEditor
             ' have to let the user know what happened 
             If cmdUpdateItem.ExecuteNonQuery() = 1 Then
                 MessageBox.Show("Update successful. Item " & ItemName & " has been updated.")
+
+                ' Mark flag to indicate reload on return to item lookup page
+                blnChangedData = True
 
             Else
                 MessageBox.Show("Update failed.")
@@ -508,6 +512,9 @@ Public Class frmItemEditor
                         ' Yes, success
                         MessageBox.Show("Delete successful")
 
+                        ' Mark flag to indicate reload on return to item lookup page
+                        blnChangedData = True
+
                     End If
 
             End Select
@@ -518,7 +525,7 @@ Public Class frmItemEditor
 
             Dim frmNewItemLookup As New frmItemLookup
 
-            OpenFormKillParent(Me, frmNewItemLookup)
+            Me.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)

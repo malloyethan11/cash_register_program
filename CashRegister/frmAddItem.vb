@@ -183,6 +183,18 @@ Public Class frmAddItem
             End If
         End If
 
+        ' Clear all boxes
+        txtSKU.ResetText()
+        txtName.ResetText()
+        txtDescription.ResetText()
+        txtPrice.ResetText()
+        txtInventory.ResetText()
+        txtSafetytock.ResetText()
+        txtUPC.ResetText()
+        cboCategory.SelectedIndex = 0
+        cboVendors.SelectedIndex = 0
+        picItemImage.Image = Nothing
+
     End Sub
 
     Private Sub AddItem(ByVal SKU As String, ByVal ItemName As String, ByVal ItemDesc As String, ByVal ItemPrice As Decimal, ByVal InventoryAmt As Integer, ByVal SafetyStockAmt As Integer,
@@ -371,5 +383,4 @@ Public Class frmAddItem
 
 
     End Function
-
 End Class

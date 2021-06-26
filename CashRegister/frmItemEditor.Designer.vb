@@ -23,7 +23,6 @@ Partial Class frmItemEditor
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemEditor))
-        Me.itmPictureFrame = New System.Windows.Forms.GroupBox()
         Me.txtSKU = New System.Windows.Forms.TextBox()
         Me.lblSKU = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
@@ -44,18 +43,11 @@ Partial Class frmItemEditor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnChangeImage = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.picItemImage = New System.Windows.Forms.PictureBox()
+        CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'itmPictureFrame
-        '
-        Me.itmPictureFrame.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.itmPictureFrame.Location = New System.Drawing.Point(13, 12)
-        Me.itmPictureFrame.Name = "itmPictureFrame"
-        Me.itmPictureFrame.Size = New System.Drawing.Size(135, 135)
-        Me.itmPictureFrame.TabIndex = 48
-        Me.itmPictureFrame.TabStop = False
         '
         'txtSKU
         '
@@ -286,18 +278,18 @@ Partial Class frmItemEditor
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnChangeImage
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.CashRegister.My.Resources.Resources.SkinnyButton
-        Me.Button1.Location = New System.Drawing.Point(12, 153)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 29)
-        Me.Button1.TabIndex = 106
-        Me.Button1.Text = "Change Image"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnChangeImage.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnChangeImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnChangeImage.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnChangeImage.Image = Global.CashRegister.My.Resources.Resources.SkinnyButton
+        Me.btnChangeImage.Location = New System.Drawing.Point(12, 153)
+        Me.btnChangeImage.Name = "btnChangeImage"
+        Me.btnChangeImage.Size = New System.Drawing.Size(135, 29)
+        Me.btnChangeImage.TabIndex = 106
+        Me.btnChangeImage.Text = "Change Image"
+        Me.btnChangeImage.UseVisualStyleBackColor = True
         '
         'btnExit
         '
@@ -312,13 +304,23 @@ Partial Class frmItemEditor
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'picItemImage
+        '
+        Me.picItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picItemImage.Location = New System.Drawing.Point(12, 12)
+        Me.picItemImage.Name = "picItemImage"
+        Me.picItemImage.Size = New System.Drawing.Size(135, 135)
+        Me.picItemImage.TabIndex = 108
+        Me.picItemImage.TabStop = False
+        '
         'frmItemEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(746, 237)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.picItemImage)
+        Me.Controls.Add(Me.btnChangeImage)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.cboVendor)
         Me.Controls.Add(Me.cboCategory)
@@ -338,37 +340,37 @@ Partial Class frmItemEditor
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblSKU)
         Me.Controls.Add(Me.txtSKU)
-        Me.Controls.Add(Me.itmPictureFrame)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmItemEditor"
         Me.Text = "Item Editor"
+        CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents itmPictureFrame As GroupBox
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnUpdate As Button
-    Friend WithEvents txtSKU As TextBox
-    Friend WithEvents lblSKU As Label
-    Friend WithEvents lblName As Label
-    Friend WithEvents txtName As TextBox
-    Friend WithEvents lblDescription As Label
-    Friend WithEvents txtDescription As TextBox
-    Friend WithEvents lblPrice As Label
-    Friend WithEvents txtPrice As TextBox
-    Friend WithEvents txtInventory As TextBox
-    Friend WithEvents lblInventory As Label
-    Friend WithEvents txtUPC As TextBox
-    Friend WithEvents lblUPC As Label
-    Friend WithEvents txtSafetytock As TextBox
-    Friend WithEvents lblSafetyStock As Label
-    Friend WithEvents cboVendor As ComboBox
-    Friend WithEvents cboCategory As ComboBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnExit As Button
+	Friend WithEvents btnUpdate As Button
+	Friend WithEvents txtSKU As TextBox
+	Friend WithEvents lblSKU As Label
+	Friend WithEvents lblName As Label
+	Friend WithEvents txtName As TextBox
+	Friend WithEvents lblDescription As Label
+	Friend WithEvents txtDescription As TextBox
+	Friend WithEvents lblPrice As Label
+	Friend WithEvents txtPrice As TextBox
+	Friend WithEvents txtInventory As TextBox
+	Friend WithEvents lblInventory As Label
+	Friend WithEvents txtUPC As TextBox
+	Friend WithEvents lblUPC As Label
+	Friend WithEvents txtSafetytock As TextBox
+	Friend WithEvents lblSafetyStock As Label
+	Friend WithEvents cboVendor As ComboBox
+	Friend WithEvents cboCategory As ComboBox
+	Friend WithEvents Label3 As Label
+	Friend WithEvents Label2 As Label
+	Friend WithEvents btnChangeImage As Button
+	Friend WithEvents btnExit As Button
+	Friend WithEvents picItemImage As PictureBox
 End Class

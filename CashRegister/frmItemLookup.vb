@@ -1,10 +1,14 @@
-﻿
+﻿Imports System.Data.SqlClient
+Imports System.IO
+
 Public Class frmItemLookup
 
     Public intPrimaryKeyReturnValue As Integer
+    Public intQuantityToPurchase As Integer
     Public Type As String = "Dialog"
     Dim intStartIndex As Integer = 0
-    Dim drSet() As System.Data.DataRow
+    Dim drSet As System.Data.DataRowCollection
+    Dim bytList As Byte()
     Dim intPages As Integer = 0
     Dim intTotalItems As Integer = 0
 
@@ -35,6 +39,12 @@ Public Class frmItemLookup
         lblItem8.Text = ""
         lblItem9.Text = ""
         lblItem10.Text = ""
+
+        ' Make qty visible if dialog
+        If (Type = "Dialog") Then
+            lblQTY.Visible = True
+            txtQTY.Visible = True
+        End If
 
     End Sub
 
@@ -84,6 +94,7 @@ Public Class frmItemLookup
 
     Private Sub LoadItems()
 
+        Cursor.Current = Cursors.WaitCursor
 
         Try
 
@@ -178,7 +189,7 @@ Public Class frmItemLookup
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intItemID, strItemName, imgItemImage FROM TItems WHERE " & strSelectList
+                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -188,7 +199,7 @@ Public Class frmItemLookup
                 dt.Load(drSourceTable)
 
                 ' Populate the array based on search
-                drSet = dt.Select("intItemID>0")
+                drSet = dt.Rows
 
             ElseIf (strFilter = "intVendorID") Then
 
@@ -221,7 +232,7 @@ Public Class frmItemLookup
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intItemID, strItemName, imgItemImage FROM TItems WHERE " & strSelectList
+                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -231,10 +242,10 @@ Public Class frmItemLookup
                 dt.Load(drSourceTable)
 
                 ' Populate the array based on search
-                drSet = dt.Select("intItemID>0")
+                drSet = dt.Rows
 
             Else
-                strSelect = "SELECT intItemID, strItemName, imgItemImage FROM TItems WHERE " & strFilter & " Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%" & txtSearch.Text & "%'"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -244,7 +255,7 @@ Public Class frmItemLookup
                 dt.Load(drSourceTable)
 
                 ' Populate the array based on search
-                drSet = dt.Select("intItemID>0")
+                drSet = dt.Rows
             End If
 
             ' Build the select statement
@@ -255,7 +266,7 @@ Public Class frmItemLookup
             'End If
 
             ' Calc total pages
-            intTotalItems = drSet.Length
+            intTotalItems = drSet.Count
             While (intTotalItems > 0)
                 intPages += 1
                 intTotalItems -= 10
@@ -278,10 +289,14 @@ Public Class frmItemLookup
 
         Catch excError As Exception
 
+            Cursor.Current = Cursors.Default
+
             ' Log and display error message
             MessageBox.Show(excError.Message)
 
         End Try
+
+        Cursor.Current = Cursors.Default
 
     End Sub
 
@@ -294,70 +309,119 @@ Public Class frmItemLookup
             lblPageNumber.Text = "Page " & (intStartIndex + 10) / 10 & " of " & (intPages)
         End If
 
+        ' Image thing
+        picImage1.Image = Nothing
+        picImage2.Image = Nothing
+        picImage3.Image = Nothing
+        picImage4.Image = Nothing
+        picImage5.Image = Nothing
+        picImage6.Image = Nothing
+        picImage7.Image = Nothing
+        picImage8.Image = Nothing
+        picImage9.Image = Nothing
+        picImage10.Image = Nothing
+
         ' Populate each
-        If (drSet.Length >= intStartIndex + 1) Then
-            lblItem1.Text = drSet(intStartIndex)("strItemName").ToString
-            'Dim bytImageData(0) As Byte
-            'bytImageData = CType(drSet(intStartIndex)("imgItemImage"), Byte())
-            'Dim memData As System.IO.MemoryStream = New System.IO.MemoryStream(bytImageData)
-            'picImage1.Image = Image.FromStream(memData)
+        If (drSet.Count >= intStartIndex + 1) Then
+            ' Get Name
+            lblItem1.Text = drSet(intStartIndex)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex, picImage1)
         Else
             lblItem1.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 2) Then
-            lblItem2.Text = drSet(intStartIndex + 1)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 2) Then
+            ' Get Name
+            lblItem2.Text = drSet(intStartIndex + 1)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 1)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 1, picImage2)
         Else
             lblItem2.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 3) Then
-            lblItem3.Text = drSet(intStartIndex + 2)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 3) Then
+            ' Get Name
+            lblItem3.Text = drSet(intStartIndex + 2)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 2)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 2, picImage3)
         Else
             lblItem3.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 4) Then
-            lblItem4.Text = drSet(intStartIndex + 3)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 4) Then
+            ' Get name
+            lblItem4.Text = drSet(intStartIndex + 3)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 3)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 3, picImage4)
         Else
             lblItem4.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 5) Then
-            lblItem5.Text = drSet(intStartIndex + 4)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 5) Then
+            ' Get name
+            lblItem5.Text = drSet(intStartIndex + 4)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 4)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 4, picImage5)
         Else
             lblItem5.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 6) Then
-            lblItem6.Text = drSet(intStartIndex + 5)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 6) Then
+            ' Get name
+            lblItem6.Text = drSet(intStartIndex + 5)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 5)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 5, picImage6)
         Else
             lblItem6.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 7) Then
-            lblItem7.Text = drSet(intStartIndex + 6)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 7) Then
+            ' Get name
+            lblItem7.Text = drSet(intStartIndex + 6)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 6)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 6, picImage7)
         Else
             lblItem7.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 8) Then
-            lblItem8.Text = drSet(intStartIndex + 7)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 8) Then
+            ' Get name
+            lblItem8.Text = drSet(intStartIndex + 7)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 7)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 7, picImage8)
         Else
             lblItem8.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 9) Then
-            lblItem9.Text = drSet(intStartIndex + 8)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 9) Then
+            ' Get name
+            lblItem9.Text = drSet(intStartIndex + 8)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 8)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 8, picImage9)
         Else
             lblItem9.Text = ""
         End If
 
-        If (drSet.Length >= intStartIndex + 10) Then
-            lblItem10.Text = drSet(intStartIndex + 9)("strItemName").ToString
+        If (drSet.Count >= intStartIndex + 10) Then
+            ' Get name
+            lblItem10.Text = drSet(intStartIndex + 9)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 9)("decItemPrice").ToString, 2)
+            ' Get image
+            GetImage(intStartIndex + 9, picImage10)
         Else
             lblItem10.Text = ""
         End If
+
+    End Sub
+
+    Private Sub GetImage(ByVal intIndex As Integer, ByRef picImageBox As PictureBox)
+
+        ' Get image
+        Dim bytImageData(0) As Byte
+        bytImageData = drSet(intIndex)("imgItemImage")
+        Dim memData As System.IO.MemoryStream = New System.IO.MemoryStream(bytImageData)
+        picImageBox.Image = Image.FromStream(memData)
+        picImageBox.SizeMode = PictureBoxSizeMode.Zoom
 
     End Sub
 
@@ -365,7 +429,7 @@ Public Class frmItemLookup
 
         ' Go to next page
         If (drSet IsNot Nothing) Then
-            If (drSet.Length > intStartIndex + 10) Then
+            If (drSet.Count > intStartIndex + 10) Then
                 intStartIndex += 10
                 DisplayData()
             End If
@@ -389,16 +453,21 @@ Public Class frmItemLookup
 
         ' Open the item
         If (drSet IsNot Nothing) Then
-            If (drSet.Length > intIndex) Then
+            If (drSet.Count > intIndex) Then
                 If (Type = "Dialog") Then
                     ' Close the form and return the primary key
                     intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                    intQuantityToPurchase = txtQTY.Text
                     Me.Close()
                 Else
                     ' Open the editor form and pass on the primary key
                     Dim frmNewEditor As New frmItemEditor
                     frmNewEditor.intCurrentlyEditingVendorPrimaryKey = drSet(intIndex)("intItemID").ToString
-                    OpenFormKillParent(Me, frmNewEditor)
+                    OpenFormMaintainParent(Me, frmNewEditor)
+                    ' If data change has occured, then load the items again
+                    If (frmNewEditor.blnChangedData = True) Then
+                        LoadItems()
+                    End If
                 End If
             End If
         End If
@@ -462,6 +531,17 @@ Public Class frmItemLookup
     Private Sub picImage10_Click(sender As Object, e As EventArgs) Handles picImage10.Click
 
         OpenItem(intStartIndex + 9)
+
+    End Sub
+
+    Private Sub txtQTY_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtQTY.KeyPress
+
+        If (IsNumeric(e.KeyChar.ToString) = False And Asc(e.KeyChar) <> 8) Then
+
+            e.Handled = True
+            CType(sender, TextBox).Clear()
+
+        End If
 
     End Sub
 End Class

@@ -14,29 +14,4 @@
         Next
 
     End Sub
-
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
-
-
-    End Sub
-
-    Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click
-
-
-
-    End Sub
-
-    Private Sub btnPrintAndEmail_Click(sender As Object, e As EventArgs) Handles btnPrintAndEmail.Click
-
-
-
-    End Sub
-
-    Private Sub btnNone_Click(sender As Object, e As EventArgs) Handles btnNone.Click
-
-        ' close the form
-        Me.Close()
-
-    End Sub
 End Class

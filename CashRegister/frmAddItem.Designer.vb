@@ -36,15 +36,16 @@ Partial Class frmAddItem
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.lblSKU = New System.Windows.Forms.Label()
         Me.txtSKU = New System.Windows.Forms.TextBox()
-        Me.itmPictureFrame = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cboCategory = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.cboVendor = New System.Windows.Forms.ComboBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cboVendors = New System.Windows.Forms.ComboBox()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnAddImage = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.picItemImage = New System.Windows.Forms.PictureBox()
+        CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtSafetytock
@@ -197,15 +198,6 @@ Partial Class frmAddItem
         Me.txtSKU.Size = New System.Drawing.Size(182, 20)
         Me.txtSKU.TabIndex = 87
         '
-        'itmPictureFrame
-        '
-        Me.itmPictureFrame.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.itmPictureFrame.Location = New System.Drawing.Point(13, 12)
-        Me.itmPictureFrame.Name = "itmPictureFrame"
-        Me.itmPictureFrame.Size = New System.Drawing.Size(135, 135)
-        Me.itmPictureFrame.TabIndex = 86
-        Me.itmPictureFrame.TabStop = False
-        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -249,41 +241,41 @@ Partial Class frmAddItem
         Me.Label3.Text = "Vendor:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'cboVendor
+        'cboVendors
         '
-        Me.cboVendor.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cboVendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboVendor.FormattingEnabled = True
-        Me.cboVendor.Location = New System.Drawing.Point(507, 72)
-        Me.cboVendor.Name = "cboVendor"
-        Me.cboVendor.Size = New System.Drawing.Size(227, 21)
-        Me.cboVendor.TabIndex = 101
+        Me.cboVendors.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.cboVendors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVendors.FormattingEnabled = True
+        Me.cboVendors.Location = New System.Drawing.Point(507, 72)
+        Me.cboVendors.Name = "cboVendors"
+        Me.cboVendors.Size = New System.Drawing.Size(227, 21)
+        Me.cboVendors.TabIndex = 101
         '
-        'btnDelete
+        'btnAdd
         '
-        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDelete.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.btnDelete.Location = New System.Drawing.Point(621, 183)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(113, 42)
-        Me.btnDelete.TabIndex = 85
-        Me.btnDelete.Text = "Add"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAdd.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
+        Me.btnAdd.Location = New System.Drawing.Point(621, 183)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(113, 42)
+        Me.btnAdd.TabIndex = 85
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAddImage
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.CashRegister.My.Resources.Resources.SkinnyButton
-        Me.Button1.Location = New System.Drawing.Point(13, 153)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 29)
-        Me.Button1.TabIndex = 84
-        Me.Button1.Text = "Add Image"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAddImage.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnAddImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddImage.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddImage.Image = Global.CashRegister.My.Resources.Resources.SkinnyButton
+        Me.btnAddImage.Location = New System.Drawing.Point(13, 153)
+        Me.btnAddImage.Name = "btnAddImage"
+        Me.btnAddImage.Size = New System.Drawing.Size(135, 29)
+        Me.btnAddImage.TabIndex = 84
+        Me.btnAddImage.Text = "Add Image"
+        Me.btnAddImage.UseVisualStyleBackColor = True
         '
         'btnExit
         '
@@ -295,8 +287,17 @@ Partial Class frmAddItem
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
         Me.btnExit.TabIndex = 84
-        Me.btnExit.Text = "Cancel"
+        Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'picItemImage
+        '
+        Me.picItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picItemImage.Location = New System.Drawing.Point(14, 12)
+        Me.picItemImage.Name = "picItemImage"
+        Me.picItemImage.Size = New System.Drawing.Size(135, 135)
+        Me.picItemImage.TabIndex = 102
+        Me.picItemImage.TabStop = False
         '
         'frmAddItem
         '
@@ -304,7 +305,8 @@ Partial Class frmAddItem
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(746, 237)
-        Me.Controls.Add(Me.cboVendor)
+        Me.Controls.Add(Me.picItemImage)
+        Me.Controls.Add(Me.cboVendors)
         Me.Controls.Add(Me.cboCategory)
         Me.Controls.Add(Me.txtSafetytock)
         Me.Controls.Add(Me.Label3)
@@ -322,13 +324,13 @@ Partial Class frmAddItem
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblSKU)
         Me.Controls.Add(Me.txtSKU)
-        Me.Controls.Add(Me.itmPictureFrame)
-        Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnAddImage)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAddItem"
         Me.Text = "Add Item"
+        CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -347,13 +349,13 @@ Partial Class frmAddItem
     Friend WithEvents txtName As TextBox
     Friend WithEvents lblSKU As Label
     Friend WithEvents txtSKU As TextBox
-    Friend WithEvents itmPictureFrame As GroupBox
-    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnAdd As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents cboCategory As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents cboVendor As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cboVendors As ComboBox
+    Friend WithEvents btnAddImage As Button
+    Friend WithEvents picItemImage As PictureBox
 End Class

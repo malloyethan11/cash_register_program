@@ -18,23 +18,18 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-
-        ' close the form
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
-
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
 
-        ' open frmTransactions, kill frmMain
         OpenFormKillParent(Me, frmTransactions)
 
     End Sub
 
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
 
-        ' open frmInventory, kill frmMain
         OpenFormKillParent(Me, frmInventory)
 
     End Sub

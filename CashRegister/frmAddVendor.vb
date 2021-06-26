@@ -49,8 +49,9 @@ Public Class frmAddVendor
                 End If
 
                 ' build db insert string and command
-                strDbInsertString = "INSERT INTO TVendors (strVendorName) VALUES ('" & strVendor & "');"
+                strDbInsertString = "INSERT INTO TVendors (strVendorName) VALUES (" & "?" & ");"
                 cmdInsert = New OleDb.OleDbCommand(strDbInsertString, m_conAdministrator)
+                cmdInsert.Parameters.AddWithValue("Vendor", strVendor)
 
                 ' insert the records
                 cmdInsert.ExecuteNonQuery()

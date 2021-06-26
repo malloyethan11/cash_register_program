@@ -293,10 +293,17 @@ Public Class frmItemEditor
                                                       "Database=CPDM-GroupB;" &
                                                       "User ID=" & strConnectionUsername & ";" &
                                                       "Password=" & strConnectionPassword & ";")
-        Dim strSelect As String = "Update TItems Set strSKU = '" & SKU & "', " & "strItemName = '" & ItemName &
-                    "', " & "strItemDesc = '" & ItemDesc & "', " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
-                     "decItemPrice = '" & ItemPrice & "', " & "intInventoryAmt = '" & InventoryAmt & "', " & "intSafetyStockAmt = '" & SafetyStockAmt & "', 
-                    " & "strUPC = '" & UPC & "', " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
+
+        'Dim strSelect As String = "Update TItems Set strSKU = '" & SKU & "', " & "strItemName = '" & ItemName &
+        '            "', " & "strItemDesc = '" & ItemDesc & "', " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
+        '             "decItemPrice = '" & ItemPrice & "', " & "intInventoryAmt = '" & InventoryAmt & "', " & "intSafetyStockAmt = '" & SafetyStockAmt & "', 
+        '            " & "strUPC = '" & UPC & "', " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
+
+        ' Update for handling SQL injection attacks
+        Dim strSelect As String = "Update TItems Set strSKU = @strSKU, " & "strItemName = @strItemName" &
+                    ", " & "strItemDesc = @strItemDesc, " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
+                     "decItemPrice = @decItemPrice, " & "intInventoryAmt = @intInventoryAmt, " & "intSafetyStockAmt = @intSafetyStockAmt," &
+                    "strUPC = @strUPC, " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
 
         Dim cmdUpdateItem As New SqlCommand(strSelect, Connection)
         Dim ms As MemoryStream = New MemoryStream()
@@ -311,6 +318,14 @@ Public Class frmItemEditor
 
 
         Try
+
+            cmdUpdateItem.Parameters.AddWithValue("@strSKU", SKU)
+            cmdUpdateItem.Parameters.AddWithValue("@strItemName", ItemName)
+            cmdUpdateItem.Parameters.AddWithValue("@strItemDesc", ItemDesc)
+            cmdUpdateItem.Parameters.AddWithValue("@decItemPrice", ItemPrice)
+            cmdUpdateItem.Parameters.AddWithValue("@intInventoryAmt", InventoryAmt)
+            cmdUpdateItem.Parameters.AddWithValue("@intSafetyStockAmt", SafetyStockAmt)
+            cmdUpdateItem.Parameters.AddWithValue("@strUPC", UPC)
             cmdUpdateItem.Parameters.AddWithValue("@imgItemImage", ms.ToArray())
 
             Connection.Open()

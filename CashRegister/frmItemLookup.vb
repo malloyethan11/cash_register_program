@@ -159,11 +159,13 @@ Public Class frmItemLookup
 
             If (strFilter = "intCategoryID") Then
 
-                strSelect = "SELECT intCategoryID, strCategory FROM TCategories
-                WHERE strCategory Like '%" & txtSearch.Text & "%'"
+                'strSelect = "SELECT intCategoryID, strCategory FROM TCategories
+                'WHERE strCategory Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intCategoryID, strCategory FROM TCategories WHERE strCategory Like '%' +" & "?" & "+ '%'"
 
                 ' Retrieve all the records 
                 cmdVenCatSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdVenCatSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drVenCatSourceTable = cmdVenCatSelect.ExecuteReader
 
                 ' load table from data reader
@@ -203,10 +205,11 @@ Public Class frmItemLookup
 
             ElseIf (strFilter = "intVendorID") Then
 
-                strSelect = "SELECT intVendorID, strVendorName FROM TVendors WHERE strVendorName Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intVendorID, strVendorName FROM TVendors WHERE strVendorName Like '%'+" & "?" & "+'%'"
 
                 ' Retrieve all the records 
                 cmdVenCatSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdVenCatSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drVenCatSourceTable = cmdVenCatSelect.ExecuteReader
 
                 ' load table from data reader
@@ -245,10 +248,11 @@ Public Class frmItemLookup
                 drSet = dt.Rows
 
             Else
-                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%'+" & "?" & "+'%'"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drSourceTable = cmdSelect.ExecuteReader
 
                 ' load table from data reader

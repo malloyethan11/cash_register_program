@@ -175,6 +175,18 @@ Public Class frmAddItem
 
                                     ' pass inputs, now validated to sub AddItem to enter in DB
                                     AddItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+
+                                    ' Clear all boxes
+                                    txtSKU.ResetText()
+                                    txtName.ResetText()
+                                    txtDescription.ResetText()
+                                    txtPrice.ResetText()
+                                    txtInventory.ResetText()
+                                    txtSafetytock.ResetText()
+                                    txtUPC.ResetText()
+                                    cboCategory.SelectedIndex = 0
+                                    cboVendors.SelectedIndex = 0
+                                    picItemImage.Image = Nothing
                                 End If
                             End If
                         End If
@@ -182,18 +194,6 @@ Public Class frmAddItem
                 End If
             End If
         End If
-
-        ' Clear all boxes
-        txtSKU.ResetText()
-        txtName.ResetText()
-        txtDescription.ResetText()
-        txtPrice.ResetText()
-        txtInventory.ResetText()
-        txtSafetytock.ResetText()
-        txtUPC.ResetText()
-        cboCategory.SelectedIndex = 0
-        cboVendors.SelectedIndex = 0
-        picItemImage.Image = Nothing
 
     End Sub
 

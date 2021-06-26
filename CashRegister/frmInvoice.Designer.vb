@@ -23,59 +23,59 @@ Partial Class frmInvoice
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInvoice))
-        Me.btnCheckout = New System.Windows.Forms.Button()
-        Me.btnInventory = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnEmail = New System.Windows.Forms.Button()
+        Me.btnPrintAndEmail = New System.Windows.Forms.Button()
+        Me.btnNone = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnCheckout
+        'btnPrint
         '
-        Me.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCheckout.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckout.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnCheckout.Location = New System.Drawing.Point(12, 12)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(284, 42)
-        Me.btnCheckout.TabIndex = 7
-        Me.btnCheckout.Text = "Print"
-        Me.btnCheckout.UseVisualStyleBackColor = True
+        Me.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrint.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnPrint.Location = New System.Drawing.Point(12, 12)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(284, 42)
+        Me.btnPrint.TabIndex = 7
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
         '
-        'btnInventory
+        'btnEmail
         '
-        Me.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnInventory.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventory.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnInventory.Location = New System.Drawing.Point(12, 60)
-        Me.btnInventory.Name = "btnInventory"
-        Me.btnInventory.Size = New System.Drawing.Size(284, 42)
-        Me.btnInventory.TabIndex = 6
-        Me.btnInventory.Text = "Email"
-        Me.btnInventory.UseVisualStyleBackColor = True
+        Me.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEmail.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEmail.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnEmail.Location = New System.Drawing.Point(12, 60)
+        Me.btnEmail.Name = "btnEmail"
+        Me.btnEmail.Size = New System.Drawing.Size(284, 42)
+        Me.btnEmail.TabIndex = 6
+        Me.btnEmail.Text = "Email"
+        Me.btnEmail.UseVisualStyleBackColor = True
         '
-        'btnExit
+        'btnPrintAndEmail
         '
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnExit.Location = New System.Drawing.Point(12, 108)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 5
-        Me.btnExit.Text = "Print && Email"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnPrintAndEmail.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrintAndEmail.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrintAndEmail.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnPrintAndEmail.Location = New System.Drawing.Point(12, 108)
+        Me.btnPrintAndEmail.Name = "btnPrintAndEmail"
+        Me.btnPrintAndEmail.Size = New System.Drawing.Size(284, 42)
+        Me.btnPrintAndEmail.TabIndex = 5
+        Me.btnPrintAndEmail.Text = "Print && Email"
+        Me.btnPrintAndEmail.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnNone
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.Button1.Location = New System.Drawing.Point(12, 156)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(284, 42)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "None"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNone.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnNone.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNone.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnNone.Location = New System.Drawing.Point(12, 156)
+        Me.btnNone.Name = "btnNone"
+        Me.btnNone.Size = New System.Drawing.Size(284, 42)
+        Me.btnNone.TabIndex = 5
+        Me.btnNone.Text = "None"
+        Me.btnNone.UseVisualStyleBackColor = True
         '
         'frmInvoice
         '
@@ -83,10 +83,10 @@ Partial Class frmInvoice
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(308, 211)
-        Me.Controls.Add(Me.btnCheckout)
-        Me.Controls.Add(Me.btnInventory)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.btnEmail)
+        Me.Controls.Add(Me.btnNone)
+        Me.Controls.Add(Me.btnPrintAndEmail)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmInvoice"
@@ -95,8 +95,8 @@ Partial Class frmInvoice
 
     End Sub
 
-    Friend WithEvents btnCheckout As Button
-    Friend WithEvents btnInventory As Button
-    Friend WithEvents btnExit As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents btnEmail As Button
+    Friend WithEvents btnPrintAndEmail As Button
+    Friend WithEvents btnNone As Button
 End Class

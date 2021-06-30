@@ -19,6 +19,69 @@
             End If
         Next
 
+        LoadTransactionTypes()
+
+    End Sub
+
+    Private Sub LoadTransactionTypes()
+        Try
+
+            ' Init select statement string
+            Dim strSelect As String = ""
+            ' Init select statement Db command
+            Dim cmdSelect As OleDb.OleDbCommand
+            ' Init data reader
+            Dim drSourceTable As OleDb.OleDbDataReader
+            ' Init data table
+            Dim dt As DataTable = New DataTable
+
+            ' Open the DB
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' The database is not open
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' Close the form/application
+                Me.Close()
+
+            End If
+
+            ' Build the select statement
+            strSelect = "SELECT intTransactionTypeID, strTransactionType FROM TTransactionTypes"
+
+            ' Retrieve all the records 
+            cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+            drSourceTable = cmdSelect.ExecuteReader
+
+            ' load table from data reader
+            dt.Load(drSourceTable)
+
+            ' Add the item to the combo box. We need the user ID associated with the name so 
+            ' when we click on the name we can then use the ID to pull the rest of the user data.
+            ' We are binding the column name to the combo box display and value members. 
+            cboType.ValueMember = "intTransactionTypeID"
+            cboType.DisplayMember = "strTransactionType"
+            cboType.DataSource = dt
+
+            ' Select the first item in the list by default
+            If cboType.Items.Count > 0 Then cboType.SelectedIndex = 0
+
+            ' Clean up
+            drSourceTable.Close()
+
+            ' close the database connection
+            CloseDatabaseConnection()
+
+        Catch excError As Exception
+
+            ' Log and display error message
+            MessageBox.Show(excError.Message)
+
+        End Try
+
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -172,7 +235,7 @@
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedIndex + 1 & " AND (" & strSelectList & ")"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -221,7 +284,7 @@
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedIndex + 1 & " AND (" & strSelectList & ")"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -237,7 +300,7 @@
                 drStatePaySourceTable.Close()
 
             Else
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedIndex + 1 & " AND (" & strFilter & " Like '%'+" & "?" & "+'%')"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strFilter & " Like '%'+" & "?" & "+'%')"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -256,7 +319,7 @@
             intTotalTransactions = drSet.Count
             While (intTotalTransactions > 0)
                 intPages += 1
-                intTotalTransactions -= 5
+                intTotalTransactions -= 4
             End While
 
             ' Set the page number to 1 if 0
@@ -293,7 +356,7 @@
         If (intStartIndex < 4) Then
             lblPageNumber.Text = "Page " & (intStartIndex + 1) & " of " & (intPages)
         Else
-            lblPageNumber.Text = "Page " & (intStartIndex + 5) / 5 & " of " & (intPages)
+            lblPageNumber.Text = "Page " & (intStartIndex + 4) / 4 & " of " & (intPages)
         End If
 
         ' I wish there was a more iterative approach to this, but this was the best way to handle it because every control has its own unique name.
@@ -315,7 +378,9 @@
                             txtPaymentType1,
                             txtState1,
                             lstItems1,
-                            lblTransactionID1)
+                            lblTransactionID1,
+                            lblUser1,
+                            txtDescription1)
 
         ' Load transaction 2
         DisplayTransaction(intStartIndex + 1,
@@ -335,7 +400,9 @@
                             txtPaymentType2,
                             txtState2,
                             lstItems2,
-                            lblTransactionID2)
+                            lblTransactionID2,
+                            lblUser2,
+                            txtDescription2)
 
         ' Load transaction 3
         DisplayTransaction(intStartIndex + 2,
@@ -355,7 +422,9 @@
                             txtPaymentType3,
                             txtState3,
                             lstItems3,
-                            lblTransactionID3)
+                            lblTransactionID3,
+                            lblUser3,
+                            txtDescription3)
 
         ' Load transaction 4
         DisplayTransaction(intStartIndex + 3,
@@ -375,34 +444,17 @@
                             txtPaymentType4,
                             txtState4,
                             lstItems4,
-                            lblTransactionID4)
-
-        ' Load transaction 5
-        DisplayTransaction(intStartIndex + 4,
-                            txtCredit5,
-                            txtFirstName5,
-                            txtLastName5,
-                            txtExpirationDate5,
-                            txtSecurityCode5,
-                            txtEmail5,
-                            txtPhoneNumber5,
-                            txtAddress5,
-                            txtCity5,
-                            txtZip5,
-                            txtTotalPrice5,
-                            txtSalesTax5,
-                            txtTransactionType5,
-                            txtPaymentType5,
-                            txtState5,
-                            lstItems5,
-                            lblTransactionID5)
+                            lblTransactionID4,
+                            lblUser4,
+                            txtDescription4)
 
     End Sub
 
     Private Sub DisplayTransaction(ByVal intIndex As Integer, ByRef txtCredit As TextBox, ByRef txtFirstName As TextBox, ByRef txtLastName As TextBox, ByRef txtExpirationDate As TextBox,
-                                    ByRef txtSecurityCode As TextBox, ByRef txtEmail As TextBox, ByRef txtPhoneNumber As TextBox, ByRef txtAddress As TextBox,
-                                    ByRef txtCity As TextBox, ByRef txtZip As TextBox, ByRef txtTotalPrice As TextBox, ByRef txtSalesTax As TextBox, ByRef txtTransactionType As TextBox,
-                                    ByRef txtPaymentType As TextBox, ByRef txtState As TextBox, ByRef lstItems As ListBox, ByRef lblPrimaryKey As Label)
+                                   ByRef txtSecurityCode As TextBox, ByRef txtEmail As TextBox, ByRef txtPhoneNumber As TextBox, ByRef txtAddress As TextBox,
+                                   ByRef txtCity As TextBox, ByRef txtZip As TextBox, ByRef txtTotalPrice As TextBox, ByRef txtSalesTax As TextBox, ByRef txtTransactionType As TextBox,
+                                   ByRef txtPaymentType As TextBox, ByRef txtState As TextBox, ByRef lstItems As ListBox, ByRef lblPrimaryKey As Label, ByRef lblUser As Label,
+                                   ByRef txtDescription As TextBox)
 
         ' Populate each
         If (drSet.Count >= intIndex + 1) Then
@@ -421,6 +473,8 @@
             txtSalesTax.Text = drSet(intIndex)("decSalesTax").ToString
             txtTransactionType.Text = cboType.Text
             lblPrimaryKey.Text = drSet(intIndex)("intTransactionID").ToString
+            lblUser.Text = "Cashier: " & drSet(intIndex)("strUserName").ToString
+            txtDescription.Text = drSet(intIndex)("strDescription").ToString
 
             ' START ITEMS GET
 
@@ -488,6 +542,9 @@
                 ' Advance
                 intCount += 1
 
+                ' Close
+                drItemNameSourceTable.Close()
+
             Next
 
             ' Clean up
@@ -527,41 +584,46 @@
             ' Clean up
             drPaymentSourceTable.Close()
 
-            ' Get linked field state
-            ' Init select string
-            Dim strSelectForState As String
-            ' Init command
-            Dim cmdStateSelect As OleDb.OleDbCommand
-            ' Init data reader
-            Dim drStateSourceTable As OleDb.OleDbDataReader
-            ' Init data table
-            Dim dtState As DataTable = New DataTable
-            ' Init row set
-            Dim drStateTypeSet() As System.Data.DataRow
+            If (cboType.Text <> "Pay-In" And cboType.Text <> "Pay-Out") Then
+                ' Get linked field state
+                ' Init select string
+                Dim strSelectForState As String
+                ' Init command
+                Dim cmdStateSelect As OleDb.OleDbCommand
+                ' Init data reader
+                Dim drStateSourceTable As OleDb.OleDbDataReader
+                ' Init data table
+                Dim dtState As DataTable = New DataTable
+                ' Init row set
+                Dim drStateTypeSet() As System.Data.DataRow
 
-            ' Select statement
-            strSelectForState = "SELECT intStateID, strState FROM TStates WHERE intStateID = ?"
+                ' Select statement
+                strSelectForState = "SELECT intStateID, strState FROM TStates WHERE intStateID = ?"
 
-            ' Retrieve all the records 
-            cmdStateSelect = New OleDb.OleDbCommand(strSelectForState, m_conAdministrator)
-            cmdStateSelect.Parameters.AddWithValue("State", drSet(intIndex)("intStateID").ToString)
-            drStateSourceTable = cmdStateSelect.ExecuteReader
+                ' Retrieve all the records 
+                cmdStateSelect = New OleDb.OleDbCommand(strSelectForState, m_conAdministrator)
+                cmdStateSelect.Parameters.AddWithValue("State", drSet(intIndex)("intStateID").ToString)
+                drStateSourceTable = cmdStateSelect.ExecuteReader
 
-            ' load table from data reader
-            dtState.Load(drStateSourceTable)
+                ' load table from data reader
+                dtState.Load(drStateSourceTable)
 
-            ' Populate the array based on search
-            drStateTypeSet = dtState.Select()
+                ' Populate the array based on search
+                drStateTypeSet = dtState.Select()
 
-            ' Display
-            txtState.Text = drStateTypeSet(0)("strState").ToString
+                ' Display
+                txtState.Text = drStateTypeSet(0)("strState").ToString
 
-            ' Clean up
-            drStateSourceTable.Close()
+                ' Clean up
+                drStateSourceTable.Close()
+            Else
+                txtState.Text = "N/A"
+            End If
+
             drItemSourceTable.Close()
 
-        Else
-            txtCredit.Text = ""
+            Else
+                txtCredit.Text = ""
             txtFirstName.Text = ""
             txtLastName.Text = ""
             txtExpirationDate.Text = ""
@@ -577,6 +639,9 @@
             txtTotalPrice.Text = ""
             txtSalesTax.Text = ""
             lstItems.Items.Clear()
+            lblUser.Text = "Cashier:"
+            lblPrimaryKey.Text = "0"
+            txtDescription.Text = ""
         End If
 
     End Sub
@@ -602,7 +667,7 @@
         ' Go to last page
         If (drSet IsNot Nothing) Then
             If (intStartIndex > 0) Then
-                intStartIndex -= 5
+                intStartIndex -= 4
                 DisplayData()
             End If
         End If
@@ -634,8 +699,8 @@
 
         ' Go to next page
         If (drSet IsNot Nothing) Then
-            If (drSet.Count > intStartIndex + 5) Then
-                intStartIndex += 5
+            If (drSet.Count > intStartIndex + 4) Then
+                intStartIndex += 4
                 DisplayData()
             End If
         End If
@@ -646,5 +711,4 @@
         Cursor.Current = Cursors.Default
 
     End Sub
-
 End Class

@@ -238,9 +238,17 @@ Public Class frmAddItem
 
             End If
 
+        Catch excError As SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Catch ex As Exception
+
+            ' Handle General errors
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Close()
+
         End Try
 
 

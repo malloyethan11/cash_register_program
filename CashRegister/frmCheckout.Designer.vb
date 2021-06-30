@@ -178,7 +178,6 @@ Partial Class frmCheckout
         '
         'TextBox9
         '
-        Me.TextBox9.Enabled = False
         Me.TextBox9.Location = New System.Drawing.Point(90, 124)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(389, 20)
@@ -187,7 +186,6 @@ Partial Class frmCheckout
         'lblState
         '
         Me.lblState.AutoSize = True
-        Me.lblState.Enabled = False
         Me.lblState.Location = New System.Drawing.Point(280, 153)
         Me.lblState.Name = "lblState"
         Me.lblState.Size = New System.Drawing.Size(35, 13)
@@ -198,7 +196,6 @@ Partial Class frmCheckout
         'lblAddress
         '
         Me.lblAddress.AutoSize = True
-        Me.lblAddress.Enabled = False
         Me.lblAddress.Location = New System.Drawing.Point(5, 127)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(79, 13)
@@ -226,7 +223,6 @@ Partial Class frmCheckout
         'lblZip
         '
         Me.lblZip.AutoSize = True
-        Me.lblZip.Enabled = False
         Me.lblZip.Location = New System.Drawing.Point(31, 179)
         Me.lblZip.Name = "lblZip"
         Me.lblZip.Size = New System.Drawing.Size(53, 13)
@@ -236,7 +232,6 @@ Partial Class frmCheckout
         '
         'TextBox8
         '
-        Me.TextBox8.Enabled = False
         Me.TextBox8.Location = New System.Drawing.Point(90, 176)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(390, 20)
@@ -244,7 +239,6 @@ Partial Class frmCheckout
         '
         'TextBox7
         '
-        Me.TextBox7.Enabled = False
         Me.TextBox7.Location = New System.Drawing.Point(90, 150)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(158, 20)
@@ -253,7 +247,6 @@ Partial Class frmCheckout
         'lblCity
         '
         Me.lblCity.AutoSize = True
-        Me.lblCity.Enabled = False
         Me.lblCity.Location = New System.Drawing.Point(57, 153)
         Me.lblCity.Name = "lblCity"
         Me.lblCity.Size = New System.Drawing.Size(27, 13)
@@ -367,9 +360,7 @@ Partial Class frmCheckout
         'cboState
         '
         Me.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboState.Enabled = False
         Me.cboState.FormattingEnabled = True
-        Me.cboState.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
         Me.cboState.Location = New System.Drawing.Point(320, 149)
         Me.cboState.Name = "cboState"
         Me.cboState.Size = New System.Drawing.Size(159, 21)

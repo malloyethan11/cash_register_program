@@ -3,8 +3,8 @@ Imports System.Data.SqlClient
 
 Public Class frmItemEditor
 
-    ' This public variable is set by the vendor lookup form when it opens this form
-    Public intCurrentlyEditingVendorPrimaryKey As Integer
+    ' This public variable is set by the item lookup form when it opens this form
+    Public intCurrentlyEditingItemPrimaryKey As Integer
     Public blnChangedData As Boolean = False
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -58,7 +58,7 @@ Public Class frmItemEditor
             End If
 
             ' Build the select statement using PK from name selected
-            strSelect = "SELECT strSKU, strItemName, strItemDesc, intCategoryID, intVendorID, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC, imgItemImage FROM TItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+            strSelect = "SELECT strSKU, strItemName, strItemDesc, intCategoryID, intVendorID, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC, imgItemImage FROM TItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
 
             ' Retrieve all the records 
             cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -303,7 +303,7 @@ Public Class frmItemEditor
         Dim strSelect As String = "Update TItems Set strSKU = @strSKU, " & "strItemName = @strItemName" &
                     ", " & "strItemDesc = @strItemDesc, " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
                      "decItemPrice = @decItemPrice, " & "intInventoryAmt = @intInventoryAmt, " & "intSafetyStockAmt = @intSafetyStockAmt," &
-                    "strUPC = @strUPC, " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
+                    "strUPC = @strUPC, " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingItemPrimaryKey
 
         Dim cmdUpdateItem As New SqlCommand(strSelect, Connection)
         Dim ms As MemoryStream = New MemoryStream()
@@ -341,10 +341,17 @@ Public Class frmItemEditor
                 MessageBox.Show("Update failed.")
 
             End If
+        Catch excError As SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         Catch ex As Exception
+
+            ' Handle general errors
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Close()
+
         End Try
 
 
@@ -508,14 +515,15 @@ Public Class frmItemEditor
 
                     ' Build the delete statement using PK from name selected
                     ' must delete any child records first
-                    strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+                    strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
 
                     ' Delete the record(s) 
                     cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
                     intRowsAffected = cmdDelete.ExecuteNonQuery()
 
                     ' now we can delete the parent record
-                    strDelete = "Delete FROM TItems Where intItemID = " & intCurrentlyEditingVendorPrimaryKey
+                    strDelete = "Delete FROM TItems Where intItemID = " & strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
+
 
                     ' Delete the record(s) 
                     cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)

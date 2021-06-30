@@ -31,170 +31,171 @@ Partial Class frmViewTransactions
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.grpTransaction1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.lblSalesTax = New System.Windows.Forms.Label()
+        Me.txtSalesTax1 = New System.Windows.Forms.TextBox()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.txtTotalPrice1 = New System.Windows.Forms.TextBox()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.txtAddress1 = New System.Windows.Forms.TextBox()
         Me.lblState = New System.Windows.Forms.Label()
         Me.lblAddress = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtCity1 = New System.Windows.Forms.TextBox()
         Me.lblCity = New System.Windows.Forms.Label()
-        Me.cboState = New System.Windows.Forms.ComboBox()
         Me.lstItems1 = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber1 = New System.Windows.Forms.TextBox()
+        Me.txtEmail1 = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblZip = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtZip1 = New System.Windows.Forms.TextBox()
+        Me.txtSecurityCode1 = New System.Windows.Forms.TextBox()
         Me.lblSecurityCode = New System.Windows.Forms.Label()
-        Me.dtpExpirationDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtCredit1 = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtExpirationDate1 = New System.Windows.Forms.TextBox()
+        Me.txtLastName1 = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtState1 = New System.Windows.Forms.TextBox()
+        Me.txtTransactionType1 = New System.Windows.Forms.TextBox()
+        Me.txtPaymentType1 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName1 = New System.Windows.Forms.TextBox()
         Me.lblPaymentType = New System.Windows.Forms.Label()
         Me.lblTransactionID1 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.Label56 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtExpirationDate2 = New System.Windows.Forms.TextBox()
+        Me.txtState2 = New System.Windows.Forms.TextBox()
+        Me.txtTransactionType2 = New System.Windows.Forms.TextBox()
+        Me.txtPaymentType2 = New System.Windows.Forms.TextBox()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.txtSalesTax2 = New System.Windows.Forms.TextBox()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.txtTotalPrice2 = New System.Windows.Forms.TextBox()
+        Me.lstItems2 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAddress2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCity2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber2 = New System.Windows.Forms.TextBox()
+        Me.txtEmail2 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.txtZip2 = New System.Windows.Forms.TextBox()
+        Me.txtSecurityCode2 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.txtCredit2 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.txtLastName2 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName2 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lblTransactionID2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.txtExpirationDate3 = New System.Windows.Forms.TextBox()
+        Me.txtState3 = New System.Windows.Forms.TextBox()
+        Me.txtTransactionType3 = New System.Windows.Forms.TextBox()
+        Me.txtPaymentType3 = New System.Windows.Forms.TextBox()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.txtSalesTax3 = New System.Windows.Forms.TextBox()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.txtTotalPrice3 = New System.Windows.Forms.TextBox()
+        Me.lstItems3 = New System.Windows.Forms.ListBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.txtAddress3 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.txtCity3 = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber3 = New System.Windows.Forms.TextBox()
+        Me.txtEmail3 = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.txtZip3 = New System.Windows.Forms.TextBox()
+        Me.txtSecurityCode3 = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.txtCredit3 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.txtLastName3 = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName3 = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.lblTransactionID3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.txtExpirationDate4 = New System.Windows.Forms.TextBox()
+        Me.txtState4 = New System.Windows.Forms.TextBox()
+        Me.txtTransactionType4 = New System.Windows.Forms.TextBox()
+        Me.txtPaymentType4 = New System.Windows.Forms.TextBox()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.txtSalesTax4 = New System.Windows.Forms.TextBox()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.txtTotalPrice4 = New System.Windows.Forms.TextBox()
+        Me.lstItems4 = New System.Windows.Forms.ListBox()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.txtAddress4 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.txtCity4 = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber4 = New System.Windows.Forms.TextBox()
+        Me.txtEmail4 = New System.Windows.Forms.TextBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.txtZip4 = New System.Windows.Forms.TextBox()
+        Me.txtSecurityCode4 = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.txtCredit4 = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.txtLastName4 = New System.Windows.Forms.TextBox()
         Me.Label43 = New System.Windows.Forms.Label()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName4 = New System.Windows.Forms.TextBox()
         Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
+        Me.lblTransactionID4 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.txtExpirationDate5 = New System.Windows.Forms.TextBox()
+        Me.txtState5 = New System.Windows.Forms.TextBox()
+        Me.txtTransactionType5 = New System.Windows.Forms.TextBox()
+        Me.txtPaymentType5 = New System.Windows.Forms.TextBox()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.txtSalesTax5 = New System.Windows.Forms.TextBox()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.txtTotalPrice5 = New System.Windows.Forms.TextBox()
+        Me.lstItems5 = New System.Windows.Forms.ListBox()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.txtAddress5 = New System.Windows.Forms.TextBox()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.txtCity5 = New System.Windows.Forms.TextBox()
         Me.Label49 = New System.Windows.Forms.Label()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.Label50 = New System.Windows.Forms.Label()
-        Me.TextBox37 = New System.Windows.Forms.TextBox()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber5 = New System.Windows.Forms.TextBox()
+        Me.txtEmail5 = New System.Windows.Forms.TextBox()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
+        Me.txtZip5 = New System.Windows.Forms.TextBox()
+        Me.txtSecurityCode5 = New System.Windows.Forms.TextBox()
         Me.Label53 = New System.Windows.Forms.Label()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
+        Me.txtCredit5 = New System.Windows.Forms.TextBox()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.TextBox42 = New System.Windows.Forms.TextBox()
+        Me.txtLastName5 = New System.Windows.Forms.TextBox()
         Me.Label58 = New System.Windows.Forms.Label()
-        Me.TextBox43 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName5 = New System.Windows.Forms.TextBox()
         Me.Label59 = New System.Windows.Forms.Label()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.lblSalesTax = New System.Windows.Forms.Label()
-        Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.TextBox45 = New System.Windows.Forms.TextBox()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.TextBox46 = New System.Windows.Forms.TextBox()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.TextBox47 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.TextBox48 = New System.Windows.Forms.TextBox()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.TextBox49 = New System.Windows.Forms.TextBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.TextBox50 = New System.Windows.Forms.TextBox()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.TextBox51 = New System.Windows.Forms.TextBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.TextBox52 = New System.Windows.Forms.TextBox()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.TextBox53 = New System.Windows.Forms.TextBox()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.lblTransactionID5 = New System.Windows.Forms.Label()
+        Me.cboType = New System.Windows.Forms.ComboBox()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTransaction1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -205,18 +206,20 @@ Partial Class frmViewTransactions
         '
         'cboFilter
         '
-        Me.cboFilter.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.cboFilter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboFilter.FormattingEnabled = True
-        Me.cboFilter.Location = New System.Drawing.Point(879, 12)
+        Me.cboFilter.Items.AddRange(New Object() {"Payment Type", "First Name", "Last Name", "Address", "City", "State", "Zip", "Phone Number", "Email", "Total Price", "Sales Tax"})
+        Me.cboFilter.Location = New System.Drawing.Point(1075, 12)
         Me.cboFilter.Name = "cboFilter"
         Me.cboFilter.Size = New System.Drawing.Size(125, 21)
         Me.cboFilter.TabIndex = 51
         '
         'lblPageNumber
         '
-        Me.lblPageNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblPageNumber.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPageNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPageNumber.Location = New System.Drawing.Point(826, 860)
+        Me.lblPageNumber.Location = New System.Drawing.Point(1022, 860)
         Me.lblPageNumber.Name = "lblPageNumber"
         Me.lblPageNumber.Size = New System.Drawing.Size(86, 42)
         Me.lblPageNumber.TabIndex = 48
@@ -225,26 +228,27 @@ Partial Class frmViewTransactions
         '
         'txtSearch
         '
-        Me.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtSearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSearch.BackColor = System.Drawing.Color.White
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSearch.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch.ForeColor = System.Drawing.Color.DarkGray
         Me.txtSearch.Location = New System.Drawing.Point(12, 12)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(861, 21)
+        Me.txtSearch.Size = New System.Drawing.Size(926, 21)
         Me.txtSearch.TabIndex = 49
         Me.txtSearch.Text = "Type here to search..."
         '
         'btnSearch
         '
-        Me.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSearch.BackColor = System.Drawing.Color.White
         Me.btnSearch.BackgroundImage = Global.CashRegister.My.Resources.Resources.Search
         Me.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSearch.InitialImage = CType(resources.GetObject("btnSearch.InitialImage"), System.Drawing.Image)
-        Me.btnSearch.Location = New System.Drawing.Point(1010, 12)
+        Me.btnSearch.Location = New System.Drawing.Point(1206, 12)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(21, 22)
         Me.btnSearch.TabIndex = 50
@@ -252,11 +256,11 @@ Partial Class frmViewTransactions
         '
         'btnNext
         '
-        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnNext.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNext.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.btnNext.Location = New System.Drawing.Point(918, 860)
+        Me.btnNext.Location = New System.Drawing.Point(1114, 860)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(113, 42)
         Me.btnNext.TabIndex = 47
@@ -265,11 +269,11 @@ Partial Class frmViewTransactions
         '
         'btnBack
         '
-        Me.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBack.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.btnBack.Location = New System.Drawing.Point(707, 860)
+        Me.btnBack.Location = New System.Drawing.Point(903, 860)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(113, 42)
         Me.btnBack.TabIndex = 46
@@ -278,7 +282,7 @@ Partial Class frmViewTransactions
         '
         'btnExit
         '
-        Me.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Image = Global.CashRegister.My.Resources.Resources.Button
@@ -291,51 +295,104 @@ Partial Class frmViewTransactions
         '
         'grpTransaction1
         '
+        Me.grpTransaction1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpTransaction1.Controls.Add(Me.lblSalesTax)
-        Me.grpTransaction1.Controls.Add(Me.TextBox44)
+        Me.grpTransaction1.Controls.Add(Me.txtSalesTax1)
         Me.grpTransaction1.Controls.Add(Me.Label61)
-        Me.grpTransaction1.Controls.Add(Me.TextBox45)
-        Me.grpTransaction1.Controls.Add(Me.ComboBox6)
+        Me.grpTransaction1.Controls.Add(Me.txtTotalPrice1)
         Me.grpTransaction1.Controls.Add(Me.Label56)
-        Me.grpTransaction1.Controls.Add(Me.TextBox9)
+        Me.grpTransaction1.Controls.Add(Me.txtAddress1)
         Me.grpTransaction1.Controls.Add(Me.lblState)
         Me.grpTransaction1.Controls.Add(Me.lblAddress)
-        Me.grpTransaction1.Controls.Add(Me.TextBox7)
+        Me.grpTransaction1.Controls.Add(Me.txtCity1)
         Me.grpTransaction1.Controls.Add(Me.lblCity)
-        Me.grpTransaction1.Controls.Add(Me.ComboBox5)
-        Me.grpTransaction1.Controls.Add(Me.cboState)
         Me.grpTransaction1.Controls.Add(Me.lstItems1)
         Me.grpTransaction1.Controls.Add(Me.Label4)
-        Me.grpTransaction1.Controls.Add(Me.txtPhoneNumber)
-        Me.grpTransaction1.Controls.Add(Me.txtEmail)
+        Me.grpTransaction1.Controls.Add(Me.txtPhoneNumber1)
+        Me.grpTransaction1.Controls.Add(Me.txtEmail1)
         Me.grpTransaction1.Controls.Add(Me.lblEmail)
         Me.grpTransaction1.Controls.Add(Me.lblZip)
-        Me.grpTransaction1.Controls.Add(Me.TextBox8)
-        Me.grpTransaction1.Controls.Add(Me.TextBox6)
+        Me.grpTransaction1.Controls.Add(Me.txtZip1)
+        Me.grpTransaction1.Controls.Add(Me.txtSecurityCode1)
         Me.grpTransaction1.Controls.Add(Me.lblSecurityCode)
-        Me.grpTransaction1.Controls.Add(Me.dtpExpirationDate)
         Me.grpTransaction1.Controls.Add(Me.Label3)
         Me.grpTransaction1.Controls.Add(Me.Label2)
-        Me.grpTransaction1.Controls.Add(Me.TextBox5)
+        Me.grpTransaction1.Controls.Add(Me.txtCredit1)
         Me.grpTransaction1.Controls.Add(Me.lblLastName)
-        Me.grpTransaction1.Controls.Add(Me.TextBox4)
+        Me.grpTransaction1.Controls.Add(Me.txtExpirationDate1)
+        Me.grpTransaction1.Controls.Add(Me.txtLastName1)
         Me.grpTransaction1.Controls.Add(Me.lblFirstName)
-        Me.grpTransaction1.Controls.Add(Me.TextBox3)
+        Me.grpTransaction1.Controls.Add(Me.txtState1)
+        Me.grpTransaction1.Controls.Add(Me.txtTransactionType1)
+        Me.grpTransaction1.Controls.Add(Me.txtPaymentType1)
+        Me.grpTransaction1.Controls.Add(Me.txtFirstName1)
         Me.grpTransaction1.Controls.Add(Me.lblPaymentType)
         Me.grpTransaction1.Controls.Add(Me.lblTransactionID1)
         Me.grpTransaction1.Location = New System.Drawing.Point(12, 39)
         Me.grpTransaction1.Name = "grpTransaction1"
-        Me.grpTransaction1.Size = New System.Drawing.Size(1019, 158)
+        Me.grpTransaction1.Size = New System.Drawing.Size(1215, 158)
         Me.grpTransaction1.TabIndex = 52
         Me.grpTransaction1.TabStop = False
         '
-        'TextBox9
+        'lblSalesTax
         '
-        Me.TextBox9.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(680, 20)
-        Me.TextBox9.TabIndex = 97
+        Me.lblSalesTax.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblSalesTax.Location = New System.Drawing.Point(776, 115)
+        Me.lblSalesTax.Name = "lblSalesTax"
+        Me.lblSalesTax.Size = New System.Drawing.Size(61, 23)
+        Me.lblSalesTax.TabIndex = 106
+        Me.lblSalesTax.Text = "Sales Tax:"
+        Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax1
+        '
+        Me.txtSalesTax1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax1.Location = New System.Drawing.Point(843, 117)
+        Me.txtSalesTax1.Name = "txtSalesTax1"
+        Me.txtSalesTax1.ReadOnly = True
+        Me.txtSalesTax1.Size = New System.Drawing.Size(365, 20)
+        Me.txtSalesTax1.TabIndex = 105
+        Me.txtSalesTax1.TabStop = False
+        '
+        'Label61
+        '
+        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label61.Location = New System.Drawing.Point(776, 89)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(61, 23)
+        Me.Label61.TabIndex = 104
+        Me.Label61.Text = "Total Price:"
+        Me.Label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtTotalPrice1
+        '
+        Me.txtTotalPrice1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPrice1.Location = New System.Drawing.Point(843, 91)
+        Me.txtTotalPrice1.Name = "txtTotalPrice1"
+        Me.txtTotalPrice1.ReadOnly = True
+        Me.txtTotalPrice1.Size = New System.Drawing.Size(365, 20)
+        Me.txtTotalPrice1.TabIndex = 103
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Location = New System.Drawing.Point(195, 16)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(93, 13)
+        Me.Label56.TabIndex = 101
+        Me.Label56.Text = "Transaction Type:"
+        Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtAddress1
+        '
+        Me.txtAddress1.Location = New System.Drawing.Point(90, 91)
+        Me.txtAddress1.Name = "txtAddress1"
+        Me.txtAddress1.ReadOnly = True
+        Me.txtAddress1.Size = New System.Drawing.Size(680, 20)
+        Me.txtAddress1.TabIndex = 97
         '
         'lblState
         '
@@ -357,13 +414,13 @@ Partial Class frmViewTransactions
         Me.lblAddress.Text = "Street Address:"
         Me.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox7
+        'txtCity1
         '
-        Me.TextBox7.Location = New System.Drawing.Point(90, 117)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(229, 20)
-        Me.TextBox7.TabIndex = 96
+        Me.txtCity1.Location = New System.Drawing.Point(90, 117)
+        Me.txtCity1.Name = "txtCity1"
+        Me.txtCity1.ReadOnly = True
+        Me.txtCity1.Size = New System.Drawing.Size(229, 20)
+        Me.txtCity1.TabIndex = 96
         '
         'lblCity
         '
@@ -375,22 +432,14 @@ Partial Class frmViewTransactions
         Me.lblCity.Text = "City:"
         Me.lblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'cboState
-        '
-        Me.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboState.FormattingEnabled = True
-        Me.cboState.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.cboState.Location = New System.Drawing.Point(369, 116)
-        Me.cboState.Name = "cboState"
-        Me.cboState.Size = New System.Drawing.Size(159, 21)
-        Me.cboState.TabIndex = 95
-        '
         'lstItems1
         '
+        Me.lstItems1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lstItems1.FormattingEnabled = True
         Me.lstItems1.Location = New System.Drawing.Point(776, 13)
         Me.lstItems1.Name = "lstItems1"
-        Me.lstItems1.Size = New System.Drawing.Size(236, 69)
+        Me.lstItems1.Size = New System.Drawing.Size(432, 69)
         Me.lstItems1.TabIndex = 94
         '
         'Label4
@@ -403,21 +452,21 @@ Partial Class frmViewTransactions
         Me.Label4.Text = "Phone Number:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtPhoneNumber
+        'txtPhoneNumber1
         '
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(349, 65)
-        Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.ReadOnly = True
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(421, 20)
-        Me.txtPhoneNumber.TabIndex = 83
+        Me.txtPhoneNumber1.Location = New System.Drawing.Point(349, 65)
+        Me.txtPhoneNumber1.Name = "txtPhoneNumber1"
+        Me.txtPhoneNumber1.ReadOnly = True
+        Me.txtPhoneNumber1.Size = New System.Drawing.Size(421, 20)
+        Me.txtPhoneNumber1.TabIndex = 83
         '
-        'txtEmail
+        'txtEmail1
         '
-        Me.txtEmail.Location = New System.Drawing.Point(90, 65)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.ReadOnly = True
-        Me.txtEmail.Size = New System.Drawing.Size(166, 20)
-        Me.txtEmail.TabIndex = 82
+        Me.txtEmail1.Location = New System.Drawing.Point(90, 65)
+        Me.txtEmail1.Name = "txtEmail1"
+        Me.txtEmail1.ReadOnly = True
+        Me.txtEmail1.Size = New System.Drawing.Size(166, 20)
+        Me.txtEmail1.TabIndex = 82
         '
         'lblEmail
         '
@@ -439,21 +488,21 @@ Partial Class frmViewTransactions
         Me.lblZip.Text = "Zip Code:"
         Me.lblZip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox8
+        'txtZip1
         '
-        Me.TextBox8.Location = New System.Drawing.Point(602, 117)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox8.TabIndex = 81
+        Me.txtZip1.Location = New System.Drawing.Point(602, 117)
+        Me.txtZip1.Name = "txtZip1"
+        Me.txtZip1.ReadOnly = True
+        Me.txtZip1.Size = New System.Drawing.Size(168, 20)
+        Me.txtZip1.TabIndex = 81
         '
-        'TextBox6
+        'txtSecurityCode1
         '
-        Me.TextBox6.Location = New System.Drawing.Point(661, 39)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox6.TabIndex = 79
+        Me.txtSecurityCode1.Location = New System.Drawing.Point(661, 39)
+        Me.txtSecurityCode1.Name = "txtSecurityCode1"
+        Me.txtSecurityCode1.ReadOnly = True
+        Me.txtSecurityCode1.Size = New System.Drawing.Size(109, 20)
+        Me.txtSecurityCode1.TabIndex = 79
         '
         'lblSecurityCode
         '
@@ -464,17 +513,6 @@ Partial Class frmViewTransactions
         Me.lblSecurityCode.TabIndex = 89
         Me.lblSecurityCode.Text = "Security Code:"
         Me.lblSecurityCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtpExpirationDate
-        '
-        Me.dtpExpirationDate.Enabled = False
-        Me.dtpExpirationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpExpirationDate.Location = New System.Drawing.Point(474, 39)
-        Me.dtpExpirationDate.MinDate = New Date(2001, 1, 1, 0, 0, 0, 0)
-        Me.dtpExpirationDate.Name = "dtpExpirationDate"
-        Me.dtpExpirationDate.Size = New System.Drawing.Size(99, 20)
-        Me.dtpExpirationDate.TabIndex = 78
-        Me.dtpExpirationDate.Value = New Date(2001, 1, 1, 0, 0, 0, 0)
         '
         'Label3
         '
@@ -496,13 +534,13 @@ Partial Class frmViewTransactions
         Me.Label2.Text = "Credit Card Number:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox5
+        'txtCredit1
         '
-        Me.TextBox5.Location = New System.Drawing.Point(546, 13)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox5.TabIndex = 77
+        Me.txtCredit1.Location = New System.Drawing.Point(546, 13)
+        Me.txtCredit1.Name = "txtCredit1"
+        Me.txtCredit1.ReadOnly = True
+        Me.txtCredit1.Size = New System.Drawing.Size(224, 20)
+        Me.txtCredit1.TabIndex = 77
         '
         'lblLastName
         '
@@ -514,13 +552,21 @@ Partial Class frmViewTransactions
         Me.lblLastName.Text = "Last Name:"
         Me.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox4
+        'txtExpirationDate1
         '
-        Me.TextBox4.Location = New System.Drawing.Point(261, 39)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox4.TabIndex = 76
+        Me.txtExpirationDate1.Location = New System.Drawing.Point(474, 39)
+        Me.txtExpirationDate1.Name = "txtExpirationDate1"
+        Me.txtExpirationDate1.ReadOnly = True
+        Me.txtExpirationDate1.Size = New System.Drawing.Size(99, 20)
+        Me.txtExpirationDate1.TabIndex = 76
+        '
+        'txtLastName1
+        '
+        Me.txtLastName1.Location = New System.Drawing.Point(261, 39)
+        Me.txtLastName1.Name = "txtLastName1"
+        Me.txtLastName1.ReadOnly = True
+        Me.txtLastName1.Size = New System.Drawing.Size(99, 20)
+        Me.txtLastName1.TabIndex = 76
         '
         'lblFirstName
         '
@@ -532,13 +578,37 @@ Partial Class frmViewTransactions
         Me.lblFirstName.Text = "First Name:"
         Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox3
+        'txtState1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(90, 40)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox3.TabIndex = 75
+        Me.txtState1.Location = New System.Drawing.Point(370, 117)
+        Me.txtState1.Name = "txtState1"
+        Me.txtState1.ReadOnly = True
+        Me.txtState1.Size = New System.Drawing.Size(170, 20)
+        Me.txtState1.TabIndex = 75
+        '
+        'txtTransactionType1
+        '
+        Me.txtTransactionType1.Location = New System.Drawing.Point(294, 13)
+        Me.txtTransactionType1.Name = "txtTransactionType1"
+        Me.txtTransactionType1.ReadOnly = True
+        Me.txtTransactionType1.Size = New System.Drawing.Size(138, 20)
+        Me.txtTransactionType1.TabIndex = 75
+        '
+        'txtPaymentType1
+        '
+        Me.txtPaymentType1.Location = New System.Drawing.Point(90, 13)
+        Me.txtPaymentType1.Name = "txtPaymentType1"
+        Me.txtPaymentType1.ReadOnly = True
+        Me.txtPaymentType1.Size = New System.Drawing.Size(99, 20)
+        Me.txtPaymentType1.TabIndex = 75
+        '
+        'txtFirstName1
+        '
+        Me.txtFirstName1.Location = New System.Drawing.Point(90, 40)
+        Me.txtFirstName1.Name = "txtFirstName1"
+        Me.txtFirstName1.ReadOnly = True
+        Me.txtFirstName1.Size = New System.Drawing.Size(99, 20)
+        Me.txtFirstName1.TabIndex = 75
         '
         'lblPaymentType
         '
@@ -552,93 +622,140 @@ Partial Class frmViewTransactions
         '
         'lblTransactionID1
         '
+        Me.lblTransactionID1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTransactionID1.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.lblTransactionID1.Location = New System.Drawing.Point(777, 134)
         Me.lblTransactionID1.Name = "lblTransactionID1"
-        Me.lblTransactionID1.Size = New System.Drawing.Size(236, 18)
+        Me.lblTransactionID1.Size = New System.Drawing.Size(432, 18)
         Me.lblTransactionID1.TabIndex = 0
         Me.lblTransactionID1.Text = "0000"
         Me.lblTransactionID1.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
-        'ComboBox5
-        '
-        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox5.Location = New System.Drawing.Point(90, 13)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox5.TabIndex = 95
-        '
-        'ComboBox6
-        '
-        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox6.Location = New System.Drawing.Point(295, 13)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox6.TabIndex = 102
-        '
-        'Label56
-        '
-        Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(195, 16)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(93, 13)
-        Me.Label56.TabIndex = 101
-        Me.Label56.Text = "Transaction Type:"
-        Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.txtExpirationDate2)
+        Me.GroupBox1.Controls.Add(Me.txtState2)
+        Me.GroupBox1.Controls.Add(Me.txtTransactionType2)
+        Me.GroupBox1.Controls.Add(Me.txtPaymentType2)
         Me.GroupBox1.Controls.Add(Me.Label62)
-        Me.GroupBox1.Controls.Add(Me.TextBox46)
+        Me.GroupBox1.Controls.Add(Me.txtSalesTax2)
         Me.GroupBox1.Controls.Add(Me.Label63)
-        Me.GroupBox1.Controls.Add(Me.TextBox47)
-        Me.GroupBox1.Controls.Add(Me.ListBox1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.txtTotalPrice2)
+        Me.GroupBox1.Controls.Add(Me.lstItems2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtAddress2)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txtCity2)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox10)
-        Me.GroupBox1.Controls.Add(Me.TextBox11)
+        Me.GroupBox1.Controls.Add(Me.txtPhoneNumber2)
+        Me.GroupBox1.Controls.Add(Me.txtEmail2)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.TextBox12)
-        Me.GroupBox1.Controls.Add(Me.TextBox13)
+        Me.GroupBox1.Controls.Add(Me.txtZip2)
+        Me.GroupBox1.Controls.Add(Me.txtSecurityCode2)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.TextBox14)
+        Me.GroupBox1.Controls.Add(Me.txtCredit2)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.TextBox15)
+        Me.GroupBox1.Controls.Add(Me.txtLastName2)
         Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.TextBox16)
+        Me.GroupBox1.Controls.Add(Me.txtFirstName2)
         Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.lblTransactionID2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 203)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1019, 158)
+        Me.GroupBox1.Size = New System.Drawing.Size(1215, 158)
         Me.GroupBox1.TabIndex = 52
         Me.GroupBox1.TabStop = False
         '
-        'ComboBox1
+        'txtExpirationDate2
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox1.Location = New System.Drawing.Point(295, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox1.TabIndex = 102
+        Me.txtExpirationDate2.Location = New System.Drawing.Point(474, 39)
+        Me.txtExpirationDate2.Name = "txtExpirationDate2"
+        Me.txtExpirationDate2.ReadOnly = True
+        Me.txtExpirationDate2.Size = New System.Drawing.Size(99, 20)
+        Me.txtExpirationDate2.TabIndex = 115
+        '
+        'txtState2
+        '
+        Me.txtState2.Location = New System.Drawing.Point(370, 117)
+        Me.txtState2.Name = "txtState2"
+        Me.txtState2.ReadOnly = True
+        Me.txtState2.Size = New System.Drawing.Size(170, 20)
+        Me.txtState2.TabIndex = 112
+        '
+        'txtTransactionType2
+        '
+        Me.txtTransactionType2.Location = New System.Drawing.Point(294, 13)
+        Me.txtTransactionType2.Name = "txtTransactionType2"
+        Me.txtTransactionType2.ReadOnly = True
+        Me.txtTransactionType2.Size = New System.Drawing.Size(138, 20)
+        Me.txtTransactionType2.TabIndex = 113
+        '
+        'txtPaymentType2
+        '
+        Me.txtPaymentType2.Location = New System.Drawing.Point(90, 13)
+        Me.txtPaymentType2.Name = "txtPaymentType2"
+        Me.txtPaymentType2.ReadOnly = True
+        Me.txtPaymentType2.Size = New System.Drawing.Size(99, 20)
+        Me.txtPaymentType2.TabIndex = 114
+        '
+        'Label62
+        '
+        Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label62.Location = New System.Drawing.Point(776, 115)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(61, 23)
+        Me.Label62.TabIndex = 111
+        Me.Label62.Text = "Sales Tax:"
+        Me.Label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax2
+        '
+        Me.txtSalesTax2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax2.Location = New System.Drawing.Point(843, 117)
+        Me.txtSalesTax2.Name = "txtSalesTax2"
+        Me.txtSalesTax2.ReadOnly = True
+        Me.txtSalesTax2.Size = New System.Drawing.Size(365, 20)
+        Me.txtSalesTax2.TabIndex = 110
+        Me.txtSalesTax2.TabStop = False
+        '
+        'Label63
+        '
+        Me.Label63.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label63.Location = New System.Drawing.Point(776, 89)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(61, 23)
+        Me.Label63.TabIndex = 109
+        Me.Label63.Text = "Total Price:"
+        Me.Label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtTotalPrice2
+        '
+        Me.txtTotalPrice2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPrice2.Location = New System.Drawing.Point(843, 91)
+        Me.txtTotalPrice2.Name = "txtTotalPrice2"
+        Me.txtTotalPrice2.ReadOnly = True
+        Me.txtTotalPrice2.Size = New System.Drawing.Size(365, 20)
+        Me.txtTotalPrice2.TabIndex = 108
+        '
+        'lstItems2
+        '
+        Me.lstItems2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstItems2.FormattingEnabled = True
+        Me.lstItems2.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems2.Name = "lstItems2"
+        Me.lstItems2.Size = New System.Drawing.Size(432, 69)
+        Me.lstItems2.TabIndex = 107
         '
         'Label1
         '
@@ -650,13 +767,13 @@ Partial Class frmViewTransactions
         Me.Label1.Text = "Transaction Type:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'txtAddress2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(680, 20)
-        Me.TextBox1.TabIndex = 97
+        Me.txtAddress2.Location = New System.Drawing.Point(90, 91)
+        Me.txtAddress2.Name = "txtAddress2"
+        Me.txtAddress2.ReadOnly = True
+        Me.txtAddress2.Size = New System.Drawing.Size(680, 20)
+        Me.txtAddress2.TabIndex = 97
         '
         'Label5
         '
@@ -678,13 +795,13 @@ Partial Class frmViewTransactions
         Me.Label6.Text = "Street Address:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox2
+        'txtCity2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(90, 117)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(229, 20)
-        Me.TextBox2.TabIndex = 96
+        Me.txtCity2.Location = New System.Drawing.Point(90, 117)
+        Me.txtCity2.Name = "txtCity2"
+        Me.txtCity2.ReadOnly = True
+        Me.txtCity2.Size = New System.Drawing.Size(229, 20)
+        Me.txtCity2.TabIndex = 96
         '
         'Label7
         '
@@ -696,26 +813,6 @@ Partial Class frmViewTransactions
         Me.Label7.Text = "City:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox2.Location = New System.Drawing.Point(90, 13)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox2.TabIndex = 95
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox3.Location = New System.Drawing.Point(369, 116)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(159, 21)
-        Me.ComboBox3.TabIndex = 95
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -726,21 +823,21 @@ Partial Class frmViewTransactions
         Me.Label8.Text = "Phone Number:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox10
+        'txtPhoneNumber2
         '
-        Me.TextBox10.Location = New System.Drawing.Point(349, 65)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(421, 20)
-        Me.TextBox10.TabIndex = 83
+        Me.txtPhoneNumber2.Location = New System.Drawing.Point(349, 65)
+        Me.txtPhoneNumber2.Name = "txtPhoneNumber2"
+        Me.txtPhoneNumber2.ReadOnly = True
+        Me.txtPhoneNumber2.Size = New System.Drawing.Size(421, 20)
+        Me.txtPhoneNumber2.TabIndex = 83
         '
-        'TextBox11
+        'txtEmail2
         '
-        Me.TextBox11.Location = New System.Drawing.Point(90, 65)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox11.TabIndex = 82
+        Me.txtEmail2.Location = New System.Drawing.Point(90, 65)
+        Me.txtEmail2.Name = "txtEmail2"
+        Me.txtEmail2.ReadOnly = True
+        Me.txtEmail2.Size = New System.Drawing.Size(166, 20)
+        Me.txtEmail2.TabIndex = 82
         '
         'Label9
         '
@@ -762,21 +859,21 @@ Partial Class frmViewTransactions
         Me.Label10.Text = "Zip Code:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox12
+        'txtZip2
         '
-        Me.TextBox12.Location = New System.Drawing.Point(602, 117)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox12.TabIndex = 81
+        Me.txtZip2.Location = New System.Drawing.Point(602, 117)
+        Me.txtZip2.Name = "txtZip2"
+        Me.txtZip2.ReadOnly = True
+        Me.txtZip2.Size = New System.Drawing.Size(168, 20)
+        Me.txtZip2.TabIndex = 81
         '
-        'TextBox13
+        'txtSecurityCode2
         '
-        Me.TextBox13.Location = New System.Drawing.Point(661, 39)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox13.TabIndex = 79
+        Me.txtSecurityCode2.Location = New System.Drawing.Point(661, 39)
+        Me.txtSecurityCode2.Name = "txtSecurityCode2"
+        Me.txtSecurityCode2.ReadOnly = True
+        Me.txtSecurityCode2.Size = New System.Drawing.Size(109, 20)
+        Me.txtSecurityCode2.TabIndex = 79
         '
         'Label11
         '
@@ -787,17 +884,6 @@ Partial Class frmViewTransactions
         Me.Label11.TabIndex = 89
         Me.Label11.Text = "Security Code:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(474, 39)
-        Me.DateTimePicker1.MinDate = New Date(2001, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker1.TabIndex = 78
-        Me.DateTimePicker1.Value = New Date(2001, 1, 1, 0, 0, 0, 0)
         '
         'Label12
         '
@@ -819,13 +905,13 @@ Partial Class frmViewTransactions
         Me.Label13.Text = "Credit Card Number:"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox14
+        'txtCredit2
         '
-        Me.TextBox14.Location = New System.Drawing.Point(546, 13)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.ReadOnly = True
-        Me.TextBox14.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox14.TabIndex = 77
+        Me.txtCredit2.Location = New System.Drawing.Point(546, 13)
+        Me.txtCredit2.Name = "txtCredit2"
+        Me.txtCredit2.ReadOnly = True
+        Me.txtCredit2.Size = New System.Drawing.Size(224, 20)
+        Me.txtCredit2.TabIndex = 77
         '
         'Label14
         '
@@ -837,13 +923,13 @@ Partial Class frmViewTransactions
         Me.Label14.Text = "Last Name:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox15
+        'txtLastName2
         '
-        Me.TextBox15.Location = New System.Drawing.Point(261, 39)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox15.TabIndex = 76
+        Me.txtLastName2.Location = New System.Drawing.Point(261, 39)
+        Me.txtLastName2.Name = "txtLastName2"
+        Me.txtLastName2.ReadOnly = True
+        Me.txtLastName2.Size = New System.Drawing.Size(99, 20)
+        Me.txtLastName2.TabIndex = 76
         '
         'Label15
         '
@@ -855,13 +941,13 @@ Partial Class frmViewTransactions
         Me.Label15.Text = "First Name:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox16
+        'txtFirstName2
         '
-        Me.TextBox16.Location = New System.Drawing.Point(90, 40)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox16.TabIndex = 75
+        Me.txtFirstName2.Location = New System.Drawing.Point(90, 40)
+        Me.txtFirstName2.Name = "txtFirstName2"
+        Me.txtFirstName2.ReadOnly = True
+        Me.txtFirstName2.Size = New System.Drawing.Size(99, 20)
+        Me.txtFirstName2.TabIndex = 75
         '
         'Label16
         '
@@ -873,65 +959,142 @@ Partial Class frmViewTransactions
         Me.Label16.Text = "Payment Type:"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label17
+        'lblTransactionID2
         '
-        Me.Label17.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label17.Location = New System.Drawing.Point(777, 134)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(236, 18)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "0001"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.lblTransactionID2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTransactionID2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTransactionID2.Location = New System.Drawing.Point(777, 134)
+        Me.lblTransactionID2.Name = "lblTransactionID2"
+        Me.lblTransactionID2.Size = New System.Drawing.Size(432, 18)
+        Me.lblTransactionID2.TabIndex = 0
+        Me.lblTransactionID2.Text = "0001"
+        Me.lblTransactionID2.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'GroupBox2
         '
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.txtExpirationDate3)
+        Me.GroupBox2.Controls.Add(Me.txtState3)
+        Me.GroupBox2.Controls.Add(Me.txtTransactionType3)
+        Me.GroupBox2.Controls.Add(Me.txtPaymentType3)
         Me.GroupBox2.Controls.Add(Me.Label64)
-        Me.GroupBox2.Controls.Add(Me.TextBox48)
+        Me.GroupBox2.Controls.Add(Me.txtSalesTax3)
         Me.GroupBox2.Controls.Add(Me.Label65)
-        Me.GroupBox2.Controls.Add(Me.TextBox49)
-        Me.GroupBox2.Controls.Add(Me.ListBox2)
-        Me.GroupBox2.Controls.Add(Me.ComboBox4)
+        Me.GroupBox2.Controls.Add(Me.txtTotalPrice3)
+        Me.GroupBox2.Controls.Add(Me.lstItems3)
         Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.TextBox17)
+        Me.GroupBox2.Controls.Add(Me.txtAddress3)
         Me.GroupBox2.Controls.Add(Me.Label19)
         Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.TextBox18)
+        Me.GroupBox2.Controls.Add(Me.txtCity3)
         Me.GroupBox2.Controls.Add(Me.Label21)
-        Me.GroupBox2.Controls.Add(Me.ComboBox7)
-        Me.GroupBox2.Controls.Add(Me.ComboBox8)
         Me.GroupBox2.Controls.Add(Me.Label22)
-        Me.GroupBox2.Controls.Add(Me.TextBox19)
-        Me.GroupBox2.Controls.Add(Me.TextBox20)
+        Me.GroupBox2.Controls.Add(Me.txtPhoneNumber3)
+        Me.GroupBox2.Controls.Add(Me.txtEmail3)
         Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.TextBox21)
-        Me.GroupBox2.Controls.Add(Me.TextBox22)
+        Me.GroupBox2.Controls.Add(Me.txtZip3)
+        Me.GroupBox2.Controls.Add(Me.txtSecurityCode3)
         Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox2.Controls.Add(Me.Label26)
         Me.GroupBox2.Controls.Add(Me.Label27)
-        Me.GroupBox2.Controls.Add(Me.TextBox23)
+        Me.GroupBox2.Controls.Add(Me.txtCredit3)
         Me.GroupBox2.Controls.Add(Me.Label28)
-        Me.GroupBox2.Controls.Add(Me.TextBox24)
+        Me.GroupBox2.Controls.Add(Me.txtLastName3)
         Me.GroupBox2.Controls.Add(Me.Label29)
-        Me.GroupBox2.Controls.Add(Me.TextBox25)
+        Me.GroupBox2.Controls.Add(Me.txtFirstName3)
         Me.GroupBox2.Controls.Add(Me.Label30)
-        Me.GroupBox2.Controls.Add(Me.Label31)
+        Me.GroupBox2.Controls.Add(Me.lblTransactionID3)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 367)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1019, 158)
+        Me.GroupBox2.Size = New System.Drawing.Size(1215, 158)
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         '
-        'ComboBox4
+        'txtExpirationDate3
         '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox4.Location = New System.Drawing.Point(295, 13)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox4.TabIndex = 102
+        Me.txtExpirationDate3.Location = New System.Drawing.Point(474, 39)
+        Me.txtExpirationDate3.Name = "txtExpirationDate3"
+        Me.txtExpirationDate3.ReadOnly = True
+        Me.txtExpirationDate3.Size = New System.Drawing.Size(99, 20)
+        Me.txtExpirationDate3.TabIndex = 118
+        '
+        'txtState3
+        '
+        Me.txtState3.Location = New System.Drawing.Point(370, 117)
+        Me.txtState3.Name = "txtState3"
+        Me.txtState3.ReadOnly = True
+        Me.txtState3.Size = New System.Drawing.Size(170, 20)
+        Me.txtState3.TabIndex = 115
+        '
+        'txtTransactionType3
+        '
+        Me.txtTransactionType3.Location = New System.Drawing.Point(294, 13)
+        Me.txtTransactionType3.Name = "txtTransactionType3"
+        Me.txtTransactionType3.ReadOnly = True
+        Me.txtTransactionType3.Size = New System.Drawing.Size(138, 20)
+        Me.txtTransactionType3.TabIndex = 116
+        '
+        'txtPaymentType3
+        '
+        Me.txtPaymentType3.Location = New System.Drawing.Point(90, 13)
+        Me.txtPaymentType3.Name = "txtPaymentType3"
+        Me.txtPaymentType3.ReadOnly = True
+        Me.txtPaymentType3.Size = New System.Drawing.Size(99, 20)
+        Me.txtPaymentType3.TabIndex = 117
+        '
+        'Label64
+        '
+        Me.Label64.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label64.Location = New System.Drawing.Point(776, 115)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(61, 23)
+        Me.Label64.TabIndex = 111
+        Me.Label64.Text = "Sales Tax:"
+        Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax3
+        '
+        Me.txtSalesTax3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax3.Location = New System.Drawing.Point(843, 117)
+        Me.txtSalesTax3.Name = "txtSalesTax3"
+        Me.txtSalesTax3.ReadOnly = True
+        Me.txtSalesTax3.Size = New System.Drawing.Size(365, 20)
+        Me.txtSalesTax3.TabIndex = 110
+        Me.txtSalesTax3.TabStop = False
+        '
+        'Label65
+        '
+        Me.Label65.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label65.Location = New System.Drawing.Point(776, 89)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(61, 23)
+        Me.Label65.TabIndex = 109
+        Me.Label65.Text = "Total Price:"
+        Me.Label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtTotalPrice3
+        '
+        Me.txtTotalPrice3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPrice3.Location = New System.Drawing.Point(843, 91)
+        Me.txtTotalPrice3.Name = "txtTotalPrice3"
+        Me.txtTotalPrice3.ReadOnly = True
+        Me.txtTotalPrice3.Size = New System.Drawing.Size(365, 20)
+        Me.txtTotalPrice3.TabIndex = 108
+        '
+        'lstItems3
+        '
+        Me.lstItems3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstItems3.FormattingEnabled = True
+        Me.lstItems3.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems3.Name = "lstItems3"
+        Me.lstItems3.Size = New System.Drawing.Size(432, 69)
+        Me.lstItems3.TabIndex = 107
         '
         'Label18
         '
@@ -943,13 +1106,13 @@ Partial Class frmViewTransactions
         Me.Label18.Text = "Transaction Type:"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox17
+        'txtAddress3
         '
-        Me.TextBox17.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(680, 20)
-        Me.TextBox17.TabIndex = 97
+        Me.txtAddress3.Location = New System.Drawing.Point(90, 91)
+        Me.txtAddress3.Name = "txtAddress3"
+        Me.txtAddress3.ReadOnly = True
+        Me.txtAddress3.Size = New System.Drawing.Size(680, 20)
+        Me.txtAddress3.TabIndex = 97
         '
         'Label19
         '
@@ -971,13 +1134,13 @@ Partial Class frmViewTransactions
         Me.Label20.Text = "Street Address:"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox18
+        'txtCity3
         '
-        Me.TextBox18.Location = New System.Drawing.Point(90, 117)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(229, 20)
-        Me.TextBox18.TabIndex = 96
+        Me.txtCity3.Location = New System.Drawing.Point(90, 117)
+        Me.txtCity3.Name = "txtCity3"
+        Me.txtCity3.ReadOnly = True
+        Me.txtCity3.Size = New System.Drawing.Size(229, 20)
+        Me.txtCity3.TabIndex = 96
         '
         'Label21
         '
@@ -989,26 +1152,6 @@ Partial Class frmViewTransactions
         Me.Label21.Text = "City:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox7
-        '
-        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox7.Location = New System.Drawing.Point(90, 13)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox7.TabIndex = 95
-        '
-        'ComboBox8
-        '
-        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox8.Location = New System.Drawing.Point(369, 116)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(159, 21)
-        Me.ComboBox8.TabIndex = 95
-        '
         'Label22
         '
         Me.Label22.AutoSize = True
@@ -1019,21 +1162,21 @@ Partial Class frmViewTransactions
         Me.Label22.Text = "Phone Number:"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox19
+        'txtPhoneNumber3
         '
-        Me.TextBox19.Location = New System.Drawing.Point(349, 65)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(421, 20)
-        Me.TextBox19.TabIndex = 83
+        Me.txtPhoneNumber3.Location = New System.Drawing.Point(349, 65)
+        Me.txtPhoneNumber3.Name = "txtPhoneNumber3"
+        Me.txtPhoneNumber3.ReadOnly = True
+        Me.txtPhoneNumber3.Size = New System.Drawing.Size(421, 20)
+        Me.txtPhoneNumber3.TabIndex = 83
         '
-        'TextBox20
+        'txtEmail3
         '
-        Me.TextBox20.Location = New System.Drawing.Point(90, 65)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.ReadOnly = True
-        Me.TextBox20.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox20.TabIndex = 82
+        Me.txtEmail3.Location = New System.Drawing.Point(90, 65)
+        Me.txtEmail3.Name = "txtEmail3"
+        Me.txtEmail3.ReadOnly = True
+        Me.txtEmail3.Size = New System.Drawing.Size(166, 20)
+        Me.txtEmail3.TabIndex = 82
         '
         'Label23
         '
@@ -1055,21 +1198,21 @@ Partial Class frmViewTransactions
         Me.Label24.Text = "Zip Code:"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox21
+        'txtZip3
         '
-        Me.TextBox21.Location = New System.Drawing.Point(602, 117)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox21.TabIndex = 81
+        Me.txtZip3.Location = New System.Drawing.Point(602, 117)
+        Me.txtZip3.Name = "txtZip3"
+        Me.txtZip3.ReadOnly = True
+        Me.txtZip3.Size = New System.Drawing.Size(168, 20)
+        Me.txtZip3.TabIndex = 81
         '
-        'TextBox22
+        'txtSecurityCode3
         '
-        Me.TextBox22.Location = New System.Drawing.Point(661, 39)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.ReadOnly = True
-        Me.TextBox22.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox22.TabIndex = 79
+        Me.txtSecurityCode3.Location = New System.Drawing.Point(661, 39)
+        Me.txtSecurityCode3.Name = "txtSecurityCode3"
+        Me.txtSecurityCode3.ReadOnly = True
+        Me.txtSecurityCode3.Size = New System.Drawing.Size(109, 20)
+        Me.txtSecurityCode3.TabIndex = 79
         '
         'Label25
         '
@@ -1080,17 +1223,6 @@ Partial Class frmViewTransactions
         Me.Label25.TabIndex = 89
         Me.Label25.Text = "Security Code:"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Enabled = False
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(474, 39)
-        Me.DateTimePicker2.MinDate = New Date(2001, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker2.TabIndex = 78
-        Me.DateTimePicker2.Value = New Date(2001, 1, 1, 0, 0, 0, 0)
         '
         'Label26
         '
@@ -1112,13 +1244,13 @@ Partial Class frmViewTransactions
         Me.Label27.Text = "Credit Card Number:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox23
+        'txtCredit3
         '
-        Me.TextBox23.Location = New System.Drawing.Point(546, 13)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.ReadOnly = True
-        Me.TextBox23.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox23.TabIndex = 77
+        Me.txtCredit3.Location = New System.Drawing.Point(546, 13)
+        Me.txtCredit3.Name = "txtCredit3"
+        Me.txtCredit3.ReadOnly = True
+        Me.txtCredit3.Size = New System.Drawing.Size(224, 20)
+        Me.txtCredit3.TabIndex = 77
         '
         'Label28
         '
@@ -1130,13 +1262,13 @@ Partial Class frmViewTransactions
         Me.Label28.Text = "Last Name:"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox24
+        'txtLastName3
         '
-        Me.TextBox24.Location = New System.Drawing.Point(261, 39)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.ReadOnly = True
-        Me.TextBox24.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox24.TabIndex = 76
+        Me.txtLastName3.Location = New System.Drawing.Point(261, 39)
+        Me.txtLastName3.Name = "txtLastName3"
+        Me.txtLastName3.ReadOnly = True
+        Me.txtLastName3.Size = New System.Drawing.Size(99, 20)
+        Me.txtLastName3.TabIndex = 76
         '
         'Label29
         '
@@ -1148,13 +1280,13 @@ Partial Class frmViewTransactions
         Me.Label29.Text = "First Name:"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox25
+        'txtFirstName3
         '
-        Me.TextBox25.Location = New System.Drawing.Point(90, 40)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.ReadOnly = True
-        Me.TextBox25.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox25.TabIndex = 75
+        Me.txtFirstName3.Location = New System.Drawing.Point(90, 40)
+        Me.txtFirstName3.Name = "txtFirstName3"
+        Me.txtFirstName3.ReadOnly = True
+        Me.txtFirstName3.Size = New System.Drawing.Size(99, 20)
+        Me.txtFirstName3.TabIndex = 75
         '
         'Label30
         '
@@ -1166,65 +1298,142 @@ Partial Class frmViewTransactions
         Me.Label30.Text = "Payment Type:"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label31
+        'lblTransactionID3
         '
-        Me.Label31.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label31.Location = New System.Drawing.Point(777, 134)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(236, 18)
-        Me.Label31.TabIndex = 0
-        Me.Label31.Text = "0002"
-        Me.Label31.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.lblTransactionID3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTransactionID3.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTransactionID3.Location = New System.Drawing.Point(777, 134)
+        Me.lblTransactionID3.Name = "lblTransactionID3"
+        Me.lblTransactionID3.Size = New System.Drawing.Size(432, 18)
+        Me.lblTransactionID3.TabIndex = 0
+        Me.lblTransactionID3.Text = "0002"
+        Me.lblTransactionID3.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'GroupBox3
         '
+        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Controls.Add(Me.txtExpirationDate4)
+        Me.GroupBox3.Controls.Add(Me.txtState4)
+        Me.GroupBox3.Controls.Add(Me.txtTransactionType4)
+        Me.GroupBox3.Controls.Add(Me.txtPaymentType4)
         Me.GroupBox3.Controls.Add(Me.Label66)
-        Me.GroupBox3.Controls.Add(Me.TextBox50)
+        Me.GroupBox3.Controls.Add(Me.txtSalesTax4)
         Me.GroupBox3.Controls.Add(Me.Label67)
-        Me.GroupBox3.Controls.Add(Me.TextBox51)
-        Me.GroupBox3.Controls.Add(Me.ListBox3)
-        Me.GroupBox3.Controls.Add(Me.ComboBox9)
+        Me.GroupBox3.Controls.Add(Me.txtTotalPrice4)
+        Me.GroupBox3.Controls.Add(Me.lstItems4)
         Me.GroupBox3.Controls.Add(Me.Label32)
-        Me.GroupBox3.Controls.Add(Me.TextBox26)
+        Me.GroupBox3.Controls.Add(Me.txtAddress4)
         Me.GroupBox3.Controls.Add(Me.Label33)
         Me.GroupBox3.Controls.Add(Me.Label34)
-        Me.GroupBox3.Controls.Add(Me.TextBox27)
+        Me.GroupBox3.Controls.Add(Me.txtCity4)
         Me.GroupBox3.Controls.Add(Me.Label35)
-        Me.GroupBox3.Controls.Add(Me.ComboBox10)
-        Me.GroupBox3.Controls.Add(Me.ComboBox11)
         Me.GroupBox3.Controls.Add(Me.Label36)
-        Me.GroupBox3.Controls.Add(Me.TextBox28)
-        Me.GroupBox3.Controls.Add(Me.TextBox29)
+        Me.GroupBox3.Controls.Add(Me.txtPhoneNumber4)
+        Me.GroupBox3.Controls.Add(Me.txtEmail4)
         Me.GroupBox3.Controls.Add(Me.Label37)
         Me.GroupBox3.Controls.Add(Me.Label38)
-        Me.GroupBox3.Controls.Add(Me.TextBox30)
-        Me.GroupBox3.Controls.Add(Me.TextBox31)
+        Me.GroupBox3.Controls.Add(Me.txtZip4)
+        Me.GroupBox3.Controls.Add(Me.txtSecurityCode4)
         Me.GroupBox3.Controls.Add(Me.Label39)
-        Me.GroupBox3.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox3.Controls.Add(Me.Label40)
         Me.GroupBox3.Controls.Add(Me.Label41)
-        Me.GroupBox3.Controls.Add(Me.TextBox32)
+        Me.GroupBox3.Controls.Add(Me.txtCredit4)
         Me.GroupBox3.Controls.Add(Me.Label42)
-        Me.GroupBox3.Controls.Add(Me.TextBox33)
+        Me.GroupBox3.Controls.Add(Me.txtLastName4)
         Me.GroupBox3.Controls.Add(Me.Label43)
-        Me.GroupBox3.Controls.Add(Me.TextBox34)
+        Me.GroupBox3.Controls.Add(Me.txtFirstName4)
         Me.GroupBox3.Controls.Add(Me.Label44)
-        Me.GroupBox3.Controls.Add(Me.Label45)
+        Me.GroupBox3.Controls.Add(Me.lblTransactionID4)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 531)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1019, 158)
+        Me.GroupBox3.Size = New System.Drawing.Size(1215, 158)
         Me.GroupBox3.TabIndex = 52
         Me.GroupBox3.TabStop = False
         '
-        'ComboBox9
+        'txtExpirationDate4
         '
-        Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox9.Location = New System.Drawing.Point(295, 13)
-        Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox9.TabIndex = 102
+        Me.txtExpirationDate4.Location = New System.Drawing.Point(474, 39)
+        Me.txtExpirationDate4.Name = "txtExpirationDate4"
+        Me.txtExpirationDate4.ReadOnly = True
+        Me.txtExpirationDate4.Size = New System.Drawing.Size(99, 20)
+        Me.txtExpirationDate4.TabIndex = 121
+        '
+        'txtState4
+        '
+        Me.txtState4.Location = New System.Drawing.Point(370, 117)
+        Me.txtState4.Name = "txtState4"
+        Me.txtState4.ReadOnly = True
+        Me.txtState4.Size = New System.Drawing.Size(170, 20)
+        Me.txtState4.TabIndex = 118
+        '
+        'txtTransactionType4
+        '
+        Me.txtTransactionType4.Location = New System.Drawing.Point(294, 13)
+        Me.txtTransactionType4.Name = "txtTransactionType4"
+        Me.txtTransactionType4.ReadOnly = True
+        Me.txtTransactionType4.Size = New System.Drawing.Size(138, 20)
+        Me.txtTransactionType4.TabIndex = 119
+        '
+        'txtPaymentType4
+        '
+        Me.txtPaymentType4.Location = New System.Drawing.Point(90, 13)
+        Me.txtPaymentType4.Name = "txtPaymentType4"
+        Me.txtPaymentType4.ReadOnly = True
+        Me.txtPaymentType4.Size = New System.Drawing.Size(99, 20)
+        Me.txtPaymentType4.TabIndex = 120
+        '
+        'Label66
+        '
+        Me.Label66.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label66.Location = New System.Drawing.Point(776, 115)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(61, 23)
+        Me.Label66.TabIndex = 111
+        Me.Label66.Text = "Sales Tax:"
+        Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax4
+        '
+        Me.txtSalesTax4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax4.Location = New System.Drawing.Point(843, 117)
+        Me.txtSalesTax4.Name = "txtSalesTax4"
+        Me.txtSalesTax4.ReadOnly = True
+        Me.txtSalesTax4.Size = New System.Drawing.Size(365, 20)
+        Me.txtSalesTax4.TabIndex = 110
+        Me.txtSalesTax4.TabStop = False
+        '
+        'Label67
+        '
+        Me.Label67.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label67.Location = New System.Drawing.Point(776, 89)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(61, 23)
+        Me.Label67.TabIndex = 109
+        Me.Label67.Text = "Total Price:"
+        Me.Label67.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtTotalPrice4
+        '
+        Me.txtTotalPrice4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPrice4.Location = New System.Drawing.Point(843, 91)
+        Me.txtTotalPrice4.Name = "txtTotalPrice4"
+        Me.txtTotalPrice4.ReadOnly = True
+        Me.txtTotalPrice4.Size = New System.Drawing.Size(365, 20)
+        Me.txtTotalPrice4.TabIndex = 108
+        '
+        'lstItems4
+        '
+        Me.lstItems4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstItems4.FormattingEnabled = True
+        Me.lstItems4.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems4.Name = "lstItems4"
+        Me.lstItems4.Size = New System.Drawing.Size(432, 69)
+        Me.lstItems4.TabIndex = 107
         '
         'Label32
         '
@@ -1236,13 +1445,13 @@ Partial Class frmViewTransactions
         Me.Label32.Text = "Transaction Type:"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox26
+        'txtAddress4
         '
-        Me.TextBox26.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.ReadOnly = True
-        Me.TextBox26.Size = New System.Drawing.Size(680, 20)
-        Me.TextBox26.TabIndex = 97
+        Me.txtAddress4.Location = New System.Drawing.Point(90, 91)
+        Me.txtAddress4.Name = "txtAddress4"
+        Me.txtAddress4.ReadOnly = True
+        Me.txtAddress4.Size = New System.Drawing.Size(680, 20)
+        Me.txtAddress4.TabIndex = 97
         '
         'Label33
         '
@@ -1264,13 +1473,13 @@ Partial Class frmViewTransactions
         Me.Label34.Text = "Street Address:"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox27
+        'txtCity4
         '
-        Me.TextBox27.Location = New System.Drawing.Point(90, 117)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.ReadOnly = True
-        Me.TextBox27.Size = New System.Drawing.Size(229, 20)
-        Me.TextBox27.TabIndex = 96
+        Me.txtCity4.Location = New System.Drawing.Point(90, 117)
+        Me.txtCity4.Name = "txtCity4"
+        Me.txtCity4.ReadOnly = True
+        Me.txtCity4.Size = New System.Drawing.Size(229, 20)
+        Me.txtCity4.TabIndex = 96
         '
         'Label35
         '
@@ -1282,26 +1491,6 @@ Partial Class frmViewTransactions
         Me.Label35.Text = "City:"
         Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox10
-        '
-        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox10.Location = New System.Drawing.Point(90, 13)
-        Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox10.TabIndex = 95
-        '
-        'ComboBox11
-        '
-        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox11.Location = New System.Drawing.Point(369, 116)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(159, 21)
-        Me.ComboBox11.TabIndex = 95
-        '
         'Label36
         '
         Me.Label36.AutoSize = True
@@ -1312,21 +1501,21 @@ Partial Class frmViewTransactions
         Me.Label36.Text = "Phone Number:"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox28
+        'txtPhoneNumber4
         '
-        Me.TextBox28.Location = New System.Drawing.Point(349, 65)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.ReadOnly = True
-        Me.TextBox28.Size = New System.Drawing.Size(421, 20)
-        Me.TextBox28.TabIndex = 83
+        Me.txtPhoneNumber4.Location = New System.Drawing.Point(349, 65)
+        Me.txtPhoneNumber4.Name = "txtPhoneNumber4"
+        Me.txtPhoneNumber4.ReadOnly = True
+        Me.txtPhoneNumber4.Size = New System.Drawing.Size(421, 20)
+        Me.txtPhoneNumber4.TabIndex = 83
         '
-        'TextBox29
+        'txtEmail4
         '
-        Me.TextBox29.Location = New System.Drawing.Point(90, 65)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.ReadOnly = True
-        Me.TextBox29.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox29.TabIndex = 82
+        Me.txtEmail4.Location = New System.Drawing.Point(90, 65)
+        Me.txtEmail4.Name = "txtEmail4"
+        Me.txtEmail4.ReadOnly = True
+        Me.txtEmail4.Size = New System.Drawing.Size(166, 20)
+        Me.txtEmail4.TabIndex = 82
         '
         'Label37
         '
@@ -1348,21 +1537,21 @@ Partial Class frmViewTransactions
         Me.Label38.Text = "Zip Code:"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox30
+        'txtZip4
         '
-        Me.TextBox30.Location = New System.Drawing.Point(602, 117)
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.ReadOnly = True
-        Me.TextBox30.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox30.TabIndex = 81
+        Me.txtZip4.Location = New System.Drawing.Point(602, 117)
+        Me.txtZip4.Name = "txtZip4"
+        Me.txtZip4.ReadOnly = True
+        Me.txtZip4.Size = New System.Drawing.Size(168, 20)
+        Me.txtZip4.TabIndex = 81
         '
-        'TextBox31
+        'txtSecurityCode4
         '
-        Me.TextBox31.Location = New System.Drawing.Point(661, 39)
-        Me.TextBox31.Name = "TextBox31"
-        Me.TextBox31.ReadOnly = True
-        Me.TextBox31.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox31.TabIndex = 79
+        Me.txtSecurityCode4.Location = New System.Drawing.Point(661, 39)
+        Me.txtSecurityCode4.Name = "txtSecurityCode4"
+        Me.txtSecurityCode4.ReadOnly = True
+        Me.txtSecurityCode4.Size = New System.Drawing.Size(109, 20)
+        Me.txtSecurityCode4.TabIndex = 79
         '
         'Label39
         '
@@ -1373,17 +1562,6 @@ Partial Class frmViewTransactions
         Me.Label39.TabIndex = 89
         Me.Label39.Text = "Security Code:"
         Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.Enabled = False
-        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(474, 39)
-        Me.DateTimePicker3.MinDate = New Date(2001, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker3.TabIndex = 78
-        Me.DateTimePicker3.Value = New Date(2001, 1, 1, 0, 0, 0, 0)
         '
         'Label40
         '
@@ -1405,13 +1583,13 @@ Partial Class frmViewTransactions
         Me.Label41.Text = "Credit Card Number:"
         Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox32
+        'txtCredit4
         '
-        Me.TextBox32.Location = New System.Drawing.Point(546, 13)
-        Me.TextBox32.Name = "TextBox32"
-        Me.TextBox32.ReadOnly = True
-        Me.TextBox32.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox32.TabIndex = 77
+        Me.txtCredit4.Location = New System.Drawing.Point(546, 13)
+        Me.txtCredit4.Name = "txtCredit4"
+        Me.txtCredit4.ReadOnly = True
+        Me.txtCredit4.Size = New System.Drawing.Size(224, 20)
+        Me.txtCredit4.TabIndex = 77
         '
         'Label42
         '
@@ -1423,13 +1601,13 @@ Partial Class frmViewTransactions
         Me.Label42.Text = "Last Name:"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox33
+        'txtLastName4
         '
-        Me.TextBox33.Location = New System.Drawing.Point(261, 39)
-        Me.TextBox33.Name = "TextBox33"
-        Me.TextBox33.ReadOnly = True
-        Me.TextBox33.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox33.TabIndex = 76
+        Me.txtLastName4.Location = New System.Drawing.Point(261, 39)
+        Me.txtLastName4.Name = "txtLastName4"
+        Me.txtLastName4.ReadOnly = True
+        Me.txtLastName4.Size = New System.Drawing.Size(99, 20)
+        Me.txtLastName4.TabIndex = 76
         '
         'Label43
         '
@@ -1441,13 +1619,13 @@ Partial Class frmViewTransactions
         Me.Label43.Text = "First Name:"
         Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox34
+        'txtFirstName4
         '
-        Me.TextBox34.Location = New System.Drawing.Point(90, 40)
-        Me.TextBox34.Name = "TextBox34"
-        Me.TextBox34.ReadOnly = True
-        Me.TextBox34.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox34.TabIndex = 75
+        Me.txtFirstName4.Location = New System.Drawing.Point(90, 40)
+        Me.txtFirstName4.Name = "txtFirstName4"
+        Me.txtFirstName4.ReadOnly = True
+        Me.txtFirstName4.Size = New System.Drawing.Size(99, 20)
+        Me.txtFirstName4.TabIndex = 75
         '
         'Label44
         '
@@ -1459,65 +1637,142 @@ Partial Class frmViewTransactions
         Me.Label44.Text = "Payment Type:"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label45
+        'lblTransactionID4
         '
-        Me.Label45.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label45.Location = New System.Drawing.Point(777, 134)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(236, 18)
-        Me.Label45.TabIndex = 0
-        Me.Label45.Text = "0003"
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.lblTransactionID4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTransactionID4.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTransactionID4.Location = New System.Drawing.Point(777, 134)
+        Me.lblTransactionID4.Name = "lblTransactionID4"
+        Me.lblTransactionID4.Size = New System.Drawing.Size(432, 18)
+        Me.lblTransactionID4.TabIndex = 0
+        Me.lblTransactionID4.Text = "0003"
+        Me.lblTransactionID4.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'GroupBox4
         '
+        Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.txtExpirationDate5)
+        Me.GroupBox4.Controls.Add(Me.txtState5)
+        Me.GroupBox4.Controls.Add(Me.txtTransactionType5)
+        Me.GroupBox4.Controls.Add(Me.txtPaymentType5)
         Me.GroupBox4.Controls.Add(Me.Label68)
-        Me.GroupBox4.Controls.Add(Me.TextBox52)
+        Me.GroupBox4.Controls.Add(Me.txtSalesTax5)
         Me.GroupBox4.Controls.Add(Me.Label69)
-        Me.GroupBox4.Controls.Add(Me.TextBox53)
-        Me.GroupBox4.Controls.Add(Me.ListBox4)
-        Me.GroupBox4.Controls.Add(Me.ComboBox12)
+        Me.GroupBox4.Controls.Add(Me.txtTotalPrice5)
+        Me.GroupBox4.Controls.Add(Me.lstItems5)
         Me.GroupBox4.Controls.Add(Me.Label46)
-        Me.GroupBox4.Controls.Add(Me.TextBox35)
+        Me.GroupBox4.Controls.Add(Me.txtAddress5)
         Me.GroupBox4.Controls.Add(Me.Label47)
         Me.GroupBox4.Controls.Add(Me.Label48)
-        Me.GroupBox4.Controls.Add(Me.TextBox36)
+        Me.GroupBox4.Controls.Add(Me.txtCity5)
         Me.GroupBox4.Controls.Add(Me.Label49)
-        Me.GroupBox4.Controls.Add(Me.ComboBox13)
-        Me.GroupBox4.Controls.Add(Me.ComboBox14)
         Me.GroupBox4.Controls.Add(Me.Label50)
-        Me.GroupBox4.Controls.Add(Me.TextBox37)
-        Me.GroupBox4.Controls.Add(Me.TextBox38)
+        Me.GroupBox4.Controls.Add(Me.txtPhoneNumber5)
+        Me.GroupBox4.Controls.Add(Me.txtEmail5)
         Me.GroupBox4.Controls.Add(Me.Label51)
         Me.GroupBox4.Controls.Add(Me.Label52)
-        Me.GroupBox4.Controls.Add(Me.TextBox39)
-        Me.GroupBox4.Controls.Add(Me.TextBox40)
+        Me.GroupBox4.Controls.Add(Me.txtZip5)
+        Me.GroupBox4.Controls.Add(Me.txtSecurityCode5)
         Me.GroupBox4.Controls.Add(Me.Label53)
-        Me.GroupBox4.Controls.Add(Me.DateTimePicker4)
         Me.GroupBox4.Controls.Add(Me.Label54)
         Me.GroupBox4.Controls.Add(Me.Label55)
-        Me.GroupBox4.Controls.Add(Me.TextBox41)
+        Me.GroupBox4.Controls.Add(Me.txtCredit5)
         Me.GroupBox4.Controls.Add(Me.Label57)
-        Me.GroupBox4.Controls.Add(Me.TextBox42)
+        Me.GroupBox4.Controls.Add(Me.txtLastName5)
         Me.GroupBox4.Controls.Add(Me.Label58)
-        Me.GroupBox4.Controls.Add(Me.TextBox43)
+        Me.GroupBox4.Controls.Add(Me.txtFirstName5)
         Me.GroupBox4.Controls.Add(Me.Label59)
-        Me.GroupBox4.Controls.Add(Me.Label60)
+        Me.GroupBox4.Controls.Add(Me.lblTransactionID5)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 695)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1019, 158)
+        Me.GroupBox4.Size = New System.Drawing.Size(1215, 158)
         Me.GroupBox4.TabIndex = 52
         Me.GroupBox4.TabStop = False
         '
-        'ComboBox12
+        'txtExpirationDate5
         '
-        Me.ComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox12.Location = New System.Drawing.Point(295, 13)
-        Me.ComboBox12.Name = "ComboBox12"
-        Me.ComboBox12.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox12.TabIndex = 102
+        Me.txtExpirationDate5.Location = New System.Drawing.Point(474, 39)
+        Me.txtExpirationDate5.Name = "txtExpirationDate5"
+        Me.txtExpirationDate5.ReadOnly = True
+        Me.txtExpirationDate5.Size = New System.Drawing.Size(99, 20)
+        Me.txtExpirationDate5.TabIndex = 124
+        '
+        'txtState5
+        '
+        Me.txtState5.Location = New System.Drawing.Point(370, 117)
+        Me.txtState5.Name = "txtState5"
+        Me.txtState5.ReadOnly = True
+        Me.txtState5.Size = New System.Drawing.Size(170, 20)
+        Me.txtState5.TabIndex = 121
+        '
+        'txtTransactionType5
+        '
+        Me.txtTransactionType5.Location = New System.Drawing.Point(294, 13)
+        Me.txtTransactionType5.Name = "txtTransactionType5"
+        Me.txtTransactionType5.ReadOnly = True
+        Me.txtTransactionType5.Size = New System.Drawing.Size(138, 20)
+        Me.txtTransactionType5.TabIndex = 122
+        '
+        'txtPaymentType5
+        '
+        Me.txtPaymentType5.Location = New System.Drawing.Point(90, 13)
+        Me.txtPaymentType5.Name = "txtPaymentType5"
+        Me.txtPaymentType5.ReadOnly = True
+        Me.txtPaymentType5.Size = New System.Drawing.Size(99, 20)
+        Me.txtPaymentType5.TabIndex = 123
+        '
+        'Label68
+        '
+        Me.Label68.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label68.Location = New System.Drawing.Point(776, 115)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(61, 23)
+        Me.Label68.TabIndex = 111
+        Me.Label68.Text = "Sales Tax:"
+        Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtSalesTax5
+        '
+        Me.txtSalesTax5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSalesTax5.Location = New System.Drawing.Point(843, 117)
+        Me.txtSalesTax5.Name = "txtSalesTax5"
+        Me.txtSalesTax5.ReadOnly = True
+        Me.txtSalesTax5.Size = New System.Drawing.Size(365, 20)
+        Me.txtSalesTax5.TabIndex = 110
+        Me.txtSalesTax5.TabStop = False
+        '
+        'Label69
+        '
+        Me.Label69.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label69.Location = New System.Drawing.Point(776, 89)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(61, 23)
+        Me.Label69.TabIndex = 109
+        Me.Label69.Text = "Total Price:"
+        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtTotalPrice5
+        '
+        Me.txtTotalPrice5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPrice5.Location = New System.Drawing.Point(843, 91)
+        Me.txtTotalPrice5.Name = "txtTotalPrice5"
+        Me.txtTotalPrice5.ReadOnly = True
+        Me.txtTotalPrice5.Size = New System.Drawing.Size(365, 20)
+        Me.txtTotalPrice5.TabIndex = 108
+        '
+        'lstItems5
+        '
+        Me.lstItems5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstItems5.FormattingEnabled = True
+        Me.lstItems5.Location = New System.Drawing.Point(776, 13)
+        Me.lstItems5.Name = "lstItems5"
+        Me.lstItems5.Size = New System.Drawing.Size(432, 69)
+        Me.lstItems5.TabIndex = 107
         '
         'Label46
         '
@@ -1529,13 +1784,13 @@ Partial Class frmViewTransactions
         Me.Label46.Text = "Transaction Type:"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox35
+        'txtAddress5
         '
-        Me.TextBox35.Location = New System.Drawing.Point(90, 91)
-        Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.ReadOnly = True
-        Me.TextBox35.Size = New System.Drawing.Size(680, 20)
-        Me.TextBox35.TabIndex = 97
+        Me.txtAddress5.Location = New System.Drawing.Point(90, 91)
+        Me.txtAddress5.Name = "txtAddress5"
+        Me.txtAddress5.ReadOnly = True
+        Me.txtAddress5.Size = New System.Drawing.Size(680, 20)
+        Me.txtAddress5.TabIndex = 97
         '
         'Label47
         '
@@ -1557,13 +1812,13 @@ Partial Class frmViewTransactions
         Me.Label48.Text = "Street Address:"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox36
+        'txtCity5
         '
-        Me.TextBox36.Location = New System.Drawing.Point(90, 117)
-        Me.TextBox36.Name = "TextBox36"
-        Me.TextBox36.ReadOnly = True
-        Me.TextBox36.Size = New System.Drawing.Size(229, 20)
-        Me.TextBox36.TabIndex = 96
+        Me.txtCity5.Location = New System.Drawing.Point(90, 117)
+        Me.txtCity5.Name = "txtCity5"
+        Me.txtCity5.ReadOnly = True
+        Me.txtCity5.Size = New System.Drawing.Size(229, 20)
+        Me.txtCity5.TabIndex = 96
         '
         'Label49
         '
@@ -1575,26 +1830,6 @@ Partial Class frmViewTransactions
         Me.Label49.Text = "City:"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox13
-        '
-        Me.ComboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox13.Location = New System.Drawing.Point(90, 13)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox13.TabIndex = 95
-        '
-        'ComboBox14
-        '
-        Me.ComboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox14.Location = New System.Drawing.Point(369, 116)
-        Me.ComboBox14.Name = "ComboBox14"
-        Me.ComboBox14.Size = New System.Drawing.Size(159, 21)
-        Me.ComboBox14.TabIndex = 95
-        '
         'Label50
         '
         Me.Label50.AutoSize = True
@@ -1605,21 +1840,21 @@ Partial Class frmViewTransactions
         Me.Label50.Text = "Phone Number:"
         Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox37
+        'txtPhoneNumber5
         '
-        Me.TextBox37.Location = New System.Drawing.Point(349, 65)
-        Me.TextBox37.Name = "TextBox37"
-        Me.TextBox37.ReadOnly = True
-        Me.TextBox37.Size = New System.Drawing.Size(421, 20)
-        Me.TextBox37.TabIndex = 83
+        Me.txtPhoneNumber5.Location = New System.Drawing.Point(349, 65)
+        Me.txtPhoneNumber5.Name = "txtPhoneNumber5"
+        Me.txtPhoneNumber5.ReadOnly = True
+        Me.txtPhoneNumber5.Size = New System.Drawing.Size(421, 20)
+        Me.txtPhoneNumber5.TabIndex = 83
         '
-        'TextBox38
+        'txtEmail5
         '
-        Me.TextBox38.Location = New System.Drawing.Point(90, 65)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.ReadOnly = True
-        Me.TextBox38.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox38.TabIndex = 82
+        Me.txtEmail5.Location = New System.Drawing.Point(90, 65)
+        Me.txtEmail5.Name = "txtEmail5"
+        Me.txtEmail5.ReadOnly = True
+        Me.txtEmail5.Size = New System.Drawing.Size(166, 20)
+        Me.txtEmail5.TabIndex = 82
         '
         'Label51
         '
@@ -1641,21 +1876,21 @@ Partial Class frmViewTransactions
         Me.Label52.Text = "Zip Code:"
         Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox39
+        'txtZip5
         '
-        Me.TextBox39.Location = New System.Drawing.Point(602, 117)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.ReadOnly = True
-        Me.TextBox39.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox39.TabIndex = 81
+        Me.txtZip5.Location = New System.Drawing.Point(602, 117)
+        Me.txtZip5.Name = "txtZip5"
+        Me.txtZip5.ReadOnly = True
+        Me.txtZip5.Size = New System.Drawing.Size(168, 20)
+        Me.txtZip5.TabIndex = 81
         '
-        'TextBox40
+        'txtSecurityCode5
         '
-        Me.TextBox40.Location = New System.Drawing.Point(661, 39)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.ReadOnly = True
-        Me.TextBox40.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox40.TabIndex = 79
+        Me.txtSecurityCode5.Location = New System.Drawing.Point(661, 39)
+        Me.txtSecurityCode5.Name = "txtSecurityCode5"
+        Me.txtSecurityCode5.ReadOnly = True
+        Me.txtSecurityCode5.Size = New System.Drawing.Size(109, 20)
+        Me.txtSecurityCode5.TabIndex = 79
         '
         'Label53
         '
@@ -1666,17 +1901,6 @@ Partial Class frmViewTransactions
         Me.Label53.TabIndex = 89
         Me.Label53.Text = "Security Code:"
         Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Enabled = False
-        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker4.Location = New System.Drawing.Point(474, 39)
-        Me.DateTimePicker4.MinDate = New Date(2001, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker4.TabIndex = 78
-        Me.DateTimePicker4.Value = New Date(2001, 1, 1, 0, 0, 0, 0)
         '
         'Label54
         '
@@ -1698,13 +1922,13 @@ Partial Class frmViewTransactions
         Me.Label55.Text = "Credit Card Number:"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox41
+        'txtCredit5
         '
-        Me.TextBox41.Location = New System.Drawing.Point(546, 13)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.ReadOnly = True
-        Me.TextBox41.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox41.TabIndex = 77
+        Me.txtCredit5.Location = New System.Drawing.Point(546, 13)
+        Me.txtCredit5.Name = "txtCredit5"
+        Me.txtCredit5.ReadOnly = True
+        Me.txtCredit5.Size = New System.Drawing.Size(224, 20)
+        Me.txtCredit5.TabIndex = 77
         '
         'Label57
         '
@@ -1716,13 +1940,13 @@ Partial Class frmViewTransactions
         Me.Label57.Text = "Last Name:"
         Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox42
+        'txtLastName5
         '
-        Me.TextBox42.Location = New System.Drawing.Point(261, 39)
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.ReadOnly = True
-        Me.TextBox42.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox42.TabIndex = 76
+        Me.txtLastName5.Location = New System.Drawing.Point(261, 39)
+        Me.txtLastName5.Name = "txtLastName5"
+        Me.txtLastName5.ReadOnly = True
+        Me.txtLastName5.Size = New System.Drawing.Size(99, 20)
+        Me.txtLastName5.TabIndex = 76
         '
         'Label58
         '
@@ -1734,13 +1958,13 @@ Partial Class frmViewTransactions
         Me.Label58.Text = "First Name:"
         Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox43
+        'txtFirstName5
         '
-        Me.TextBox43.Location = New System.Drawing.Point(90, 40)
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.ReadOnly = True
-        Me.TextBox43.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox43.TabIndex = 75
+        Me.txtFirstName5.Location = New System.Drawing.Point(90, 40)
+        Me.txtFirstName5.Name = "txtFirstName5"
+        Me.txtFirstName5.ReadOnly = True
+        Me.txtFirstName5.Size = New System.Drawing.Size(99, 20)
+        Me.txtFirstName5.TabIndex = 75
         '
         'Label59
         '
@@ -1752,264 +1976,41 @@ Partial Class frmViewTransactions
         Me.Label59.Text = "Payment Type:"
         Me.Label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label60
+        'lblTransactionID5
         '
-        Me.Label60.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label60.Location = New System.Drawing.Point(777, 134)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(236, 18)
-        Me.Label60.TabIndex = 0
-        Me.Label60.Text = "0004"
-        Me.Label60.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        '
-        'lblSalesTax
-        '
-        Me.lblSalesTax.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblSalesTax.Location = New System.Drawing.Point(776, 115)
-        Me.lblSalesTax.Name = "lblSalesTax"
-        Me.lblSalesTax.Size = New System.Drawing.Size(61, 23)
-        Me.lblSalesTax.TabIndex = 106
-        Me.lblSalesTax.Text = "Sales Tax:"
-        Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox44
-        '
-        Me.TextBox44.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.lblTransactionID5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox44.Location = New System.Drawing.Point(843, 117)
-        Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.ReadOnly = True
-        Me.TextBox44.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox44.TabIndex = 105
-        Me.TextBox44.TabStop = False
+        Me.lblTransactionID5.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTransactionID5.Location = New System.Drawing.Point(777, 134)
+        Me.lblTransactionID5.Name = "lblTransactionID5"
+        Me.lblTransactionID5.Size = New System.Drawing.Size(432, 18)
+        Me.lblTransactionID5.TabIndex = 0
+        Me.lblTransactionID5.Text = "0004"
+        Me.lblTransactionID5.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
-        'Label61
+        'cboType
         '
-        Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label61.Location = New System.Drawing.Point(776, 89)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(61, 23)
-        Me.Label61.TabIndex = 104
-        Me.Label61.Text = "Total Price:"
-        Me.Label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox45
-        '
-        Me.TextBox45.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox45.Location = New System.Drawing.Point(843, 91)
-        Me.TextBox45.Name = "TextBox45"
-        Me.TextBox45.ReadOnly = True
-        Me.TextBox45.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox45.TabIndex = 103
-        '
-        'Label62
-        '
-        Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label62.Location = New System.Drawing.Point(776, 115)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(61, 23)
-        Me.Label62.TabIndex = 111
-        Me.Label62.Text = "Sales Tax:"
-        Me.Label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox46
-        '
-        Me.TextBox46.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox46.Location = New System.Drawing.Point(843, 117)
-        Me.TextBox46.Name = "TextBox46"
-        Me.TextBox46.ReadOnly = True
-        Me.TextBox46.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox46.TabIndex = 110
-        Me.TextBox46.TabStop = False
-        '
-        'Label63
-        '
-        Me.Label63.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label63.Location = New System.Drawing.Point(776, 89)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(61, 23)
-        Me.Label63.TabIndex = 109
-        Me.Label63.Text = "Total Price:"
-        Me.Label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox47
-        '
-        Me.TextBox47.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox47.Location = New System.Drawing.Point(843, 91)
-        Me.TextBox47.Name = "TextBox47"
-        Me.TextBox47.ReadOnly = True
-        Me.TextBox47.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox47.TabIndex = 108
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(776, 13)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(236, 69)
-        Me.ListBox1.TabIndex = 107
-        '
-        'Label64
-        '
-        Me.Label64.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label64.Location = New System.Drawing.Point(776, 115)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(61, 23)
-        Me.Label64.TabIndex = 111
-        Me.Label64.Text = "Sales Tax:"
-        Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox48
-        '
-        Me.TextBox48.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox48.Location = New System.Drawing.Point(843, 117)
-        Me.TextBox48.Name = "TextBox48"
-        Me.TextBox48.ReadOnly = True
-        Me.TextBox48.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox48.TabIndex = 110
-        Me.TextBox48.TabStop = False
-        '
-        'Label65
-        '
-        Me.Label65.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label65.Location = New System.Drawing.Point(776, 89)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(61, 23)
-        Me.Label65.TabIndex = 109
-        Me.Label65.Text = "Total Price:"
-        Me.Label65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox49
-        '
-        Me.TextBox49.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox49.Location = New System.Drawing.Point(843, 91)
-        Me.TextBox49.Name = "TextBox49"
-        Me.TextBox49.ReadOnly = True
-        Me.TextBox49.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox49.TabIndex = 108
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(776, 13)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(236, 69)
-        Me.ListBox2.TabIndex = 107
-        '
-        'Label66
-        '
-        Me.Label66.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label66.Location = New System.Drawing.Point(776, 115)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(61, 23)
-        Me.Label66.TabIndex = 111
-        Me.Label66.Text = "Sales Tax:"
-        Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox50
-        '
-        Me.TextBox50.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox50.Location = New System.Drawing.Point(843, 117)
-        Me.TextBox50.Name = "TextBox50"
-        Me.TextBox50.ReadOnly = True
-        Me.TextBox50.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox50.TabIndex = 110
-        Me.TextBox50.TabStop = False
-        '
-        'Label67
-        '
-        Me.Label67.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label67.Location = New System.Drawing.Point(776, 89)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(61, 23)
-        Me.Label67.TabIndex = 109
-        Me.Label67.Text = "Total Price:"
-        Me.Label67.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox51
-        '
-        Me.TextBox51.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox51.Location = New System.Drawing.Point(843, 91)
-        Me.TextBox51.Name = "TextBox51"
-        Me.TextBox51.ReadOnly = True
-        Me.TextBox51.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox51.TabIndex = 108
-        '
-        'ListBox3
-        '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(776, 13)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(236, 69)
-        Me.ListBox3.TabIndex = 107
-        '
-        'Label68
-        '
-        Me.Label68.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label68.Location = New System.Drawing.Point(776, 115)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(61, 23)
-        Me.Label68.TabIndex = 111
-        Me.Label68.Text = "Sales Tax:"
-        Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox52
-        '
-        Me.TextBox52.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox52.Location = New System.Drawing.Point(843, 117)
-        Me.TextBox52.Name = "TextBox52"
-        Me.TextBox52.ReadOnly = True
-        Me.TextBox52.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox52.TabIndex = 110
-        Me.TextBox52.TabStop = False
-        '
-        'Label69
-        '
-        Me.Label69.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label69.Location = New System.Drawing.Point(776, 89)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(61, 23)
-        Me.Label69.TabIndex = 109
-        Me.Label69.Text = "Total Price:"
-        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox53
-        '
-        Me.TextBox53.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox53.Location = New System.Drawing.Point(843, 91)
-        Me.TextBox53.Name = "TextBox53"
-        Me.TextBox53.ReadOnly = True
-        Me.TextBox53.Size = New System.Drawing.Size(169, 20)
-        Me.TextBox53.TabIndex = 108
-        '
-        'ListBox4
-        '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(776, 13)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(236, 69)
-        Me.ListBox4.TabIndex = 107
+        Me.cboType.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboType.FormattingEnabled = True
+        Me.cboType.Items.AddRange(New Object() {"Checkouts", "Returns"})
+        Me.cboType.Location = New System.Drawing.Point(944, 12)
+        Me.cboType.Name = "cboType"
+        Me.cboType.Size = New System.Drawing.Size(125, 21)
+        Me.cboType.TabIndex = 51
         '
         'frmViewTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1043, 914)
+        Me.ClientSize = New System.Drawing.Size(1239, 914)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grpTransaction1)
+        Me.Controls.Add(Me.cboType)
         Me.Controls.Add(Me.cboFilter)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.lblPageNumber)
@@ -2046,166 +2047,167 @@ Partial Class frmViewTransactions
     Friend WithEvents grpTransaction1 As GroupBox
     Friend WithEvents lblTransactionID1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtPhoneNumber As TextBox
-    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtPhoneNumber1 As TextBox
+    Friend WithEvents txtEmail1 As TextBox
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblZip As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtZip1 As TextBox
+    Friend WithEvents txtSecurityCode1 As TextBox
     Friend WithEvents lblSecurityCode As Label
-    Friend WithEvents dtpExpirationDate As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtCredit1 As TextBox
     Friend WithEvents lblLastName As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtLastName1 As TextBox
     Friend WithEvents lblFirstName As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtFirstName1 As TextBox
     Friend WithEvents lblPaymentType As Label
     Friend WithEvents lstItems1 As ListBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtAddress1 As TextBox
     Friend WithEvents lblState As Label
     Friend WithEvents lblAddress As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtCity1 As TextBox
     Friend WithEvents lblCity As Label
-    Friend WithEvents cboState As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents Label56 As Label
-    Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAddress2 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtCity2 As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtPhoneNumber2 As TextBox
+    Friend WithEvents txtEmail2 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txtZip2 As TextBox
+    Friend WithEvents txtSecurityCode2 As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents txtCredit2 As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents txtLastName2 As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents txtFirstName2 As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents lblTransactionID2 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents txtAddress3 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents txtCity3 As TextBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents ComboBox7 As ComboBox
-    Friend WithEvents ComboBox8 As ComboBox
     Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents txtPhoneNumber3 As TextBox
+    Friend WithEvents txtEmail3 As TextBox
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents txtZip3 As TextBox
+    Friend WithEvents txtSecurityCode3 As TextBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents txtCredit3 As TextBox
     Friend WithEvents Label28 As Label
-    Friend WithEvents TextBox24 As TextBox
+    Friend WithEvents txtLastName3 As TextBox
     Friend WithEvents Label29 As Label
-    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents txtFirstName3 As TextBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents Label31 As Label
+    Friend WithEvents lblTransactionID3 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents ComboBox9 As ComboBox
     Friend WithEvents Label32 As Label
-    Friend WithEvents TextBox26 As TextBox
+    Friend WithEvents txtAddress4 As TextBox
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents txtCity4 As TextBox
     Friend WithEvents Label35 As Label
-    Friend WithEvents ComboBox10 As ComboBox
-    Friend WithEvents ComboBox11 As ComboBox
     Friend WithEvents Label36 As Label
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents TextBox29 As TextBox
+    Friend WithEvents txtPhoneNumber4 As TextBox
+    Friend WithEvents txtEmail4 As TextBox
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
-    Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents TextBox31 As TextBox
+    Friend WithEvents txtZip4 As TextBox
+    Friend WithEvents txtSecurityCode4 As TextBox
     Friend WithEvents Label39 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
-    Friend WithEvents TextBox32 As TextBox
+    Friend WithEvents txtCredit4 As TextBox
     Friend WithEvents Label42 As Label
-    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents txtLastName4 As TextBox
     Friend WithEvents Label43 As Label
-    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents txtFirstName4 As TextBox
     Friend WithEvents Label44 As Label
-    Friend WithEvents Label45 As Label
+    Friend WithEvents lblTransactionID4 As Label
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents ComboBox12 As ComboBox
     Friend WithEvents Label46 As Label
-    Friend WithEvents TextBox35 As TextBox
+    Friend WithEvents txtAddress5 As TextBox
     Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
-    Friend WithEvents TextBox36 As TextBox
+    Friend WithEvents txtCity5 As TextBox
     Friend WithEvents Label49 As Label
-    Friend WithEvents ComboBox13 As ComboBox
-    Friend WithEvents ComboBox14 As ComboBox
     Friend WithEvents Label50 As Label
-    Friend WithEvents TextBox37 As TextBox
-    Friend WithEvents TextBox38 As TextBox
+    Friend WithEvents txtPhoneNumber5 As TextBox
+    Friend WithEvents txtEmail5 As TextBox
     Friend WithEvents Label51 As Label
     Friend WithEvents Label52 As Label
-    Friend WithEvents TextBox39 As TextBox
-    Friend WithEvents TextBox40 As TextBox
+    Friend WithEvents txtZip5 As TextBox
+    Friend WithEvents txtSecurityCode5 As TextBox
     Friend WithEvents Label53 As Label
-    Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
-    Friend WithEvents TextBox41 As TextBox
+    Friend WithEvents txtCredit5 As TextBox
     Friend WithEvents Label57 As Label
-    Friend WithEvents TextBox42 As TextBox
+    Friend WithEvents txtLastName5 As TextBox
     Friend WithEvents Label58 As Label
-    Friend WithEvents TextBox43 As TextBox
+    Friend WithEvents txtFirstName5 As TextBox
     Friend WithEvents Label59 As Label
-    Friend WithEvents Label60 As Label
+    Friend WithEvents lblTransactionID5 As Label
     Friend WithEvents lblSalesTax As Label
-    Friend WithEvents TextBox44 As TextBox
+    Friend WithEvents txtSalesTax1 As TextBox
     Friend WithEvents Label61 As Label
-    Friend WithEvents TextBox45 As TextBox
+    Friend WithEvents txtTotalPrice1 As TextBox
     Friend WithEvents Label62 As Label
-    Friend WithEvents TextBox46 As TextBox
+    Friend WithEvents txtSalesTax2 As TextBox
     Friend WithEvents Label63 As Label
-    Friend WithEvents TextBox47 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents txtTotalPrice2 As TextBox
+    Friend WithEvents lstItems2 As ListBox
     Friend WithEvents Label64 As Label
-    Friend WithEvents TextBox48 As TextBox
+    Friend WithEvents txtSalesTax3 As TextBox
     Friend WithEvents Label65 As Label
-    Friend WithEvents TextBox49 As TextBox
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents txtTotalPrice3 As TextBox
+    Friend WithEvents lstItems3 As ListBox
     Friend WithEvents Label66 As Label
-    Friend WithEvents TextBox50 As TextBox
+    Friend WithEvents txtSalesTax4 As TextBox
     Friend WithEvents Label67 As Label
-    Friend WithEvents TextBox51 As TextBox
-    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents txtTotalPrice4 As TextBox
+    Friend WithEvents lstItems4 As ListBox
     Friend WithEvents Label68 As Label
-    Friend WithEvents TextBox52 As TextBox
+    Friend WithEvents txtSalesTax5 As TextBox
     Friend WithEvents Label69 As Label
-    Friend WithEvents TextBox53 As TextBox
-    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents txtTotalPrice5 As TextBox
+    Friend WithEvents lstItems5 As ListBox
+    Friend WithEvents cboType As ComboBox
+    Friend WithEvents txtState1 As TextBox
+    Friend WithEvents txtTransactionType1 As TextBox
+    Friend WithEvents txtPaymentType1 As TextBox
+    Friend WithEvents txtState2 As TextBox
+    Friend WithEvents txtTransactionType2 As TextBox
+    Friend WithEvents txtPaymentType2 As TextBox
+    Friend WithEvents txtState3 As TextBox
+    Friend WithEvents txtTransactionType3 As TextBox
+    Friend WithEvents txtPaymentType3 As TextBox
+    Friend WithEvents txtState4 As TextBox
+    Friend WithEvents txtTransactionType4 As TextBox
+    Friend WithEvents txtPaymentType4 As TextBox
+    Friend WithEvents txtState5 As TextBox
+    Friend WithEvents txtTransactionType5 As TextBox
+    Friend WithEvents txtPaymentType5 As TextBox
+    Friend WithEvents txtExpirationDate1 As TextBox
+    Friend WithEvents txtExpirationDate2 As TextBox
+    Friend WithEvents txtExpirationDate3 As TextBox
+    Friend WithEvents txtExpirationDate4 As TextBox
+    Friend WithEvents txtExpirationDate5 As TextBox
 End Class

@@ -112,9 +112,9 @@
                     strVendorName = txtVendor.Text
 
 
-                    ' Build the select statement using PK from name selected
-                    strSelect = "Update TVendors Set strVendorName = '" & strVendorName & "'" &
-                     "Where intVendorID = " & intCurrentlyEditingVendorPrimaryKey
+                    ' Build the select statement using PK from name selected (Updated for injection attacks)
+                    strSelect = "Update TVendors Set strVendorName = ?" &
+                     " Where intVendorID = " & intCurrentlyEditingVendorPrimaryKey
 
                     ' uncomment out the following message box line to use as a tool to check your sql statement
                     ' remember anything not a numeric value going into SQL Server must have single quotes '
@@ -125,6 +125,7 @@
 
                     ' make the connection
                     cmdUpdate = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                    cmdUpdate.Parameters.AddWithValue("@VendorName", strVendorName)
 
                     ' IUpdate the row with execute the statement
                     intRowsAffected = cmdUpdate.ExecuteNonQuery()

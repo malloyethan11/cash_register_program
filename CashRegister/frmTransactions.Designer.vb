@@ -28,6 +28,7 @@ Partial Class frmTransactions
         Me.btnReturns = New System.Windows.Forms.Button()
         Me.btnViewTransactions = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnPayInPayOut = New System.Windows.Forms.Button()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class frmTransactions
         Me.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCheckout.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckout.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnCheckout.Location = New System.Drawing.Point(266, 232)
+        Me.btnCheckout.Location = New System.Drawing.Point(120, 232)
         Me.btnCheckout.Name = "btnCheckout"
         Me.btnCheckout.Size = New System.Drawing.Size(284, 42)
         Me.btnCheckout.TabIndex = 11
@@ -62,7 +63,7 @@ Partial Class frmTransactions
         Me.btnReturns.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReturns.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReturns.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnReturns.Location = New System.Drawing.Point(266, 280)
+        Me.btnReturns.Location = New System.Drawing.Point(410, 232)
         Me.btnReturns.Name = "btnReturns"
         Me.btnReturns.Size = New System.Drawing.Size(284, 42)
         Me.btnReturns.TabIndex = 12
@@ -95,6 +96,19 @@ Partial Class frmTransactions
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'btnPayInPayOut
+        '
+        Me.btnPayInPayOut.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnPayInPayOut.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPayInPayOut.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPayInPayOut.Image = Global.CashRegister.My.Resources.Resources.Button
+        Me.btnPayInPayOut.Location = New System.Drawing.Point(266, 280)
+        Me.btnPayInPayOut.Name = "btnPayInPayOut"
+        Me.btnPayInPayOut.Size = New System.Drawing.Size(284, 42)
+        Me.btnPayInPayOut.TabIndex = 10
+        Me.btnPayInPayOut.Text = "Pay-Ins and Pay-Outs"
+        Me.btnPayInPayOut.UseVisualStyleBackColor = True
+        '
         'frmTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -104,6 +118,7 @@ Partial Class frmTransactions
         Me.Controls.Add(Me.picLogo)
         Me.Controls.Add(Me.btnCheckout)
         Me.Controls.Add(Me.btnReturns)
+        Me.Controls.Add(Me.btnPayInPayOut)
         Me.Controls.Add(Me.btnViewTransactions)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -119,4 +134,5 @@ Partial Class frmTransactions
     Friend WithEvents btnReturns As Button
     Friend WithEvents btnViewTransactions As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents btnPayInPayOut As Button
 End Class

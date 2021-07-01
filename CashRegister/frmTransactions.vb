@@ -40,4 +40,9 @@
 
     End Sub
 
+    Private Sub btnPayInPayOut_Click(sender As Object, e As EventArgs) Handles btnPayInPayOut.Click
+
+        OpenFormKillParent(Me, frmPayInPayOut)
+
+    End Sub
 End Class

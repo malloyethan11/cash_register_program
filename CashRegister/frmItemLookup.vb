@@ -87,7 +87,9 @@ Public Class frmItemLookup
         End If
 
         ' Load the items
-        LoadItems()
+        If (String.IsNullOrEmpty(cboFilter.Text) = False) Then
+            LoadItems()
+        End If
         txtSearch.Text = Trim(txtSearch.Text)
 
     End Sub
@@ -118,7 +120,7 @@ Public Class frmItemLookup
             Dim dt As DataTable = New DataTable
 
             ' Filter string
-            Dim strFilter As String
+            Dim strFilter As String = ""
             ' Cat ID
             Dim drCategorySet() As System.Data.DataRow
             ' Ven ID
@@ -153,17 +155,19 @@ Public Class frmItemLookup
                     strFilter = "intCategoryID"
                 Case "Vendor"
                     strFilter = "intVendorID"
-                Case Else
+                Case "UPC"
                     strFilter = "strUPC"
             End Select
 
             If (strFilter = "intCategoryID") Then
 
-                strSelect = "SELECT intCategoryID, strCategory FROM TCategories
-                WHERE strCategory Like '%" & txtSearch.Text & "%'"
+                'strSelect = "SELECT intCategoryID, strCategory FROM TCategories
+                'WHERE strCategory Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intCategoryID, strCategory FROM TCategories WHERE strCategory Like '%' +" & "?" & "+ '%'"
 
                 ' Retrieve all the records 
                 cmdVenCatSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdVenCatSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drVenCatSourceTable = cmdVenCatSelect.ExecuteReader
 
                 ' load table from data reader
@@ -201,12 +205,16 @@ Public Class frmItemLookup
                 ' Populate the array based on search
                 drSet = dt.Rows
 
+                ' Clean up
+                drVenCatSourceTable.Close()
+
             ElseIf (strFilter = "intVendorID") Then
 
-                strSelect = "SELECT intVendorID, strVendorName FROM TVendors WHERE strVendorName Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intVendorID, strVendorName FROM TVendors WHERE strVendorName Like '%'+" & "?" & "+'%'"
 
                 ' Retrieve all the records 
                 cmdVenCatSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdVenCatSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drVenCatSourceTable = cmdVenCatSelect.ExecuteReader
 
                 ' load table from data reader
@@ -244,11 +252,15 @@ Public Class frmItemLookup
                 ' Populate the array based on search
                 drSet = dt.Rows
 
+                ' Clean up
+                drVenCatSourceTable.Close()
+
             Else
-                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%" & txtSearch.Text & "%'"
+                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%'+" & "?" & "+'%'"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                cmdSelect.Parameters.AddWithValue("SearchText", txtSearch.Text)
                 drSourceTable = cmdSelect.ExecuteReader
 
                 ' load table from data reader
@@ -462,7 +474,7 @@ Public Class frmItemLookup
                 Else
                     ' Open the editor form and pass on the primary key
                     Dim frmNewEditor As New frmItemEditor
-                    frmNewEditor.intCurrentlyEditingVendorPrimaryKey = drSet(intIndex)("intItemID").ToString
+                    frmNewEditor.intCurrentlyEditingItemPrimaryKey = drSet(intIndex)("intItemID").ToString
                     OpenFormMaintainParent(Me, frmNewEditor)
                     ' If data change has occured, then load the items again
                     If (frmNewEditor.blnChangedData = True) Then
@@ -534,12 +546,24 @@ Public Class frmItemLookup
 
     End Sub
 
-    Private Sub txtQTY_TextChanged(sender As Object, e As KeyPressEventArgs) Handles txtQTY.KeyPress
+    Private Sub txtQTY_KeyPressed(sender As Object, e As KeyPressEventArgs) Handles txtQTY.KeyPress
 
+        ' If the input is not numeric, reject
         If (IsNumeric(e.KeyChar.ToString) = False And Asc(e.KeyChar) <> 8) Then
 
             e.Handled = True
             CType(sender, TextBox).Clear()
+
+        End If
+
+    End Sub
+
+    Private Sub txtQTY_TextChanged(sender As Object, e As EventArgs) Handles txtQTY.TextChanged
+
+        ' If the text is not numeric, clear
+        If (IsNumeric(txtQTY.Text) = False) Then
+
+            txtQTY.ResetText()
 
         End If
 

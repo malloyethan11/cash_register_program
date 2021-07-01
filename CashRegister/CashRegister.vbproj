@@ -147,6 +147,12 @@
     <Compile Include="frmItemLookup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPayInPayOut.Designer.vb">
+      <DependentUpon>frmPayInPayOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayInPayOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPriceAdjust.Designer.vb">
       <DependentUpon>frmPriceAdjust.vb</DependentUpon>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmItemLookup.resx">
       <DependentUpon>frmItemLookup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayInPayOut.resx">
+      <DependentUpon>frmPayInPayOut.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPriceAdjust.resx">
       <DependentUpon>frmPriceAdjust.vb</DependentUpon>

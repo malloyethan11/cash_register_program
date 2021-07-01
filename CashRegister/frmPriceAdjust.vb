@@ -30,28 +30,76 @@ Public Class frmPriceAdjust
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
         ' declare variables
-        Dim intAdjustmentAmount As Integer
         Dim dblAdjustmentAmount As Double
-        Dim strVendorName As String
         Dim strAdjustmentType As String
 
         ' validate input
         If ValidateInput(txtAmount.Text) = True Then
+
+            strAdjustmentType = cboUnitOfMeasure.SelectedItem
 
             ' determine adjustment type (dollar amount or percent)
             If strAdjustmentType = "%" Then
 
                 dblAdjustmentAmount = txtAmount.Text
 
+                ' convert dblAdjustmentAmount to decimal
+                ' e.g. 5% goes to .05
+                dblAdjustmentAmount /= 100
+
+                ' add 1 to the decimal for price increase arithmetic 
+                ' e.g. for 5% increase of 100, do 100 * 1.05
+                dblAdjustmentAmount += 1
+
+                ' in case of price decrease 
+                If dblAdjustmentAmount < 0 Then
+
+                    dblAdjustmentAmount -= 1
+                    dblAdjustmentAmount = Math.Abs(dblAdjustmentAmount)
+
+                End If
+
+
                 ' build and execute update statement
                 Try
 
+                    Dim strUpdate As String = ""
+                    Dim cmdUpdate As OleDb.OleDbCommand
 
+                    ' open the DB
+                    If OpenDatabaseConnectionSQLServer() = False Then
 
+                        ' No, warn the user ...
+                        MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                                "The application will now close.",
+                                                Me.Text + " Error",
+                                                MessageBoxButtons.OK, MessageBoxIcon.Error)
 
+                        ' and close the form/application
+                        Me.Close()
 
+                    End If
+
+                    ' build db insert string and command
+                    strUpdate = "UPDATE TItems SET decItemPrice = decItemPrice * " & dblAdjustmentAmount & " WHERE intVendorID = " & cboVendor.SelectedValue
+                    cmdUpdate = New OleDb.OleDbCommand(strUpdate, m_conAdministrator)
+
+                    ' insert the records
+                    cmdUpdate.ExecuteNonQuery()
+
+                    ' close the db connection
+                    CloseDatabaseConnection()
+
+                    ' display message box to notify of successful insert
+                    MessageBox.Show("Prices successfully adjusted!")
+
+                    ' clear textbox for next vendor
+                    txtAmount.Clear()
 
                 Catch ex As Exception
+
+                    ' Log and display error message
+                    MessageBox.Show(ex.Message)
 
                 End Try
 
@@ -80,7 +128,7 @@ Public Class frmPriceAdjust
                     End If
 
                     ' build db insert string and command
-                    strUpdate = "UPDATE TItems SET decItemPrice = decItemPrice + " & dblAdjustmentAmount & " WHERE intVendorID = " & cboVendor.SelectedIndex
+                    strUpdate = "UPDATE TItems SET decItemPrice = decItemPrice + " & dblAdjustmentAmount & " WHERE intVendorID = " & cboVendor.SelectedValue
                     cmdUpdate = New OleDb.OleDbCommand(strUpdate, m_conAdministrator)
 
                     ' insert the records
@@ -96,6 +144,9 @@ Public Class frmPriceAdjust
                     txtAmount.Clear()
 
                 Catch ex As Exception
+
+                    ' Log and display error message
+                    MessageBox.Show(ex.Message)
 
                 End Try
 
@@ -139,12 +190,10 @@ Public Class frmPriceAdjust
             ' load table from data reader
             dt.Load(drSourceTable)
 
-            ' Add the item to the combo box. We need the sponsor ID associated with the name so 
-            ' when we click on the name we can then use the ID to pull the rest of the sponsors data.
-            ' We are binding the column name to the combo box display and value members. 
+            ' populate combobox
+            cboVendor.DataSource = dt
             cboVendor.ValueMember = "intVendorID"
             cboVendor.DisplayMember = "strVendorName"
-            cboVendor.DataSource = dt
 
             ' Select the first item in the list by default
             If cboVendor.Items.Count > 0 Then cboVendor.SelectedIndex = 0

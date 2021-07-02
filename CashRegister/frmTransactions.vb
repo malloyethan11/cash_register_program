@@ -24,13 +24,21 @@
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
 
-        OpenFormKillParent(Me, frmCheckout)
+        If (MyUser.CanCheckout = True) Then
+            OpenFormKillParent(Me, frmCheckout)
+        Else
+            MessageBox.Show("You do not have permission to access frmCheckout!", "Error")
+        End If
 
     End Sub
 
     Private Sub btnReturns_Click(sender As Object, e As EventArgs) Handles btnReturns.Click
 
-        OpenFormKillParent(Me, frmReturn)
+        If (MyUser.CanReturn = True) Then
+            OpenFormKillParent(Me, frmReturn)
+        Else
+            MessageBox.Show("You do not have permission to access frmReturns!", "Error")
+        End If
 
     End Sub
 
@@ -42,7 +50,11 @@
 
     Private Sub btnPayInPayOut_Click(sender As Object, e As EventArgs) Handles btnPayInPayOut.Click
 
-        OpenFormKillParent(Me, frmPayInPayOut)
+        If (MyUser.CanPayInPayOut = True) Then
+            OpenFormKillParent(Me, frmPayInPayOut)
+        Else
+            MessageBox.Show("You do not have permission to access frmReturns!", "Error")
+        End If
 
     End Sub
 End Class

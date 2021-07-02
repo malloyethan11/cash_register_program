@@ -22,6 +22,7 @@ Public Class frmPayInPayOut
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
+
         ' variables for new item data
         Dim strDesc As String = ""
         Dim decPrice As Decimal = 0

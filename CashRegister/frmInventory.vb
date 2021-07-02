@@ -26,13 +26,21 @@
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
 
-        OpenFormKillParent(Me, frmAddItem)
+        If (MyUser.CanAddItems = True) Then
+            OpenFormKillParent(Me, frmAddItem)
+        Else
+            MessageBox.Show("You do not have permission to access frmAddItem!", "Error")
+        End If
 
     End Sub
 
     Private Sub btnPriceItems_Click(sender As Object, e As EventArgs) Handles btnPriceItems.Click
 
-        OpenFormKillParent(Me, frmPriceAdjust)
+        If (MyUser.CanAdjustPricing = True) Then
+            OpenFormKillParent(Me, frmPriceAdjust)
+        Else
+            MessageBox.Show("You do not have permission to access frmPriceAdjust!", "Error")
+        End If
 
     End Sub
 
@@ -50,7 +58,11 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAddVendor.Click
 
-        OpenFormKillParent(Me, frmAddVendor)
+        If (MyUser.CanAdjustPricing = True) Then
+            OpenFormKillParent(Me, frmAddVendor)
+        Else
+            MessageBox.Show("You do not have permission to access frmAddVendor!", "Error")
+        End If
 
     End Sub
 End Class

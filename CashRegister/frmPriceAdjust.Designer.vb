@@ -24,7 +24,7 @@ Partial Class frmPriceAdjust
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPriceAdjust))
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.txtAmount = New System.Windows.Forms.TextBox()
         Me.lblAdjust = New System.Windows.Forms.Label()
         Me.cboUnitOfMeasure = New System.Windows.Forms.ComboBox()
@@ -45,18 +45,18 @@ Partial Class frmPriceAdjust
         Me.btnExit.Text = "Cancel"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.Button1.Location = New System.Drawing.Point(320, 65)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 42)
-        Me.Button1.TabIndex = 85
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSubmit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
+        Me.btnSubmit.Location = New System.Drawing.Point(320, 65)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(113, 42)
+        Me.btnSubmit.TabIndex = 85
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'txtAmount
         '
@@ -120,7 +120,7 @@ Partial Class frmPriceAdjust
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblAdjust)
         Me.Controls.Add(Me.txtAmount)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPriceAdjust"
@@ -130,7 +130,7 @@ Partial Class frmPriceAdjust
 
     End Sub
     Friend WithEvents btnExit As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents txtAmount As TextBox
     Friend WithEvents lblAdjust As Label
     Friend WithEvents cboUnitOfMeasure As ComboBox

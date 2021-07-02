@@ -122,7 +122,7 @@
                         ' remember anything not a numeric value going into SQL Server must have single quotes '
                         ' around it, including dates.
 
-                        MessageBox.Show(strSelect)
+                        'MessageBox.Show(strSelect)
 
 
                         ' make the connection

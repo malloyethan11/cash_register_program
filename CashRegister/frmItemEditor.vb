@@ -256,31 +256,35 @@ Public Class frmItemEditor
 
 
         ' validate data is entered
-        If Validation() = True Then
-            If VerifySKU(strSKU) = True Then
-                If VerifyPrice(decItemPrice) = True Then
-                    If VerifyInventory(intInventoryAmt) = True Then
-                        If VerifySafetyStock(intSafetyStockAmt) = True Then
-                            If VerifyUPC(strUPC) = True Then
-                                If VerifyImage() = True Then
+        If MyUser.CanEditItems = True Then
+            If Validation() = True Then
+                If VerifySKU(strSKU) = True Then
+                    If VerifyPrice(decItemPrice) = True Then
+                        If VerifyInventory(intInventoryAmt) = True Then
+                            If VerifySafetyStock(intSafetyStockAmt) = True Then
+                                If VerifyUPC(strUPC) = True Then
+                                    If VerifyImage() = True Then
 
 
-                                    strSKU = txtSKU.Text
-                                    strItemName = txtName.Text
-                                    strItemDesc = txtDescription.Text
-                                    decItemPrice = txtPrice.Text
-                                    intInventoryAmt = txtInventory.Text
-                                    intSafetyStockAmt = txtSafetytock.Text
-                                    strUPC = txtUPC.Text
+                                        strSKU = txtSKU.Text
+                                        strItemName = txtName.Text
+                                        strItemDesc = txtDescription.Text
+                                        decItemPrice = txtPrice.Text
+                                        intInventoryAmt = txtInventory.Text
+                                        intSafetyStockAmt = txtSafetytock.Text
+                                        strUPC = txtUPC.Text
 
-                                    ' pass inputs, now validated to sub UpdateItem to enter in DB
-                                    UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                        ' pass inputs, now validated to sub UpdateItem to enter in DB
+                                        UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                    End If
                                 End If
                             End If
                         End If
                     End If
                 End If
             End If
+        Else
+            MessageBox.Show("You do not have permission to update items!", "Error")
         End If
 
     End Sub
@@ -486,73 +490,78 @@ Public Class frmItemEditor
         Dim dt As DataTable = New DataTable ' this is the table we will load from our reader
         Dim result As DialogResult  ' this is the result of which button the user selects
 
-        Try
-            ' open the database this is in module
-            If OpenDatabaseConnectionSQLServer() = False Then
+        ' Test permission
+        If MyUser.CanDeleteItems = True Then
+            Try
+                ' open the database this is in module
+                If OpenDatabaseConnectionSQLServer() = False Then
 
-                ' No, warn the user ...
-                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                    ' No, warn the user ...
+                    MessageBox.Show(Me, "Database connection error." & vbNewLine &
                                     "The application will now close.",
                                     Me.Text + " Error",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                ' and close the form/application
+                    ' and close the form/application
+                    Me.Close()
+
+                End If
+
+                ' always ask before deleting!!!!
+                result = MessageBox.Show("Are you sure you want to Delete Item: Item Name-" & txtName.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+
+                ' this will figure out which button was selected. Cancel and No does nothing, Yes will allow deletion
+                Select Case result
+                    Case DialogResult.Cancel
+                        MessageBox.Show("Action Canceled")
+                    Case DialogResult.No
+                        MessageBox.Show("Action Canceled")
+                    Case DialogResult.Yes
+
+
+                        ' Build the delete statement using PK from name selected
+                        ' must delete any child records first
+                        strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
+
+                        ' Delete the record(s) 
+                        cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                        intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                        ' now we can delete the parent record
+                        strDelete = "Delete FROM TItems Where intItemID = " & strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
+
+
+                        ' Delete the record(s) 
+                        cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
+                        intRowsAffected = cmdDelete.ExecuteNonQuery()
+
+                        ' Did it work?
+                        If intRowsAffected > 0 Then
+
+                            ' Yes, success
+                            MessageBox.Show("Delete successful")
+
+                            ' Mark flag to indicate reload on return to item lookup page
+                            blnChangedData = True
+
+                        End If
+
+                End Select
+
+
+                ' close the database connection
+                CloseDatabaseConnection()
+
+                Dim frmNewItemLookup As New frmItemLookup
+
                 Me.Close()
 
-            End If
-
-            ' always ask before deleting!!!!
-            result = MessageBox.Show("Are you sure you want to Delete Item: Item Name-" & txtName.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-
-            ' this will figure out which button was selected. Cancel and No does nothing, Yes will allow deletion
-            Select Case result
-                Case DialogResult.Cancel
-                    MessageBox.Show("Action Canceled")
-                Case DialogResult.No
-                    MessageBox.Show("Action Canceled")
-                Case DialogResult.Yes
-
-
-                    ' Build the delete statement using PK from name selected
-                    ' must delete any child records first
-                    strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
-
-                    ' Delete the record(s) 
-                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
-                    intRowsAffected = cmdDelete.ExecuteNonQuery()
-
-                    ' now we can delete the parent record
-                    strDelete = "Delete FROM TItems Where intItemID = " & strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
-
-
-                    ' Delete the record(s) 
-                    cmdDelete = New OleDb.OleDbCommand(strDelete, m_conAdministrator)
-                    intRowsAffected = cmdDelete.ExecuteNonQuery()
-
-                    ' Did it work?
-                    If intRowsAffected > 0 Then
-
-                        ' Yes, success
-                        MessageBox.Show("Delete successful")
-
-                        ' Mark flag to indicate reload on return to item lookup page
-                        blnChangedData = True
-
-                    End If
-
-            End Select
-
-
-            ' close the database connection
-            CloseDatabaseConnection()
-
-            Dim frmNewItemLookup As New frmItemLookup
-
-            Me.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("You do not have permission to delete items!", "Error")
+        End If
 
     End Sub
 End Class

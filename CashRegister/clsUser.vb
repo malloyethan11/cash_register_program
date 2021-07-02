@@ -1,14 +1,16 @@
 ﻿Public Class clsUser
 
     Private m_strUsername As String
-    Private m_blnCheckout As Boolean
-    Private m_blnReturns As Boolean
-    Private m_blnAddItems As Boolean
-    Private m_blnEditItems As Boolean
-    Private m_blnDeleteItems As Boolean
-    Private m_blnMassPricing As Boolean
-    Private m_blnAddVendors As Boolean
-    Private m_blnEditVendors As Boolean
+    Private m_blnCheckout As Boolean '
+    Private m_blnReturns As Boolean '
+    Private m_blnAddItems As Boolean '
+    Private m_blnEditItems As Boolean '
+    Private m_blnDeleteItems As Boolean '
+    Private m_blnMassPricing As Boolean '
+    Private m_blnAddVendors As Boolean '
+    Private m_blnEditVendors As Boolean '
+    Private m_blnDeleteVendors As Boolean '
+    Private m_blnPayInPayOut As Boolean
 
     Public Property Username() As String
         Get
@@ -88,6 +90,24 @@
         End Get
         Set(ByVal value As Boolean)
             m_blnEditVendors = value
+        End Set
+    End Property
+
+    Public Property CanDeleteVendors() As Boolean
+        Get
+            Return m_blnDeleteVendors
+        End Get
+        Set(ByVal value As Boolean)
+            m_blnDeleteVendors = value
+        End Set
+    End Property
+
+    Public Property CanPayInPayOut() As Boolean
+        Get
+            Return m_blnPayInPayOut
+        End Get
+        Set(ByVal value As Boolean)
+            m_blnPayInPayOut = value
         End Set
     End Property
 

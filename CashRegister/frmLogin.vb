@@ -93,6 +93,8 @@
                     MyUser.CanAdjustPricing = drSet(0)("blnMassPricing").ToString
                     MyUser.CanAddVendors = drSet(0)("blnAddVendors").ToString
                     MyUser.CanEditVendors = drSet(0)("blnEditVendors").ToString
+                    MyUser.CanDeleteVendors = drSet(0)("blnDeleteVendors").ToString
+                    MyUser.CanPayInPayOut = drSet(0)("blnPayInPayOut").ToString
                     blnValid = True
                 Else
                     MessageBox.Show("Incorrect username or password!", "Login Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

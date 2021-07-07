@@ -161,14 +161,39 @@ Module ModuleCommonUtilities
 
     End Function
 
-    Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control)
+    Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control, ByRef frmForm As Form)
 
-        If (MousePosition.X > ctlControl.Location.X And MousePosition.Y > ctlControl.Location.Y And MousePosition.X < ctlControl.Location.X + ctlControl.Width And MousePosition.X < ctlControl.Location.Y + ctlControl.Height) Then
+        ' This if statement adapted from the Waveslash game launch I made for my latest game: https://gravityhamster.itch.io/waveslash
+        If (MousePosition.X > ctlControl.Left + frmForm.Left And MousePosition.X < ctlControl.Right + frmForm.Left) And (MousePosition.Y > ctlControl.Top + frmForm.Top + ctlControl.Height - 9 And MousePosition.Y < ctlControl.Bottom + frmForm.Top + ctlControl.Height - 8) Then
             Return True
         Else
             Return False
         End If
 
     End Function
+
+    Public Function Clamp(ByVal intValue As Integer, ByVal intMin As Integer, ByVal intMax As Integer) As Integer
+
+        ' Clamp into range
+        If (intValue > intMax) Then
+            intValue = intMax
+        ElseIf (intValue < intMin) Then
+            intValue = intMin
+        End If
+
+        ' Return
+        Return intValue
+
+    End Function
+
+    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap)
+
+        If (MouseIsHovering(pntPosition, btnItemLookup, frMe)) Then
+            btnItemLookup.Image = btmButtonGray
+        Else
+            btnItemLookup.Image = btmButton
+        End If
+
+    End Sub
 
 End Module

@@ -22,6 +22,7 @@ Partial Class frmAddItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddItem))
         Me.txtSafetytock = New System.Windows.Forms.TextBox()
         Me.txtUPC = New System.Windows.Forms.TextBox()
@@ -45,6 +46,7 @@ Partial Class frmAddItem
         Me.btnAddImage = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.picItemImage = New System.Windows.Forms.PictureBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -299,6 +301,11 @@ Partial Class frmAddItem
         Me.picItemImage.TabIndex = 102
         Me.picItemImage.TabStop = False
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmAddItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,4 +365,5 @@ Partial Class frmAddItem
     Friend WithEvents cboVendors As ComboBox
     Friend WithEvents btnAddImage As Button
     Friend WithEvents picItemImage As PictureBox
+    Friend WithEvents StepAction As Timer
 End Class

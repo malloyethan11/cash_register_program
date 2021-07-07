@@ -65,4 +65,16 @@
         End If
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnItemLookup, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnPriceItems, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnVendorLookup, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnAddItem, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnAddVendor, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
+
 End Class

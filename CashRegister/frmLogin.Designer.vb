@@ -22,6 +22,7 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -30,6 +31,7 @@ Partial Class frmLogin
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -100,6 +102,10 @@ Partial Class frmLogin
         Me.lblWelcome.TabIndex = 13
         Me.lblWelcome.Text = "Welcome Back!"
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnLogin
@@ -130,4 +136,5 @@ Partial Class frmLogin
     Friend WithEvents lblUsername As Label
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents lblWelcome As Label
+    Friend WithEvents StepAction As Timer
 End Class

@@ -22,6 +22,7 @@ Partial Class frmInventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventory))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnItemLookup = New System.Windows.Forms.Button()
@@ -30,6 +31,7 @@ Partial Class frmInventory
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnAddVendor = New System.Windows.Forms.Button()
         Me.btnVendorLookup = New System.Windows.Forms.Button()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,6 +125,11 @@ Partial Class frmInventory
         Me.btnVendorLookup.Text = "Vendor Lookup"
         Me.btnVendorLookup.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -151,4 +158,5 @@ Partial Class frmInventory
     Friend WithEvents btnItemLookup As Button
     Friend WithEvents btnAddVendor As Button
     Friend WithEvents btnVendorLookup As Button
+    Friend WithEvents StepAction As Timer
 End Class

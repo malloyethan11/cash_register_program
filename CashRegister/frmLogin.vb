@@ -1,4 +1,5 @@
 ﻿Public Class frmLogin
+
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ' Prompt for database connection credentials
@@ -21,6 +22,77 @@
         txtPassword.MaxLength = 50
 
         txtUsername.MaxLength = 50
+
+        SetImages()
+
+    End Sub
+
+    Private Sub SetImages()
+
+        ' Change color - Cite: https://www.daniweb.com/programming/software-development/threads/486625/convert-color-image-to-grayscale
+        Dim x As Integer = btmButtonDefault.Width
+        Dim y As Integer = btmButtonDefault.Height
+        btmButtonDefaultGray = New Bitmap(btmButtonDefault.Width, btmButtonDefault.Height)
+
+        For x = 0 To (btmButtonDefault.Width) - 1
+            For y = 0 To (btmButtonDefault.Height) - 1
+                Dim c As Color = btmButtonDefault.GetPixel(x, y)
+                Dim r As Integer = c.R
+                Dim g As Integer = c.G
+                Dim b As Integer = c.B
+                Dim a As Integer = c.A
+                Dim d As Integer = (r + g + b) \ 3
+                btmButtonDefaultGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
+            Next
+        Next
+
+        x = btmButtonLittleLong.Width
+        y = btmButtonLittleLong.Height
+        btmButtonLittleLongGray = New Bitmap(btmButtonLittleLong.Width, btmButtonLittleLong.Height)
+
+        For x = 0 To (btmButtonLittleLong.Width) - 1
+            For y = 0 To (btmButtonLittleLong.Height) - 1
+                Dim c As Color = btmButtonLittleLong.GetPixel(x, y)
+                Dim r As Integer = c.R
+                Dim g As Integer = c.G
+                Dim b As Integer = c.B
+                Dim a As Integer = c.A
+                Dim d As Integer = (r + g + b) \ 3
+                btmButtonLittleLongGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
+            Next
+        Next
+
+        x = btmButtonShort.Width
+        y = btmButtonShort.Height
+        btmButtonShortGray = New Bitmap(btmButtonShort.Width, btmButtonShort.Height)
+
+        For x = 0 To (btmButtonShort.Width) - 1
+            For y = 0 To (btmButtonShort.Height) - 1
+                Dim c As Color = btmButtonShort.GetPixel(x, y)
+                Dim r As Integer = c.R
+                Dim g As Integer = c.G
+                Dim b As Integer = c.B
+                Dim a As Integer = c.A
+                Dim d As Integer = (r + g + b) \ 3
+                btmButtonShortGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
+            Next
+        Next
+
+        x = btmSkinnyButton.Width
+        y = btmSkinnyButton.Height
+        btmSkinnyButtonGray = New Bitmap(btmSkinnyButton.Width, btmSkinnyButton.Height)
+
+        For x = 0 To (btmSkinnyButton.Width) - 1
+            For y = 0 To (btmSkinnyButton.Height) - 1
+                Dim c As Color = btmSkinnyButton.GetPixel(x, y)
+                Dim r As Integer = c.R
+                Dim g As Integer = c.G
+                Dim b As Integer = c.B
+                Dim a As Integer = c.A
+                Dim d As Integer = (r + g + b) \ 3
+                btmSkinnyButtonGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
+            Next
+        Next
 
     End Sub
 
@@ -119,4 +191,10 @@
         Return blnValid
 
     End Function
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnLogin, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
 End Class

@@ -549,7 +549,7 @@ Public Class frmItemEditor
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
 
-        ButtonColor(MousePosition, btnChangeImage, Me, btmSkinnyButtonGray, btmSkinnyButton)
+        ButtonColor(MousePosition, btnChangeImage, Me, btmSkinnyButtonGray, btmSkinnyButton, 0, 0)
         ButtonColor(MousePosition, btnExit, Me, btmButtonLittleLongGray, btmButtonLittleLong)
         ButtonColor(MousePosition, btnDelete, Me, btmButtonShortGray, btmButtonShort)
         ButtonColor(MousePosition, btnUpdate, Me, btmButtonDefaultGray, btmButtonDefault)

@@ -186,9 +186,9 @@ Module ModuleCommonUtilities
 
     End Function
 
-    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap)
+    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
 
-        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe) And frmMe.ContainsFocus = True) Then
+        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe, intUpperOffset, intLowerOffset) And frmMe.ContainsFocus = True) Then
             btnItemLookup.Image = btmButtonGray
         Else
             btnItemLookup.Image = btmButton

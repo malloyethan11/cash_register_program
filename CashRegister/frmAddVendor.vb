@@ -105,5 +105,11 @@ Public Class frmAddVendor
 
     End Sub
 
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnAdd, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonLittleLongGray, btmButtonLittleLong)
+
+    End Sub
 
 End Class

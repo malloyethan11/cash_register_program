@@ -22,6 +22,7 @@ Partial Class frmViewTransactions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewTransactions))
         Me.cboFilter = New System.Windows.Forms.ComboBox()
         Me.lblPageNumber = New System.Windows.Forms.Label()
@@ -38,7 +39,9 @@ Partial Class frmViewTransactions
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtCity1 = New System.Windows.Forms.TextBox()
         Me.lblCity = New System.Windows.Forms.Label()
+        Me.txtDescription1 = New System.Windows.Forms.TextBox()
         Me.lstItems1 = New System.Windows.Forms.ListBox()
+        Me.Label60 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber1 = New System.Windows.Forms.TextBox()
         Me.txtEmail1 = New System.Windows.Forms.TextBox()
@@ -72,7 +75,9 @@ Partial Class frmViewTransactions
         Me.txtTotalPrice2 = New System.Windows.Forms.TextBox()
         Me.lstItems2 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtDescription2 = New System.Windows.Forms.TextBox()
         Me.txtAddress2 = New System.Windows.Forms.TextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtCity2 = New System.Windows.Forms.TextBox()
@@ -106,7 +111,9 @@ Partial Class frmViewTransactions
         Me.txtTotalPrice3 = New System.Windows.Forms.TextBox()
         Me.lstItems3 = New System.Windows.Forms.ListBox()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtDescription3 = New System.Windows.Forms.TextBox()
         Me.txtAddress3 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtCity3 = New System.Windows.Forms.TextBox()
@@ -140,7 +147,9 @@ Partial Class frmViewTransactions
         Me.txtTotalPrice4 = New System.Windows.Forms.TextBox()
         Me.lstItems4 = New System.Windows.Forms.ListBox()
         Me.Label32 = New System.Windows.Forms.Label()
+        Me.txtDescription4 = New System.Windows.Forms.TextBox()
         Me.txtAddress4 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.txtCity4 = New System.Windows.Forms.TextBox()
@@ -167,14 +176,7 @@ Partial Class frmViewTransactions
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtDescription4 = New System.Windows.Forms.TextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.txtDescription3 = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.txtDescription2 = New System.Windows.Forms.TextBox()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.txtDescription1 = New System.Windows.Forms.TextBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.grpTransaction1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -370,6 +372,16 @@ Partial Class frmViewTransactions
         Me.lblCity.Text = "City:"
         Me.lblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txtDescription1
+        '
+        Me.txtDescription1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDescription1.Location = New System.Drawing.Point(90, 143)
+        Me.txtDescription1.Name = "txtDescription1"
+        Me.txtDescription1.ReadOnly = True
+        Me.txtDescription1.Size = New System.Drawing.Size(1158, 20)
+        Me.txtDescription1.TabIndex = 97
+        '
         'lstItems1
         '
         Me.lstItems1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -379,6 +391,16 @@ Partial Class frmViewTransactions
         Me.lstItems1.Name = "lstItems1"
         Me.lstItems1.Size = New System.Drawing.Size(472, 69)
         Me.lstItems1.TabIndex = 94
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Location = New System.Drawing.Point(21, 146)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(63, 13)
+        Me.Label60.TabIndex = 100
+        Me.Label60.Text = "Description:"
+        Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label4
         '
@@ -718,6 +740,16 @@ Partial Class frmViewTransactions
         Me.Label1.Text = "Transaction Type:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txtDescription2
+        '
+        Me.txtDescription2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDescription2.Location = New System.Drawing.Point(90, 143)
+        Me.txtDescription2.Name = "txtDescription2"
+        Me.txtDescription2.ReadOnly = True
+        Me.txtDescription2.Size = New System.Drawing.Size(1158, 20)
+        Me.txtDescription2.TabIndex = 97
+        '
         'txtAddress2
         '
         Me.txtAddress2.Location = New System.Drawing.Point(90, 91)
@@ -725,6 +757,16 @@ Partial Class frmViewTransactions
         Me.txtAddress2.ReadOnly = True
         Me.txtAddress2.Size = New System.Drawing.Size(680, 20)
         Me.txtAddress2.TabIndex = 97
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(21, 146)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(63, 13)
+        Me.Label45.TabIndex = 100
+        Me.Label45.Text = "Description:"
+        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label5
         '
@@ -1069,6 +1111,16 @@ Partial Class frmViewTransactions
         Me.Label18.Text = "Transaction Type:"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txtDescription3
+        '
+        Me.txtDescription3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDescription3.Location = New System.Drawing.Point(90, 143)
+        Me.txtDescription3.Name = "txtDescription3"
+        Me.txtDescription3.ReadOnly = True
+        Me.txtDescription3.Size = New System.Drawing.Size(1158, 20)
+        Me.txtDescription3.TabIndex = 97
+        '
         'txtAddress3
         '
         Me.txtAddress3.Location = New System.Drawing.Point(90, 91)
@@ -1076,6 +1128,16 @@ Partial Class frmViewTransactions
         Me.txtAddress3.ReadOnly = True
         Me.txtAddress3.Size = New System.Drawing.Size(680, 20)
         Me.txtAddress3.TabIndex = 97
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(21, 146)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(63, 13)
+        Me.Label31.TabIndex = 100
+        Me.Label31.Text = "Description:"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label19
         '
@@ -1420,6 +1482,16 @@ Partial Class frmViewTransactions
         Me.Label32.Text = "Transaction Type:"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txtDescription4
+        '
+        Me.txtDescription4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDescription4.Location = New System.Drawing.Point(90, 143)
+        Me.txtDescription4.Name = "txtDescription4"
+        Me.txtDescription4.ReadOnly = True
+        Me.txtDescription4.Size = New System.Drawing.Size(1158, 20)
+        Me.txtDescription4.TabIndex = 97
+        '
         'txtAddress4
         '
         Me.txtAddress4.Location = New System.Drawing.Point(90, 91)
@@ -1427,6 +1499,16 @@ Partial Class frmViewTransactions
         Me.txtAddress4.ReadOnly = True
         Me.txtAddress4.Size = New System.Drawing.Size(680, 20)
         Me.txtAddress4.TabIndex = 97
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(21, 146)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(63, 13)
+        Me.Label17.TabIndex = 100
+        Me.Label17.Text = "Description:"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label33
         '
@@ -1686,85 +1768,10 @@ Partial Class frmViewTransactions
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Label17
+        'StepAction
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(21, 146)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(63, 13)
-        Me.Label17.TabIndex = 100
-        Me.Label17.Text = "Description:"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDescription4
-        '
-        Me.txtDescription4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescription4.Location = New System.Drawing.Point(90, 143)
-        Me.txtDescription4.Name = "txtDescription4"
-        Me.txtDescription4.ReadOnly = True
-        Me.txtDescription4.Size = New System.Drawing.Size(1158, 20)
-        Me.txtDescription4.TabIndex = 97
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(21, 146)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(63, 13)
-        Me.Label31.TabIndex = 100
-        Me.Label31.Text = "Description:"
-        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDescription3
-        '
-        Me.txtDescription3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescription3.Location = New System.Drawing.Point(90, 143)
-        Me.txtDescription3.Name = "txtDescription3"
-        Me.txtDescription3.ReadOnly = True
-        Me.txtDescription3.Size = New System.Drawing.Size(1158, 20)
-        Me.txtDescription3.TabIndex = 97
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(21, 146)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(63, 13)
-        Me.Label45.TabIndex = 100
-        Me.Label45.Text = "Description:"
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDescription2
-        '
-        Me.txtDescription2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescription2.Location = New System.Drawing.Point(90, 143)
-        Me.txtDescription2.Name = "txtDescription2"
-        Me.txtDescription2.ReadOnly = True
-        Me.txtDescription2.Size = New System.Drawing.Size(1158, 20)
-        Me.txtDescription2.TabIndex = 97
-        '
-        'Label60
-        '
-        Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(21, 146)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(63, 13)
-        Me.Label60.TabIndex = 100
-        Me.Label60.Text = "Description:"
-        Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtDescription1
-        '
-        Me.txtDescription1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescription1.Location = New System.Drawing.Point(90, 143)
-        Me.txtDescription1.Name = "txtDescription1"
-        Me.txtDescription1.ReadOnly = True
-        Me.txtDescription1.Size = New System.Drawing.Size(1158, 20)
-        Me.txtDescription1.TabIndex = 97
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
         '
         'frmViewTransactions
         '
@@ -1953,4 +1960,5 @@ Partial Class frmViewTransactions
     Friend WithEvents Label31 As Label
     Friend WithEvents txtDescription4 As TextBox
     Friend WithEvents Label17 As Label
+    Friend WithEvents StepAction As Timer
 End Class

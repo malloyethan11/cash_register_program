@@ -22,6 +22,7 @@ Partial Class frmItemEditor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemEditor))
         Me.txtSKU = New System.Windows.Forms.TextBox()
         Me.lblSKU = New System.Windows.Forms.Label()
@@ -46,6 +47,7 @@ Partial Class frmItemEditor
         Me.btnChangeImage = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.picItemImage = New System.Windows.Forms.PictureBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picItemImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -313,6 +315,10 @@ Partial Class frmItemEditor
         Me.picItemImage.TabIndex = 108
         Me.picItemImage.TabStop = False
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        '
         'frmItemEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -373,4 +379,5 @@ Partial Class frmItemEditor
 	Friend WithEvents btnChangeImage As Button
 	Friend WithEvents btnExit As Button
 	Friend WithEvents picItemImage As PictureBox
+    Friend WithEvents StepAction As Timer
 End Class

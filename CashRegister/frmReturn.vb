@@ -37,4 +37,14 @@
         intItem = frmLookup.intPrimaryKeyReturnValue
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnSubmit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnItemLookup, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnRemoveSelectedItem, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
+
 End Class

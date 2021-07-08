@@ -239,4 +239,10 @@ Public Class frmPriceAdjust
 
     End Function
 
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnSubmit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+
+    End Sub
 End Class

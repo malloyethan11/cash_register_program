@@ -258,25 +258,23 @@ Public Class frmItemEditor
         ' validate data is entered
         If MyUser.CanEditItems = True Then
             If Validation() = True Then
-                If VerifySKU(strSKU) = True Then
-                    If VerifyPrice(decItemPrice) = True Then
-                        If VerifyInventory(intInventoryAmt) = True Then
-                            If VerifySafetyStock(intSafetyStockAmt) = True Then
-                                If VerifyUPC(strUPC) = True Then
-                                    If VerifyImage() = True Then
+                If VerifyPrice(decItemPrice) = True Then
+                    If VerifyInventory(intInventoryAmt) = True Then
+                        If VerifySafetyStock(intSafetyStockAmt) = True Then
+                            If VerifyUPC(strUPC) = True Then
+                                If VerifyImage() = True Then
 
 
-                                        strSKU = txtSKU.Text
-                                        strItemName = txtName.Text
-                                        strItemDesc = txtDescription.Text
-                                        decItemPrice = txtPrice.Text
-                                        intInventoryAmt = txtInventory.Text
-                                        intSafetyStockAmt = txtSafetytock.Text
-                                        strUPC = txtUPC.Text
+                                    strSKU = txtSKU.Text
+                                    strItemName = txtName.Text
+                                    strItemDesc = txtDescription.Text
+                                    decItemPrice = txtPrice.Text
+                                    intInventoryAmt = txtInventory.Text
+                                    intSafetyStockAmt = txtSafetytock.Text
+                                    strUPC = txtUPC.Text
 
-                                        ' pass inputs, now validated to sub UpdateItem to enter in DB
-                                        UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
-                                    End If
+                                    ' pass inputs, now validated to sub UpdateItem to enter in DB
+                                    UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
                                 End If
                             End If
                         End If
@@ -418,22 +416,6 @@ Public Class frmItemEditor
 
     End Function
 
-    Private Function VerifySKU(ByRef SKU As String) As Boolean
-
-        Dim intNumChars As Integer
-
-        intNumChars = txtSKU.Text.Length
-
-        If (8 <= intNumChars <= 12) Then
-            SKU = txtSKU.Text 'set the SKU
-        Else
-            MessageBox.Show("Please enter an 8 to 12 character string for the SKU.") 'pop a message box if an error
-            Return False
-        End If
-        Return True
-
-    End Function
-
     Private Function VerifyInventory(ByRef InventoryAmt As Integer) As Boolean
         If IsNumeric(txtInventory.Text) Then
             If CInt(txtInventory.Text) > 0 Then 'convert to int and check for the range
@@ -528,7 +510,7 @@ Public Class frmItemEditor
                         intRowsAffected = cmdDelete.ExecuteNonQuery()
 
                         ' now we can delete the parent record
-                        strDelete = "Delete FROM TItems Where intItemID = " & strDelete = "Delete FROM TTransactionItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
+                        strDelete = "Delete FROM TItems Where intItemID = " & intCurrentlyEditingItemPrimaryKey
 
 
                         ' Delete the record(s) 

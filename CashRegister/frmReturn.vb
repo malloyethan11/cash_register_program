@@ -28,6 +28,7 @@
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
         Dim intItem As Integer
+        Dim intQty As Integer
 
         Dim frmLookup As New frmItemLookup
 
@@ -35,7 +36,7 @@
 
         ' Get the selected item
         intItem = frmLookup.intPrimaryKeyReturnValue
-
+        intQty = frmLookup.intQuantityToPurchase
     End Sub
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick

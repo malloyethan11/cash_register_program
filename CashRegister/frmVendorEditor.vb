@@ -263,4 +263,12 @@
         End If
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnDelete, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnUpdate, Me, btmButtonShortGray, btmButtonShort)
+
+    End Sub
 End Class

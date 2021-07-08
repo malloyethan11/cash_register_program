@@ -22,6 +22,7 @@ Partial Class frmTransactions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTransactions))
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.btnCheckout = New System.Windows.Forms.Button()
@@ -29,6 +30,7 @@ Partial Class frmTransactions
         Me.btnViewTransactions = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnPayInPayOut = New System.Windows.Forms.Button()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,6 +111,11 @@ Partial Class frmTransactions
         Me.btnPayInPayOut.Text = "Pay-Ins and Pay-Outs"
         Me.btnPayInPayOut.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmTransactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -135,4 +142,5 @@ Partial Class frmTransactions
     Friend WithEvents btnViewTransactions As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents btnPayInPayOut As Button
+    Friend WithEvents StepAction As Timer
 End Class

@@ -568,4 +568,12 @@ Public Class frmItemLookup
         End If
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnBack, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
+
+    End Sub
 End Class

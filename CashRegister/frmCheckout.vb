@@ -28,6 +28,7 @@
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
         Dim intItem As Integer
+        Dim intQty As Integer
 
         Dim frmLookup As New frmItemLookup
 
@@ -35,6 +36,17 @@
 
         ' Get the selected item
         intItem = frmLookup.intPrimaryKeyReturnValue
+        intQty = frmLookup.intQuantityToPurchase
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnSubmit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnItemLookup, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnRemoveSelectedItem, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
+
 End Class

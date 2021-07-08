@@ -711,4 +711,13 @@
         Cursor.Current = Cursors.Default
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnBack, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
+
 End Class

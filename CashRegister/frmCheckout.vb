@@ -1,7 +1,14 @@
 ﻿Imports System.Data.OleDb
 
 Public Class frmCheckout
+    Private Class ItemData
+        Public intItemID As Integer
+        Public intQty As Integer
+        Public strItemName As String
+        Public decPrice As Decimal
+    End Class
 
+    Dim Items As List(Of ItemData)
     Private Sub frmCheckout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
@@ -29,16 +36,19 @@ Public Class frmCheckout
 
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
-        Dim intItem As Integer
-        Dim intQty As Integer
-
         Dim frmLookup As New frmItemLookup
 
         OpenFormMaintainParent(Me, frmLookup)
 
+        Dim myItem = New ItemData
         ' Get the selected item
-        intItem = frmLookup.intPrimaryKeyReturnValue
-        intQty = frmLookup.intQuantityToPurchase
+        myItem.intItemID = frmLookup.intPrimaryKeyReturnValue
+        myItem.intQty = frmLookup.intQuantityToPurchase
+        myItem.strItemName = frmLookup.intQuantityToPurchase.ToString
+        myItem.decPrice = 399 ' Need to Call one form frmLookup
+
+        lstItems.Items.Add(myItem.strItemName + " X " + myItem.intQty.ToString)
+        Items.Add(myItem)
 
     End Sub
 
@@ -119,5 +129,11 @@ Public Class frmCheckout
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub btnRemoveSelectedItem_Click(sender As Object, e As EventArgs) Handles btnRemoveSelectedItem.Click
+        Items.RemoveAt(lstItems.SelectedIndex)
+        lstItems.Items.RemoveAt(lstItems.SelectedIndex)
+        lstItems.Refresh()
     End Sub
 End Class

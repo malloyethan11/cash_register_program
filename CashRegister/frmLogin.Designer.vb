@@ -105,6 +105,7 @@ Partial Class frmLogin
         'StepAction
         '
         Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
         '
         'frmLogin
         '

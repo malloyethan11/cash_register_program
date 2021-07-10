@@ -161,6 +161,16 @@ Module ModuleCommonUtilities
 
     End Function
 
+    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
+
+        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe, intUpperOffset, intLowerOffset) And frmMe.ContainsFocus = True) Then
+            btnItemLookup.Image = btmButtonGray
+        Else
+            btnItemLookup.Image = btmButton
+        End If
+
+    End Sub
+
     Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control, ByRef frmForm As Form, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
 
         ' This if statement adapted from the Waveslash game launch I made for my latest game: https://gravityhamster.itch.io/waveslash
@@ -185,15 +195,5 @@ Module ModuleCommonUtilities
         Return intValue
 
     End Function
-
-    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
-
-        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe, intUpperOffset, intLowerOffset) And frmMe.ContainsFocus = True) Then
-            btnItemLookup.Image = btmButtonGray
-        Else
-            btnItemLookup.Image = btmButton
-        End If
-
-    End Sub
 
 End Module

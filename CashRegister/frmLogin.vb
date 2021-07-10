@@ -184,7 +184,7 @@
         Catch excError As Exception
 
             ' Log and display error message
-            MessageBox.Show(excError.Message)
+            MessageBox.Show("Failed to attempt login to the system.", "Error")
 
         End Try
 

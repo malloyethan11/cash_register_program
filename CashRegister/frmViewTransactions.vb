@@ -235,7 +235,7 @@
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription, dtTransactionDate FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -284,7 +284,7 @@
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription, dtTransactionDate FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strSelectList & ")"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -300,7 +300,7 @@
                 drStatePaySourceTable.Close()
 
             Else
-                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strFilter & " Like '%'+" & "?" & "+'%')"
+                strSelect = "SELECT intTransactionID, intPaymentTypeID, intTransactionTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strUserName, strDescription, dtTransactionDate FROM TTransactions WHERE intTransactionTypeID = " & cboType.SelectedValue & " AND (" & strFilter & " Like '%'+" & "?" & "+'%')"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -380,7 +380,8 @@
                             lstItems1,
                             lblTransactionID1,
                             lblUser1,
-                            txtDescription1)
+                            txtDescription1,
+                            txtDate1)
 
         ' Load transaction 2
         DisplayTransaction(intStartIndex + 1,
@@ -402,7 +403,8 @@
                             lstItems2,
                             lblTransactionID2,
                             lblUser2,
-                            txtDescription2)
+                            txtDescription2,
+                            txtDate2)
 
         ' Load transaction 3
         DisplayTransaction(intStartIndex + 2,
@@ -424,7 +426,8 @@
                             lstItems3,
                             lblTransactionID3,
                             lblUser3,
-                            txtDescription3)
+                            txtDescription3,
+                            txtDate3)
 
         ' Load transaction 4
         DisplayTransaction(intStartIndex + 3,
@@ -446,7 +449,8 @@
                             lstItems4,
                             lblTransactionID4,
                             lblUser4,
-                            txtDescription4)
+                            txtDescription4,
+                            txtDate4)
 
     End Sub
 
@@ -454,7 +458,7 @@
                                    ByRef txtSecurityCode As TextBox, ByRef txtEmail As TextBox, ByRef txtPhoneNumber As TextBox, ByRef txtAddress As TextBox,
                                    ByRef txtCity As TextBox, ByRef txtZip As TextBox, ByRef txtTotalPrice As TextBox, ByRef txtSalesTax As TextBox, ByRef txtTransactionType As TextBox,
                                    ByRef txtPaymentType As TextBox, ByRef txtState As TextBox, ByRef lstItems As ListBox, ByRef lblPrimaryKey As Label, ByRef lblUser As Label,
-                                   ByRef txtDescription As TextBox)
+                                   ByRef txtDescription As TextBox, ByRef txtDate As TextBox)
 
         ' Populate each
         If (drSet.Count >= intIndex + 1) Then
@@ -475,6 +479,7 @@
             lblPrimaryKey.Text = drSet(intIndex)("intTransactionID").ToString
             lblUser.Text = "Cashier: " & drSet(intIndex)("strUserName").ToString
             txtDescription.Text = drSet(intIndex)("strDescription").ToString
+            txtDate.Text = drSet(intIndex)("dtTransactionDate").ToString
 
             ' START ITEMS GET
 
@@ -622,8 +627,8 @@
 
             drItemSourceTable.Close()
 
-            Else
-                txtCredit.Text = ""
+        Else
+            txtCredit.Text = ""
             txtFirstName.Text = ""
             txtLastName.Text = ""
             txtExpirationDate.Text = ""
@@ -642,6 +647,7 @@
             lblUser.Text = "Cashier:"
             lblPrimaryKey.Text = "0"
             txtDescription.Text = ""
+            txtDate.Text = ""
         End If
 
     End Sub

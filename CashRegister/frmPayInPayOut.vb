@@ -182,6 +182,8 @@ Public Class frmPayInPayOut
             cmdAddTransaction.Parameters.AddWithValue("@strCreditCard", "")
             cmdAddTransaction.Parameters.AddWithValue("@strExpirationDate", "")
             cmdAddTransaction.Parameters.AddWithValue("@strSecurityCode", "")
+            ' Citation https://stackoverflow.com/questions/13355638/get-the-current-date-and-time
+            cmdAddTransaction.Parameters.AddWithValue("@dtTransactionDate", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"))
 
             ' Close source table
             drTransTypeSourceTable.Close()

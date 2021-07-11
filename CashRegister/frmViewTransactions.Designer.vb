@@ -29,7 +29,9 @@ Partial Class frmViewTransactions
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.grpTransaction1 = New System.Windows.Forms.GroupBox()
         Me.lblUser1 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
         Me.lblSalesTax = New System.Windows.Forms.Label()
+        Me.txtDate1 = New System.Windows.Forms.TextBox()
         Me.txtSalesTax1 = New System.Windows.Forms.TextBox()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.txtTotalPrice1 = New System.Windows.Forms.TextBox()
@@ -65,8 +67,10 @@ Partial Class frmViewTransactions
         Me.lblTransactionID1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblUser2 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
         Me.txtExpirationDate2 = New System.Windows.Forms.TextBox()
         Me.txtState2 = New System.Windows.Forms.TextBox()
+        Me.txtDate2 = New System.Windows.Forms.TextBox()
         Me.txtTransactionType2 = New System.Windows.Forms.TextBox()
         Me.txtPaymentType2 = New System.Windows.Forms.TextBox()
         Me.Label62 = New System.Windows.Forms.Label()
@@ -101,9 +105,11 @@ Partial Class frmViewTransactions
         Me.lblTransactionID2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lblUser3 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
         Me.txtExpirationDate3 = New System.Windows.Forms.TextBox()
         Me.txtState3 = New System.Windows.Forms.TextBox()
         Me.txtTransactionType3 = New System.Windows.Forms.TextBox()
+        Me.txtDate3 = New System.Windows.Forms.TextBox()
         Me.txtPaymentType3 = New System.Windows.Forms.TextBox()
         Me.Label64 = New System.Windows.Forms.Label()
         Me.txtSalesTax3 = New System.Windows.Forms.TextBox()
@@ -137,10 +143,12 @@ Partial Class frmViewTransactions
         Me.lblTransactionID3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblUser4 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.txtExpirationDate4 = New System.Windows.Forms.TextBox()
         Me.txtState4 = New System.Windows.Forms.TextBox()
         Me.txtTransactionType4 = New System.Windows.Forms.TextBox()
         Me.txtPaymentType4 = New System.Windows.Forms.TextBox()
+        Me.txtDate4 = New System.Windows.Forms.TextBox()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.txtSalesTax4 = New System.Windows.Forms.TextBox()
         Me.Label67 = New System.Windows.Forms.Label()
@@ -177,14 +185,6 @@ Partial Class frmViewTransactions
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.StepAction = New System.Windows.Forms.Timer(Me.components)
-        Me.txtDate1 = New System.Windows.Forms.TextBox()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.txtDate2 = New System.Windows.Forms.TextBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.txtDate3 = New System.Windows.Forms.TextBox()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.txtDate4 = New System.Windows.Forms.TextBox()
-        Me.Label49 = New System.Windows.Forms.Label()
         Me.grpTransaction1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -287,6 +287,16 @@ Partial Class frmViewTransactions
         Me.lblUser1.Text = "Cashier:"
         Me.lblUser1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'Label46
+        '
+        Me.Label46.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label46.Location = New System.Drawing.Point(773, 141)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(61, 23)
+        Me.Label46.TabIndex = 106
+        Me.Label46.Text = "Date:"
+        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'lblSalesTax
         '
         Me.lblSalesTax.Location = New System.Drawing.Point(776, 115)
@@ -295,6 +305,17 @@ Partial Class frmViewTransactions
         Me.lblSalesTax.TabIndex = 106
         Me.lblSalesTax.Text = "Sales Tax:"
         Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtDate1
+        '
+        Me.txtDate1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDate1.Location = New System.Drawing.Point(843, 143)
+        Me.txtDate1.Name = "txtDate1"
+        Me.txtDate1.ReadOnly = True
+        Me.txtDate1.Size = New System.Drawing.Size(672, 20)
+        Me.txtDate1.TabIndex = 105
+        Me.txtDate1.TabStop = False
         '
         'txtSalesTax1
         '
@@ -661,6 +682,16 @@ Partial Class frmViewTransactions
         Me.lblUser2.Text = "Cashier:"
         Me.lblUser2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'Label47
+        '
+        Me.Label47.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label47.Location = New System.Drawing.Point(773, 141)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(61, 23)
+        Me.Label47.TabIndex = 106
+        Me.Label47.Text = "Date:"
+        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'txtExpirationDate2
         '
         Me.txtExpirationDate2.Location = New System.Drawing.Point(474, 39)
@@ -676,6 +707,17 @@ Partial Class frmViewTransactions
         Me.txtState2.ReadOnly = True
         Me.txtState2.Size = New System.Drawing.Size(170, 20)
         Me.txtState2.TabIndex = 112
+        '
+        'txtDate2
+        '
+        Me.txtDate2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDate2.Location = New System.Drawing.Point(843, 143)
+        Me.txtDate2.Name = "txtDate2"
+        Me.txtDate2.ReadOnly = True
+        Me.txtDate2.Size = New System.Drawing.Size(672, 20)
+        Me.txtDate2.TabIndex = 105
+        Me.txtDate2.TabStop = False
         '
         'txtTransactionType2
         '
@@ -1034,6 +1076,16 @@ Partial Class frmViewTransactions
         Me.lblUser3.Text = "Cashier:"
         Me.lblUser3.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'Label48
+        '
+        Me.Label48.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label48.Location = New System.Drawing.Point(773, 141)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(61, 23)
+        Me.Label48.TabIndex = 106
+        Me.Label48.Text = "Date:"
+        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'txtExpirationDate3
         '
         Me.txtExpirationDate3.Location = New System.Drawing.Point(474, 39)
@@ -1057,6 +1109,17 @@ Partial Class frmViewTransactions
         Me.txtTransactionType3.ReadOnly = True
         Me.txtTransactionType3.Size = New System.Drawing.Size(138, 20)
         Me.txtTransactionType3.TabIndex = 116
+        '
+        'txtDate3
+        '
+        Me.txtDate3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDate3.Location = New System.Drawing.Point(843, 143)
+        Me.txtDate3.Name = "txtDate3"
+        Me.txtDate3.ReadOnly = True
+        Me.txtDate3.Size = New System.Drawing.Size(672, 20)
+        Me.txtDate3.TabIndex = 105
+        Me.txtDate3.TabStop = False
         '
         'txtPaymentType3
         '
@@ -1407,6 +1470,16 @@ Partial Class frmViewTransactions
         Me.lblUser4.Text = "Cashier:"
         Me.lblUser4.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'Label49
+        '
+        Me.Label49.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label49.Location = New System.Drawing.Point(773, 141)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(61, 23)
+        Me.Label49.TabIndex = 106
+        Me.Label49.Text = "Date:"
+        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'txtExpirationDate4
         '
         Me.txtExpirationDate4.Location = New System.Drawing.Point(474, 39)
@@ -1438,6 +1511,17 @@ Partial Class frmViewTransactions
         Me.txtPaymentType4.ReadOnly = True
         Me.txtPaymentType4.Size = New System.Drawing.Size(99, 20)
         Me.txtPaymentType4.TabIndex = 120
+        '
+        'txtDate4
+        '
+        Me.txtDate4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDate4.Location = New System.Drawing.Point(843, 143)
+        Me.txtDate4.Name = "txtDate4"
+        Me.txtDate4.ReadOnly = True
+        Me.txtDate4.Size = New System.Drawing.Size(672, 20)
+        Me.txtDate4.TabIndex = 105
+        Me.txtDate4.TabStop = False
         '
         'Label66
         '
@@ -1788,90 +1872,6 @@ Partial Class frmViewTransactions
         '
         Me.StepAction.Enabled = True
         Me.StepAction.Interval = 1
-        '
-        'txtDate1
-        '
-        Me.txtDate1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDate1.Location = New System.Drawing.Point(843, 143)
-        Me.txtDate1.Name = "txtDate1"
-        Me.txtDate1.ReadOnly = True
-        Me.txtDate1.Size = New System.Drawing.Size(672, 20)
-        Me.txtDate1.TabIndex = 105
-        Me.txtDate1.TabStop = False
-        '
-        'Label46
-        '
-        Me.Label46.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label46.Location = New System.Drawing.Point(773, 141)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(61, 23)
-        Me.Label46.TabIndex = 106
-        Me.Label46.Text = "Date:"
-        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtDate2
-        '
-        Me.txtDate2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDate2.Location = New System.Drawing.Point(843, 143)
-        Me.txtDate2.Name = "txtDate2"
-        Me.txtDate2.ReadOnly = True
-        Me.txtDate2.Size = New System.Drawing.Size(672, 20)
-        Me.txtDate2.TabIndex = 105
-        Me.txtDate2.TabStop = False
-        '
-        'Label47
-        '
-        Me.Label47.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label47.Location = New System.Drawing.Point(773, 141)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(61, 23)
-        Me.Label47.TabIndex = 106
-        Me.Label47.Text = "Date:"
-        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtDate3
-        '
-        Me.txtDate3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDate3.Location = New System.Drawing.Point(843, 143)
-        Me.txtDate3.Name = "txtDate3"
-        Me.txtDate3.ReadOnly = True
-        Me.txtDate3.Size = New System.Drawing.Size(672, 20)
-        Me.txtDate3.TabIndex = 105
-        Me.txtDate3.TabStop = False
-        '
-        'Label48
-        '
-        Me.Label48.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label48.Location = New System.Drawing.Point(773, 141)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(61, 23)
-        Me.Label48.TabIndex = 106
-        Me.Label48.Text = "Date:"
-        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtDate4
-        '
-        Me.txtDate4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDate4.Location = New System.Drawing.Point(843, 143)
-        Me.txtDate4.Name = "txtDate4"
-        Me.txtDate4.ReadOnly = True
-        Me.txtDate4.Size = New System.Drawing.Size(672, 20)
-        Me.txtDate4.TabIndex = 105
-        Me.txtDate4.TabStop = False
-        '
-        'Label49
-        '
-        Me.Label49.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label49.Location = New System.Drawing.Point(773, 141)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(61, 23)
-        Me.Label49.TabIndex = 106
-        Me.Label49.Text = "Date:"
-        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'frmViewTransactions
         '

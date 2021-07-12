@@ -132,3 +132,4 @@ C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegist
 C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPayInPayOut.resources
 C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPayInPayOut.resources
+D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmGetDatabaseCredentials.resources

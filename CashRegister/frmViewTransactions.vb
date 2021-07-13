@@ -496,7 +496,7 @@
             Dim drItemTypeSet() As System.Data.DataRow
 
             ' Select statement
-            strSelectItems = "SELECT intItemID, intItemAmount FROM TTransactionItems WHERE intTransactionID = ?"
+            strSelectItems = "SELECT intItemID, intItemAmount, decCurrentItemPrice FROM TTransactionItems WHERE intTransactionID = ?"
 
             ' Retrieve all the records 
             cmdItemsSelect = New OleDb.OleDbCommand(strSelectItems, m_conAdministrator)
@@ -542,7 +542,7 @@
                 drItemNameTypeSet = dtItemNames.Select()
 
                 ' Add record to the item list
-                lstItems.Items.Add("SKU: " & drItemNameTypeSet(0)("strSKU").ToString & ", Name: " & drItemNameTypeSet(0)("strItemName").ToString & ", QTY: " & drItemTypeSet(intCount)("intItemAmount").ToString)
+                lstItems.Items.Add("SKU: " & drItemNameTypeSet(0)("strSKU").ToString & ", Name: " & drItemNameTypeSet(0)("strItemName").ToString & ", QTY: " & drItemTypeSet(intCount)("intItemAmount").ToString & ", Price: " & drItemTypeSet(intCount)("decCurrentItemPrice"))
 
                 ' Advance
                 intCount += 1

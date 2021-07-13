@@ -22,6 +22,7 @@ Partial Class frmPriceAdjust
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPriceAdjust))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnSubmit = New System.Windows.Forms.Button()
@@ -30,6 +31,7 @@ Partial Class frmPriceAdjust
         Me.cboUnitOfMeasure = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboVendor = New System.Windows.Forms.ComboBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnExit
@@ -42,7 +44,7 @@ Partial Class frmPriceAdjust
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
         Me.btnExit.TabIndex = 85
-        Me.btnExit.Text = "Cancel"
+        Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnSubmit
@@ -109,6 +111,11 @@ Partial Class frmPriceAdjust
         Me.cboVendor.Size = New System.Drawing.Size(290, 21)
         Me.cboVendor.TabIndex = 88
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmPriceAdjust
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -136,4 +143,5 @@ Partial Class frmPriceAdjust
     Friend WithEvents cboUnitOfMeasure As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cboVendor As ComboBox
+    Friend WithEvents StepAction As Timer
 End Class

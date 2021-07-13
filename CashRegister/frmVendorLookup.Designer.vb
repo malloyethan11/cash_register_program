@@ -22,11 +22,13 @@ Partial Class frmVendorLookup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendorLookup))
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblVendorName = New System.Windows.Forms.Label()
         Me.cboVendors = New System.Windows.Forms.ComboBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnOpen
@@ -74,6 +76,11 @@ Partial Class frmVendorLookup
         Me.cboVendors.Size = New System.Drawing.Size(169, 21)
         Me.cboVendors.TabIndex = 99
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmVendorLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -95,4 +102,5 @@ Partial Class frmVendorLookup
     Friend WithEvents btnExit As Button
     Friend WithEvents lblVendorName As Label
     Friend WithEvents cboVendors As ComboBox
+    Friend WithEvents StepAction As Timer
 End Class

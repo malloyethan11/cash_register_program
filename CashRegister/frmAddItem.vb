@@ -157,37 +157,35 @@ Public Class frmAddItem
 
         ' validate data is entered
         If Validation() = True Then
-            If VerifySKU(strSKU) = True Then
-                If VerifyPrice(decItemPrice) = True Then
-                    If VerifyInventory(intInventoryAmt) = True Then
-                        If VerifySafetyStock(intSafetyStockAmt) = True Then
-                            If VerifyUPC(strUPC) = True Then
-                                If VerifyImage() = True Then
+            If VerifyPrice(decItemPrice) = True Then
+                If VerifyInventory(intInventoryAmt) = True Then
+                    If VerifySafetyStock(intSafetyStockAmt) = True Then
+                        If VerifyUPC(strUPC) = True Then
+                            If VerifyImage() = True Then
 
 
-                                    strSKU = txtSKU.Text
-                                    strItemName = txtName.Text
-                                    strItemDesc = txtDescription.Text
-                                    decItemPrice = txtPrice.Text
-                                    intInventoryAmt = txtInventory.Text
-                                    intSafetyStockAmt = txtSafetytock.Text
-                                    strUPC = txtUPC.Text
+                                strSKU = txtSKU.Text
+                                strItemName = txtName.Text
+                                strItemDesc = txtDescription.Text
+                                decItemPrice = txtPrice.Text
+                                intInventoryAmt = txtInventory.Text
+                                intSafetyStockAmt = txtSafetytock.Text
+                                strUPC = txtUPC.Text
 
-                                    ' pass inputs, now validated to sub AddItem to enter in DB
-                                    AddItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                ' pass inputs, now validated to sub AddItem to enter in DB
+                                AddItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
 
-                                    ' Clear all boxes
-                                    txtSKU.ResetText()
-                                    txtName.ResetText()
-                                    txtDescription.ResetText()
-                                    txtPrice.ResetText()
-                                    txtInventory.ResetText()
-                                    txtSafetytock.ResetText()
-                                    txtUPC.ResetText()
-                                    cboCategory.SelectedIndex = 0
-                                    cboVendors.SelectedIndex = 0
-                                    picItemImage.Image = Nothing
-                                End If
+                                ' Clear all boxes
+                                txtSKU.ResetText()
+                                txtName.ResetText()
+                                txtDescription.ResetText()
+                                txtPrice.ResetText()
+                                txtInventory.ResetText()
+                                txtSafetytock.ResetText()
+                                txtUPC.ResetText()
+                                cboCategory.SelectedIndex = 0
+                                cboVendors.SelectedIndex = 0
+                                picItemImage.Image = Nothing
                             End If
                         End If
                     End If
@@ -332,22 +330,6 @@ Public Class frmAddItem
 
     End Function
 
-    Private Function VerifySKU(ByRef SKU As String) As Boolean
-
-        Dim intNumChars As Integer
-
-        intNumChars = txtSKU.Text.Length
-
-        If (8 <= intNumChars <= 12) Then
-            SKU = txtSKU.Text 'set the SKU
-        Else
-            MessageBox.Show("Please enter an 8 to 12 character string for the SKU.") 'pop a message box if an error
-            Return False
-        End If
-        Return True
-
-    End Function
-
     Private Function VerifyInventory(ByRef InventoryAmt As Integer) As Boolean
         If IsNumeric(txtInventory.Text) Then
             If CInt(txtInventory.Text) > 0 Then 'check the range
@@ -391,4 +373,12 @@ Public Class frmAddItem
 
 
     End Function
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnAddImage, Me, btmSkinnyButtonGray, btmSkinnyButton, 0, 0)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonLittleLongGray, btmButtonLittleLong)
+        ButtonColor(MousePosition, btnAdd, Me, btmButtonShortGray, btmButtonShort)
+
+    End Sub
 End Class

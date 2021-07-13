@@ -14,4 +14,13 @@
         Next
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnPrint, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnEmail, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnPrintEmail, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnNone, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
 End Class

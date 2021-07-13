@@ -467,13 +467,15 @@ Public Class frmItemLookup
         If (drSet IsNot Nothing) Then
             If (drSet.Count > intIndex) Then
                 If (Type = "Dialog") Then
-                    ' Close the form and return the primary key
-                    intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
-                    intQuantityToPurchase = txtQTY.Text
-                    Me.Close()
+                    If (ValidateQTY() = True) Then
+                        ' Close the form and return the primary key
+                        intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                        intQuantityToPurchase = txtQTY.Text
+                        Me.Close()
+                    End If
                 Else
-                    ' Open the editor form and pass on the primary key
-                    Dim frmNewEditor As New frmItemEditor
+                        ' Open the editor form and pass on the primary key
+                        Dim frmNewEditor As New frmItemEditor
                     frmNewEditor.intCurrentlyEditingItemPrimaryKey = drSet(intIndex)("intItemID").ToString
                     OpenFormMaintainParent(Me, frmNewEditor)
                     ' If data change has occured, then load the items again
@@ -485,6 +487,21 @@ Public Class frmItemLookup
         End If
 
     End Sub
+
+    Private Function ValidateQTY() As Boolean
+
+        Dim blnResult As Boolean = False
+
+        If (IsNumeric(txtQTY.Text) = True) Then
+            blnResult = True
+            txtQTY.BackColor = Color.White
+        Else
+            txtQTY.BackColor = Color.Yellow
+        End If
+
+        Return blnResult
+
+    End Function
 
     Private Sub picImage1_Click(sender As Object, e As EventArgs) Handles picImage1.Click
 
@@ -566,6 +583,14 @@ Public Class frmItemLookup
             txtQTY.ResetText()
 
         End If
+
+    End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnBack, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
 
     End Sub
 End Class

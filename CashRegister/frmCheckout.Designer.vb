@@ -22,6 +22,7 @@ Partial Class frmCheckout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCheckout))
         Me.lstItems = New System.Windows.Forms.ListBox()
         Me.lblList = New System.Windows.Forms.Label()
@@ -58,6 +59,7 @@ Partial Class frmCheckout
         Me.btnItemLookup = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.lblPaymentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -428,6 +430,10 @@ Partial Class frmCheckout
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        '
         'frmCheckout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -490,4 +496,5 @@ Partial Class frmCheckout
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents lblCity As Label
     Friend WithEvents cboState As ComboBox
+    Friend WithEvents StepAction As Timer
 End Class

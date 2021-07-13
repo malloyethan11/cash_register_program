@@ -22,6 +22,7 @@ Partial Class frmReturn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReturn))
         Me.btnRemoveSelectedItem = New System.Windows.Forms.Button()
         Me.btnItemLookup = New System.Windows.Forms.Button()
@@ -58,6 +59,7 @@ Partial Class frmReturn
         Me.txtReturn = New System.Windows.Forms.TextBox()
         Me.lblList = New System.Windows.Forms.Label()
         Me.lstItems = New System.Windows.Forms.ListBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.lblPaymentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -428,6 +430,10 @@ Partial Class frmReturn
         Me.lstItems.TabIndex = 61
         Me.lstItems.TabStop = False
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        '
         'frmReturn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -490,4 +496,5 @@ Partial Class frmReturn
     Friend WithEvents lblPaymentType As Label
     Friend WithEvents cboState As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents StepAction As Timer
 End Class

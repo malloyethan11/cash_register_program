@@ -22,6 +22,7 @@ Partial Class frmPayInPayOut
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPayInPayOut))
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.lblPrice = New System.Windows.Forms.Label()
@@ -31,6 +32,7 @@ Partial Class frmPayInPayOut
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboType = New System.Windows.Forms.ComboBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'txtPrice
@@ -89,7 +91,7 @@ Partial Class frmPayInPayOut
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(113, 42)
         Me.btnAdd.TabIndex = 105
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Submit"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'btnExit
@@ -127,6 +129,11 @@ Partial Class frmPayInPayOut
         Me.cboType.Size = New System.Drawing.Size(494, 21)
         Me.cboType.TabIndex = 123
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmPayInPayOut
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,4 +163,5 @@ Partial Class frmPayInPayOut
     Friend WithEvents btnExit As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents cboType As ComboBox
+    Friend WithEvents StepAction As Timer
 End Class

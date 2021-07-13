@@ -182,6 +182,8 @@ Public Class frmPayInPayOut
             cmdAddTransaction.Parameters.AddWithValue("@strCreditCard", "")
             cmdAddTransaction.Parameters.AddWithValue("@strExpirationDate", "")
             cmdAddTransaction.Parameters.AddWithValue("@strSecurityCode", "")
+            ' Citation https://stackoverflow.com/questions/13355638/get-the-current-date-and-time
+            cmdAddTransaction.Parameters.AddWithValue("@dtTransactionDate", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"))
 
             ' Close source table
             drTransTypeSourceTable.Close()
@@ -217,6 +219,13 @@ Public Class frmPayInPayOut
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         OpenFormKillParent(Me, frmTransactions)
+
+    End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonLittleLongGray, btmButtonLittleLong)
+        ButtonColor(MousePosition, btnAdd, Me, btmButtonShortGray, btmButtonShort)
 
     End Sub
 End Class

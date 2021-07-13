@@ -22,6 +22,7 @@ Partial Class frmItemLookup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemLookup))
         Me.itmPictureFrame1 = New System.Windows.Forms.GroupBox()
         Me.picImage1 = New System.Windows.Forms.PictureBox()
@@ -62,6 +63,7 @@ Partial Class frmItemLookup
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblQTY = New System.Windows.Forms.Label()
         Me.txtQTY = New System.Windows.Forms.TextBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.itmPictureFrame1.SuspendLayout()
         CType(Me.picImage1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.itmPictureFrame2.SuspendLayout()
@@ -492,6 +494,11 @@ Partial Class frmItemLookup
         Me.txtQTY.TabIndex = 46
         Me.txtQTY.Visible = False
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmItemLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -594,4 +601,5 @@ Partial Class frmItemLookup
     Friend WithEvents picImage6 As PictureBox
     Friend WithEvents lblQTY As Label
     Friend WithEvents txtQTY As TextBox
+    Friend WithEvents StepAction As Timer
 End Class

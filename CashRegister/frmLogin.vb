@@ -1,9 +1,6 @@
 ﻿Public Class frmLogin
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Prompt for database connection credentials
-        strConnectionUsername = InputBox("Please provide database login username: ")
-        strConnectionPassword = InputBox("Please provide database login password: ")
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
 
@@ -112,11 +109,17 @@
         Catch excError As Exception
 
             ' Log and display error message
-            MessageBox.Show(excError.Message)
+            MessageBox.Show("Failed to attempt login to the system.", "Error")
 
         End Try
 
         Return blnValid
 
     End Function
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnLogin, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
 End Class

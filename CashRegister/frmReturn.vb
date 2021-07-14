@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Data.SqlClient
 
 Public Class frmReturn
     Private Class ItemData
@@ -8,7 +9,7 @@ Public Class frmReturn
         Public decPrice As Decimal
     End Class
 
-    Dim Items As List(Of ItemData)
+    Dim Items = New List(Of ItemData)
     Private Sub frmReturn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
@@ -44,12 +45,35 @@ Public Class frmReturn
         ' Get the selected item
         myItem.intItemID = frmLookup.intPrimaryKeyReturnValue
         myItem.intQty = frmLookup.intQuantityToPurchase
-        myItem.strItemName = frmLookup.intQuantityToPurchase.ToString
-        myItem.decPrice = 399 ' Need to Call one form frmLookup
+        Try
+            ' Open the DB
+            If OpenDatabaseConnectionSQLServer() = False Then
 
-        lstItems.Items.Add(myItem.strItemName + " X " + myItem.intQty.ToString)
-        Items.Add(myItem)
+                ' The database is not open
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
 
+                ' Close the form/application
+                Me.Close()
+
+            End If
+            Dim cmdSelect = New OleDbCommand("SELECT * FROM TItems WHERE intItemID=" + myItem.intItemID.ToString, m_conAdministrator)
+            Dim result = cmdSelect.ExecuteReader
+            If result.Read Then
+                myItem.strItemName = result.GetString(2)
+                myItem.decPrice = result.GetDecimal(6) ' Need to Call one form frmLookup
+
+                lstItems.Items.Add(myItem.strItemName + " X " + myItem.intQty.ToString)
+                Items.Add(myItem)
+                txtReturn.Text = (myItem.decPrice * myItem.intQty).ToString
+            Else
+                MessageBox.Show("No Item found in database")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Database Error:" + ex.Message)
+        End Try
     End Sub
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
@@ -84,69 +108,115 @@ Public Class frmReturn
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        ' Validations
-        If TextBox3.Text = "" Or ' For credit not added
-                TextBox4.Text = "" Or 'TextBox5.Text = "" Or TextBox6.Text = "" Or
-                TextBox7.Text = "" Or
-                TextBox8.Text = "" Or
-                txtEmail.Text = "" Or
-                txtPhoneNumber.Text = "" Or
-                txtReturn.Text = "" Or
-                txtSalesTax.Text = "" Or
-                TextBox9.Text = "" Then
 
-            ' Some Things to show Error not making it compulsory as cash or credit will differ
-        Else
-            Try
-                ' Open the DB
-                If OpenDatabaseConnectionSQLServer() = False Then
 
-                    ' The database is not open
-                    MessageBox.Show(Me, "Database connection error." & vbNewLine &
-                                    "The form will now close.",
-                                    Me.Text + " Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ' create command object
+        Dim Connection As New SqlConnection("Server=itd2.cincinnatistate.edu;" &
+                                                      "Database=CPDM-GroupB;" &
+                                                      "User ID=" & strConnectionUsername & ";" &
+                                                      "Password=" & strConnectionPassword & ";")
+        Dim cmdAddItem As New SqlCommand
 
-                    ' Close the form/application
-                    Me.Close()
+        cmdAddItem.Connection = Connection
+        cmdAddItem.CommandText = "uspTransaction"
+        cmdAddItem.CommandType = CommandType.StoredProcedure
 
-                End If
-                Dim cmdInsert = New OleDbCommand("INSERT INTO TTransactions(intTransactionTypeID, intPaymentTypeID, strFirstName, strLastName, strAddress, strCity, intStateID, strZip, strPhoneNumber, strEmail, strCreditCard, strExpirationDate, strSecurityCode, decTotalPrice, decSalesTax, strDescription, strUserName) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
-                cmdInsert.CommandType = CommandType.Text
-                cmdInsert.Connection = m_conAdministrator
-                ' Username Password
-                cmdInsert.Parameters.AddWithValue("intTransactionTypeID", 2)
-                cmdInsert.Parameters.AddWithValue("intPaymentTypeID", ComboBox1.SelectedIndex)
-                ' UserData
-                cmdInsert.Parameters.AddWithValue("strFirstName", TextBox3.Text)
-                cmdInsert.Parameters.AddWithValue("strLastName", TextBox4.Text)
-                cmdInsert.Parameters.AddWithValue("strAddress", TextBox9.Text)
-                cmdInsert.Parameters.AddWithValue("strCity", TextBox7.Text)
-                cmdInsert.Parameters.AddWithValue("intStateID", cboState.SelectedIndex)
-                cmdInsert.Parameters.AddWithValue("strZip", TextBox8.Text)
-                cmdInsert.Parameters.AddWithValue("strPhoneNumber", txtPhoneNumber.Text)
-                cmdInsert.Parameters.AddWithValue("strEmail", txtEmail.Text)
-                ' Credit Card
-                cmdInsert.Parameters.AddWithValue("strCreditCard", TextBox5.Text)
-                cmdInsert.Parameters.AddWithValue("strExpirationDate", dtpExpirationDate.Value)
-                cmdInsert.Parameters.AddWithValue("strSecurityCode", TextBox6.Text)
+        Try
+            cmdAddItem.Parameters.AddWithValue("@intTransactionTypeID", 2)
+            cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", ComboBox1.SelectedIndex)
 
-                cmdInsert.Parameters.AddWithValue("decTotalPrice", Convert.ToDecimal(txtReturn.Text))
-                cmdInsert.Parameters.AddWithValue("decSalesTax", txtSalesTax.Text)
+            cmdAddItem.Parameters.AddWithValue("@strFirstName", TextBox3.Text)
+            cmdAddItem.Parameters.AddWithValue("@strLastName", TextBox4.Text)
+            cmdAddItem.Parameters.AddWithValue("@strAddress", TextBox9.Text)
+            cmdAddItem.Parameters.AddWithValue("@intStateID", cboState.SelectedIndex)
+            cmdAddItem.Parameters.AddWithValue("@strZip", TextBox8.Text)
+            cmdAddItem.Parameters.AddWithValue("@strPhoneNumber", txtPhoneNumber.Text)
+            cmdAddItem.Parameters.AddWithValue("@strEmail", txtEmail.Text)
+            cmdAddItem.Parameters.AddWithValue("@strCreditCard", TextBox5.Text)
+            cmdAddItem.Parameters.AddWithValue("@strExpirationDate", dtpExpirationDate)
+            cmdAddItem.Parameters.AddWithValue("@strSecurityCode", TextBox6.Text)
+            cmdAddItem.Parameters.AddWithValue("@decTotalPrice", Convert.ToDecimal(txtReturn.Text))
+            cmdAddItem.Parameters.AddWithValue("@decSalesTax", Convert.ToDecimal(txtSalesTax.Text))
+            cmdAddItem.Parameters.AddWithValue("@strDescription", "?")
+            cmdAddItem.Parameters.AddWithValue("@strUsername", "")
+            cmdAddItem.Parameters.AddWithValue("@dtTransactionDate", DateTime.Today.ToString)
 
-                cmdInsert.Parameters.AddWithValue("strDescription", "?")
-                cmdInsert.Parameters.AddWithValue("strUserName", "")
-                Dim result = cmdInsert.ExecuteNonQuery()
-                ' If result is one that means a row is added
-                MessageBox.Show(result.ToString + "Returns Added successfully")
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-        End If
+            Connection.Open()
+            Dim result As Integer = 0
+            For Each item In Items
+                result += addItems(item)
+            Next
+            ' have to let the user know what happened 
+            If cmdAddItem.ExecuteNonQuery() = 1 Then
+                MessageBox.Show("Insert successful. Transaction has been added.")
+
+            Else
+                MessageBox.Show("Insert failed")
+
+            End If
+
+        Catch excError As SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Catch ex As Exception
+
+            ' Handle General errors
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Close()
+
+        End Try
 
     End Sub
 
+    Private Function addItems(item As ItemData) As Integer
+
+        ' create command object
+        Dim Connection As New SqlConnection("Server=itd2.cincinnatistate.edu;" &
+                                                      "Database=CPDM-GroupB;" &
+                                                      "User ID=" & strConnectionUsername & ";" &
+                                                      "Password=" & strConnectionPassword & ";")
+        Dim cmdAddItem As New SqlCommand
+
+        cmdAddItem.Connection = Connection
+        cmdAddItem.CommandText = "uspCheckoutItems"
+        cmdAddItem.CommandType = CommandType.StoredProcedure
+
+        Try
+            cmdAddItem.Parameters.AddWithValue("@intItemID", item.intItemID)
+            cmdAddItem.Parameters.AddWithValue("@intItemAmount", item.intQty)
+            cmdAddItem.Parameters.AddWithValue("@decCurrentItemPrice", item.decPrice)
+            cmdAddItem.Parameters.AddWithValue("@dtTransactionDate", DateTime.Today)
+
+            Connection.Open()
+
+            ' have to let the user know what happened 
+            If cmdAddItem.ExecuteNonQuery() = 1 Then
+                Return 0
+            Else
+                Return 1
+            End If
+
+        Catch excError As SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Catch ex As Exception
+
+            ' Handle General errors
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Close()
+
+        End Try
+        Return -10
+    End Function
+
+
     Private Sub btnRemoveSelectedItem_Click(sender As Object, e As EventArgs) Handles btnRemoveSelectedItem.Click
+        Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
+        txtReturn.Text = Convert.ToDecimal(txtReturn.Text) - (delIt.decPrice * delIt.intQty)
         Items.RemoveAt(lstItems.SelectedIndex)
         lstItems.Items.RemoveAt(lstItems.SelectedIndex)
         lstItems.Refresh()

@@ -88,12 +88,12 @@ Public Class frmReturn
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim roller As ComboBox = sender
         If roller.SelectedIndex = 2 Then
-            TextBox5.Enabled = True
-            TextBox6.Enabled = True
+            txtCredit.Enabled = True
+            txtSecurity.Enabled = True
             dtpExpirationDate.Enabled = True
         Else
-            TextBox5.Enabled = False
-            TextBox6.Enabled = False
+            txtCredit.Enabled = False
+            txtSecurity.Enabled = False
             dtpExpirationDate.Enabled = False
         End If
 
@@ -125,16 +125,16 @@ Public Class frmReturn
             cmdAddItem.Parameters.AddWithValue("@intTransactionTypeID", 2)
             cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", ComboBox1.SelectedIndex)
 
-            cmdAddItem.Parameters.AddWithValue("@strFirstName", TextBox3.Text)
-            cmdAddItem.Parameters.AddWithValue("@strLastName", TextBox4.Text)
-            cmdAddItem.Parameters.AddWithValue("@strAddress", TextBox9.Text)
+            cmdAddItem.Parameters.AddWithValue("@strFirstName", txtFirstName.Text)
+            cmdAddItem.Parameters.AddWithValue("@strLastName", txtLastName.Text)
+            cmdAddItem.Parameters.AddWithValue("@strAddress", txtAddress.Text)
             cmdAddItem.Parameters.AddWithValue("@intStateID", cboState.SelectedIndex)
-            cmdAddItem.Parameters.AddWithValue("@strZip", TextBox8.Text)
+            cmdAddItem.Parameters.AddWithValue("@strZip", txtZip.Text)
             cmdAddItem.Parameters.AddWithValue("@strPhoneNumber", txtPhoneNumber.Text)
             cmdAddItem.Parameters.AddWithValue("@strEmail", txtEmail.Text)
-            cmdAddItem.Parameters.AddWithValue("@strCreditCard", TextBox5.Text)
+            cmdAddItem.Parameters.AddWithValue("@strCreditCard", txtCredit.Text)
             cmdAddItem.Parameters.AddWithValue("@strExpirationDate", dtpExpirationDate)
-            cmdAddItem.Parameters.AddWithValue("@strSecurityCode", TextBox6.Text)
+            cmdAddItem.Parameters.AddWithValue("@strSecurityCode", txtSecurity.Text)
             cmdAddItem.Parameters.AddWithValue("@decTotalPrice", Convert.ToDecimal(txtReturn.Text))
             cmdAddItem.Parameters.AddWithValue("@decSalesTax", Convert.ToDecimal(txtSalesTax.Text))
             cmdAddItem.Parameters.AddWithValue("@strDescription", "?")

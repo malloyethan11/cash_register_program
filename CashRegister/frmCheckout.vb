@@ -69,7 +69,7 @@ Public Class frmCheckout
 
                 lstItems.Items.Add(myItem.strItemName + " X " + myItem.intQty.ToString)
                 Items.Add(myItem)
-                TextBox1.Text = (myItem.decPrice * myItem.intQty).ToString
+                txtPrice.Text = (myItem.decPrice * myItem.intQty).ToString
             Else
                 MessageBox.Show("No Item found in database")
             End If
@@ -89,25 +89,25 @@ Public Class frmCheckout
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPayment.SelectedIndexChanged
         Dim roller As ComboBox = sender
         If roller.SelectedIndex = 2 Then
-            TextBox5.Enabled = True
-            TextBox6.Enabled = True
+            txtCredit.Enabled = True
+            txtSecurity.Enabled = True
             dtpExpirationDate.Enabled = True
         Else
-            TextBox5.Enabled = False
-            TextBox6.Enabled = False
+            txtCredit.Enabled = False
+            txtSecurity.Enabled = False
             dtpExpirationDate.Enabled = False
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
 
-        If IsNumeric(TextBox1.Text) Then
-            TextBox2.Text = Convert.ToDecimal(TextBox1.Text) * 0.575
+        If IsNumeric(txtPrice.Text) Then
+            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.575
         Else
-            TextBox2.Text = "NAN"
+            txtTax.Text = "NAN"
         End If
     End Sub
 
@@ -126,20 +126,20 @@ Public Class frmCheckout
 
         Try
             cmdAddItem.Parameters.AddWithValue("@intTransactionTypeID", 1)
-            cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", ComboBox1.SelectedIndex)
+            cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", cboPayment.SelectedIndex)
 
-            cmdAddItem.Parameters.AddWithValue("@strFirstName", TextBox3.Text)
-            cmdAddItem.Parameters.AddWithValue("@strLastName", TextBox4.Text)
-            cmdAddItem.Parameters.AddWithValue("@strAddress", TextBox9.Text)
+            cmdAddItem.Parameters.AddWithValue("@strFirstName", txtFirstName.Text)
+            cmdAddItem.Parameters.AddWithValue("@strLastName", txtLastName.Text)
+            cmdAddItem.Parameters.AddWithValue("@strAddress", txtAddress.Text)
             cmdAddItem.Parameters.AddWithValue("@intStateID", cboState.SelectedIndex)
-            cmdAddItem.Parameters.AddWithValue("@strZip", TextBox8.Text)
+            cmdAddItem.Parameters.AddWithValue("@strZip", txtZip.Text)
             cmdAddItem.Parameters.AddWithValue("@strPhoneNumber", txtPhoneNumber.Text)
             cmdAddItem.Parameters.AddWithValue("@strEmail", txtEmail.Text)
-            cmdAddItem.Parameters.AddWithValue("@strCreditCard", TextBox5.Text)
+            cmdAddItem.Parameters.AddWithValue("@strCreditCard", txtCredit.Text)
             cmdAddItem.Parameters.AddWithValue("@strExpirationDate", dtpExpirationDate)
-            cmdAddItem.Parameters.AddWithValue("@strSecurityCode", TextBox6.Text)
-            cmdAddItem.Parameters.AddWithValue("@decTotalPrice", Convert.ToDecimal(TextBox1.Text))
-            cmdAddItem.Parameters.AddWithValue("@decSalesTax", Convert.ToDecimal(TextBox2.Text))
+            cmdAddItem.Parameters.AddWithValue("@strSecurityCode", txtSecurity.Text)
+            cmdAddItem.Parameters.AddWithValue("@decTotalPrice", Convert.ToDecimal(txtPrice.Text))
+            cmdAddItem.Parameters.AddWithValue("@decSalesTax", Convert.ToDecimal(txtTax.Text))
             cmdAddItem.Parameters.AddWithValue("@strDescription", "?")
             cmdAddItem.Parameters.AddWithValue("@strUsername", "")
             cmdAddItem.Parameters.AddWithValue("@dtTransactionDate", DateTime.Today.ToString)
@@ -218,7 +218,7 @@ Public Class frmCheckout
 
     Private Sub btnRemoveSelectedItem_Click(sender As Object, e As EventArgs) Handles btnRemoveSelectedItem.Click
         Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
-        TextBox1.Text = Convert.ToDecimal(TextBox1.Text) - (delIt.decPrice * delIt.intQty)
+        txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
         Items.RemoveAt(lstItems.SelectedIndex)
         lstItems.Items.RemoveAt(lstItems.SelectedIndex)
         lstItems.Refresh()

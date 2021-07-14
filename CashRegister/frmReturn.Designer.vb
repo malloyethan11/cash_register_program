@@ -31,25 +31,25 @@ Partial Class frmReturn
         Me.lblPaymentDetails = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.lblState = New System.Windows.Forms.Label()
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblZip = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtZip = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
         Me.lblCity = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtSecurity = New System.Windows.Forms.TextBox()
         Me.lblSecurityCode = New System.Windows.Forms.Label()
         Me.dtpExpirationDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtCredit = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.lblPaymentType = New System.Windows.Forms.Label()
         Me.cboState = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -121,25 +121,25 @@ Partial Class frmReturn
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblPaymentDetails.Controls.Add(Me.Label4)
         Me.lblPaymentDetails.Controls.Add(Me.txtPhoneNumber)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox9)
+        Me.lblPaymentDetails.Controls.Add(Me.txtAddress)
         Me.lblPaymentDetails.Controls.Add(Me.lblState)
         Me.lblPaymentDetails.Controls.Add(Me.lblAddress)
         Me.lblPaymentDetails.Controls.Add(Me.txtEmail)
         Me.lblPaymentDetails.Controls.Add(Me.lblEmail)
         Me.lblPaymentDetails.Controls.Add(Me.lblZip)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox8)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox7)
+        Me.lblPaymentDetails.Controls.Add(Me.txtZip)
+        Me.lblPaymentDetails.Controls.Add(Me.txtCity)
         Me.lblPaymentDetails.Controls.Add(Me.lblCity)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox6)
+        Me.lblPaymentDetails.Controls.Add(Me.txtSecurity)
         Me.lblPaymentDetails.Controls.Add(Me.lblSecurityCode)
         Me.lblPaymentDetails.Controls.Add(Me.dtpExpirationDate)
         Me.lblPaymentDetails.Controls.Add(Me.Label3)
         Me.lblPaymentDetails.Controls.Add(Me.Label2)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox5)
+        Me.lblPaymentDetails.Controls.Add(Me.txtCredit)
         Me.lblPaymentDetails.Controls.Add(Me.lblLastName)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox4)
+        Me.lblPaymentDetails.Controls.Add(Me.txtLastName)
         Me.lblPaymentDetails.Controls.Add(Me.lblFirstName)
-        Me.lblPaymentDetails.Controls.Add(Me.TextBox3)
+        Me.lblPaymentDetails.Controls.Add(Me.txtFirstName)
         Me.lblPaymentDetails.Controls.Add(Me.lblPaymentType)
         Me.lblPaymentDetails.Controls.Add(Me.cboState)
         Me.lblPaymentDetails.Controls.Add(Me.ComboBox1)
@@ -167,12 +167,12 @@ Partial Class frmReturn
         Me.txtPhoneNumber.Size = New System.Drawing.Size(389, 20)
         Me.txtPhoneNumber.TabIndex = 85
         '
-        'TextBox9
+        'txtAddress
         '
-        Me.TextBox9.Location = New System.Drawing.Point(90, 124)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(389, 20)
-        Me.TextBox9.TabIndex = 84
+        Me.txtAddress.Location = New System.Drawing.Point(90, 124)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(389, 20)
+        Me.txtAddress.TabIndex = 84
         '
         'lblState
         '
@@ -221,19 +221,19 @@ Partial Class frmReturn
         Me.lblZip.Text = "Zip Code:"
         Me.lblZip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox8
+        'txtZip
         '
-        Me.TextBox8.Location = New System.Drawing.Point(90, 176)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(390, 20)
-        Me.TextBox8.TabIndex = 82
+        Me.txtZip.Location = New System.Drawing.Point(90, 176)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.Size = New System.Drawing.Size(390, 20)
+        Me.txtZip.TabIndex = 82
         '
-        'TextBox7
+        'txtCity
         '
-        Me.TextBox7.Location = New System.Drawing.Point(90, 150)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox7.TabIndex = 81
+        Me.txtCity.Location = New System.Drawing.Point(90, 150)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.Size = New System.Drawing.Size(158, 20)
+        Me.txtCity.TabIndex = 81
         '
         'lblCity
         '
@@ -245,13 +245,13 @@ Partial Class frmReturn
         Me.lblCity.Text = "City:"
         Me.lblCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox6
+        'txtSecurity
         '
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(277, 98)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox6.TabIndex = 80
+        Me.txtSecurity.Enabled = False
+        Me.txtSecurity.Location = New System.Drawing.Point(277, 98)
+        Me.txtSecurity.Name = "txtSecurity"
+        Me.txtSecurity.Size = New System.Drawing.Size(202, 20)
+        Me.txtSecurity.TabIndex = 80
         '
         'lblSecurityCode
         '
@@ -296,13 +296,13 @@ Partial Class frmReturn
         Me.Label2.Text = "Credit Card Number:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox5
+        'txtCredit
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(114, 72)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(365, 20)
-        Me.TextBox5.TabIndex = 78
+        Me.txtCredit.Enabled = False
+        Me.txtCredit.Location = New System.Drawing.Point(114, 72)
+        Me.txtCredit.Name = "txtCredit"
+        Me.txtCredit.Size = New System.Drawing.Size(365, 20)
+        Me.txtCredit.TabIndex = 78
         '
         'lblLastName
         '
@@ -314,12 +314,12 @@ Partial Class frmReturn
         Me.lblLastName.Text = "Last Name:"
         Me.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox4
+        'txtLastName
         '
-        Me.TextBox4.Location = New System.Drawing.Point(320, 46)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox4.TabIndex = 77
+        Me.txtLastName.Location = New System.Drawing.Point(320, 46)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(159, 20)
+        Me.txtLastName.TabIndex = 77
         '
         'lblFirstName
         '
@@ -331,12 +331,12 @@ Partial Class frmReturn
         Me.lblFirstName.Text = "First Name:"
         Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox3
+        'txtFirstName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(90, 46)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox3.TabIndex = 76
+        Me.txtFirstName.Location = New System.Drawing.Point(90, 46)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(158, 20)
+        Me.txtFirstName.TabIndex = 76
         '
         'lblPaymentType
         '
@@ -474,25 +474,25 @@ Partial Class frmReturn
     Friend WithEvents lstItems As ListBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtPhoneNumber As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents lblState As Label
     Friend WithEvents lblAddress As Label
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblZip As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtZip As TextBox
+    Friend WithEvents txtCity As TextBox
     Friend WithEvents lblCity As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtSecurity As TextBox
     Friend WithEvents lblSecurityCode As Label
     Friend WithEvents dtpExpirationDate As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtCredit As TextBox
     Friend WithEvents lblLastName As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtLastName As TextBox
     Friend WithEvents lblFirstName As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtFirstName As TextBox
     Friend WithEvents lblPaymentType As Label
     Friend WithEvents cboState As ComboBox
     Friend WithEvents ComboBox1 As ComboBox

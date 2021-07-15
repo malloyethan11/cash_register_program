@@ -207,7 +207,7 @@ Partial Class frmViewTransactions
         '
         Me.lblPageNumber.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPageNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPageNumber.Location = New System.Drawing.Point(1153, 695)
+        Me.lblPageNumber.Location = New System.Drawing.Point(1153, 816)
         Me.lblPageNumber.Name = "lblPageNumber"
         Me.lblPageNumber.Size = New System.Drawing.Size(86, 42)
         Me.lblPageNumber.TabIndex = 48
@@ -1835,7 +1835,7 @@ Partial Class frmViewTransactions
         Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNext.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.btnNext.Location = New System.Drawing.Point(1245, 695)
+        Me.btnNext.Location = New System.Drawing.Point(1245, 816)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(113, 42)
         Me.btnNext.TabIndex = 47
@@ -1848,7 +1848,7 @@ Partial Class frmViewTransactions
         Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBack.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Image = Global.CashRegister.My.Resources.Resources.ButtonShort
-        Me.btnBack.Location = New System.Drawing.Point(1034, 695)
+        Me.btnBack.Location = New System.Drawing.Point(1034, 816)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(113, 42)
         Me.btnBack.TabIndex = 46
@@ -1861,7 +1861,7 @@ Partial Class frmViewTransactions
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Image = Global.CashRegister.My.Resources.Resources.Button
-        Me.btnExit.Location = New System.Drawing.Point(12, 695)
+        Me.btnExit.Location = New System.Drawing.Point(12, 816)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(278, 42)
         Me.btnExit.TabIndex = 45
@@ -1878,7 +1878,7 @@ Partial Class frmViewTransactions
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1370, 870)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

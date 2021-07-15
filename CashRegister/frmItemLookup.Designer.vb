@@ -545,7 +545,7 @@ Partial Class frmItemLookup
         'lblPrice1
         '
         Me.lblPrice1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice1.Location = New System.Drawing.Point(13, 293)
         Me.lblPrice1.Name = "lblPrice1"
         Me.lblPrice1.Size = New System.Drawing.Size(209, 26)
@@ -556,7 +556,7 @@ Partial Class frmItemLookup
         'lblPrice2
         '
         Me.lblPrice2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice2.Location = New System.Drawing.Point(229, 293)
         Me.lblPrice2.Name = "lblPrice2"
         Me.lblPrice2.Size = New System.Drawing.Size(209, 26)
@@ -567,7 +567,7 @@ Partial Class frmItemLookup
         'lblPrice3
         '
         Me.lblPrice3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice3.Location = New System.Drawing.Point(445, 293)
         Me.lblPrice3.Name = "lblPrice3"
         Me.lblPrice3.Size = New System.Drawing.Size(209, 26)
@@ -578,7 +578,7 @@ Partial Class frmItemLookup
         'lblPrice4
         '
         Me.lblPrice4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice4.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice4.Location = New System.Drawing.Point(661, 293)
         Me.lblPrice4.Name = "lblPrice4"
         Me.lblPrice4.Size = New System.Drawing.Size(209, 26)
@@ -589,7 +589,7 @@ Partial Class frmItemLookup
         'lblPrice5
         '
         Me.lblPrice5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice5.Location = New System.Drawing.Point(877, 293)
         Me.lblPrice5.Name = "lblPrice5"
         Me.lblPrice5.Size = New System.Drawing.Size(209, 26)
@@ -600,7 +600,7 @@ Partial Class frmItemLookup
         'lblPrice6
         '
         Me.lblPrice6.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice6.Location = New System.Drawing.Point(13, 577)
         Me.lblPrice6.Name = "lblPrice6"
         Me.lblPrice6.Size = New System.Drawing.Size(209, 26)
@@ -611,7 +611,7 @@ Partial Class frmItemLookup
         'lblPrice7
         '
         Me.lblPrice7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice7.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice7.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice7.Location = New System.Drawing.Point(229, 577)
         Me.lblPrice7.Name = "lblPrice7"
         Me.lblPrice7.Size = New System.Drawing.Size(209, 26)
@@ -622,7 +622,7 @@ Partial Class frmItemLookup
         'lblPrice8
         '
         Me.lblPrice8.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice8.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice8.Location = New System.Drawing.Point(445, 577)
         Me.lblPrice8.Name = "lblPrice8"
         Me.lblPrice8.Size = New System.Drawing.Size(209, 26)
@@ -633,7 +633,7 @@ Partial Class frmItemLookup
         'lblPrice9
         '
         Me.lblPrice9.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice9.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice9.Location = New System.Drawing.Point(661, 577)
         Me.lblPrice9.Name = "lblPrice9"
         Me.lblPrice9.Size = New System.Drawing.Size(209, 26)
@@ -644,7 +644,7 @@ Partial Class frmItemLookup
         'lblPrice10
         '
         Me.lblPrice10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblPrice10.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrice10.Location = New System.Drawing.Point(877, 577)
         Me.lblPrice10.Name = "lblPrice10"
         Me.lblPrice10.Size = New System.Drawing.Size(209, 26)

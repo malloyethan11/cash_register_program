@@ -39,6 +39,16 @@ Public Class frmItemLookup
         lblItem8.Text = ""
         lblItem9.Text = ""
         lblItem10.Text = ""
+        lblPrice1.Text = ""
+        lblPrice2.Text = ""
+        lblPrice3.Text = ""
+        lblPrice4.Text = ""
+        lblPrice5.Text = ""
+        lblPrice6.Text = ""
+        lblPrice7.Text = ""
+        lblPrice8.Text = ""
+        lblPrice9.Text = ""
+        lblPrice10.Text = ""
 
         ' Make qty visible if dialog
         If (Type = "Dialog") Then
@@ -336,92 +346,146 @@ Public Class frmItemLookup
         ' Populate each
         If (drSet.Count >= intStartIndex + 1) Then
             ' Get Name
-            lblItem1.Text = drSet(intStartIndex)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex)("decItemPrice").ToString, 2)
+            lblItem1.Text = drSet(intStartIndex)("strItemName").ToString
+            lblPrice1.Text = FormatCurrency(drSet(intStartIndex)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex, picImage1)
         Else
+            lblPrice1.Text = ""
             lblItem1.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 2) Then
             ' Get Name
-            lblItem2.Text = drSet(intStartIndex + 1)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 1)("decItemPrice").ToString, 2)
+            lblItem2.Text = drSet(intStartIndex + 1)("strItemName").ToString
+            lblPrice2.Text = FormatCurrency(drSet(intStartIndex + 1)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 1, picImage2)
         Else
+            lblPrice2.Text = ""
             lblItem2.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 3) Then
             ' Get Name
-            lblItem3.Text = drSet(intStartIndex + 2)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 2)("decItemPrice").ToString, 2)
+            lblItem3.Text = drSet(intStartIndex + 2)("strItemName").ToString
+            lblPrice3.Text = FormatCurrency(drSet(intStartIndex + 2)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 2, picImage3)
         Else
+            lblPrice3.Text = ""
             lblItem3.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 4) Then
             ' Get name
-            lblItem4.Text = drSet(intStartIndex + 3)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 3)("decItemPrice").ToString, 2)
+            lblItem4.Text = drSet(intStartIndex + 3)("strItemName").ToString
+            lblPrice4.Text = FormatCurrency(drSet(intStartIndex + 3)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 3, picImage4)
         Else
+            lblPrice4.Text = ""
             lblItem4.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 5) Then
             ' Get name
-            lblItem5.Text = drSet(intStartIndex + 4)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 4)("decItemPrice").ToString, 2)
+            lblItem5.Text = drSet(intStartIndex + 4)("strItemName").ToString
+            lblPrice5.Text = FormatCurrency(drSet(intStartIndex + 4)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 4, picImage5)
         Else
+            lblPrice5.Text = ""
             lblItem5.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 6) Then
             ' Get name
-            lblItem6.Text = drSet(intStartIndex + 5)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 5)("decItemPrice").ToString, 2)
+            lblItem6.Text = drSet(intStartIndex + 5)("strItemName").ToString
+            lblPrice6.Text = FormatCurrency(drSet(intStartIndex + 5)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 5, picImage6)
         Else
+            lblPrice6.Text = ""
             lblItem6.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 7) Then
             ' Get name
-            lblItem7.Text = drSet(intStartIndex + 6)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 6)("decItemPrice").ToString, 2)
+            lblItem7.Text = drSet(intStartIndex + 6)("strItemName").ToString
+            lblPrice7.Text = FormatCurrency(drSet(intStartIndex + 6)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 6, picImage7)
         Else
+            lblPrice7.Text = ""
             lblItem7.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 8) Then
             ' Get name
-            lblItem8.Text = drSet(intStartIndex + 7)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 7)("decItemPrice").ToString, 2)
+            lblItem8.Text = drSet(intStartIndex + 7)("strItemName").ToString
+            lblPrice8.Text = FormatCurrency(drSet(intStartIndex + 7)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 7, picImage8)
         Else
+            lblPrice8.Text = ""
             lblItem8.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 9) Then
             ' Get name
-            lblItem9.Text = drSet(intStartIndex + 8)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 8)("decItemPrice").ToString, 2)
+            lblItem9.Text = drSet(intStartIndex + 8)("strItemName").ToString
+            lblPrice9.Text = FormatCurrency(drSet(intStartIndex + 8)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 8, picImage9)
         Else
+            lblPrice9.Text = ""
             lblItem9.Text = ""
         End If
 
         If (drSet.Count >= intStartIndex + 10) Then
             ' Get name
-            lblItem10.Text = drSet(intStartIndex + 9)("strItemName").ToString & " - " & FormatCurrency(drSet(intStartIndex + 9)("decItemPrice").ToString, 2)
+            lblItem10.Text = drSet(intStartIndex + 9)("strItemName").ToString
+            lblPrice10.Text = FormatCurrency(drSet(intStartIndex + 9)("decItemPrice").ToString, 2)
             ' Get image
             GetImage(intStartIndex + 9, picImage10)
         Else
+            lblPrice10.Text = ""
             lblItem10.Text = ""
+        End If
+
+        ' Trim
+        TrimBoxes()
+
+    End Sub
+
+    Private Sub TrimBoxes()
+
+        ' Trim the boxes
+        TrimOneBox(lblItem1)
+        TrimOneBox(lblItem2)
+        TrimOneBox(lblItem3)
+        TrimOneBox(lblItem4)
+        TrimOneBox(lblItem5)
+        TrimOneBox(lblItem6)
+        TrimOneBox(lblItem7)
+        TrimOneBox(lblItem8)
+        TrimOneBox(lblItem9)
+        TrimOneBox(lblItem10)
+
+    End Sub
+
+    Private Sub TrimOneBox(ByRef lblBox As Label)
+
+        ' Trim length
+        Dim intIndex As Integer = 50
+
+        ' Truncate
+        If (lblBox.Text.Length <= intIndex) And (lblBox.Text <> "") Then
+            intIndex = lblBox.Text.Length - 1
+        ElseIf (lblBox.Text <> "") Then
+            lblBox.Text = lblBox.Text.Remove(intIndex)
+            lblBox.Text += "..."
         End If
 
     End Sub
@@ -472,10 +536,12 @@ Public Class frmItemLookup
                         intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
                         intQuantityToPurchase = txtQTY.Text
                         Me.Close()
+                    Else
+                        MessageBox.Show("Quantity is required to select item.", "Error")
                     End If
                 Else
-                        ' Open the editor form and pass on the primary key
-                        Dim frmNewEditor As New frmItemEditor
+                    ' Open the editor form and pass on the primary key
+                    Dim frmNewEditor As New frmItemEditor
                     frmNewEditor.intCurrentlyEditingItemPrimaryKey = drSet(intIndex)("intItemID").ToString
                     OpenFormMaintainParent(Me, frmNewEditor)
                     ' If data change has occured, then load the items again

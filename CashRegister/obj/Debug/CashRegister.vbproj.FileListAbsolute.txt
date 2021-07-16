@@ -162,3 +162,4 @@ C:\Users\Nikhil\Documents\repo\cash_register_program\CashRegister\obj\Debug\Cash
 C:\Users\Nikhil\Documents\repo\cash_register_program\CashRegister\obj\Debug\CashRegister.exe
 C:\Users\Nikhil\Documents\repo\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
 C:\Users\Nikhil\Documents\repo\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
+C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmGetDatabaseCredentials.resources

@@ -125,7 +125,7 @@ Public Class frmItemEditor
             End If
 
             ' Build the select statement
-            strSelect = "SELECT intVendorID, strVendorName FROM TVendors"
+            strSelect = "SELECT intVendorID, strVendorName FROM TVendors ORDER BY strVendorName ASC"
 
             ' Retrieve all the records 
             cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -134,8 +134,7 @@ Public Class frmItemEditor
             ' load table from data reader
             dt.Load(drSourceTable)
 
-            ' Add the item to the combo box. We need the user ID associated with the name so 
-            ' when we click on the name we can then use the ID to pull the rest of the user data.
+            ' Add the item to the combo box.
             ' We are binding the column name to the combo box display and value members. 
             cboVendor.ValueMember = "intVendorID"
             cboVendor.DisplayMember = "strVendorName"
@@ -296,11 +295,6 @@ Public Class frmItemEditor
                                                       "User ID=" & strConnectionUsername & ";" &
                                                       "Password=" & strConnectionPassword & ";")
 
-        'Dim strSelect As String = "Update TItems Set strSKU = '" & SKU & "', " & "strItemName = '" & ItemName &
-        '            "', " & "strItemDesc = '" & ItemDesc & "', " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
-        '             "decItemPrice = '" & ItemPrice & "', " & "intInventoryAmt = '" & InventoryAmt & "', " & "intSafetyStockAmt = '" & SafetyStockAmt & "', 
-        '            " & "strUPC = '" & UPC & "', " & "imgitemImage = @imgItemImage WHERE intItemID = " & intCurrentlyEditingVendorPrimaryKey
-
         ' Update for handling SQL injection attacks
         Dim strSelect As String = "Update TItems Set strSKU = @strSKU, " & "strItemName = @strItemName" &
                     ", " & "strItemDesc = @strItemDesc, " & "intCategoryID = '" & cboCategory.SelectedValue.ToString & "'," & "intVendorID = '" & cboVendor.SelectedValue.ToString & "'," &
@@ -454,7 +448,7 @@ Public Class frmItemEditor
         If Not picItemImage.Image Is Nothing Then
             Return True
         Else
-            MessageBox.Show("Please add an image.") 'pop a message box if an error
+            MessageBox.Show("An item image is required.") 'pop a message box if an error
             Return False
         End If
 
@@ -490,7 +484,7 @@ Public Class frmItemEditor
                 End If
 
                 ' always ask before deleting!!!!
-                result = MessageBox.Show("Are you sure you want to Delete Item: Item Name-" & txtName.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                result = MessageBox.Show("Are you sure you want to Delete Item: " & txtName.Text & "?", "Confirm Deletion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 
                 ' this will figure out which button was selected. Cancel and No does nothing, Yes will allow deletion
                 Select Case result

@@ -49,7 +49,7 @@ Public Class frmAddItem
             End If
 
             ' Build the select statement
-            strSelect = "SELECT intVendorID, strVendorName FROM TVendors"
+            strSelect = "SELECT intVendorID, strVendorName FROM TVendors ORDER BY strVendorName ASC"
 
             ' Retrieve all the records 
             cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -58,8 +58,7 @@ Public Class frmAddItem
             ' load table from data reader
             dt.Load(drSourceTable)
 
-            ' Add the item to the combo box. We need the user ID associated with the name so 
-            ' when we click on the name we can then use the ID to pull the rest of the user data.
+            ' Add the item to the combo box.
             ' We are binding the column name to the combo box display and value members. 
             cboVendors.ValueMember = "intVendorID"
             cboVendors.DisplayMember = "strVendorName"
@@ -367,7 +366,7 @@ Public Class frmAddItem
         If Not picItemImage.Image Is Nothing Then
             Return True
         Else
-            MessageBox.Show("Please add an image.") 'pop a message box if an error
+            MessageBox.Show("An item image is required.") 'pop a message box if an error
             Return False
         End If
 

@@ -23,4 +23,10 @@
         ButtonColor(MousePosition, btnNone, Me, btmButtonDefaultGray, btmButtonDefault)
 
     End Sub
+
+    Private Sub btnNone_Click(sender As Object, e As EventArgs) Handles btnNone.Click
+
+        OpenFormKillParent(Me, frmTransactions)
+
+    End Sub
 End Class

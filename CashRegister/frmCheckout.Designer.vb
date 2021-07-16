@@ -45,8 +45,8 @@ Partial Class frmCheckout
         Me.txtSecurity = New System.Windows.Forms.TextBox()
         Me.lblSecurityCode = New System.Windows.Forms.Label()
         Me.dtpExpirationDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblExpDate = New System.Windows.Forms.Label()
+        Me.lblCred = New System.Windows.Forms.Label()
         Me.txtCredit = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
@@ -93,7 +93,7 @@ Partial Class frmCheckout
         Me.txtPrice.Location = New System.Drawing.Point(571, 225)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(203, 20)
-        Me.txtPrice.TabIndex = 11
+        Me.txtPrice.TabIndex = 14
         '
         'Label1
         '
@@ -144,8 +144,8 @@ Partial Class frmCheckout
         Me.lblPaymentDetails.Controls.Add(Me.txtSecurity)
         Me.lblPaymentDetails.Controls.Add(Me.lblSecurityCode)
         Me.lblPaymentDetails.Controls.Add(Me.dtpExpirationDate)
-        Me.lblPaymentDetails.Controls.Add(Me.Label3)
-        Me.lblPaymentDetails.Controls.Add(Me.Label2)
+        Me.lblPaymentDetails.Controls.Add(Me.lblExpDate)
+        Me.lblPaymentDetails.Controls.Add(Me.lblCred)
         Me.lblPaymentDetails.Controls.Add(Me.txtCredit)
         Me.lblPaymentDetails.Controls.Add(Me.lblLastName)
         Me.lblPaymentDetails.Controls.Add(Me.txtLastName)
@@ -176,14 +176,14 @@ Partial Class frmCheckout
         Me.txtPhoneNumber.Location = New System.Drawing.Point(90, 226)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(389, 20)
-        Me.txtPhoneNumber.TabIndex = 9
+        Me.txtPhoneNumber.TabIndex = 11
         '
         'txtAddress
         '
         Me.txtAddress.Location = New System.Drawing.Point(90, 124)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(389, 20)
-        Me.txtAddress.TabIndex = 8
+        Me.txtAddress.TabIndex = 6
         '
         'lblState
         '
@@ -210,7 +210,7 @@ Partial Class frmCheckout
         Me.txtEmail.Location = New System.Drawing.Point(90, 200)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(389, 20)
-        Me.txtEmail.TabIndex = 8
+        Me.txtEmail.TabIndex = 10
         '
         'lblEmail
         '
@@ -237,14 +237,14 @@ Partial Class frmCheckout
         Me.txtZip.Location = New System.Drawing.Point(90, 176)
         Me.txtZip.Name = "txtZip"
         Me.txtZip.Size = New System.Drawing.Size(390, 20)
-        Me.txtZip.TabIndex = 7
+        Me.txtZip.TabIndex = 9
         '
         'txtCity
         '
         Me.txtCity.Location = New System.Drawing.Point(90, 150)
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(158, 20)
-        Me.txtCity.TabIndex = 6
+        Me.txtCity.TabIndex = 7
         '
         'lblCity
         '
@@ -285,27 +285,27 @@ Partial Class frmCheckout
         Me.dtpExpirationDate.TabIndex = 4
         Me.dtpExpirationDate.Value = New Date(2021, 1, 21, 0, 0, 0, 0)
         '
-        'Label3
+        'lblExpDate
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Enabled = False
-        Me.Label3.Location = New System.Drawing.Point(2, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 13)
-        Me.Label3.TabIndex = 62
-        Me.Label3.Text = "Expiration Date:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblExpDate.AutoSize = True
+        Me.lblExpDate.Enabled = False
+        Me.lblExpDate.Location = New System.Drawing.Point(2, 101)
+        Me.lblExpDate.Name = "lblExpDate"
+        Me.lblExpDate.Size = New System.Drawing.Size(82, 13)
+        Me.lblExpDate.TabIndex = 62
+        Me.lblExpDate.Text = "Expiration Date:"
+        Me.lblExpDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'lblCred
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Enabled = False
-        Me.Label2.Location = New System.Drawing.Point(6, 75)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 13)
-        Me.Label2.TabIndex = 60
-        Me.Label2.Text = "Credit Card Number:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblCred.AutoSize = True
+        Me.lblCred.Enabled = False
+        Me.lblCred.Location = New System.Drawing.Point(6, 75)
+        Me.lblCred.Name = "lblCred"
+        Me.lblCred.Size = New System.Drawing.Size(102, 13)
+        Me.lblCred.TabIndex = 60
+        Me.lblCred.Text = "Credit Card Number:"
+        Me.lblCred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtCredit
         '
@@ -366,13 +366,12 @@ Partial Class frmCheckout
         Me.cboState.Location = New System.Drawing.Point(320, 149)
         Me.cboState.Name = "cboState"
         Me.cboState.Size = New System.Drawing.Size(159, 21)
-        Me.cboState.TabIndex = 0
+        Me.cboState.TabIndex = 8
         '
         'cboPayment
         '
         Me.cboPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboPayment.FormattingEnabled = True
-        Me.cboPayment.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
         Me.cboPayment.Location = New System.Drawing.Point(90, 19)
         Me.cboPayment.Name = "cboPayment"
         Me.cboPayment.Size = New System.Drawing.Size(389, 21)
@@ -387,7 +386,7 @@ Partial Class frmCheckout
         Me.btnRemoveSelectedItem.Location = New System.Drawing.Point(499, 172)
         Me.btnRemoveSelectedItem.Name = "btnRemoveSelectedItem"
         Me.btnRemoveSelectedItem.Size = New System.Drawing.Size(284, 42)
-        Me.btnRemoveSelectedItem.TabIndex = 56
+        Me.btnRemoveSelectedItem.TabIndex = 13
         Me.btnRemoveSelectedItem.Text = "Remove Selected Item"
         Me.btnRemoveSelectedItem.UseVisualStyleBackColor = True
         '
@@ -400,7 +399,7 @@ Partial Class frmCheckout
         Me.btnItemLookup.Location = New System.Drawing.Point(499, 12)
         Me.btnItemLookup.Name = "btnItemLookup"
         Me.btnItemLookup.Size = New System.Drawing.Size(284, 42)
-        Me.btnItemLookup.TabIndex = 10
+        Me.btnItemLookup.TabIndex = 12
         Me.btnItemLookup.Text = "Item Lookup"
         Me.btnItemLookup.UseVisualStyleBackColor = True
         '
@@ -413,7 +412,7 @@ Partial Class frmCheckout
         Me.btnExit.Location = New System.Drawing.Point(12, 289)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 12
+        Me.btnExit.TabIndex = 15
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -426,7 +425,7 @@ Partial Class frmCheckout
         Me.btnSubmit.Location = New System.Drawing.Point(499, 289)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(284, 42)
-        Me.btnSubmit.TabIndex = 13
+        Me.btnSubmit.TabIndex = 16
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
@@ -436,6 +435,7 @@ Partial Class frmCheckout
         '
         'frmCheckout
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
@@ -472,8 +472,8 @@ Partial Class frmCheckout
     Friend WithEvents txtTax As TextBox
     Friend WithEvents lblPaymentDetails As GroupBox
     Friend WithEvents dtpExpirationDate As DateTimePicker
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblExpDate As Label
+    Friend WithEvents lblCred As Label
     Friend WithEvents txtCredit As TextBox
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtLastName As TextBox

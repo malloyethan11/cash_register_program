@@ -3,8 +3,8 @@ Imports System.IO
 
 Public Class frmItemLookup
 
-    Public intPrimaryKeyReturnValue As Integer
-    Public intQuantityToPurchase As Integer
+    Public intPrimaryKeyReturnValue As Integer = -1
+    Public intQuantityToPurchase As Integer = -1
     Public Type As String = "Dialog"
     Dim intStartIndex As Integer = 0
     Dim drSet As System.Data.DataRowCollection
@@ -563,6 +563,7 @@ Public Class frmItemLookup
             txtQTY.BackColor = Color.White
         Else
             txtQTY.BackColor = Color.Yellow
+            txtQTY.Focus()
         End If
 
         Return blnResult
@@ -629,25 +630,12 @@ Public Class frmItemLookup
 
     End Sub
 
-    Private Sub txtQTY_KeyPressed(sender As Object, e As KeyPressEventArgs) Handles txtQTY.KeyPress
+    ' Only allow numbers in the phone number field
+    Private Sub txtQTY_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtQTY.KeyPress
 
-        ' If the input is not numeric, reject
-        If (IsNumeric(e.KeyChar.ToString) = False And Asc(e.KeyChar) <> 8) Then
-
+        ' Only accept number keystrokes and backspace keystroke
+        If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back Then
             e.Handled = True
-            CType(sender, TextBox).Clear()
-
-        End If
-
-    End Sub
-
-    Private Sub txtQTY_TextChanged(sender As Object, e As EventArgs) Handles txtQTY.TextChanged
-
-        ' If the text is not numeric, clear
-        If (IsNumeric(txtQTY.Text) = False) Then
-
-            txtQTY.ResetText()
-
         End If
 
     End Sub

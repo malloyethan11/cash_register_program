@@ -43,8 +43,8 @@ Partial Class frmReturn
         Me.txtSecurity = New System.Windows.Forms.TextBox()
         Me.lblSecurityCode = New System.Windows.Forms.Label()
         Me.dtpExpirationDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblExpDate = New System.Windows.Forms.Label()
+        Me.lblCred = New System.Windows.Forms.Label()
         Me.txtCredit = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
@@ -52,11 +52,11 @@ Partial Class frmReturn
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.lblPaymentType = New System.Windows.Forms.Label()
         Me.cboState = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboPayment = New System.Windows.Forms.ComboBox()
         Me.lblSalesTax = New System.Windows.Forms.Label()
-        Me.txtSalesTax = New System.Windows.Forms.TextBox()
+        Me.txtTax = New System.Windows.Forms.TextBox()
         Me.lblReturn = New System.Windows.Forms.Label()
-        Me.txtReturn = New System.Windows.Forms.TextBox()
+        Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.lblList = New System.Windows.Forms.Label()
         Me.lstItems = New System.Windows.Forms.ListBox()
         Me.StepAction = New System.Windows.Forms.Timer(Me.components)
@@ -72,7 +72,7 @@ Partial Class frmReturn
         Me.btnRemoveSelectedItem.Location = New System.Drawing.Point(499, 172)
         Me.btnRemoveSelectedItem.Name = "btnRemoveSelectedItem"
         Me.btnRemoveSelectedItem.Size = New System.Drawing.Size(284, 42)
-        Me.btnRemoveSelectedItem.TabIndex = 67
+        Me.btnRemoveSelectedItem.TabIndex = 13
         Me.btnRemoveSelectedItem.Text = "Remove Selected Item"
         Me.btnRemoveSelectedItem.UseVisualStyleBackColor = True
         '
@@ -85,7 +85,7 @@ Partial Class frmReturn
         Me.btnItemLookup.Location = New System.Drawing.Point(499, 12)
         Me.btnItemLookup.Name = "btnItemLookup"
         Me.btnItemLookup.Size = New System.Drawing.Size(284, 42)
-        Me.btnItemLookup.TabIndex = 57
+        Me.btnItemLookup.TabIndex = 12
         Me.btnItemLookup.Text = "Item Lookup"
         Me.btnItemLookup.UseVisualStyleBackColor = True
         '
@@ -98,7 +98,7 @@ Partial Class frmReturn
         Me.btnSubmit.Location = New System.Drawing.Point(499, 289)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(284, 42)
-        Me.btnSubmit.TabIndex = 60
+        Me.btnSubmit.TabIndex = 16
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
@@ -111,7 +111,7 @@ Partial Class frmReturn
         Me.btnExit.Location = New System.Drawing.Point(12, 289)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 59
+        Me.btnExit.TabIndex = 15
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -133,8 +133,8 @@ Partial Class frmReturn
         Me.lblPaymentDetails.Controls.Add(Me.txtSecurity)
         Me.lblPaymentDetails.Controls.Add(Me.lblSecurityCode)
         Me.lblPaymentDetails.Controls.Add(Me.dtpExpirationDate)
-        Me.lblPaymentDetails.Controls.Add(Me.Label3)
-        Me.lblPaymentDetails.Controls.Add(Me.Label2)
+        Me.lblPaymentDetails.Controls.Add(Me.lblExpDate)
+        Me.lblPaymentDetails.Controls.Add(Me.lblCred)
         Me.lblPaymentDetails.Controls.Add(Me.txtCredit)
         Me.lblPaymentDetails.Controls.Add(Me.lblLastName)
         Me.lblPaymentDetails.Controls.Add(Me.txtLastName)
@@ -142,7 +142,7 @@ Partial Class frmReturn
         Me.lblPaymentDetails.Controls.Add(Me.txtFirstName)
         Me.lblPaymentDetails.Controls.Add(Me.lblPaymentType)
         Me.lblPaymentDetails.Controls.Add(Me.cboState)
-        Me.lblPaymentDetails.Controls.Add(Me.ComboBox1)
+        Me.lblPaymentDetails.Controls.Add(Me.cboPayment)
         Me.lblPaymentDetails.Location = New System.Drawing.Point(13, 12)
         Me.lblPaymentDetails.Name = "lblPaymentDetails"
         Me.lblPaymentDetails.Size = New System.Drawing.Size(485, 260)
@@ -165,14 +165,14 @@ Partial Class frmReturn
         Me.txtPhoneNumber.Location = New System.Drawing.Point(90, 226)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(389, 20)
-        Me.txtPhoneNumber.TabIndex = 85
+        Me.txtPhoneNumber.TabIndex = 11
         '
         'txtAddress
         '
         Me.txtAddress.Location = New System.Drawing.Point(90, 124)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(389, 20)
-        Me.txtAddress.TabIndex = 84
+        Me.txtAddress.TabIndex = 6
         '
         'lblState
         '
@@ -199,7 +199,7 @@ Partial Class frmReturn
         Me.txtEmail.Location = New System.Drawing.Point(90, 200)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(389, 20)
-        Me.txtEmail.TabIndex = 83
+        Me.txtEmail.TabIndex = 10
         '
         'lblEmail
         '
@@ -226,14 +226,14 @@ Partial Class frmReturn
         Me.txtZip.Location = New System.Drawing.Point(90, 176)
         Me.txtZip.Name = "txtZip"
         Me.txtZip.Size = New System.Drawing.Size(390, 20)
-        Me.txtZip.TabIndex = 82
+        Me.txtZip.TabIndex = 9
         '
         'txtCity
         '
         Me.txtCity.Location = New System.Drawing.Point(90, 150)
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(158, 20)
-        Me.txtCity.TabIndex = 81
+        Me.txtCity.TabIndex = 7
         '
         'lblCity
         '
@@ -251,7 +251,7 @@ Partial Class frmReturn
         Me.txtSecurity.Location = New System.Drawing.Point(277, 98)
         Me.txtSecurity.Name = "txtSecurity"
         Me.txtSecurity.Size = New System.Drawing.Size(202, 20)
-        Me.txtSecurity.TabIndex = 80
+        Me.txtSecurity.TabIndex = 5
         '
         'lblSecurityCode
         '
@@ -271,30 +271,30 @@ Partial Class frmReturn
         Me.dtpExpirationDate.Location = New System.Drawing.Point(90, 98)
         Me.dtpExpirationDate.Name = "dtpExpirationDate"
         Me.dtpExpirationDate.Size = New System.Drawing.Size(99, 20)
-        Me.dtpExpirationDate.TabIndex = 79
+        Me.dtpExpirationDate.TabIndex = 4
         Me.dtpExpirationDate.Value = New Date(2021, 1, 21, 0, 0, 0, 0)
         '
-        'Label3
+        'lblExpDate
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Enabled = False
-        Me.Label3.Location = New System.Drawing.Point(2, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 13)
-        Me.Label3.TabIndex = 90
-        Me.Label3.Text = "Expiration Date:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblExpDate.AutoSize = True
+        Me.lblExpDate.Enabled = False
+        Me.lblExpDate.Location = New System.Drawing.Point(2, 101)
+        Me.lblExpDate.Name = "lblExpDate"
+        Me.lblExpDate.Size = New System.Drawing.Size(82, 13)
+        Me.lblExpDate.TabIndex = 90
+        Me.lblExpDate.Text = "Expiration Date:"
+        Me.lblExpDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'lblCred
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Enabled = False
-        Me.Label2.Location = New System.Drawing.Point(6, 75)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 13)
-        Me.Label2.TabIndex = 89
-        Me.Label2.Text = "Credit Card Number:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblCred.AutoSize = True
+        Me.lblCred.Enabled = False
+        Me.lblCred.Location = New System.Drawing.Point(6, 75)
+        Me.lblCred.Name = "lblCred"
+        Me.lblCred.Size = New System.Drawing.Size(102, 13)
+        Me.lblCred.TabIndex = 89
+        Me.lblCred.Text = "Credit Card Number:"
+        Me.lblCred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtCredit
         '
@@ -302,7 +302,7 @@ Partial Class frmReturn
         Me.txtCredit.Location = New System.Drawing.Point(114, 72)
         Me.txtCredit.Name = "txtCredit"
         Me.txtCredit.Size = New System.Drawing.Size(365, 20)
-        Me.txtCredit.TabIndex = 78
+        Me.txtCredit.TabIndex = 3
         '
         'lblLastName
         '
@@ -319,7 +319,7 @@ Partial Class frmReturn
         Me.txtLastName.Location = New System.Drawing.Point(320, 46)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(159, 20)
-        Me.txtLastName.TabIndex = 77
+        Me.txtLastName.TabIndex = 2
         '
         'lblFirstName
         '
@@ -336,7 +336,7 @@ Partial Class frmReturn
         Me.txtFirstName.Location = New System.Drawing.Point(90, 46)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(158, 20)
-        Me.txtFirstName.TabIndex = 76
+        Me.txtFirstName.TabIndex = 1
         '
         'lblPaymentType
         '
@@ -355,17 +355,17 @@ Partial Class frmReturn
         Me.cboState.Location = New System.Drawing.Point(320, 149)
         Me.cboState.Name = "cboState"
         Me.cboState.Size = New System.Drawing.Size(159, 21)
-        Me.cboState.TabIndex = 75
+        Me.cboState.TabIndex = 8
         '
-        'ComboBox1
+        'cboPayment
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
-        Me.ComboBox1.Location = New System.Drawing.Point(90, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(389, 21)
-        Me.ComboBox1.TabIndex = 74
+        Me.cboPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboPayment.FormattingEnabled = True
+        Me.cboPayment.Items.AddRange(New Object() {"Select a Payment Type", "Cash", "Credit"})
+        Me.cboPayment.Location = New System.Drawing.Point(90, 19)
+        Me.cboPayment.Name = "cboPayment"
+        Me.cboPayment.Size = New System.Drawing.Size(389, 21)
+        Me.cboPayment.TabIndex = 0
         '
         'lblSalesTax
         '
@@ -377,16 +377,16 @@ Partial Class frmReturn
         Me.lblSalesTax.Text = "Sales Tax Returned:"
         Me.lblSalesTax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtSalesTax
+        'txtTax
         '
-        Me.txtSalesTax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtTax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSalesTax.Location = New System.Drawing.Point(615, 251)
-        Me.txtSalesTax.Name = "txtSalesTax"
-        Me.txtSalesTax.ReadOnly = True
-        Me.txtSalesTax.Size = New System.Drawing.Size(159, 20)
-        Me.txtSalesTax.TabIndex = 64
-        Me.txtSalesTax.TabStop = False
+        Me.txtTax.Location = New System.Drawing.Point(615, 251)
+        Me.txtTax.Name = "txtTax"
+        Me.txtTax.ReadOnly = True
+        Me.txtTax.Size = New System.Drawing.Size(159, 20)
+        Me.txtTax.TabIndex = 64
+        Me.txtTax.TabStop = False
         '
         'lblReturn
         '
@@ -398,14 +398,14 @@ Partial Class frmReturn
         Me.lblReturn.Text = "Total Return:"
         Me.lblReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtReturn
+        'txtPrice
         '
-        Me.txtReturn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtPrice.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtReturn.Location = New System.Drawing.Point(615, 225)
-        Me.txtReturn.Name = "txtReturn"
-        Me.txtReturn.Size = New System.Drawing.Size(159, 20)
-        Me.txtReturn.TabIndex = 58
+        Me.txtPrice.Location = New System.Drawing.Point(615, 225)
+        Me.txtPrice.Name = "txtPrice"
+        Me.txtPrice.Size = New System.Drawing.Size(159, 20)
+        Me.txtPrice.TabIndex = 14
         '
         'lblList
         '
@@ -446,9 +446,9 @@ Partial Class frmReturn
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lblPaymentDetails)
         Me.Controls.Add(Me.lblSalesTax)
-        Me.Controls.Add(Me.txtSalesTax)
+        Me.Controls.Add(Me.txtTax)
         Me.Controls.Add(Me.lblReturn)
-        Me.Controls.Add(Me.txtReturn)
+        Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.lblList)
         Me.Controls.Add(Me.lstItems)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -467,9 +467,9 @@ Partial Class frmReturn
     Friend WithEvents btnExit As Button
     Friend WithEvents lblPaymentDetails As GroupBox
     Friend WithEvents lblSalesTax As Label
-    Friend WithEvents txtSalesTax As TextBox
+    Friend WithEvents txtTax As TextBox
     Friend WithEvents lblReturn As Label
-    Friend WithEvents txtReturn As TextBox
+    Friend WithEvents txtPrice As TextBox
     Friend WithEvents lblList As Label
     Friend WithEvents lstItems As ListBox
     Friend WithEvents Label4 As Label
@@ -486,8 +486,8 @@ Partial Class frmReturn
     Friend WithEvents txtSecurity As TextBox
     Friend WithEvents lblSecurityCode As Label
     Friend WithEvents dtpExpirationDate As DateTimePicker
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblExpDate As Label
+    Friend WithEvents lblCred As Label
     Friend WithEvents txtCredit As TextBox
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtLastName As TextBox
@@ -495,6 +495,6 @@ Partial Class frmReturn
     Friend WithEvents txtFirstName As TextBox
     Friend WithEvents lblPaymentType As Label
     Friend WithEvents cboState As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboPayment As ComboBox
     Friend WithEvents StepAction As Timer
 End Class

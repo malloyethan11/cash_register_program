@@ -14,36 +14,65 @@
             ' Decrypt text
             Dim strDecryptedFile As String = clsEncrypt.DecryptData(strEncryptedFile)
 
-            ' Load Credentials
-            Dim strTempUsername As String = ""
-            Dim strTempPassword As String = ""
-            Dim intCount As Integer = 0
+            ' DId getting the data succeed?
+            If (strDecryptedFile <> Nothing) Then
+                ' Load Credentials
+                Dim strTempUsername As String = ""
+                Dim strTempPassword As String = ""
+                Dim intCount As Integer = 0
 
-            ' Get all text until pipe
-            While (strDecryptedFile.Chars(intCount) <> "|")
-                strTempUsername += strDecryptedFile.Chars(intCount)
+                ' Get all text until pipe
+                While (strDecryptedFile.Chars(intCount) <> "|")
+                    strTempUsername += strDecryptedFile.Chars(intCount)
+                    intCount += 1
+                End While
+
+                ' Move passed pipe
                 intCount += 1
-            End While
 
-            ' Move passed pipe
-            intCount += 1
+                ' Get all text until end
+                While (intCount < strDecryptedFile.Length)
+                    strTempPassword += strDecryptedFile.Chars(intCount)
+                    intCount += 1
+                End While
 
-            ' Get all text until end
-            While (intCount < strDecryptedFile.Length)
-                strTempPassword += strDecryptedFile.Chars(intCount)
-                intCount += 1
-            End While
+                ' Get credentials
+                strConnectionUsername = strTempUsername
+                strConnectionPassword = strTempPassword
 
-            ' Get credentials
-            strConnectionUsername = strTempUsername
-            strConnectionPassword = strTempPassword
+                ' Test connection
+                If OpenDatabaseConnectionSQLServer() = False Then
 
-            ' Test connection
-            If OpenDatabaseConnectionSQLServer() = False Then
+                    CloseDatabaseConnection()
+                    MessageBox.Show("Unable to connect to database at this time. Either enter new credentials or close the program and try again later.", "Error")
 
-                CloseDatabaseConnection()
-                MessageBox.Show("Unable to connect to database at this time. Either enter new credentials or close the program and try again later.", "Error")
+                    Me.CenterToScreen()
 
+                    For Each Control In Controls
+                        If Control.GetType() = GetType(Button) Then
+                            Control.FlatStyle = FlatStyle.Flat
+                            Control.ForeColor = BackColor
+                            Control.FlatAppearance.BorderColor = BackColor
+                            Control.FlatAppearance.MouseOverBackColor = BackColor
+                            Control.FlatAppearance.MouseDownBackColor = BackColor
+                        End If
+                    Next
+
+                    txtPassword.PasswordChar = "*"
+
+                    SetImages()
+
+                Else
+
+                    CloseDatabaseConnection()
+                    OpenFormKillParent(Me, frmLogin)
+
+                    SetImages()
+
+                End If
+            Else
+
+                ' Else, get the username and password
                 Me.CenterToScreen()
 
                 For Each Control In Controls
@@ -60,17 +89,12 @@
 
                 SetImages()
 
-            Else
-
-                CloseDatabaseConnection()
-                OpenFormKillParent(Me, frmLogin)
-
             End If
 
 
         Else
 
-            Me.CenterToScreen()
+                Me.CenterToScreen()
 
             For Each Control In Controls
                 If Control.GetType() = GetType(Button) Then
@@ -170,8 +194,16 @@
         strConnectionUsername = txtUsername.Text
         strConnectionPassword = txtPassword.Text
 
+        m_strDatabaseConnectionStringPassword = "Provider=SQLOLEDB;" &
+                                                "Server=itd2.cincinnatistate.edu;" &
+                                                "Database=CPDM-GroupB;" &
+                                                "User ID=" & strConnectionUsername & ";" &
+                                                "Password=" & strConnectionPassword & ";"
+
         ' Start encryption service
         Dim clsEncrypt As New clsEncryption("09b023thboiu3h2rf02p3098t2b03g98uh92oeryugbs0e59y72nb09348tv02934vthm0")
+
+
 
         ' Open the DB
         If OpenDatabaseConnectionSQLServer() = False Then

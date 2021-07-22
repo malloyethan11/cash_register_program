@@ -40,13 +40,6 @@
                 strConnectionUsername = strTempUsername
                 strConnectionPassword = strTempPassword
 
-                ' Update the connection string
-                m_strDatabaseConnectionStringPassword = "Provider=SQLOLEDB;" &
-                                                "Server=itd2.cincinnatistate.edu;" &
-                                                "Database=CPDM-GroupB;" &
-                                                "User ID=" & strConnectionUsername & ";" &
-                                                "Password=" & strConnectionPassword & ";"
-
                 ' Test connection
                 If OpenDatabaseConnectionSQLServer() = False Then
 

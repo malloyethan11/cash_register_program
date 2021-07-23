@@ -536,8 +536,6 @@ Public Class frmItemLookup
                         intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
                         intQuantityToPurchase = txtQTY.Text
                         Me.Close()
-                    Else
-                        MessageBox.Show("Quantity is required to select item.", "Error")
                     End If
                 Else
                     ' Open the editor form and pass on the primary key
@@ -559,10 +557,15 @@ Public Class frmItemLookup
         Dim blnResult As Boolean = False
 
         If (IsNumeric(txtQTY.Text) = True) Then
-            blnResult = True
-            txtQTY.BackColor = Color.White
+            If (CInt(txtQTY.Text) > 0) Then
+                blnResult = True
+                txtQTY.BackColor = Color.White
+            Else
+                MsgBox("Quantity must be greater than zero!", MsgBoxStyle.ApplicationModal, "Error!")
+            End If
         Else
             txtQTY.BackColor = Color.Yellow
+            MessageBox.Show("Quantity is required to select item.", "Error")
             txtQTY.Focus()
         End If
 

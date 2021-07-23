@@ -197,6 +197,8 @@
                     strFilter = "strEmail"
                 Case "Total Price"
                     strFilter = "decTotalPrice"
+                Case "Description"
+                    strFilter = "strDescription"
                 Case Else
                     strFilter = "strFirstName"
             End Select
@@ -723,6 +725,38 @@
         ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
         ButtonColor(MousePosition, btnBack, Me, btmButtonShortGray, btmButtonShort)
         ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
+
+    Private Sub cboType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboType.SelectedIndexChanged
+
+        ' Load the correct filters
+        LoadAllFilters()
+
+    End Sub
+
+    Private Sub LoadAllFilters()
+
+        cboFilter.Items.Clear()
+
+        If (cboType.Text = "Return" Or cboType.Text = "Purchase") Then
+            cboFilter.Items.Add("Payment Type")
+            cboFilter.Items.Add("First Name")
+            cboFilter.Items.Add("Last Name")
+            cboFilter.Items.Add("Address")
+            cboFilter.Items.Add("City")
+            cboFilter.Items.Add("State")
+            cboFilter.Items.Add("Zip")
+            cboFilter.Items.Add("Phone Number")
+            cboFilter.Items.Add("Email")
+            cboFilter.Items.Add("Total Price")
+            cboFilter.Items.Add("Sales Tax")
+            cboFilter.SelectedIndex = 0
+        Else
+            cboFilter.Items.Add("Description")
+            cboFilter.Items.Add("Total Price")
+            cboFilter.SelectedIndex = 0
+        End If
 
     End Sub
 

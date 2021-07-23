@@ -149,7 +149,7 @@ Public Class frmCheckout
             Try
 
                 Dim strGetTime As String = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")
-                Dim strExpDate As String = dtpExpirationDate.Value.ToString("MM/yyyy")
+                Dim strExpDate As String = dtpExpirationDate.Value.ToString("MM/yy")
 
                 cmdAddItem.Parameters.AddWithValue("@intTransactionTypeID", 1)
                 cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", cboPayment.SelectedValue)

@@ -46,6 +46,7 @@ Public Class frmReturn
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
         Dim frmLookup As New frmItemLookup
+        frmLookup.strCaller = "Return"
 
         OpenFormMaintainParent(Me, frmLookup)
 

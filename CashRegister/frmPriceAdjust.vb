@@ -16,6 +16,8 @@ Public Class frmPriceAdjust
             End If
         Next
 
+        cboUnitOfMeasure.SelectedIndex = 0
+
         ' Load cboVendor with vendors
         LoadVendors()
 

@@ -260,13 +260,15 @@ Public Class frmReturn
         If (lstItems.Items.Count <> 0) Then
             If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
                 Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
-                txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                If IsNumeric(txtPrice.Text) Then
+                    txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                    If (txtPrice.Text < 0) Then
+                        txtPrice.Text = 0
+                    End If
+                End If
                 Items.RemoveAt(lstItems.SelectedIndex)
                 lstItems.Items.RemoveAt(lstItems.SelectedIndex)
                 lstItems.Refresh()
-                If (txtPrice.Text < 0) Then
-                    txtPrice.Text = 0
-                End If
             End If
         End If
     End Sub

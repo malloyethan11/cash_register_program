@@ -46,6 +46,7 @@ Public Class frmCheckout
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
         Dim frmLookup As New frmItemLookup
+        frmLookup.strCaller = "Checkout"
 
         OpenFormMaintainParent(Me, frmLookup)
 

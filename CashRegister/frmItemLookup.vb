@@ -6,6 +6,7 @@ Public Class frmItemLookup
     Public intPrimaryKeyReturnValue As Integer = -1
     Public intQuantityToPurchase As Integer = -1
     Public Type As String = "Dialog"
+    Public strCaller As String = "Checkout"
     Dim intStartIndex As Integer = 0
     Dim drSet As System.Data.DataRowCollection
     Dim bytList As Byte()
@@ -531,7 +532,7 @@ Public Class frmItemLookup
         If (drSet IsNot Nothing) Then
             If (drSet.Count > intIndex) Then
                 If (Type = "Dialog") Then
-                    If (ValidateQTY() = True) Then
+                    If (ValidateQTY(intIndex) = True) Then
                         ' Close the form and return the primary key
                         intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
                         intQuantityToPurchase = txtQTY.Text
@@ -552,14 +553,67 @@ Public Class frmItemLookup
 
     End Sub
 
-    Private Function ValidateQTY() As Boolean
+    Private Function ValidateQTY(ByVal intIndex As Integer) As Boolean
 
         Dim blnResult As Boolean = False
 
         If (IsNumeric(txtQTY.Text) = True) Then
             If (CInt(txtQTY.Text) > 0) Then
-                blnResult = True
-                txtQTY.BackColor = Color.White
+
+                Dim intStock As Integer = 0
+                If (strCaller = "Checkout") Then
+                    ' Open the DB
+                    If OpenDatabaseConnectionSQLServer() = False Then
+
+                        ' The database is not open
+                        MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                        ' Close the form/application
+                        Me.Close()
+
+                    End If
+
+                    ' For item
+                    Dim strSelect As String
+                    ' Init select statement Db command
+                    Dim cmdSelect As OleDb.OleDbCommand
+                    ' Init data reader
+                    Dim drSourceTable As OleDb.OleDbDataReader
+                    ' Init data table
+                    Dim dt As DataTable = New DataTable
+                    ' Init dr
+                    Dim drSetAmt As System.Data.DataRowCollection
+
+                    ' Select all that apply
+                    strSelect = "SELECT intInventoryAmt FROM TItems WHERE intItemID = " & drSet(intIndex)("intItemID").ToString
+
+                    ' Retrieve all the records 
+                    cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+                    drSourceTable = cmdSelect.ExecuteReader
+
+                    ' load table from data reader
+                    dt.Load(drSourceTable)
+
+                    ' Populate the array based on search
+                    drSetAmt = dt.Rows
+
+                    ' Get inventory amt
+                    intStock = CInt(drSetAmt(0)("intInventoryAmt"))
+
+                    ' Clean up
+                    drSourceTable.Close()
+                    CloseDatabaseConnection()
+                End If
+
+                If ((CInt(txtQTY.Text) <= intStock And strCaller = "Checkout") Or strCaller = "Return") Then
+                    blnResult = True
+                    txtQTY.BackColor = Color.White
+                Else
+                    MsgBox("Not enough stock! Stock is " & intStock, MsgBoxStyle.ApplicationModal, "Error!")
+                End If
             Else
                 MsgBox("Quantity must be greater than zero!", MsgBoxStyle.ApplicationModal, "Error!")
             End If

@@ -53,7 +53,7 @@
         If (MyUser.CanPayInPayOut = True) Then
             OpenFormKillParent(Me, frmPayInPayOut)
         Else
-            MessageBox.Show("You do not have permission to access frmReturns!", "Error")
+            MessageBox.Show("You do not have permission to access Pay-ins and Pay-outs!", "Error")
         End If
 
     End Sub

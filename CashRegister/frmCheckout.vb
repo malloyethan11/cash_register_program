@@ -46,6 +46,7 @@ Public Class frmCheckout
     Private Sub btnItemLookup_Click(sender As Object, e As EventArgs) Handles btnItemLookup.Click
 
         Dim frmLookup As New frmItemLookup
+        frmLookup.strCaller = "Checkout"
 
         OpenFormMaintainParent(Me, frmLookup)
 
@@ -149,7 +150,7 @@ Public Class frmCheckout
             Try
 
                 Dim strGetTime As String = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")
-                Dim strExpDate As String = dtpExpirationDate.Value.ToString("MM/yyyy")
+                Dim strExpDate As String = dtpExpirationDate.Value.ToString("MM/yy")
 
                 cmdAddItem.Parameters.AddWithValue("@intTransactionTypeID", 1)
                 cmdAddItem.Parameters.AddWithValue("@intPaymentTypeID", cboPayment.SelectedValue)
@@ -260,13 +261,15 @@ Public Class frmCheckout
         If (lstItems.Items.Count <> 0) Then
             If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
                 Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
-                txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                If IsNumeric(txtPrice.Text) Then
+                    txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                    If (txtPrice.Text < 0) Then
+                        txtPrice.Text = 0
+                    End If
+                End If
                 Items.RemoveAt(lstItems.SelectedIndex)
                 lstItems.Items.RemoveAt(lstItems.SelectedIndex)
                 lstItems.Refresh()
-                If (txtPrice.Text < 0) Then
-                    txtPrice.Text = 0
-                End If
             End If
         End If
     End Sub

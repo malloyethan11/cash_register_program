@@ -96,7 +96,7 @@ Module ModuleCommonUtilities
             ClassType:="MSGraph.Chart.8", FileName _
             :="", LinkToFile:=False, DisplayAsIcon:=False)
         oChart = oShape.OLEFormat.Object
-        oChart.charttype = 4 'xlLine = 4
+        oChart.charttype = 4 'xlLine = 4how fast is a tick in VB.NET timer
         oChart.Application.Update()
         oChart.Application.Quit()
         'If desired, you can proceed from here using the Microsoft Graph 

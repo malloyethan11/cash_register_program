@@ -74,6 +74,9 @@
             ' load table from data reader
             dt.Load(drSourceTable)
 
+            ' Double all signle quotes
+            strUsername = strUsername.Replace("'", "''")
+
             ' Populate the array based on search
             drSet = dt.Select("strUsername='" & strUsername & "'")
 

@@ -60,7 +60,7 @@ Partial Class frmAddItem
         Me.txtSafetytock.Location = New System.Drawing.Point(507, 99)
         Me.txtSafetytock.Name = "txtSafetytock"
         Me.txtSafetytock.Size = New System.Drawing.Size(227, 20)
-        Me.txtSafetytock.TabIndex = 100
+        Me.txtSafetytock.TabIndex = 7
         '
         'txtUPC
         '
@@ -72,7 +72,7 @@ Partial Class frmAddItem
         Me.txtUPC.Location = New System.Drawing.Point(241, 126)
         Me.txtUPC.Name = "txtUPC"
         Me.txtUPC.Size = New System.Drawing.Size(144, 20)
-        Me.txtUPC.TabIndex = 98
+        Me.txtUPC.TabIndex = 8
         '
         'lblUPC
         '
@@ -95,7 +95,7 @@ Partial Class frmAddItem
         Me.txtInventory.Location = New System.Drawing.Point(241, 99)
         Me.txtInventory.Name = "txtInventory"
         Me.txtInventory.Size = New System.Drawing.Size(144, 20)
-        Me.txtInventory.TabIndex = 96
+        Me.txtInventory.TabIndex = 6
         '
         'lblInventory
         '
@@ -118,7 +118,7 @@ Partial Class frmAddItem
         Me.txtPrice.Location = New System.Drawing.Point(241, 72)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(144, 20)
-        Me.txtPrice.TabIndex = 94
+        Me.txtPrice.TabIndex = 4
         '
         'lblPrice
         '
@@ -141,7 +141,7 @@ Partial Class frmAddItem
         Me.txtDescription.Location = New System.Drawing.Point(241, 45)
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Size = New System.Drawing.Size(492, 20)
-        Me.txtDescription.TabIndex = 92
+        Me.txtDescription.TabIndex = 3
         '
         'lblDescription
         '
@@ -175,7 +175,7 @@ Partial Class frmAddItem
         Me.txtName.Location = New System.Drawing.Point(485, 18)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(248, 20)
-        Me.txtName.TabIndex = 89
+        Me.txtName.TabIndex = 2
         '
         'lblSKU
         '
@@ -198,7 +198,7 @@ Partial Class frmAddItem
         Me.txtSKU.Location = New System.Drawing.Point(241, 18)
         Me.txtSKU.Name = "txtSKU"
         Me.txtSKU.Size = New System.Drawing.Size(182, 20)
-        Me.txtSKU.TabIndex = 87
+        Me.txtSKU.TabIndex = 11
         '
         'Label1
         '
@@ -230,7 +230,7 @@ Partial Class frmAddItem
         Me.cboCategory.Location = New System.Drawing.Point(507, 126)
         Me.cboCategory.Name = "cboCategory"
         Me.cboCategory.Size = New System.Drawing.Size(227, 21)
-        Me.cboCategory.TabIndex = 101
+        Me.cboCategory.TabIndex = 9
         '
         'Label3
         '
@@ -251,7 +251,7 @@ Partial Class frmAddItem
         Me.cboVendors.Location = New System.Drawing.Point(507, 72)
         Me.cboVendors.Name = "cboVendors"
         Me.cboVendors.Size = New System.Drawing.Size(227, 21)
-        Me.cboVendors.TabIndex = 101
+        Me.cboVendors.TabIndex = 5
         '
         'btnAdd
         '
@@ -262,7 +262,7 @@ Partial Class frmAddItem
         Me.btnAdd.Location = New System.Drawing.Point(621, 183)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(113, 42)
-        Me.btnAdd.TabIndex = 85
+        Me.btnAdd.TabIndex = 12
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -275,7 +275,7 @@ Partial Class frmAddItem
         Me.btnAddImage.Location = New System.Drawing.Point(13, 153)
         Me.btnAddImage.Name = "btnAddImage"
         Me.btnAddImage.Size = New System.Drawing.Size(135, 29)
-        Me.btnAddImage.TabIndex = 84
+        Me.btnAddImage.TabIndex = 10
         Me.btnAddImage.Text = "Add Image"
         Me.btnAddImage.UseVisualStyleBackColor = True
         '
@@ -288,12 +288,13 @@ Partial Class frmAddItem
         Me.btnExit.Location = New System.Drawing.Point(13, 183)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
-        Me.btnExit.TabIndex = 84
+        Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'picItemImage
         '
+        Me.picItemImage.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.picItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picItemImage.Location = New System.Drawing.Point(14, 12)
         Me.picItemImage.Name = "picItemImage"
@@ -308,6 +309,7 @@ Partial Class frmAddItem
         '
         'frmAddItem
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

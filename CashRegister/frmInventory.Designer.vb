@@ -56,7 +56,7 @@ Partial Class frmInventory
         Me.btnItemLookup.Location = New System.Drawing.Point(120, 232)
         Me.btnItemLookup.Name = "btnItemLookup"
         Me.btnItemLookup.Size = New System.Drawing.Size(284, 42)
-        Me.btnItemLookup.TabIndex = 7
+        Me.btnItemLookup.TabIndex = 1
         Me.btnItemLookup.Text = "Item Lookup"
         Me.btnItemLookup.UseVisualStyleBackColor = True
         '
@@ -69,7 +69,7 @@ Partial Class frmInventory
         Me.btnAddItem.Location = New System.Drawing.Point(120, 280)
         Me.btnAddItem.Name = "btnAddItem"
         Me.btnAddItem.Size = New System.Drawing.Size(284, 42)
-        Me.btnAddItem.TabIndex = 7
+        Me.btnAddItem.TabIndex = 3
         Me.btnAddItem.Text = "Add Item"
         Me.btnAddItem.UseVisualStyleBackColor = True
         '
@@ -82,7 +82,7 @@ Partial Class frmInventory
         Me.btnPriceItems.Location = New System.Drawing.Point(266, 328)
         Me.btnPriceItems.Name = "btnPriceItems"
         Me.btnPriceItems.Size = New System.Drawing.Size(284, 42)
-        Me.btnPriceItems.TabIndex = 6
+        Me.btnPriceItems.TabIndex = 5
         Me.btnPriceItems.Text = "Mass Pricing Form"
         Me.btnPriceItems.UseVisualStyleBackColor = True
         '
@@ -95,7 +95,7 @@ Partial Class frmInventory
         Me.btnExit.Location = New System.Drawing.Point(266, 376)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -108,7 +108,7 @@ Partial Class frmInventory
         Me.btnAddVendor.Location = New System.Drawing.Point(410, 280)
         Me.btnAddVendor.Name = "btnAddVendor"
         Me.btnAddVendor.Size = New System.Drawing.Size(284, 42)
-        Me.btnAddVendor.TabIndex = 7
+        Me.btnAddVendor.TabIndex = 4
         Me.btnAddVendor.Text = "Add Vendor"
         Me.btnAddVendor.UseVisualStyleBackColor = True
         '
@@ -121,7 +121,7 @@ Partial Class frmInventory
         Me.btnVendorLookup.Location = New System.Drawing.Point(410, 232)
         Me.btnVendorLookup.Name = "btnVendorLookup"
         Me.btnVendorLookup.Size = New System.Drawing.Size(284, 42)
-        Me.btnVendorLookup.TabIndex = 7
+        Me.btnVendorLookup.TabIndex = 2
         Me.btnVendorLookup.Text = "Vendor Lookup"
         Me.btnVendorLookup.UseVisualStyleBackColor = True
         '

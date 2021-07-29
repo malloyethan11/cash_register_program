@@ -46,7 +46,7 @@ Partial Class frmPayInPayOut
         Me.txtPrice.Location = New System.Drawing.Point(96, 38)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(494, 20)
-        Me.txtPrice.TabIndex = 113
+        Me.txtPrice.TabIndex = 2
         '
         'lblPrice
         '
@@ -69,7 +69,7 @@ Partial Class frmPayInPayOut
         Me.txtDescription.Location = New System.Drawing.Point(96, 12)
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Size = New System.Drawing.Size(494, 20)
-        Me.txtDescription.TabIndex = 111
+        Me.txtDescription.TabIndex = 1
         '
         'lblDescription
         '
@@ -90,7 +90,7 @@ Partial Class frmPayInPayOut
         Me.btnAdd.Location = New System.Drawing.Point(477, 97)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(113, 42)
-        Me.btnAdd.TabIndex = 105
+        Me.btnAdd.TabIndex = 5
         Me.btnAdd.Text = "Submit"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -103,7 +103,7 @@ Partial Class frmPayInPayOut
         Me.btnExit.Location = New System.Drawing.Point(12, 97)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
-        Me.btnExit.TabIndex = 103
+        Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -127,7 +127,7 @@ Partial Class frmPayInPayOut
         Me.cboType.Location = New System.Drawing.Point(96, 64)
         Me.cboType.Name = "cboType"
         Me.cboType.Size = New System.Drawing.Size(494, 21)
-        Me.cboType.TabIndex = 123
+        Me.cboType.TabIndex = 3
         '
         'StepAction
         '
@@ -136,6 +136,7 @@ Partial Class frmPayInPayOut
         '
         'frmPayInPayOut
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

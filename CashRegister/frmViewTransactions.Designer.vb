@@ -201,7 +201,7 @@ Partial Class frmViewTransactions
         Me.cboFilter.Location = New System.Drawing.Point(1206, 12)
         Me.cboFilter.Name = "cboFilter"
         Me.cboFilter.Size = New System.Drawing.Size(125, 21)
-        Me.cboFilter.TabIndex = 51
+        Me.cboFilter.TabIndex = 3
         '
         'lblPageNumber
         '
@@ -225,7 +225,7 @@ Partial Class frmViewTransactions
         Me.txtSearch.Location = New System.Drawing.Point(12, 12)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(1057, 21)
-        Me.txtSearch.TabIndex = 49
+        Me.txtSearch.TabIndex = 1
         Me.txtSearch.Text = "Type here to search..."
         '
         'grpTransaction1
@@ -1813,7 +1813,7 @@ Partial Class frmViewTransactions
         Me.cboType.Location = New System.Drawing.Point(1075, 12)
         Me.cboType.Name = "cboType"
         Me.cboType.Size = New System.Drawing.Size(125, 21)
-        Me.cboType.TabIndex = 51
+        Me.cboType.TabIndex = 2
         '
         'btnSearch
         '
@@ -1838,7 +1838,7 @@ Partial Class frmViewTransactions
         Me.btnNext.Location = New System.Drawing.Point(1245, 816)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(113, 42)
-        Me.btnNext.TabIndex = 47
+        Me.btnNext.TabIndex = 6
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
@@ -1851,7 +1851,7 @@ Partial Class frmViewTransactions
         Me.btnBack.Location = New System.Drawing.Point(1034, 816)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(113, 42)
-        Me.btnBack.TabIndex = 46
+        Me.btnBack.TabIndex = 5
         Me.btnBack.Text = "Previous"
         Me.btnBack.UseVisualStyleBackColor = True
         '
@@ -1864,7 +1864,7 @@ Partial Class frmViewTransactions
         Me.btnExit.Location = New System.Drawing.Point(12, 816)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(278, 42)
-        Me.btnExit.TabIndex = 45
+        Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '

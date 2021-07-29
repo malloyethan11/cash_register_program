@@ -49,7 +49,7 @@ Partial Class frmGetDatabaseCredentials
         Me.txtUsername.Location = New System.Drawing.Point(82, 48)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(200, 20)
-        Me.txtUsername.TabIndex = 13
+        Me.txtUsername.TabIndex = 1
         '
         'lblPassword
         '
@@ -67,7 +67,7 @@ Partial Class frmGetDatabaseCredentials
         Me.txtPassword.Location = New System.Drawing.Point(82, 84)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(200, 20)
-        Me.txtPassword.TabIndex = 14
+        Me.txtPassword.TabIndex = 2
         '
         'btnLogin
         '
@@ -78,7 +78,7 @@ Partial Class frmGetDatabaseCredentials
         Me.btnLogin.Location = New System.Drawing.Point(12, 120)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(284, 42)
-        Me.btnLogin.TabIndex = 15
+        Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Connect"
         Me.btnLogin.UseVisualStyleBackColor = True
         '

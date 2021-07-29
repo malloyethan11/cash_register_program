@@ -704,4 +704,10 @@ Public Class frmItemLookup
         ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
 
     End Sub
+
+    'Private Sub txtSearch_KeyPress(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyUp
+    '    If (e.KeyCode = Keys.Enter And txtSearch.Focused = True) Then
+    '        btnSearch_Click(sender, e)
+    '    End If
+    'End Sub
 End Class

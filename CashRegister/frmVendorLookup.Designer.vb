@@ -40,7 +40,7 @@ Partial Class frmVendorLookup
         Me.btnOpen.Location = New System.Drawing.Point(166, 40)
         Me.btnOpen.Name = "btnOpen"
         Me.btnOpen.Size = New System.Drawing.Size(113, 42)
-        Me.btnOpen.TabIndex = 96
+        Me.btnOpen.TabIndex = 3
         Me.btnOpen.Text = "Open"
         Me.btnOpen.UseVisualStyleBackColor = True
         '
@@ -53,7 +53,7 @@ Partial Class frmVendorLookup
         Me.btnExit.Location = New System.Drawing.Point(11, 40)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 95
+        Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class frmVendorLookup
         Me.cboVendors.Location = New System.Drawing.Point(105, 13)
         Me.cboVendors.Name = "cboVendors"
         Me.cboVendors.Size = New System.Drawing.Size(169, 21)
-        Me.cboVendors.TabIndex = 99
+        Me.cboVendors.TabIndex = 1
         '
         'StepAction
         '
@@ -83,6 +83,7 @@ Partial Class frmVendorLookup
         '
         'frmVendorLookup
         '
+        Me.AcceptButton = Me.btnOpen
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

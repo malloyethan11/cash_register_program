@@ -58,7 +58,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAddVendor.Click
 
-        If (MyUser.CanAdjustPricing = True) Then
+        If (MyUser.CanAddVendors = True) Then
             OpenFormKillParent(Me, frmAddVendor)
         Else
             MessageBox.Show("You do not have permission to access frmAddVendor!", "Error")

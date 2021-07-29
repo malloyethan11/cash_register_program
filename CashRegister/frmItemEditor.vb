@@ -412,10 +412,10 @@ Public Class frmItemEditor
 
     Private Function VerifyInventory(ByRef InventoryAmt As Integer) As Boolean
         If IsNumeric(txtInventory.Text) Then
-            If CInt(txtInventory.Text) > 0 Then 'convert to int and check for the range
+            If CInt(txtInventory.Text) >= 0 Then 'convert to int and check for the range
                 InventoryAmt = CInt(txtInventory.Text) 'convert it to an int and set the inventory amount
             Else
-                MessageBox.Show("Please enter a number greater than 0 for the inventory.") 'pop a message box if an error
+                MessageBox.Show("Please enter a number greater than or equal to 0 for the inventory.") 'pop a message box if an error
                 Return False
             End If
         Else

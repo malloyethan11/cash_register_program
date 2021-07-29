@@ -53,7 +53,6 @@ D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRe
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.exe
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.pdb
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\bin\Debug\CashRegister.xml
-D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbprojAssemblyReference.cache
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.vbproj.ResolveComReference.cache
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddItem.resources
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmAddVendor.resources
@@ -131,11 +130,6 @@ C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegist
 C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.xml
 C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.pdb
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPayInPayOut.resources
-<<<<<<< HEAD
-C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPayInPayOut.resources
-=======
-=======
->>>>>>> master
 C:\Users\Me\Source\Repos\cash_register_program\CashRegister\obj\Debug\CashRegister.frmPayInPayOut.resources
 D:\College Homework\CAPSTONE\cash_register_program\CashRegister\obj\Debug\CashRegister.frmGetDatabaseCredentials.resources
 C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\cash_register_program\CashRegister\obj\Debug\CashRegister.frmGetDatabaseCredentials.resources

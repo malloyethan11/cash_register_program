@@ -170,22 +170,22 @@ Public Class frmInvoice
             dt.Load(drSourceTable)
 
             ' add data to excel spreadsheet
-            intNumRecords = dt.Rows.Count
+            'intNumRecords = dt.Rows.Count
 
-            While intIndex <= (intNumRecords + 1)
+            'While intIndex <= (intNumRecords + 1)
 
-                ExcelWkSht.Cells(intIndex, 1).Value = dt.Rows.Item(intRecordIndex).ItemArray(0)
-                ExcelWkSht.Cells(intIndex, 2).Value = dt.Rows.Item(intRecordIndex).ItemArray(1)
-                ExcelWkSht.Cells(intIndex, 3).Value = dt.Rows.Item(intRecordIndex).ItemArray(2)
-                ExcelWkSht.Cells(intIndex, 4).Value = dt.Rows.Item(intRecordIndex).ItemArray(3)
-                ExcelWkSht.Cells(intIndex, 5).Value = dt.Rows.Item(intRecordIndex).ItemArray(4)
-                ExcelWkSht.Cells(intIndex, 6).Value = dt.Rows.Item(intRecordIndex).ItemArray(5)
-                ExcelWkSht.Cells(intIndex, 7).Value = dt.Rows.Item(intRecordIndex).ItemArray(6)
-                ExcelWkSht.Cells(intIndex, 8).Value = dt.Rows.Item(intRecordIndex).ItemArray(7).ToString() & "​" ' <- Whitespace character to trick excel formatting. DO NOT DELETE THIS
-                intIndex += 1
-                intRecordIndex += 1
+            '    ExcelWkSht.Cells(intIndex, 1).Value = dt.Rows.Item(intRecordIndex).ItemArray(0)
+            '    ExcelWkSht.Cells(intIndex, 2).Value = dt.Rows.Item(intRecordIndex).ItemArray(1)
+            '    ExcelWkSht.Cells(intIndex, 3).Value = dt.Rows.Item(intRecordIndex).ItemArray(2)
+            '    ExcelWkSht.Cells(intIndex, 4).Value = dt.Rows.Item(intRecordIndex).ItemArray(3)
+            '    ExcelWkSht.Cells(intIndex, 5).Value = dt.Rows.Item(intRecordIndex).ItemArray(4)
+            '    ExcelWkSht.Cells(intIndex, 6).Value = dt.Rows.Item(intRecordIndex).ItemArray(5)
+            '    ExcelWkSht.Cells(intIndex, 7).Value = dt.Rows.Item(intRecordIndex).ItemArray(6)
+            '    ExcelWkSht.Cells(intIndex, 8).Value = dt.Rows.Item(intRecordIndex).ItemArray(7).ToString() & "​" ' <- Whitespace character to trick excel formatting. DO NOT DELETE THIS
+            '    intIndex += 1
+            '    intRecordIndex += 1
 
-            End While
+            'End While
 
 
         Catch ex As Exception

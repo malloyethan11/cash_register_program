@@ -196,4 +196,23 @@ Module ModuleCommonUtilities
 
     End Function
 
+    Public Function CountCharacters(ByVal strString As String, ByVal chrToFind As Char) As Integer
+
+        Dim intIndex As Integer = 0
+        Dim intCount As Integer = 0
+
+        While intIndex < strString.Length()
+
+            If (GetChar(strString, intIndex + 1) = chrToFind) Then
+                intCount += 1
+            End If
+
+            intIndex += 1
+
+        End While
+
+        Return intCount
+
+    End Function
+
 End Module

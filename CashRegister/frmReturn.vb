@@ -131,6 +131,11 @@ Public Class frmReturn
         Else
             txtTax.Text = "NAN"
         End If
+
+        If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
+            txtPrice.ResetText()
+        End If
+
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -399,13 +404,33 @@ Public Class frmReturn
     End Sub
 
     ' Only allow numbers in the phone number field
-    Private Sub txtPhoneNumber_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPhoneNumber.KeyPress, txtPrice.KeyPress, txtCredit.KeyPress, txtSecurity.KeyPress
+    Private Sub txtPhoneNumber_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPhoneNumber.KeyPress, txtCredit.KeyPress, txtSecurity.KeyPress
 
         ' Only accept number keystrokes and backspace keystroke
         If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back Then
             e.Handled = True
         End If
 
+    End Sub
+
+    ' Only allow numbers in the phone number field
+    Private Sub txtPrice_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrice.KeyPress
+
+        ' Only accept number keystrokes and backspace keystroke
+        ' For count function: https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
+        If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back And (e.KeyChar <> ".") Then
+            e.Handled = True
+        ElseIf (e.KeyChar = ".") Then
+            If (CountCharacters(txtPrice.Text, ".") > 0) Then
+                e.Handled = True
+            Else
+                If (txtPrice.Text.Length = 0) Then
+                    txtPrice.Text = "0."
+                    txtPrice.Select(txtPrice.Text.Length, 0)
+                    e.Handled = True
+                End If
+            End If
+        End If
     End Sub
 
     Private Function ValidateForm() As Boolean

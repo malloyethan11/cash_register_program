@@ -47,6 +47,7 @@ Public Class frmCheckout
 
         Dim frmLookup As New frmItemLookup
         frmLookup.strCaller = "Checkout"
+        frmLookup.lstCallingFormItems = lstItems
 
         OpenFormMaintainParent(Me, frmLookup)
 

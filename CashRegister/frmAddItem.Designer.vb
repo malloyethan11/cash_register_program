@@ -198,7 +198,7 @@ Partial Class frmAddItem
         Me.txtSKU.Location = New System.Drawing.Point(241, 18)
         Me.txtSKU.Name = "txtSKU"
         Me.txtSKU.Size = New System.Drawing.Size(182, 20)
-        Me.txtSKU.TabIndex = 11
+        Me.txtSKU.TabIndex = 1
         '
         'Label1
         '

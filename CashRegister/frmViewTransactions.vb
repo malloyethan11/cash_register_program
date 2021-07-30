@@ -544,7 +544,11 @@
                 drItemNameTypeSet = dtItemNames.Select()
 
                 ' Add record to the item list
-                lstItems.Items.Add("SKU: " & drItemNameTypeSet(0)("strSKU").ToString & ", Name: " & drItemNameTypeSet(0)("strItemName").ToString & ", QTY: " & drItemTypeSet(intCount)("intItemAmount").ToString & ", Price: " & drItemTypeSet(intCount)("decCurrentItemPrice"))
+                If (drItemNameTypeSet.Length > 0) Then
+                    lstItems.Items.Add("SKU: " & drItemNameTypeSet(0)("strSKU").ToString & ", Name: " & drItemNameTypeSet(0)("strItemName").ToString & ", QTY: " & drItemTypeSet(intCount)("intItemAmount").ToString & ", Price: " & drItemTypeSet(intCount)("decCurrentItemPrice"))
+                Else
+                    lstItems.Items.Add("SKU: " & "N/A" & ", Name: " & "N/A" & ", QTY: " & drItemTypeSet(intCount)("intItemAmount").ToString & ", Price: " & drItemTypeSet(intCount)("decCurrentItemPrice"))
+                End If
 
                 ' Advance
                 intCount += 1

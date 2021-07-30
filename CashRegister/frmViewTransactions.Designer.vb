@@ -405,12 +405,10 @@ Partial Class frmViewTransactions
         '
         'txtDescription1
         '
-        Me.txtDescription1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescription1.Location = New System.Drawing.Point(90, 143)
         Me.txtDescription1.Name = "txtDescription1"
         Me.txtDescription1.ReadOnly = True
-        Me.txtDescription1.Size = New System.Drawing.Size(504, 20)
+        Me.txtDescription1.Size = New System.Drawing.Size(680, 20)
         Me.txtDescription1.TabIndex = 97
         '
         'lstItems1
@@ -796,12 +794,10 @@ Partial Class frmViewTransactions
         '
         'txtDescription2
         '
-        Me.txtDescription2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescription2.Location = New System.Drawing.Point(90, 143)
         Me.txtDescription2.Name = "txtDescription2"
         Me.txtDescription2.ReadOnly = True
-        Me.txtDescription2.Size = New System.Drawing.Size(504, 20)
+        Me.txtDescription2.Size = New System.Drawing.Size(680, 20)
         Me.txtDescription2.TabIndex = 97
         '
         'txtAddress2
@@ -1190,12 +1186,10 @@ Partial Class frmViewTransactions
         '
         'txtDescription3
         '
-        Me.txtDescription3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescription3.Location = New System.Drawing.Point(90, 143)
         Me.txtDescription3.Name = "txtDescription3"
         Me.txtDescription3.ReadOnly = True
-        Me.txtDescription3.Size = New System.Drawing.Size(504, 20)
+        Me.txtDescription3.Size = New System.Drawing.Size(680, 20)
         Me.txtDescription3.TabIndex = 97
         '
         'txtAddress3
@@ -1584,12 +1578,10 @@ Partial Class frmViewTransactions
         '
         'txtDescription4
         '
-        Me.txtDescription4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescription4.Location = New System.Drawing.Point(90, 143)
         Me.txtDescription4.Name = "txtDescription4"
         Me.txtDescription4.ReadOnly = True
-        Me.txtDescription4.Size = New System.Drawing.Size(504, 20)
+        Me.txtDescription4.Size = New System.Drawing.Size(680, 20)
         Me.txtDescription4.TabIndex = 97
         '
         'txtAddress4

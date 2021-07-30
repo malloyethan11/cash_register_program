@@ -69,6 +69,8 @@ Partial Class frmVendorLookup
         '
         'cboVendors
         '
+        Me.cboVendors.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboVendors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboVendors.FormattingEnabled = True
         Me.cboVendors.Location = New System.Drawing.Point(105, 13)

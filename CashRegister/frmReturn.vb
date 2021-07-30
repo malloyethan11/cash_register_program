@@ -127,7 +127,7 @@ Public Class frmReturn
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
 
         If IsNumeric(txtPrice.Text) Then
-            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.065
+            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
         Else
             txtTax.Text = "NAN"
         End If

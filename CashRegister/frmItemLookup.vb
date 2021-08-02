@@ -6,6 +6,7 @@ Public Class frmItemLookup
     Public intPrimaryKeyReturnValue As Integer = -1
     Public intQuantityToPurchase As Integer = -1
     Public Type As String = "Dialog"
+    Public lstCallingFormItems As ListBox
     Public strCaller As String = "Checkout"
     Dim intStartIndex As Integer = 0
     Dim drSet As System.Data.DataRowCollection
@@ -534,9 +535,19 @@ Public Class frmItemLookup
                 If (Type = "Dialog") Then
                     If (ValidateQTY(intIndex) = True) Then
                         ' Close the form and return the primary key
-                        intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
-                        intQuantityToPurchase = txtQTY.Text
-                        Me.Close()
+                        If (strCaller = "Checkout") Then
+                            If (lstCallingFormItems.FindString(drSet(intIndex)("strItemName").ToString) <> ListBox.NoMatches) Then
+                                MessageBox.Show("You may not add two instances of the same item to an order!", "Error!")
+                            Else
+                                intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                                intQuantityToPurchase = txtQTY.Text
+                                Me.Close()
+                            End If
+                        Else
+                            intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                            intQuantityToPurchase = txtQTY.Text
+                            Me.Close()
+                        End If
                     End If
                 Else
                     ' Open the editor form and pass on the primary key
@@ -704,4 +715,10 @@ Public Class frmItemLookup
         ButtonColor(MousePosition, btnNext, Me, btmButtonShortGray, btmButtonShort)
 
     End Sub
+
+    'Private Sub txtSearch_KeyPress(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyUp
+    '    If (e.KeyCode = Keys.Enter And txtSearch.Focused = True) Then
+    '        btnSearch_Click(sender, e)
+    '    End If
+    'End Sub
 End Class

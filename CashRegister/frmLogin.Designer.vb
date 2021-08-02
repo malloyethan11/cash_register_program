@@ -62,6 +62,7 @@ Partial Class frmLogin
         '
         'txtPassword
         '
+        Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtPassword.Location = New System.Drawing.Point(336, 301)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(200, 20)
@@ -69,6 +70,7 @@ Partial Class frmLogin
         '
         'lblPassword
         '
+        Me.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Location = New System.Drawing.Point(280, 304)
         Me.lblPassword.Name = "lblPassword"
@@ -78,6 +80,7 @@ Partial Class frmLogin
         '
         'lblUsername
         '
+        Me.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Location = New System.Drawing.Point(278, 268)
         Me.lblUsername.Name = "lblUsername"
@@ -87,6 +90,7 @@ Partial Class frmLogin
         '
         'txtUsername
         '
+        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtUsername.Location = New System.Drawing.Point(336, 265)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(200, 20)
@@ -94,6 +98,7 @@ Partial Class frmLogin
         '
         'lblWelcome
         '
+        Me.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcome.Location = New System.Drawing.Point(330, 224)

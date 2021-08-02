@@ -43,7 +43,7 @@ Partial Class frmPriceAdjust
         Me.btnExit.Location = New System.Drawing.Point(12, 65)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 85
+        Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -56,7 +56,7 @@ Partial Class frmPriceAdjust
         Me.btnSubmit.Location = New System.Drawing.Point(320, 65)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(113, 42)
-        Me.btnSubmit.TabIndex = 85
+        Me.btnSubmit.TabIndex = 5
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
@@ -66,7 +66,7 @@ Partial Class frmPriceAdjust
         Me.txtAmount.Location = New System.Drawing.Point(143, 13)
         Me.txtAmount.Name = "txtAmount"
         Me.txtAmount.Size = New System.Drawing.Size(185, 20)
-        Me.txtAmount.TabIndex = 86
+        Me.txtAmount.TabIndex = 1
         '
         'lblAdjust
         '
@@ -88,7 +88,7 @@ Partial Class frmPriceAdjust
         Me.cboUnitOfMeasure.Location = New System.Drawing.Point(334, 12)
         Me.cboUnitOfMeasure.Name = "cboUnitOfMeasure"
         Me.cboUnitOfMeasure.Size = New System.Drawing.Size(99, 21)
-        Me.cboUnitOfMeasure.TabIndex = 88
+        Me.cboUnitOfMeasure.TabIndex = 2
         '
         'Label1
         '
@@ -109,7 +109,7 @@ Partial Class frmPriceAdjust
         Me.cboVendor.Location = New System.Drawing.Point(143, 39)
         Me.cboVendor.Name = "cboVendor"
         Me.cboVendor.Size = New System.Drawing.Size(290, 21)
-        Me.cboVendor.TabIndex = 88
+        Me.cboVendor.TabIndex = 3
         '
         'StepAction
         '
@@ -118,6 +118,7 @@ Partial Class frmPriceAdjust
         '
         'frmPriceAdjust
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

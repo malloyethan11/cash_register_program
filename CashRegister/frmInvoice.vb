@@ -170,6 +170,7 @@ Public Class frmInvoice
             dt.Load(drSourceTable)
 
             ' add data to excel spreadsheet
+<<<<<<< HEAD
             intNumRecords = dt.Rows.Count
 
             ' create the table
@@ -187,6 +188,24 @@ Public Class frmInvoice
                 intRowIndex += 1
 
             End While
+=======
+            'intNumRecords = dt.Rows.Count
+
+            'While intIndex <= (intNumRecords + 1)
+
+            '    ExcelWkSht.Cells(intIndex, 1).Value = dt.Rows.Item(intRecordIndex).ItemArray(0)
+            '    ExcelWkSht.Cells(intIndex, 2).Value = dt.Rows.Item(intRecordIndex).ItemArray(1)
+            '    ExcelWkSht.Cells(intIndex, 3).Value = dt.Rows.Item(intRecordIndex).ItemArray(2)
+            '    ExcelWkSht.Cells(intIndex, 4).Value = dt.Rows.Item(intRecordIndex).ItemArray(3)
+            '    ExcelWkSht.Cells(intIndex, 5).Value = dt.Rows.Item(intRecordIndex).ItemArray(4)
+            '    ExcelWkSht.Cells(intIndex, 6).Value = dt.Rows.Item(intRecordIndex).ItemArray(5)
+            '    ExcelWkSht.Cells(intIndex, 7).Value = dt.Rows.Item(intRecordIndex).ItemArray(6)
+            '    ExcelWkSht.Cells(intIndex, 8).Value = dt.Rows.Item(intRecordIndex).ItemArray(7).ToString() & "​" ' <- Whitespace character to trick excel formatting. DO NOT DELETE THIS
+            '    intIndex += 1
+            '    intRecordIndex += 1
+
+            'End While
+>>>>>>> master
 
             'GET SUBTOTAL, SALES TAX, GRAND TOTAL
             strSelect = "select decTotalPrice, decSalesTax from TTransactions where intTransactionID = " & intTransactionID

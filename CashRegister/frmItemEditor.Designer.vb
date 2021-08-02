@@ -61,7 +61,7 @@ Partial Class frmItemEditor
         Me.txtSKU.Location = New System.Drawing.Point(241, 18)
         Me.txtSKU.Name = "txtSKU"
         Me.txtSKU.Size = New System.Drawing.Size(182, 20)
-        Me.txtSKU.TabIndex = 69
+        Me.txtSKU.TabIndex = 1
         '
         'lblSKU
         '
@@ -95,7 +95,7 @@ Partial Class frmItemEditor
         Me.txtName.Location = New System.Drawing.Point(485, 18)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(248, 20)
-        Me.txtName.TabIndex = 71
+        Me.txtName.TabIndex = 2
         '
         'lblDescription
         '
@@ -118,7 +118,7 @@ Partial Class frmItemEditor
         Me.txtDescription.Location = New System.Drawing.Point(241, 45)
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Size = New System.Drawing.Size(492, 20)
-        Me.txtDescription.TabIndex = 74
+        Me.txtDescription.TabIndex = 3
         '
         'lblPrice
         '
@@ -141,7 +141,7 @@ Partial Class frmItemEditor
         Me.txtPrice.Location = New System.Drawing.Point(241, 72)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(144, 20)
-        Me.txtPrice.TabIndex = 76
+        Me.txtPrice.TabIndex = 4
         '
         'txtInventory
         '
@@ -153,7 +153,7 @@ Partial Class frmItemEditor
         Me.txtInventory.Location = New System.Drawing.Point(241, 99)
         Me.txtInventory.Name = "txtInventory"
         Me.txtInventory.Size = New System.Drawing.Size(144, 20)
-        Me.txtInventory.TabIndex = 78
+        Me.txtInventory.TabIndex = 6
         '
         'lblInventory
         '
@@ -176,7 +176,7 @@ Partial Class frmItemEditor
         Me.txtUPC.Location = New System.Drawing.Point(241, 126)
         Me.txtUPC.Name = "txtUPC"
         Me.txtUPC.Size = New System.Drawing.Size(144, 20)
-        Me.txtUPC.TabIndex = 80
+        Me.txtUPC.TabIndex = 8
         '
         'lblUPC
         '
@@ -199,7 +199,7 @@ Partial Class frmItemEditor
         Me.txtSafetytock.Location = New System.Drawing.Point(506, 99)
         Me.txtSafetytock.Name = "txtSafetytock"
         Me.txtSafetytock.Size = New System.Drawing.Size(227, 20)
-        Me.txtSafetytock.TabIndex = 82
+        Me.txtSafetytock.TabIndex = 7
         '
         'lblSafetyStock
         '
@@ -217,6 +217,7 @@ Partial Class frmItemEditor
         Me.cboVendor.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cboVendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboVendor.FormattingEnabled = True
+        Me.cboVendor.ItemHeight = 13
         Me.cboVendor.Location = New System.Drawing.Point(506, 72)
         Me.cboVendor.Name = "cboVendor"
         Me.cboVendor.Size = New System.Drawing.Size(227, 21)
@@ -230,7 +231,7 @@ Partial Class frmItemEditor
         Me.cboCategory.Location = New System.Drawing.Point(506, 126)
         Me.cboCategory.Name = "cboCategory"
         Me.cboCategory.Size = New System.Drawing.Size(227, 21)
-        Me.cboCategory.TabIndex = 105
+        Me.cboCategory.TabIndex = 9
         '
         'Label3
         '
@@ -263,7 +264,7 @@ Partial Class frmItemEditor
         Me.btnDelete.Location = New System.Drawing.Point(621, 183)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(113, 42)
-        Me.btnDelete.TabIndex = 47
+        Me.btnDelete.TabIndex = 13
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -276,7 +277,7 @@ Partial Class frmItemEditor
         Me.btnUpdate.Location = New System.Drawing.Point(241, 183)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(278, 42)
-        Me.btnUpdate.TabIndex = 45
+        Me.btnUpdate.TabIndex = 12
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
@@ -289,7 +290,7 @@ Partial Class frmItemEditor
         Me.btnChangeImage.Location = New System.Drawing.Point(12, 153)
         Me.btnChangeImage.Name = "btnChangeImage"
         Me.btnChangeImage.Size = New System.Drawing.Size(135, 29)
-        Me.btnChangeImage.TabIndex = 106
+        Me.btnChangeImage.TabIndex = 10
         Me.btnChangeImage.Text = "Change Image"
         Me.btnChangeImage.UseVisualStyleBackColor = True
         '
@@ -302,12 +303,13 @@ Partial Class frmItemEditor
         Me.btnExit.Location = New System.Drawing.Point(12, 183)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
-        Me.btnExit.TabIndex = 107
+        Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'picItemImage
         '
+        Me.picItemImage.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.picItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picItemImage.Location = New System.Drawing.Point(12, 12)
         Me.picItemImage.Name = "picItemImage"
@@ -321,6 +323,7 @@ Partial Class frmItemEditor
         '
         'frmItemEditor
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

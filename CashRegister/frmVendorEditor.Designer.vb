@@ -53,7 +53,7 @@ Partial Class frmVendorEditor
         Me.txtVendor.Location = New System.Drawing.Point(102, 9)
         Me.txtVendor.Name = "txtVendor"
         Me.txtVendor.Size = New System.Drawing.Size(268, 20)
-        Me.txtVendor.TabIndex = 95
+        Me.txtVendor.TabIndex = 1
         '
         'btnDelete
         '
@@ -64,7 +64,7 @@ Partial Class frmVendorEditor
         Me.btnDelete.Location = New System.Drawing.Point(261, 38)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(113, 42)
-        Me.btnDelete.TabIndex = 94
+        Me.btnDelete.TabIndex = 4
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class frmVendorEditor
         Me.btnExit.Location = New System.Drawing.Point(8, 38)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 93
+        Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -90,7 +90,7 @@ Partial Class frmVendorEditor
         Me.btnUpdate.Location = New System.Drawing.Point(131, 38)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(118, 42)
-        Me.btnUpdate.TabIndex = 94
+        Me.btnUpdate.TabIndex = 3
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
@@ -101,6 +101,7 @@ Partial Class frmVendorEditor
         '
         'frmVendorEditor
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

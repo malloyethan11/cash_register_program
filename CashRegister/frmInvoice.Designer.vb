@@ -39,7 +39,7 @@ Partial Class frmInvoice
         Me.btnPrint.Location = New System.Drawing.Point(12, 12)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(284, 42)
-        Me.btnPrint.TabIndex = 7
+        Me.btnPrint.TabIndex = 1
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
@@ -51,7 +51,7 @@ Partial Class frmInvoice
         Me.btnEmail.Location = New System.Drawing.Point(12, 60)
         Me.btnEmail.Name = "btnEmail"
         Me.btnEmail.Size = New System.Drawing.Size(284, 42)
-        Me.btnEmail.TabIndex = 6
+        Me.btnEmail.TabIndex = 2
         Me.btnEmail.Text = "Email"
         Me.btnEmail.UseVisualStyleBackColor = True
         '
@@ -63,7 +63,7 @@ Partial Class frmInvoice
         Me.btnPrintEmail.Location = New System.Drawing.Point(12, 108)
         Me.btnPrintEmail.Name = "btnPrintEmail"
         Me.btnPrintEmail.Size = New System.Drawing.Size(284, 42)
-        Me.btnPrintEmail.TabIndex = 5
+        Me.btnPrintEmail.TabIndex = 3
         Me.btnPrintEmail.Text = "Print && Email"
         Me.btnPrintEmail.UseVisualStyleBackColor = True
         '
@@ -75,7 +75,7 @@ Partial Class frmInvoice
         Me.btnNone.Location = New System.Drawing.Point(12, 156)
         Me.btnNone.Name = "btnNone"
         Me.btnNone.Size = New System.Drawing.Size(284, 42)
-        Me.btnNone.TabIndex = 5
+        Me.btnNone.TabIndex = 4
         Me.btnNone.Text = "None"
         Me.btnNone.UseVisualStyleBackColor = True
         '

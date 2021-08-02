@@ -197,6 +197,7 @@ Module ModuleCommonUtilities
 
     End Function
 
+<<<<<<< HEAD
     ' Made from https://www.vbforums.com/showthread.php?347835-SOLVED-How-to-print-excel-file-form-vb-net
     ' Other than this we can use ADO.NET for manupulating the data
     Public Function print(strFile As String) As Integer
@@ -257,6 +258,25 @@ Module ModuleCommonUtilities
             MsgBox(ex.ToString)
             Return ex.Message.Length
         End Try
+=======
+    Public Function CountCharacters(ByVal strString As String, ByVal chrToFind As Char) As Integer
+
+        Dim intIndex As Integer = 0
+        Dim intCount As Integer = 0
+
+        While intIndex < strString.Length()
+
+            If (GetChar(strString, intIndex + 1) = chrToFind) Then
+                intCount += 1
+            End If
+
+            intIndex += 1
+
+        End While
+
+        Return intCount
+
+>>>>>>> master
     End Function
 
 End Module

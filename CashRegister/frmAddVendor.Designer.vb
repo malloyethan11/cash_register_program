@@ -52,7 +52,7 @@ Partial Class frmAddVendor
         Me.txtVendorName.Location = New System.Drawing.Point(111, 12)
         Me.txtVendorName.Name = "txtVendorName"
         Me.txtVendorName.Size = New System.Drawing.Size(177, 20)
-        Me.txtVendorName.TabIndex = 91
+        Me.txtVendorName.TabIndex = 1
         '
         'btnAdd
         '
@@ -63,7 +63,7 @@ Partial Class frmAddVendor
         Me.btnAdd.Location = New System.Drawing.Point(175, 40)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(113, 42)
-        Me.btnAdd.TabIndex = 90
+        Me.btnAdd.TabIndex = 3
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -76,7 +76,7 @@ Partial Class frmAddVendor
         Me.btnExit.Location = New System.Drawing.Point(12, 40)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(136, 42)
-        Me.btnExit.TabIndex = 89
+        Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -86,6 +86,7 @@ Partial Class frmAddVendor
         '
         'frmAddVendor
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

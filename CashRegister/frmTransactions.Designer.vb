@@ -55,7 +55,7 @@ Partial Class frmTransactions
         Me.btnCheckout.Location = New System.Drawing.Point(120, 232)
         Me.btnCheckout.Name = "btnCheckout"
         Me.btnCheckout.Size = New System.Drawing.Size(284, 42)
-        Me.btnCheckout.TabIndex = 11
+        Me.btnCheckout.TabIndex = 1
         Me.btnCheckout.Text = "Checkout"
         Me.btnCheckout.UseVisualStyleBackColor = True
         '
@@ -68,7 +68,7 @@ Partial Class frmTransactions
         Me.btnReturns.Location = New System.Drawing.Point(410, 232)
         Me.btnReturns.Name = "btnReturns"
         Me.btnReturns.Size = New System.Drawing.Size(284, 42)
-        Me.btnReturns.TabIndex = 12
+        Me.btnReturns.TabIndex = 2
         Me.btnReturns.Text = "Returns"
         Me.btnReturns.UseVisualStyleBackColor = True
         '
@@ -81,7 +81,7 @@ Partial Class frmTransactions
         Me.btnViewTransactions.Location = New System.Drawing.Point(266, 328)
         Me.btnViewTransactions.Name = "btnViewTransactions"
         Me.btnViewTransactions.Size = New System.Drawing.Size(284, 42)
-        Me.btnViewTransactions.TabIndex = 10
+        Me.btnViewTransactions.TabIndex = 4
         Me.btnViewTransactions.Text = "View Transactions"
         Me.btnViewTransactions.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class frmTransactions
         Me.btnExit.Location = New System.Drawing.Point(266, 376)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 9
+        Me.btnExit.TabIndex = 5
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -107,7 +107,7 @@ Partial Class frmTransactions
         Me.btnPayInPayOut.Location = New System.Drawing.Point(266, 280)
         Me.btnPayInPayOut.Name = "btnPayInPayOut"
         Me.btnPayInPayOut.Size = New System.Drawing.Size(284, 42)
-        Me.btnPayInPayOut.TabIndex = 10
+        Me.btnPayInPayOut.TabIndex = 3
         Me.btnPayInPayOut.Text = "Pay-Ins and Pay-Outs"
         Me.btnPayInPayOut.UseVisualStyleBackColor = True
         '

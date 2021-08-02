@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+PlP8aZkCO7ehRTDtrhRarbJvgI2EVcSvoiqFA0rEpZyxkw7zjQbYSXoCcb8wN2W8
+=======
 ﻿PlP8aZkCO7ehRTDtrhRarbJvgI2EVcSvoiqFA0rEpZyxkw7zjQbYSXoCcb8wN2W8
+>>>>>>> master

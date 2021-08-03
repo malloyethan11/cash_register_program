@@ -414,25 +414,26 @@ Public Class frmCheckout
 
     End Sub
 
-    ' Only allow numbers in the phone number field
-    Private Sub txtPrice_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrice.KeyPress
+    '' Only allow numbers in the phone number field
+    'Private Sub txtPrice_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrice.KeyPress
 
-        ' Only accept number keystrokes and backspace keystroke
-        ' For count function: https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
-        If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back And (e.KeyChar <> ".") Then
-            e.Handled = True
-        ElseIf (e.KeyChar = ".") Then
-            If (CountCharacters(txtPrice.Text, ".") > 0) Then
-                e.Handled = True
-            Else
-                If (txtPrice.Text.Length = 0) Then
-                    txtPrice.Text = "0."
-                    txtPrice.Select(txtPrice.Text.Length, 0)
-                    e.Handled = True
-                End If
-            End If
-        End If
-    End Sub
+    '    ' Only accept number keystrokes and backspace keystroke
+    '    ' For count function: https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
+    '    If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back And (e.KeyChar <> ".") Then
+    '        e.Handled = True
+    '    ElseIf (e.KeyChar = ".") Then
+    '        If (CountCharacters(txtPrice.Text, ".") > 0) Then
+    '            e.Handled = True
+    '        Else
+    '            If (txtPrice.Text.Length = 0) Then
+    '                txtPrice.Text = "0."
+    '                txtPrice.Select(txtPrice.Text.Length, 0)
+    '                e.Handled = True
+    '            End If
+    '        End If
+    '    End If
+
+    'End Sub
 
     Private Function ValidateForm() As Boolean
 
@@ -442,8 +443,8 @@ Public Class frmCheckout
         If Validation() = True Then
             If VerifyCreditCard() = True Then
                 If VerifySecurityCode() = True Then
-                    If VerifyPhoneNumber() = True Then
-                        If VerifyPrice() = True Then
+                    If VerifyEmail() = True Then
+                        If VerifyPhoneNumber() = True Then
                             If VerifyItemList() = True Then
                                 blnResult = True
                             End If
@@ -451,6 +452,22 @@ Public Class frmCheckout
                     End If
                 End If
             End If
+        End If
+
+        Return blnResult
+
+    End Function
+
+    Private Function VerifyEmail() As Boolean
+
+        Dim blnResult As Boolean
+
+        ' Citation: https://stackoverflow.com/questions/1331084/how-do-i-validate-email-address-formatting-with-the-net-framework
+        If (System.Text.RegularExpressions.Regex.IsMatch(txtEmail.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")) Then
+            blnResult = True
+        Else
+            MessageBox.Show("Please enter a valid email address.") 'pop a message box if an error
+            blnResult = False
         End If
 
         Return blnResult
@@ -525,21 +542,6 @@ Public Class frmCheckout
 
     End Function
 
-    Private Function VerifyPrice() As Boolean
-
-        Dim blnResult As Boolean
-
-        If Information.IsNumeric(txtPhoneNumber.Text) Then
-            blnResult = True
-        Else
-            MessageBox.Show("Please enter numbers only for the phone number.") 'pop a message box if an error
-            blnResult = False
-        End If
-
-        Return blnResult
-
-    End Function
-
     Private Function VerifyItemList() As Boolean
 
         Dim blnResult As Boolean
@@ -559,7 +561,7 @@ Public Class frmCheckout
 
         ' loop through the textboxes and clear them in case they have data in them after a delete
         For Each cntrl As Control In Controls
-            If TypeOf cntrl Is TextBox And cntrl.Name <> "txtTax" Then
+            If TypeOf cntrl Is TextBox And cntrl.Name <> "txtTax" And cntrl.Name <> "txtPrice" Then
                 cntrl.BackColor = Color.White
                 If cntrl.Text = String.Empty Then
                     cntrl.BackColor = Color.Yellow
@@ -587,4 +589,15 @@ Public Class frmCheckout
 
     End Function
 
+    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+
+        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
+
+    End Sub
+
+    Private Sub txtTax_TextChanged(sender As Object, e As EventArgs) Handles txtTax.TextChanged
+
+        txtTax.Text = Format(Val(txtTax.Text), "0.00")
+
+    End Sub
 End Class

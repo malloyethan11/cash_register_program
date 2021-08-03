@@ -259,23 +259,23 @@ Module ModuleCommonUtilities
         End Try
     End Function
 
-    Public Function CountCharacters(ByVal strString As String, ByVal chrToFind As Char) As Integer
+    'Public Function CountCharacters(ByVal strString As String, ByVal chrToFind As Char) As Integer
 
-        Dim intIndex As Integer = 0
-        Dim intCount As Integer = 0
+    '    Dim intIndex As Integer = 0
+    '    Dim intCount As Integer = 0
 
-        While intIndex < strString.Length()
+    '    While intIndex < strString.Length()
 
-            If (GetChar(strString, intIndex + 1) = chrToFind) Then
-                intCount += 1
-            End If
+    '        If (GetChar(strString, intIndex + 1) = chrToFind) Then
+    '            intCount += 1
+    '        End If
 
-            intIndex += 1
+    '        intIndex += 1
 
-        End While
+    '    End While
 
-        Return intCount
+    '    Return intCount
 
-    End Function
+    'End Function
 
 End Module

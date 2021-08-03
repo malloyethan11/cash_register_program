@@ -92,6 +92,7 @@ Partial Class frmCheckout
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPrice.Location = New System.Drawing.Point(571, 225)
         Me.txtPrice.Name = "txtPrice"
+        Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(203, 20)
         Me.txtPrice.TabIndex = 14
         '

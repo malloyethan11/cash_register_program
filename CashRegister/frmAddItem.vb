@@ -380,4 +380,10 @@ Public Class frmAddItem
         ButtonColor(MousePosition, btnAdd, Me, btmButtonShortGray, btmButtonShort)
 
     End Sub
+
+    Private Sub txtPrice_LostFocus(sender As Object, e As EventArgs) Handles txtPrice.LostFocus
+
+        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
+
+    End Sub
 End Class

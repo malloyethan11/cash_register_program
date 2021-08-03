@@ -14,6 +14,16 @@ Public Class frmCheckout
     End Class
 
     Dim Items As List(Of ItemData) = New List(Of ItemData)
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
     Private Sub frmCheckout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
@@ -136,6 +146,9 @@ Public Class frmCheckout
         If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
             txtPrice.ResetText()
         End If
+
+        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
+        txtTax.Text = Format(Val(txtTax.Text), "0.00")
 
     End Sub
 
@@ -588,16 +601,4 @@ Public Class frmCheckout
         Return True
 
     End Function
-
-    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
-
-        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
-
-    End Sub
-
-    Private Sub txtTax_TextChanged(sender As Object, e As EventArgs) Handles txtTax.TextChanged
-
-        txtTax.Text = Format(Val(txtTax.Text), "0.00")
-
-    End Sub
 End Class

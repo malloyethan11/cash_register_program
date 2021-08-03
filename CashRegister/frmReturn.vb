@@ -573,15 +573,21 @@ Public Class frmReturn
 
     End Function
 
-    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+
+        If IsNumeric(txtPrice.Text) Then
+            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
+        Else
+            txtTax.Text = "NAN"
+        End If
+
+        If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
+            txtPrice.ResetText()
+        End If
 
         txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
-
-    End Sub
-
-    Private Sub txtTax_TextChanged(sender As Object, e As EventArgs) Handles txtTax.TextChanged
-
         txtTax.Text = Format(Val(txtTax.Text), "0.00")
 
     End Sub
+
 End Class

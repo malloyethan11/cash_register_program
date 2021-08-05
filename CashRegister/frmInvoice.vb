@@ -33,6 +33,22 @@ Public Class frmInvoice
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
 
+        Try
+            ' Print
+            PrintInvoice()
+            ' Return to the menu
+            btnNone_Click(sender, e)
+        Catch excError As Exception
+            MessageBox.Show("Something went wrong in creating that invoice report." & vbNewLine & "Error: " & excError.Message, "Error!")
+        Finally
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+        End Try
+
+    End Sub
+
+    Private Sub PrintInvoice()
+
         ' declare variables
         Dim strSelect As String
         Dim cmdSelect As OleDb.OleDbCommand
@@ -68,7 +84,7 @@ Public Class frmInvoice
         Dim intIndex = 2 ' start index at 2 to account for header row in table, also 1-based counting instead of 0-based
         Dim intRowIndex = 0
         oWord = CreateObject("Word.Application")
-        oWord.Visible = True ' for testing only, set to false for prod
+        oWord.Visible = False ' for testing only, set to false for prod
         oDoc = oWord.Documents.Add
 
         ' get doc content and add content to doc
@@ -245,6 +261,7 @@ Public Class frmInvoice
             MessageBox.Show("Database Error: " + ex.Message)
         End Try
 
+        oWord.Quit()
 
         ' wait for file to finish saving and print doc
         System.Threading.Thread.Sleep(3000)
@@ -253,6 +270,22 @@ Public Class frmInvoice
     End Sub
 
     Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click
+
+        Try
+            ' Send the email
+            Email()
+            ' Return to the menu
+            btnNone_Click(sender, e)
+        Catch excError As Exception
+            MessageBox.Show("Something went wrong in creating that invoice report." & vbNewLine & "Error: " & excError.Message, "Error!")
+        Finally
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+        End Try
+
+    End Sub
+
+    Private Sub Email()
 
         ' declare variables
         Dim strSelect As String
@@ -290,7 +323,7 @@ Public Class frmInvoice
         Dim intIndex = 2 ' start index at 2 to account for header row in table, also 1-based counting instead of 0-based
         Dim intRowIndex = 0
         oWord = CreateObject("Word.Application")
-        oWord.Visible = True ' for testing only, set to false for prod
+        oWord.Visible = False ' for testing only, set to false for prod
         oDoc = oWord.Documents.Add
 
         ' get doc content and add content to doc
@@ -474,6 +507,8 @@ Public Class frmInvoice
         Catch ex As Exception
             MessageBox.Show("Database Error: " + ex.Message)
         End Try
+
+        oWord.Quit()
 
         ' wait for file to finish saving
         System.Threading.Thread.Sleep(3000)
@@ -485,6 +520,22 @@ Public Class frmInvoice
 
     Private Sub btnPrintEmail_Click(sender As Object, e As EventArgs) Handles btnPrintEmail.Click
 
+        Try
+            ' Print and email
+            PrintEmail()
+            ' Return to the menu
+            btnNone_Click(sender, e)
+        Catch excError As Exception
+            MessageBox.Show("Something went wrong in creating that invoice report." & vbNewLine & "Error: " & excError.Message, "Error!")
+        Finally
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+        End Try
+
+    End Sub
+
+    Private Sub PrintEmail()
+
         ' declare variables
         Dim strSelect As String
         Dim cmdSelect As OleDb.OleDbCommand
@@ -521,7 +572,7 @@ Public Class frmInvoice
         Dim intIndex = 2 ' start index at 2 to account for header row in table, also 1-based counting instead of 0-based
         Dim intRowIndex = 0
         oWord = CreateObject("Word.Application")
-        oWord.Visible = True ' for testing only, set to false for prod
+        oWord.Visible = False ' for testing only, set to false for prod
         oDoc = oWord.Documents.Add
 
         ' get doc content and add content to doc
@@ -706,6 +757,8 @@ Public Class frmInvoice
             MessageBox.Show("Database Error: " + ex.Message)
         End Try
 
+        oWord.Quit()
+
         ' wait for file to finish saving and print doc
         System.Threading.Thread.Sleep(3000)
         print(strFile)
@@ -714,4 +767,5 @@ Public Class frmInvoice
         SendMail(strEmail, "TeamBeesCapstone@gmail.com", "Invoice #" & intTransactionID, "", "TeamBeesCapstone@gmail.com", "cincystate123", strFile)
 
     End Sub
+
 End Class

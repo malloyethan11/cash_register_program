@@ -251,7 +251,7 @@ Module ModuleCommonUtilities
             mail.Attachments.Add(attachment)
 
             SmtpServer.Send(mail)
-            MsgBox("mail send")
+            MsgBox("Mail sent")
             Return 0
         Catch ex As Exception
             MsgBox(ex.ToString)

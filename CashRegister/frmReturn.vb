@@ -612,4 +612,15 @@ Public Class frmReturn
 
     End Sub
 
+    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+
+        If IsNumeric(txtPrice.Text) Then
+            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
+        Else
+            txtTax.Text = "NAN"
+        End If
+
+        txtTax.Text = Format(Val(txtTax.Text), "0.00")
+
+    End Sub
 End Class

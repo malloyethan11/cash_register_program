@@ -58,7 +58,6 @@ Public Class frmInvoice
         Dim drSourceTable1 As OleDb.OleDbDataReader
         Dim objResults As Object
         Dim strTransactionDate As String
-        Dim intTransactionType As Integer
         Dim intTransactionID As Integer
         Dim dblSubtotal As Double
         Dim dblSalesTax As Double
@@ -136,19 +135,6 @@ Public Class frmInvoice
             oPara5.Range.Font.Size = 14
             oPara5.Range.InsertParagraphAfter()
 
-            strSelect =
-                   "SELECT TTT.strTransactionType 
-                    FROM TTransactionTypes as TTT JOIN TTransactions as TTR
-                    ON TTR.intTransactionTypeID = TTT.intTransactionTypeID
-                    WHERE TTR.intTransactionID = (Select MAX(intTransactionID) FROM TTransactions)
-                    ORDER BY dtTransactionDate DESC"
-            cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
-            objResults = cmdSelect.ExecuteScalar
-            If IsDBNull(objResults) Then
-                intTransactionType = 0
-            Else
-                intTransactionType = CInt(objResults)
-            End If
             oPara6 = oDoc.Content.Paragraphs.Add
             oPara6.Range.Text = "SALES INVOICE"
             oPara6.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft
@@ -333,6 +319,7 @@ Public Class frmInvoice
         Dim oPara12 As Word.Paragraph
         Dim oPara13 As Word.Paragraph
         Dim oPara14 As Word.Paragraph
+        Dim intTransactionType As Integer
         Dim intNumRecords As Integer
         Dim intIndex = 2 ' start index at 2 to account for header row in table, also 1-based counting instead of 0-based
         Dim intRowIndex = 0
@@ -387,6 +374,20 @@ Public Class frmInvoice
             oPara5.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter
             oPara5.Range.Font.Size = 14
             oPara5.Range.InsertParagraphAfter()
+
+            'strSelect =
+            '       "SELECT TTT.strTransactionType 
+            '        FROM TTransactionTypes as TTT JOIN TTransactions as TTR
+            '        ON TTR.intTransactionTypeID = TTT.intTransactionTypeID
+            '        WHERE TTR.intTransactionID = (Select MAX(intTransactionID) FROM TTransactions)
+            '        ORDER BY dtTransactionDate DESC"
+            'cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+            'objResults = cmdSelect.ExecuteScalar
+            'If IsDBNull(objResults) Then
+            '    intTransactionType = 0
+            'Else
+            '    intTransactionType = CInt(objResults.ToString)
+            'End If
 
             oPara6 = oDoc.Content.Paragraphs.Add
             oPara6.Range.Text = "SALES INVOICE"

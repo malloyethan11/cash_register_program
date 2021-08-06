@@ -404,7 +404,6 @@ Partial Class frmReturn
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPrice.Location = New System.Drawing.Point(615, 225)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(159, 20)
         Me.txtPrice.TabIndex = 14
         '

@@ -399,25 +399,25 @@ Public Class frmReturn
 
     End Sub
 
-    '' Only allow numbers in the phone number field
-    'Private Sub txtPrice_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrice.KeyPress
+    ' Only allow numbers in the price field
+    Private Sub txtPrice_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrice.KeyPress
 
-    '    ' Only accept number keystrokes and backspace keystroke
-    '    ' For count function: https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
-    '    If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back And (e.KeyChar <> ".") Then
-    '        e.Handled = True
-    '    ElseIf (e.KeyChar = ".") Then
-    '        If (CountCharacters(txtPrice.Text, ".") > 0) Then
-    '            e.Handled = True
-    '        Else
-    '            If (txtPrice.Text.Length = 0) Then
-    '                txtPrice.Text = "0."
-    '                txtPrice.Select(txtPrice.Text.Length, 0)
-    '                e.Handled = True
-    '            End If
-    '        End If
-    '    End If
-    'End Sub
+        ' Only accept number keystrokes and backspace keystroke
+        ' For count function: https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
+        If Not Char.IsNumber(e.KeyChar) And e.KeyChar <> ControlChars.Back And (e.KeyChar <> ".") Then
+            e.Handled = True
+        ElseIf (e.KeyChar = ".") Then
+            If (CountCharacters(txtPrice.Text, ".") > 0) Then
+                e.Handled = True
+            Else
+                If (txtPrice.Text.Length = 0) Then
+                    txtPrice.Text = "0."
+                    txtPrice.Select(txtPrice.Text.Length, 0)
+                    e.Handled = True
+                End If
+            End If
+        End If
+    End Sub
 
     Private Function ValidateForm() As Boolean
 
@@ -429,8 +429,10 @@ Public Class frmReturn
                 If VerifySecurityCode() = True Then
                     If VerifyEmail() = True Then
                         If VerifyPhoneNumber() = True Then
-                            If VerifyItemList() = True Then
-                                blnResult = True
+                            If VerifyPrice() = True Then
+                                If VerifyItemList() = True Then
+                                    blnResult = True
+                                End If
                             End If
                         End If
                     End If
@@ -476,6 +478,26 @@ Public Class frmReturn
             End If
         Else
             blnResult = True
+        End If
+
+        Return blnResult
+
+    End Function
+
+    Private Function VerifyPrice() As Boolean
+
+        Dim blnResult As Boolean
+
+        If Information.IsNumeric(txtPrice.Text) Then
+            If (txtPrice.Text > 0) Then
+                blnResult = True
+            Else
+                MessageBox.Show("Please enter a number greater than zero for the price.") 'pop a message box if an error
+                blnResult = False
+            End If
+        Else
+                MessageBox.Show("Please enter numbers only for the price.") 'pop a message box if an error
+            blnResult = False
         End If
 
         Return blnResult
@@ -545,7 +567,7 @@ Public Class frmReturn
 
         ' loop through the textboxes and clear them in case they have data in them after a delete
         For Each cntrl As Control In Controls
-            If TypeOf cntrl Is TextBox And cntrl.Name <> "txtTax" And cntrl.Name <> "txtPrice" Then
+            If TypeOf cntrl Is TextBox And cntrl.Name <> "txtTax" Then
                 cntrl.BackColor = Color.White
                 If cntrl.Text = String.Empty Then
                     cntrl.BackColor = Color.Yellow
@@ -573,7 +595,7 @@ Public Class frmReturn
 
     End Function
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+    Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles txtPrice.LostFocus
 
         If IsNumeric(txtPrice.Text) Then
             txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078

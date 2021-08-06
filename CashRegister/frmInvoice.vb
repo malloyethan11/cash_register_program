@@ -58,6 +58,7 @@ Public Class frmInvoice
         Dim drSourceTable1 As OleDb.OleDbDataReader
         Dim objResults As Object
         Dim strTransactionDate As String
+        Dim intTransactionType As Integer
         Dim intTransactionID As Integer
         Dim dblSubtotal As Double
         Dim dblSalesTax As Double
@@ -135,6 +136,19 @@ Public Class frmInvoice
             oPara5.Range.Font.Size = 14
             oPara5.Range.InsertParagraphAfter()
 
+            strSelect =
+                   "SELECT TTT.strTransactionType 
+                    FROM TTransactionTypes as TTT JOIN TTransactions as TTR
+                    ON TTR.intTransactionTypeID = TTT.intTransactionTypeID
+                    WHERE TTR.intTransactionID = (Select MAX(intTransactionID) FROM TTransactions)
+                    ORDER BY dtTransactionDate DESC"
+            cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
+            objResults = cmdSelect.ExecuteScalar
+            If IsDBNull(objResults) Then
+                intTransactionType = 0
+            Else
+                intTransactionType = CInt(objResults)
+            End If
             oPara6 = oDoc.Content.Paragraphs.Add
             oPara6.Range.Text = "SALES INVOICE"
             oPara6.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft

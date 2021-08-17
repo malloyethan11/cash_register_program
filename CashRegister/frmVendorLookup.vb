@@ -52,7 +52,7 @@
             End If
 
             ' Build the select statement
-            strSelect = "SELECT intVendorID, strVendorName FROM TVendors"
+            strSelect = "SELECT intVendorID, strVendorName FROM TVendors ORDER BY strVendorName ASC"
 
             ' Retrieve all the records 
             cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)

@@ -28,22 +28,26 @@ Public Class frmPayInPayOut
         Dim decPrice As Decimal = 0
         Dim strType As String = ""
 
-        ' validate data is entered
-        If Validation() = True Then
-            If VerifyPrice(decPrice) = True Then
+        Try
+            ' validate data is entered
+            If Validation() = True Then
+                If VerifyPrice(decPrice) = True Then
 
-                strDesc = txtDescription.Text
-                decPrice = txtPrice.Text
-                strType = cboType.Text
+                    strDesc = txtDescription.Text
+                    decPrice = txtPrice.Text
+                    strType = cboType.Text
 
-                ' pass inputs, now validated to sub AddItem to enter in DB
-                AddPay(strDesc, decPrice, strType)
+                    ' pass inputs, now validated to sub AddItem to enter in DB
+                    AddPay(strDesc, decPrice, strType)
 
-                ' Clear all boxes
-                txtDescription.ResetText()
-                txtPrice.ResetText()
+                    ' Clear all boxes
+                    txtDescription.ResetText()
+                    txtPrice.ResetText()
+                End If
             End If
-        End If
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 
@@ -68,8 +72,8 @@ Public Class frmPayInPayOut
 
     Private Function VerifyPrice(ByRef ItemPrice As Decimal) As Boolean
         If IsNumeric(txtPrice.Text) Then
-            If CDec(txtPrice.Text) > 0 Then 'convert to decimal and check for the range
-                ItemPrice = CDec(txtPrice.Text) 'convert it to a decimal and set price
+            If Convert.ToDecimal(txtPrice.Text) > 0 Then 'convert to decimal and check for the range
+                ItemPrice = Convert.ToDecimal(txtPrice.Text) 'convert it to a decimal and set price
             Else
                 MessageBox.Show("Please enter a number greater than 0 for the price.") 'pop a message box if an error
                 Return False

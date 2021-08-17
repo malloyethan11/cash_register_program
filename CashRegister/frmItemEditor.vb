@@ -253,36 +253,39 @@ Public Class frmItemEditor
         Dim intSafetyStockAmt As Integer = 0
         Dim strUPC As String = ""
 
+        Try
+            ' validate data is entered
+            If MyUser.CanEditItems = True Then
+                If Validation() = True Then
+                    If VerifyPrice(decItemPrice) = True Then
+                        If VerifyInventory(intInventoryAmt) = True Then
+                            If VerifySafetyStock(intSafetyStockAmt) = True Then
+                                If VerifyUPC(strUPC) = True Then
+                                    If VerifyImage() = True Then
 
-        ' validate data is entered
-        If MyUser.CanEditItems = True Then
-            If Validation() = True Then
-                If VerifyPrice(decItemPrice) = True Then
-                    If VerifyInventory(intInventoryAmt) = True Then
-                        If VerifySafetyStock(intSafetyStockAmt) = True Then
-                            If VerifyUPC(strUPC) = True Then
-                                If VerifyImage() = True Then
 
+                                        strSKU = txtSKU.Text
+                                        strItemName = txtName.Text
+                                        strItemDesc = txtDescription.Text
+                                        decItemPrice = txtPrice.Text
+                                        intInventoryAmt = txtInventory.Text
+                                        intSafetyStockAmt = txtSafetytock.Text
+                                        strUPC = txtUPC.Text
 
-                                    strSKU = txtSKU.Text
-                                    strItemName = txtName.Text
-                                    strItemDesc = txtDescription.Text
-                                    decItemPrice = txtPrice.Text
-                                    intInventoryAmt = txtInventory.Text
-                                    intSafetyStockAmt = txtSafetytock.Text
-                                    strUPC = txtUPC.Text
-
-                                    ' pass inputs, now validated to sub UpdateItem to enter in DB
-                                    UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                        ' pass inputs, now validated to sub UpdateItem to enter in DB
+                                        UpdateItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                    End If
                                 End If
                             End If
                         End If
                     End If
                 End If
+            Else
+                MessageBox.Show("You do not have permission to update items!", "Error")
             End If
-        Else
-            MessageBox.Show("You do not have permission to update items!", "Error")
-        End If
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 

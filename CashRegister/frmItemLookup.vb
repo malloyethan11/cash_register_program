@@ -205,7 +205,7 @@ Public Class frmItemLookup
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
+                strSelect = "SELECT intItemID, intInventoryAmt, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -252,7 +252,7 @@ Public Class frmItemLookup
                 Next
 
                 ' Select all that apply
-                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
+                strSelect = "SELECT intItemID, intInventoryAmt, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strSelectList
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -268,7 +268,7 @@ Public Class frmItemLookup
                 drVenCatSourceTable.Close()
 
             Else
-                strSelect = "SELECT intItemID, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%'+" & "?" & "+'%'"
+                strSelect = "SELECT intItemID, intInventoryAmt, strItemName, imgItemImage, decItemPrice FROM TItems WHERE " & strFilter & " Like '%'+" & "?" & "+'%'"
 
                 ' Retrieve all the records 
                 cmdSelect = New OleDb.OleDbCommand(strSelect, m_conAdministrator)
@@ -349,7 +349,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 1) Then
             ' Get Name
             lblItem1.Text = drSet(intStartIndex)("strItemName").ToString
-            lblPrice1.Text = FormatCurrency(drSet(intStartIndex)("decItemPrice").ToString, 2)
+            lblPrice1.Text = FormatCurrency(drSet(intStartIndex)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex, picImage1)
         Else
@@ -360,7 +360,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 2) Then
             ' Get Name
             lblItem2.Text = drSet(intStartIndex + 1)("strItemName").ToString
-            lblPrice2.Text = FormatCurrency(drSet(intStartIndex + 1)("decItemPrice").ToString, 2)
+            lblPrice2.Text = FormatCurrency(drSet(intStartIndex + 1)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 1)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 1, picImage2)
         Else
@@ -371,7 +371,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 3) Then
             ' Get Name
             lblItem3.Text = drSet(intStartIndex + 2)("strItemName").ToString
-            lblPrice3.Text = FormatCurrency(drSet(intStartIndex + 2)("decItemPrice").ToString, 2)
+            lblPrice3.Text = FormatCurrency(drSet(intStartIndex + 2)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 2)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 2, picImage3)
         Else
@@ -382,7 +382,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 4) Then
             ' Get name
             lblItem4.Text = drSet(intStartIndex + 3)("strItemName").ToString
-            lblPrice4.Text = FormatCurrency(drSet(intStartIndex + 3)("decItemPrice").ToString, 2)
+            lblPrice4.Text = FormatCurrency(drSet(intStartIndex + 3)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 3)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 3, picImage4)
         Else
@@ -393,7 +393,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 5) Then
             ' Get name
             lblItem5.Text = drSet(intStartIndex + 4)("strItemName").ToString
-            lblPrice5.Text = FormatCurrency(drSet(intStartIndex + 4)("decItemPrice").ToString, 2)
+            lblPrice5.Text = FormatCurrency(drSet(intStartIndex + 4)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 4)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 4, picImage5)
         Else
@@ -404,7 +404,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 6) Then
             ' Get name
             lblItem6.Text = drSet(intStartIndex + 5)("strItemName").ToString
-            lblPrice6.Text = FormatCurrency(drSet(intStartIndex + 5)("decItemPrice").ToString, 2)
+            lblPrice6.Text = FormatCurrency(drSet(intStartIndex + 5)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 5)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 5, picImage6)
         Else
@@ -415,7 +415,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 7) Then
             ' Get name
             lblItem7.Text = drSet(intStartIndex + 6)("strItemName").ToString
-            lblPrice7.Text = FormatCurrency(drSet(intStartIndex + 6)("decItemPrice").ToString, 2)
+            lblPrice7.Text = FormatCurrency(drSet(intStartIndex + 6)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 6)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 6, picImage7)
         Else
@@ -426,7 +426,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 8) Then
             ' Get name
             lblItem8.Text = drSet(intStartIndex + 7)("strItemName").ToString
-            lblPrice8.Text = FormatCurrency(drSet(intStartIndex + 7)("decItemPrice").ToString, 2)
+            lblPrice8.Text = FormatCurrency(drSet(intStartIndex + 7)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 7)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 7, picImage8)
         Else
@@ -437,7 +437,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 9) Then
             ' Get name
             lblItem9.Text = drSet(intStartIndex + 8)("strItemName").ToString
-            lblPrice9.Text = FormatCurrency(drSet(intStartIndex + 8)("decItemPrice").ToString, 2)
+            lblPrice9.Text = FormatCurrency(drSet(intStartIndex + 8)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 8)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 8, picImage9)
         Else
@@ -448,7 +448,7 @@ Public Class frmItemLookup
         If (drSet.Count >= intStartIndex + 10) Then
             ' Get name
             lblItem10.Text = drSet(intStartIndex + 9)("strItemName").ToString
-            lblPrice10.Text = FormatCurrency(drSet(intStartIndex + 9)("decItemPrice").ToString, 2)
+            lblPrice10.Text = FormatCurrency(drSet(intStartIndex + 9)("decItemPrice").ToString, 2) & " - " & "Stock: " & drSet(intStartIndex + 9)("intInventoryAmt").ToString
             ' Get image
             GetImage(intStartIndex + 9, picImage10)
         Else
@@ -529,38 +529,42 @@ Public Class frmItemLookup
 
     Private Sub OpenItem(ByVal intIndex As Integer)
 
-        ' Open the item
-        If (drSet IsNot Nothing) Then
-            If (drSet.Count > intIndex) Then
-                If (Type = "Dialog") Then
-                    If (ValidateQTY(intIndex) = True) Then
-                        ' Close the form and return the primary key
-                        If (strCaller = "Checkout") Then
-                            If (lstCallingFormItems.FindString(drSet(intIndex)("strItemName").ToString) <> ListBox.NoMatches) Then
-                                MessageBox.Show("You may not add two instances of the same item to an order!", "Error!")
+        Try
+            ' Open the item
+            If (drSet IsNot Nothing) Then
+                If (drSet.Count > intIndex) Then
+                    If (Type = "Dialog") Then
+                        If (ValidateQTY(intIndex) = True) Then
+                            ' Close the form and return the primary key
+                            If (strCaller = "Checkout") Then
+                                If (lstCallingFormItems.FindString(drSet(intIndex)("strItemName").ToString) <> ListBox.NoMatches) Then
+                                    MessageBox.Show("You may not add two instances of the same item to an order!", "Error!")
+                                Else
+                                    intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
+                                    intQuantityToPurchase = txtQTY.Text
+                                    Me.Close()
+                                End If
                             Else
                                 intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
                                 intQuantityToPurchase = txtQTY.Text
                                 Me.Close()
                             End If
-                        Else
-                            intPrimaryKeyReturnValue = drSet(intIndex)("intItemID").ToString
-                            intQuantityToPurchase = txtQTY.Text
-                            Me.Close()
                         End If
-                    End If
-                Else
-                    ' Open the editor form and pass on the primary key
-                    Dim frmNewEditor As New frmItemEditor
-                    frmNewEditor.intCurrentlyEditingItemPrimaryKey = drSet(intIndex)("intItemID").ToString
-                    OpenFormMaintainParent(Me, frmNewEditor)
-                    ' If data change has occured, then load the items again
-                    If (frmNewEditor.blnChangedData = True) Then
-                        LoadItems()
+                    Else
+                        ' Open the editor form and pass on the primary key
+                        Dim frmNewEditor As New frmItemEditor
+                        frmNewEditor.intCurrentlyEditingItemPrimaryKey = drSet(intIndex)("intItemID").ToString
+                        OpenFormMaintainParent(Me, frmNewEditor)
+                        ' If data change has occured, then load the items again
+                        If (frmNewEditor.blnChangedData = True) Then
+                            LoadItems()
+                        End If
                     End If
                 End If
             End If
-        End If
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 

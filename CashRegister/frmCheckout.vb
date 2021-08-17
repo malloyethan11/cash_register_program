@@ -61,11 +61,11 @@ Public Class frmCheckout
 
         OpenFormMaintainParent(Me, frmLookup)
 
+
         Dim myItem = New ItemData
         ' Get the selected item
         myItem.intItemID = frmLookup.intPrimaryKeyReturnValue
         myItem.intQty = frmLookup.intQuantityToPurchase
-
         If (myItem.intItemID <> -1) Then
             Try
                 ' Open the DB
@@ -73,9 +73,9 @@ Public Class frmCheckout
 
                     ' The database is not open
                     MessageBox.Show(Me, "Database connection error." & vbNewLine &
-                                    "The form will now close.",
-                                    Me.Text + " Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
 
                     ' Close the form/application
                     Me.Close()
@@ -137,18 +137,22 @@ Public Class frmCheckout
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
 
-        If IsNumeric(txtPrice.Text) Then
-            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
-        Else
-            txtTax.Text = "NAN"
-        End If
+        Try
+            If IsNumeric(txtPrice.Text) Then
+                txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
+            Else
+                txtTax.Text = "NAN"
+            End If
 
-        If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
-            txtPrice.ResetText()
-        End If
+            If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
+                txtPrice.ResetText()
+            End If
 
-        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
-        txtTax.Text = Format(Val(txtTax.Text), "0.00")
+            txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
+            txtTax.Text = Format(Val(txtTax.Text), "0.00")
+        Catch excError As System.OverflowException
+            MessageBox.Show("Price is too large!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error) 'pop a message box if an error
+        End Try
 
     End Sub
 
@@ -165,7 +169,6 @@ Public Class frmCheckout
             cmdAddItem.Connection = Connection
             cmdAddItem.CommandText = "uspTransaction"
             cmdAddItem.CommandType = CommandType.StoredProcedure
-
             Try
 
                 Dim strGetTime As String = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")
@@ -277,20 +280,24 @@ Public Class frmCheckout
     End Function
 
     Private Sub btnRemoveSelectedItem_Click(sender As Object, e As EventArgs) Handles btnRemoveSelectedItem.Click
-        If (lstItems.Items.Count <> 0) Then
-            If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
-                Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
-                If IsNumeric(txtPrice.Text) Then
-                    txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
-                    If (txtPrice.Text < 0) Then
-                        txtPrice.Text = 0
+        Try
+            If (lstItems.Items.Count <> 0) Then
+                If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
+                    Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
+                    If IsNumeric(txtPrice.Text) Then
+                        txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                        If (txtPrice.Text < 0) Then
+                            txtPrice.Text = 0
+                        End If
                     End If
+                    Items.RemoveAt(lstItems.SelectedIndex)
+                    lstItems.Items.RemoveAt(lstItems.SelectedIndex)
+                    lstItems.Refresh()
                 End If
-                Items.RemoveAt(lstItems.SelectedIndex)
-                lstItems.Items.RemoveAt(lstItems.SelectedIndex)
-                lstItems.Refresh()
             End If
-        End If
+        Catch excError As System.OverflowException
+            MessageBox.Show("Arithmatic Overflow Occured!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error) 'pop a message box if an error
+        End Try
     End Sub
 
     Private Sub LoadStates()

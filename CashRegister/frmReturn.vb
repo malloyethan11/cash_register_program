@@ -249,20 +249,24 @@ Public Class frmReturn
     End Function
 
     Private Sub btnRemoveSelectedItem_Click(sender As Object, e As EventArgs) Handles btnRemoveSelectedItem.Click
-        If (lstItems.Items.Count <> 0) Then
-            If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
-                Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
-                If IsNumeric(txtPrice.Text) Then
-                    txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
-                    If (txtPrice.Text < 0) Then
-                        txtPrice.Text = 0
+        Try
+            If (lstItems.Items.Count <> 0) Then
+                If (lstItems.SelectedIndex >= 0 And lstItems.SelectedIndex < lstItems.Items.Count) Then
+                    Dim delIt = Items.ElementAt(lstItems.SelectedIndex)
+                    If IsNumeric(txtPrice.Text) Then
+                        txtPrice.Text = Convert.ToDecimal(txtPrice.Text) - (delIt.decPrice * delIt.intQty)
+                        If (txtPrice.Text < 0) Then
+                            txtPrice.Text = 0
+                        End If
                     End If
+                    Items.RemoveAt(lstItems.SelectedIndex)
+                    lstItems.Items.RemoveAt(lstItems.SelectedIndex)
+                    lstItems.Refresh()
                 End If
-                Items.RemoveAt(lstItems.SelectedIndex)
-                lstItems.Items.RemoveAt(lstItems.SelectedIndex)
-                lstItems.Refresh()
             End If
-        End If
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub LoadStates()
@@ -596,31 +600,41 @@ Public Class frmReturn
     End Function
 
     Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles txtPrice.LostFocus
+        Try
 
-        If IsNumeric(txtPrice.Text) Then
-            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
-        Else
-            txtTax.Text = "NAN"
-        End If
+            If IsNumeric(txtPrice.Text) Then
+                txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
+            Else
+                txtTax.Text = "NAN"
+            End If
 
-        If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
-            txtPrice.ResetText()
-        End If
+            If (txtPrice.Text.Length = 1 And txtPrice.Text.Contains(".")) Then
+                txtPrice.ResetText()
+            End If
 
-        txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
-        txtTax.Text = Format(Val(txtTax.Text), "0.00")
+            txtPrice.Text = Format(Val(txtPrice.Text), "0.00")
+            txtTax.Text = Format(Val(txtTax.Text), "0.00")
+
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 
     Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+        Try
 
-        If IsNumeric(txtPrice.Text) Then
-            txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
-        Else
-            txtTax.Text = "NAN"
-        End If
+            If IsNumeric(txtPrice.Text) Then
+                txtTax.Text = Convert.ToDecimal(txtPrice.Text) * 0.078
+            Else
+                txtTax.Text = "NAN"
+            End If
 
-        txtTax.Text = Format(Val(txtTax.Text), "0.00")
+            txtTax.Text = Format(Val(txtTax.Text), "0.00")
+
+        Catch excError As Exception
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 End Class

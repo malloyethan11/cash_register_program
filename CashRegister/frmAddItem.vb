@@ -153,44 +153,39 @@ Public Class frmAddItem
         Dim intSafetyStockAmt As Integer = 0
         Dim strUPC As String = ""
 
+        Try
 
-        ' validate data is entered
-        If Validation() = True Then
-            If VerifyPrice(decItemPrice) = True Then
-                If VerifyInventory(intInventoryAmt) = True Then
-                    If VerifySafetyStock(intSafetyStockAmt) = True Then
-                        If VerifyUPC(strUPC) = True Then
-                            If VerifyImage() = True Then
+            ' validate data is entered
+            If Validation() = True Then
+                If VerifyPrice(decItemPrice) = True Then
+                    If VerifyInventory(intInventoryAmt) = True Then
+                        If VerifySafetyStock(intSafetyStockAmt) = True Then
+                            If VerifyUPC(strUPC) = True Then
+                                If VerifyImage() = True Then
 
+                                    strSKU = txtSKU.Text
+                                    strItemName = txtName.Text
+                                    strItemDesc = txtDescription.Text
+                                    decItemPrice = txtPrice.Text
+                                    intInventoryAmt = txtInventory.Text
+                                    intSafetyStockAmt = txtSafetytock.Text
+                                    strUPC = txtUPC.Text
 
-                                strSKU = txtSKU.Text
-                                strItemName = txtName.Text
-                                strItemDesc = txtDescription.Text
-                                decItemPrice = txtPrice.Text
-                                intInventoryAmt = txtInventory.Text
-                                intSafetyStockAmt = txtSafetytock.Text
-                                strUPC = txtUPC.Text
-
-                                ' pass inputs, now validated to sub AddItem to enter in DB
-                                AddItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
-
-                                ' Clear all boxes
-                                txtSKU.ResetText()
-                                txtName.ResetText()
-                                txtDescription.ResetText()
-                                txtPrice.ResetText()
-                                txtInventory.ResetText()
-                                txtSafetytock.ResetText()
-                                txtUPC.ResetText()
-                                cboCategory.SelectedIndex = 0
-                                cboVendors.SelectedIndex = 0
-                                picItemImage.Image = Nothing
+                                    ' pass inputs, now validated to sub AddItem to enter in DB
+                                    AddItem(strSKU, strItemName, strItemDesc, decItemPrice, intInventoryAmt, intSafetyStockAmt, strUPC)
+                                End If
                             End If
                         End If
                     End If
                 End If
             End If
-        End If
+
+        Catch excError As Exception
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 
@@ -229,6 +224,18 @@ Public Class frmAddItem
             ' have to let the user know what happened 
             If cmdAddItem.ExecuteNonQuery() = 1 Then
                 MessageBox.Show("Insert successful. Item " & ItemName & " has been added.")
+
+                ' Clear all boxes
+                txtSKU.ResetText()
+                txtName.ResetText()
+                txtDescription.ResetText()
+                txtPrice.ResetText()
+                txtInventory.ResetText()
+                txtSafetytock.ResetText()
+                txtUPC.ResetText()
+                cboCategory.SelectedIndex = 0
+                cboVendors.SelectedIndex = 0
+                picItemImage.Image = Nothing
 
             Else
                 MessageBox.Show("Insert failed")
@@ -293,17 +300,18 @@ Public Class frmAddItem
     End Function
 
     Private Function VerifyPrice(ByRef ItemPrice As Decimal) As Boolean
+
         If IsNumeric(txtPrice.Text) Then
-            If CDec(txtPrice.Text) > 0 Then 'convert to decimal and check for the range
-                ItemPrice = CDec(txtPrice.Text) 'convert it to a decimal and set price
+                If Convert.ToDecimal(txtPrice.Text) > 0 Then 'convert to decimal and check for the range
+                    ItemPrice = Convert.ToDecimal(txtPrice.Text) 'convert it to a decimal and set price
+                Else
+                    MessageBox.Show("Please enter a number greater than 0 for the price.") 'pop a message box if an error
+                    Return False
+                End If
             Else
-                MessageBox.Show("Please enter a number greater than 0 for the price.") 'pop a message box if an error
+                MessageBox.Show("Please enter numbers only for the price.") 'pop a message box if an error
                 Return False
             End If
-        Else
-            MessageBox.Show("Please enter numbers only for the price.") 'pop a message box if an error
-            Return False
-        End If
         Return True
 
     End Function
@@ -346,6 +354,7 @@ Public Class frmAddItem
     End Function
 
     Private Function VerifySafetyStock(ByRef SafetyStock As Integer) As Boolean
+
         If IsNumeric(txtSafetytock.Text) Then
             If CInt(txtSafetytock.Text) > 0 Then 'check the range
                 SafetyStock = CInt(txtSafetytock.Text) 'convert it to an int and set safety stock
